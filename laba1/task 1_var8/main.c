@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int main(void) {
+int main(void) 
+{
 	float a, b, c, square, volume;
 	printf("Enter edge a: ");
 	scanf_s("%f", &a);
