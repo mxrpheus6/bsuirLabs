@@ -13,4 +13,5 @@ int main(void)
 		f1 = temp;
 	}
 	printf("\nResult is %d\n", f2);
+	return 0;
 }

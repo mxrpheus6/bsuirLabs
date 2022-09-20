@@ -11,4 +11,5 @@ int main(void)
 		a = a * a + 1;
 	}
 	printf("\nResult is %d\n", a);
+	return 0;
 }
