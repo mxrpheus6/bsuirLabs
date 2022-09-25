@@ -1,6 +1,8 @@
 #include <stdio.h>
 
-int main() {
+int main(void) 
+{
+	printf("LAB 1 TASK 1 by Kazachenko Pavel from GROUP 250504\n\n");
 	float a, b, c, square, volume;
 	printf("Enter edge a: ");
 	scanf_s("%f", &a);
