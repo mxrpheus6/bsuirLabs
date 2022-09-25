@@ -1,0 +1,5 @@
+﻿  main.c
+C:\BSUIR\laby\laba1\task2_var8\task2_var8\main.c(44,6): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\BSUIR\laby\laba1\task2_var8\task2_var8\main.c(45,6): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\BSUIR\laby\laba1\task2_var8\task2_var8\main.c(46,6): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  task2_var8.vcxproj -> C:\BSUIR\laby\laba1\task2_var8\x64\Debug\task2_var8.exe

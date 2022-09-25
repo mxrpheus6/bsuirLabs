@@ -1,0 +1,3 @@
+﻿  main.c
+C:\BSUIR\laby\laba1\task3_var8\task3_var8\main.c(31,15): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  task3_var8.vcxproj -> C:\BSUIR\laby\laba1\task3_var8\x64\Debug\task3_var8.exe
