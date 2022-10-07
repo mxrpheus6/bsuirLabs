@@ -1,6 +1,6 @@
 ﻿  main.c
-C:\BSUIR\laby\laba1\task4_var8\task4_var8\main.c(9,10): warning C4473: 'scanf_s' : not enough arguments passed for format string
-C:\BSUIR\laby\laba1\task4_var8\task4_var8\main.c(9,10): message : placeholders and their parameters expect 2 variadic arguments, but 1 were provided
-C:\BSUIR\laby\laba1\task4_var8\task4_var8\main.c(9,10): message : the missing variadic argument 2 is required by format string '%c'
-C:\BSUIR\laby\laba1\task4_var8\task4_var8\main.c(9,10): message : this argument is used as a buffer size
-  task4_var8.vcxproj -> C:\BSUIR\laby\laba1\task4_var8\x64\Debug\task4_var8.exe
+C:\BSUIR\finished\OAiP\laba1\task4_var8\task4_var8\main.c(9,10): warning C4473: 'scanf_s' : not enough arguments passed for format string
+C:\BSUIR\finished\OAiP\laba1\task4_var8\task4_var8\main.c(9,10): message : placeholders and their parameters expect 2 variadic arguments, but 1 were provided
+C:\BSUIR\finished\OAiP\laba1\task4_var8\task4_var8\main.c(9,10): message : the missing variadic argument 2 is required by format string '%c'
+C:\BSUIR\finished\OAiP\laba1\task4_var8\task4_var8\main.c(9,10): message : this argument is used as a buffer size
+  task4_var8.vcxproj -> C:\BSUIR\finished\OAiP\laba1\task4_var8\x64\Debug\task4_var8.exe
