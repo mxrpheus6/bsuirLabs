@@ -62,7 +62,7 @@ int main(void)
 		numbers[i] = 0;
 		amount++;
 	}
-	for (int i = 0; i < 100; i++)
+	for (int i = 0; i < amount; i++)
 	{
 		printf(" %d ", numbers[i]);
 	}

@@ -7,7 +7,7 @@ int main(void)
 {
 	printf("LAB 3 TASK 1 by Kazachenko Pavel from GROUP 250504\n\n");
 	int numbers[100] = { 0 }, amount, counter = 0, total = 0;
-	char k[MAX], strtemp[MAX], choice[MAX], check1[MAX] = "k ", check2[MAX] = "r ";
+	char k[MAX], strtemp[MAX], choice[MAX], check1[MAX] = "k ", check2[MAX] = "r ", checkzero = 0;
 	printf("Enter amount of numbers: ");
 	fgets(k, MAX, stdin);
 	while (isdigit(k) != 1 || stringtoint(k) < 0 || stringtoint(k) > 100)
@@ -51,6 +51,20 @@ int main(void)
 		{
 			counter++;
 		}
+		if (numbers[i] == 0)
+		{
+			checkzero++;
+		}
+	}
+	if (checkzero == 0)
+	{
+		printf("\nAmount of positive elements equals %d", counter);
+		printf("\n\nThere is no zeros.\n\n");
+		for (int i = 0; i < amount; i++)
+		{
+			printf("%d ", numbers[i]);
+		}
+		return 0;
 	}
 	for (int i = amount - 1; i >= 0; i--)
 	{
@@ -60,12 +74,11 @@ int main(void)
 		}
 		total += numbers[i];
 	}
-		
-	//for (int i = 0; i < 100; i++)
-	//{
-	//	printf("%d ", numbers[i]);
-	//}
-	printf("\n\nAmount of positive elements equals %d", counter);
-	printf("\n\nTotal equals %d\n", total);
+	printf("\nAmount of positive elements equals %d", counter);
+	printf("\n\nTotal equals %d\n\n", total);
+	for (int i = 0; i < amount; i++)
+	{
+		printf("%d ", numbers[i]);
+	}
 	return 0;
 }
