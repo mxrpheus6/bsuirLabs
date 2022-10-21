@@ -1,0 +1,22 @@
+﻿  main.c
+C:\BSUIR\laby\laba4\task2_var8\task2_var8\main.c(31,24): warning C4047: 'function': 'char *' differs in levels of indirection from 'char (*)[12]'
+C:\BSUIR\laby\laba4\task2_var8\task2_var8\main.c(31,17): warning C4024: 'compare': different types for formal and actual parameter 1
+C:\BSUIR\laby\laba4\task2_var8\task2_var8\main.c(31,33): warning C4047: 'function': 'char *' differs in levels of indirection from 'char (*)[12]'
+C:\BSUIR\laby\laba4\task2_var8\task2_var8\main.c(31,26): warning C4024: 'compare': different types for formal and actual parameter 2
+C:\BSUIR\laby\laba4\task2_var8\task2_var8\main.c(31,61): warning C4047: 'function': 'char *' differs in levels of indirection from 'char (*)[12]'
+C:\BSUIR\laby\laba4\task2_var8\task2_var8\main.c(31,54): warning C4024: 'compare': different types for formal and actual parameter 1
+C:\BSUIR\laby\laba4\task2_var8\task2_var8\main.c(31,70): warning C4047: 'function': 'char *' differs in levels of indirection from 'char (*)[12]'
+C:\BSUIR\laby\laba4\task2_var8\task2_var8\main.c(31,63): warning C4024: 'compare': different types for formal and actual parameter 2
+C:\BSUIR\laby\laba4\task2_var8\task2_var8\main.c(36,21): warning C4047: 'function': 'char *' differs in levels of indirection from 'char (*)[12]'
+C:\BSUIR\laby\laba4\task2_var8\task2_var8\main.c(36,14): warning C4024: 'compare': different types for formal and actual parameter 1
+C:\BSUIR\laby\laba4\task2_var8\task2_var8\main.c(36,30): warning C4047: 'function': 'char *' differs in levels of indirection from 'char (*)[12]'
+C:\BSUIR\laby\laba4\task2_var8\task2_var8\main.c(36,23): warning C4024: 'compare': different types for formal and actual parameter 2
+C:\BSUIR\laby\laba4\task2_var8\task2_var8\main.c(53,21): warning C4047: 'function': 'char *' differs in levels of indirection from 'char (*)[12]'
+C:\BSUIR\laby\laba4\task2_var8\task2_var8\main.c(53,14): warning C4024: 'compare': different types for formal and actual parameter 1
+C:\BSUIR\laby\laba4\task2_var8\task2_var8\main.c(53,30): warning C4047: 'function': 'char *' differs in levels of indirection from 'char (*)[12]'
+C:\BSUIR\laby\laba4\task2_var8\task2_var8\main.c(53,23): warning C4024: 'compare': different types for formal and actual parameter 2
+C:\BSUIR\laby\laba4\task2_var8\task2_var8\main.c(55,9): warning C4013: 'time' undefined; assuming extern returning int
+C:\BSUIR\laby\laba4\task2_var8\task2_var8\main.c(60,42): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\BSUIR\laby\laba4\task2_var8\task2_var8\main.c(84,35): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\BSUIR\laby\laba4\task2_var8\task2_var8\main.c(11,20): warning C4101: 'strtemp': unreferenced local variable
+  task2_var8.vcxproj -> C:\BSUIR\laby\laba4\task2_var8\x64\Debug\task2_var8.exe
