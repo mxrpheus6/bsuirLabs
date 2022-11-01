@@ -80,7 +80,7 @@ int main(void)
 	{
 		for (int j = 0; j < amountofcols; j++)
 		{
-			printf(" %d ", numbers[i][j]);
+			printf("\t%d", numbers[i][j]);
 		}
 		printf("\n");
 	}

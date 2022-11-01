@@ -80,10 +80,10 @@ int signedrand()
 {
 	if (rand() % 2 == 0)
 	{
-		return rand();
+		return rand() % 100;
 	}
 	else
 	{
-		return -rand();
+		return -rand() % 100;
 	}
 }

@@ -41,7 +41,7 @@ int main(void)
 			for (int j = 0; j < amountofcols; j++)
 			{
 				printf("Input element %d: ", j + 1);
-				while (scanf_s(" %f", &doubletemp) != 1 || getchar() != '\n')
+				while (	scanf_s(" %f", &doubletemp) != 1 || getchar() != '\n')
 				{
 					printf("Invalid input. Enter correct element %d: ", j + 1);
 					rewind(stdin);
