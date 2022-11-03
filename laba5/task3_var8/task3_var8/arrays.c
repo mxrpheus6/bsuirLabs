@@ -22,14 +22,22 @@ void array_show(int** array, int amountofrows, int amountofcols)
 }
 int array_check_negative_col(int** array, int amountofrows, int j)
 {
+	int counter = 0;
 	for (int i = 0; i < amountofrows; i++)
 	{
-		if (*(*(array + i) + j) > -1)
+		if (*(*(array + i) + j) < 0)
 		{
-			return FALSE;
+			counter++;
 		}
 	}
-	return TRUE;
+	if (counter == amountofrows)
+	{
+		return TRUE;
+	}
+	else
+	{
+		return FALSE;
+	}
 }
 void array_delete(int** array, int amountofrows, int* amountofcols, int k)
 {

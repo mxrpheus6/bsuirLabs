@@ -39,15 +39,15 @@ int main(void)
 	}
 	printf("\nArray before changes:\n\n");
 	array_show(numbers, amountofrows, amountofcols);
-	for (int j = 0; j < amountofrows; j++)
+	for (int j = 0; j < amountofcols; j++)
 	{
 		if (array_check_negative_col(numbers, amountofrows, j) == TRUE)
 		{
 			array_delete(numbers, amountofrows, &amountofcols, j);
-		}
-		for (int i = 0; i < amountofrows; i++)
-		{
-			numbers[i] = (int*)realloc(numbers[i], amountofcols * sizeof(int*));
+			for (int i = 0; i < amountofrows; i++)
+			{
+				numbers[i] = (int*)realloc(numbers[i], amountofcols * sizeof(int*));
+			}
 		}
 	}
 	printf("\nArray after changes:\n\n");
