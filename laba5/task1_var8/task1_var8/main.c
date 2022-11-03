@@ -7,6 +7,7 @@ int main(void)
 	int sizeofarray, min, check_of_amount = 0;
 	int* numbers;
 	char choice[MAXCH], check_k[MAXCH] = "k ", check_r[MAXCH] = "r ";
+	printf("LAB 5 TASK 1 by Kazachenko Pavel from GROUP 250504\n\n");
 	printf("Do you want to fill the array from the keyboard or randomly? (k/r): ");
 	fgets(choice, MAXCH, stdin);
 	while (compare(&choice, &check_k) != TRUE && compare(&choice, &check_r) != TRUE)

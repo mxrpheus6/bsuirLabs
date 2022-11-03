@@ -1,18 +1,15 @@
-﻿  arrays.c
-C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\arrays.c(50,7): warning C4013: rand: нет определения; предполагается "extern" с возвратом типа "int"
-  main.c
-C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\main.c(12,24): warning C4047: функция: "char *" отличается по уровням косвенного обращения от "char (*)[12]"
-C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\main.c(12,17): warning C4024: compare: различные типы для формального и фактического параметров 1
-C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\main.c(12,34): warning C4047: функция: "char *" отличается по уровням косвенного обращения от "char (*)[12]"
-C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\main.c(12,26): warning C4024: compare: различные типы для формального и фактического параметров 2
-C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\main.c(12,62): warning C4047: функция: "char *" отличается по уровням косвенного обращения от "char (*)[12]"
-C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\main.c(12,55): warning C4024: compare: различные типы для формального и фактического параметров 1
-C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\main.c(12,72): warning C4047: функция: "char *" отличается по уровням косвенного обращения от "char (*)[12]"
-C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\main.c(12,64): warning C4024: compare: различные типы для формального и фактического параметров 2
-C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\main.c(24,21): warning C4047: функция: "char *" отличается по уровням косвенного обращения от "char (*)[12]"
-C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\main.c(24,14): warning C4024: compare: различные типы для формального и фактического параметров 1
-C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\main.c(24,31): warning C4047: функция: "char *" отличается по уровням косвенного обращения от "char (*)[12]"
-C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\main.c(24,23): warning C4024: compare: различные типы для формального и фактического параметров 2
-C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\main.c(30,9): warning C4013: time: нет определения; предполагается "extern" с возвратом типа "int"
-  Создание кода...
+﻿  main.c
+C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\main.c(13,24): warning C4047: функция: "char *" отличается по уровням косвенного обращения от "char (*)[12]"
+C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\main.c(13,17): warning C4024: compare: различные типы для формального и фактического параметров 1
+C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\main.c(13,34): warning C4047: функция: "char *" отличается по уровням косвенного обращения от "char (*)[12]"
+C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\main.c(13,26): warning C4024: compare: различные типы для формального и фактического параметров 2
+C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\main.c(13,62): warning C4047: функция: "char *" отличается по уровням косвенного обращения от "char (*)[12]"
+C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\main.c(13,55): warning C4024: compare: различные типы для формального и фактического параметров 1
+C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\main.c(13,72): warning C4047: функция: "char *" отличается по уровням косвенного обращения от "char (*)[12]"
+C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\main.c(13,64): warning C4024: compare: различные типы для формального и фактического параметров 2
+C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\main.c(25,21): warning C4047: функция: "char *" отличается по уровням косвенного обращения от "char (*)[12]"
+C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\main.c(25,14): warning C4024: compare: различные типы для формального и фактического параметров 1
+C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\main.c(25,31): warning C4047: функция: "char *" отличается по уровням косвенного обращения от "char (*)[12]"
+C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\main.c(25,23): warning C4024: compare: различные типы для формального и фактического параметров 2
+C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\main.c(31,9): warning C4013: time: нет определения; предполагается "extern" с возвратом типа "int"
   task1_var8.vcxproj -> C:\BSUIR\finished\OAiP\laba5\task1_var8\x64\Debug\task1_var8.exe

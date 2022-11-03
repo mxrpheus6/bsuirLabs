@@ -7,6 +7,7 @@ int main(void)
 {
 	int amountofrows, amountofcols, input, counter;
 	int** numbers;
+	printf("LAB 5 TASK 2 by Kazachenko Pavel from GROUP 250504\n\n");
 	printf("Enter amount of rows: ");
 	while (scanf_s(" %d", &amountofrows) == 0 || getchar() != '\n' || amountofrows < 1)
 	{
@@ -65,5 +66,10 @@ int main(void)
 	}
 	printf("\n\nArray after changes:\n");
 	array_output(numbers, amountofrows, &amountofcols);
+	for (int i = 0; i < amountofrows; i++)
+	{
+		free(numbers[i]);
+	}
+	free(numbers);
 	return 0;
 }
