@@ -1,15 +1,10 @@
-﻿  main.c
-C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\main.c(13,24): warning C4047: функция: "char *" отличается по уровням косвенного обращения от "char (*)[12]"
-C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\main.c(13,17): warning C4024: compare: различные типы для формального и фактического параметров 1
-C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\main.c(13,34): warning C4047: функция: "char *" отличается по уровням косвенного обращения от "char (*)[12]"
-C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\main.c(13,26): warning C4024: compare: различные типы для формального и фактического параметров 2
-C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\main.c(13,62): warning C4047: функция: "char *" отличается по уровням косвенного обращения от "char (*)[12]"
-C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\main.c(13,55): warning C4024: compare: различные типы для формального и фактического параметров 1
-C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\main.c(13,72): warning C4047: функция: "char *" отличается по уровням косвенного обращения от "char (*)[12]"
-C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\main.c(13,64): warning C4024: compare: различные типы для формального и фактического параметров 2
-C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\main.c(25,21): warning C4047: функция: "char *" отличается по уровням косвенного обращения от "char (*)[12]"
-C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\main.c(25,14): warning C4024: compare: различные типы для формального и фактического параметров 1
-C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\main.c(25,31): warning C4047: функция: "char *" отличается по уровням косвенного обращения от "char (*)[12]"
-C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\main.c(25,23): warning C4024: compare: различные типы для формального и фактического параметров 2
-C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\main.c(31,9): warning C4013: time: нет определения; предполагается "extern" с возвратом типа "int"
+﻿  arrays.c
+C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\arrays.c(123,27): warning C4028: формальный параметр 1 отличается от объявления
+C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\arrays.c(131,9): warning C4013: time: нет определения; предполагается "extern" с возвратом типа "int"
+  main.c
+C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\main.c(12,22): warning C4047: функция: "char *" отличается по уровням косвенного обращения от "char (*)[12]"
+C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\main.c(12,15): warning C4024: array_choice: различные типы для формального и фактического параметров 1
+C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\main.c(15,25): warning C4047: функция: "int *" отличается по уровням косвенного обращения от "int **"
+C:\BSUIR\finished\OAiP\laba5\task1_var8\task1_var8\main.c(15,17): warning C4024: choice_compare: различные типы для формального и фактического параметров 1
+  Создание кода...
   task1_var8.vcxproj -> C:\BSUIR\finished\OAiP\laba5\task1_var8\x64\Debug\task1_var8.exe

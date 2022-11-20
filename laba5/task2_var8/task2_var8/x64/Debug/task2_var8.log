@@ -1,2 +1,8 @@
 ﻿  main.c
+C:\BSUIR\finished\OAiP\laba5\task2_var8\task2_var8\main.c(14,23): warning C4047: функция: "int **" отличается по уровням косвенного обращения от "int ***"
+C:\BSUIR\finished\OAiP\laba5\task2_var8\task2_var8\main.c(14,15): warning C4024: array_output: различные типы для формального и фактического параметров 1
+C:\BSUIR\finished\OAiP\laba5\task2_var8\task2_var8\main.c(17,23): warning C4047: функция: "int **" отличается по уровням косвенного обращения от "int ***"
+C:\BSUIR\finished\OAiP\laba5\task2_var8\task2_var8\main.c(17,15): warning C4024: array_output: различные типы для формального и фактического параметров 1
+C:\BSUIR\finished\OAiP\laba5\task2_var8\task2_var8\main.c(7,41): warning C4101: counter: неиспользованная локальная переменная
+C:\BSUIR\finished\OAiP\laba5\task2_var8\task2_var8\main.c(7,34): warning C4101: input: неиспользованная локальная переменная
   task2_var8.vcxproj -> C:\BSUIR\finished\OAiP\laba5\task2_var8\x64\Debug\task2_var8.exe

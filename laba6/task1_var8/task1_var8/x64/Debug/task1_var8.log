@@ -1,0 +1,6 @@
+﻿  arrays.c
+C:\BSUIR\finished\OAiP\laba6\task1_var8\task1_var8\arrays.c(81,9): warning C4244: функция: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\BSUIR\finished\OAiP\laba6\task1_var8\task1_var8\arrays.c(86,1): warning C4029: объявленный список формальных параметров отличается от объявления
+  func.c
+  Создание кода...
+  task1_var8.vcxproj -> C:\BSUIR\finished\OAiP\laba6\task1_var8\x64\Debug\task1_var8.exe

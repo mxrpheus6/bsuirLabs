@@ -1,0 +1,5 @@
+﻿  arrays.c
+C:\BSUIR\finished\OAiP\laba6\task2_var8\task2_var8\arrays.c(25,83): warning C4047: <: "int *" отличается по уровням косвенного обращения от "int"
+C:\BSUIR\finished\OAiP\laba6\task2_var8\task2_var8\arrays.c(30,83): warning C4047: <: "int *" отличается по уровням косвенного обращения от "int"
+C:\BSUIR\finished\OAiP\laba6\task2_var8\task2_var8\arrays.c(48,1): warning C4029: объявленный список формальных параметров отличается от объявления
+  task2_var8.vcxproj -> C:\BSUIR\finished\OAiP\laba6\task2_var8\x64\Debug\task2_var8.exe
