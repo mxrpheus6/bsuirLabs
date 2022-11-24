@@ -1,6 +1,3 @@
-#define TRUE 1
-#define FALSE 0
-
 int length(char* string);
 int compare_strings(char* string1, char* string2);
 void array_input_keyboard(int* array1, int* array2, int size);

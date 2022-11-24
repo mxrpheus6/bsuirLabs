@@ -1,20 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 #include "arrays.h"
 #include "sort.h"
+
 #define MAXCH 12
 
 int main(void)
 {
-	int amount_of_rows, amount_of_cols;
+	int amountOfRows, amountOfCols;
 	int** numbers;
-	double time;
-
-	char choice[MAXCH], check_k[MAXCH] = "k ", check_r[MAXCH] = "r ";
+	char choice[MAXCH], checkingK[MAXCH] = "k ", checkingR[MAXCH] = "r ";
 	printf("LAB 6 TASK 2 by Kazachenko Pavel from GROUP 250504\n\n");
-	array_size(&amount_of_rows, &amount_of_cols);
+	arraySize(&amountOfRows, &amountOfCols);
+	arrayInputKeyboard(&numbers, amountOfRows, amountOfCols);
 	printf("\nArray before changes:\n\n");
-	
+	arrayOutput(&numbers, amountOfRows, amountOfCols);
+	printf("\nArray after changes:\n\n");
+	shellSort(&numbers, amountOfRows, amountOfCols);
+	arrayOutput(&numbers, amountOfRows, amountOfCols);
+	arrayFree(&numbers, amountOfRows);
 	return 0;
 }

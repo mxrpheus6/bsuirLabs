@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include "arrays.h"
+
 #define TRUE 1
 #define FALSE 0
 
@@ -84,7 +85,7 @@ void compare_choice(int** array1, int** array2, char* choice, char* check_k, int
 }
 void array_worst(int** array, int sizeofworst)
 {
-	*array = (int*)malloc(sizeofworst * sizeof(int));
+	*array = (int*)calloc(sizeofworst, sizeof(int));
 	int value = -1;
 	for (int i = 0; i < sizeofworst; i++)
 	{

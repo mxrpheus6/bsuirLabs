@@ -1,6 +1,14 @@
-﻿  arrays.c
-C:\BSUIR\finished\OAiP\laba6\task1_var8\task1_var8\arrays.c(81,9): warning C4244: функция: преобразование "time_t" в "unsigned int", возможна потеря данных
-C:\BSUIR\finished\OAiP\laba6\task1_var8\task1_var8\arrays.c(86,1): warning C4029: объявленный список формальных параметров отличается от объявления
-  func.c
-  Создание кода...
+﻿  main.c
+C:\BSUIR\finished\OAiP\laba6\task1_var8\task1_var8\main.c(20,22): warning C4047: функция: "char *" отличается по уровням косвенного обращения от "char (*)[12]"
+C:\BSUIR\finished\OAiP\laba6\task1_var8\task1_var8\main.c(20,15): warning C4024: array_choice: различные типы для формального и фактического параметров 1
+C:\BSUIR\finished\OAiP\laba6\task1_var8\task1_var8\main.c(22,31): warning C4020: array_worst: слишком много фактических параметров
+C:\BSUIR\finished\OAiP\laba6\task1_var8\task1_var8\main.c(23,31): warning C4020: array_worst: слишком много фактических параметров
+C:\BSUIR\finished\OAiP\laba6\task1_var8\task1_var8\main.c(28,37): warning C4020: bubble_sort: слишком много фактических параметров
+C:\BSUIR\finished\OAiP\laba6\task1_var8\task1_var8\main.c(34,22): warning C4047: функция: "int *" отличается по уровням косвенного обращения от "int **"
+C:\BSUIR\finished\OAiP\laba6\task1_var8\task1_var8\main.c(34,13): warning C4024: shell_sort: различные типы для формального и фактического параметров 1
+C:\BSUIR\finished\OAiP\laba6\task1_var8\task1_var8\main.c(34,37): warning C4020: shell_sort: слишком много фактических параметров
+C:\BSUIR\finished\OAiP\laba6\task1_var8\task1_var8\main.c(40,43): warning C4020: bubble_sort: слишком много фактических параметров
+C:\BSUIR\finished\OAiP\laba6\task1_var8\task1_var8\main.c(46,28): warning C4047: функция: "int *" отличается по уровням косвенного обращения от "int **"
+C:\BSUIR\finished\OAiP\laba6\task1_var8\task1_var8\main.c(46,13): warning C4024: shell_sort: различные типы для формального и фактического параметров 1
+C:\BSUIR\finished\OAiP\laba6\task1_var8\task1_var8\main.c(46,43): warning C4020: shell_sort: слишком много фактических параметров
   task1_var8.vcxproj -> C:\BSUIR\finished\OAiP\laba6\task1_var8\x64\Debug\task1_var8.exe

@@ -1,1 +1,1 @@
-void shell_sort(int* array, int sizeofarray);
+shellSort(int*** array, int amountOfRows, int amountOfCols);
