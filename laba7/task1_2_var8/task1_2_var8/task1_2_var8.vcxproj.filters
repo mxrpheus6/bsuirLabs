@@ -18,12 +18,18 @@
     <ClCompile Include="main.c">
       <Filter>Файлы ресурсов</Filter>
     </ClCompile>
-    <ClCompile Include="taskMenu.c">
+    <ClCompile Include="tasks.c">
+      <Filter>Файлы ресурсов</Filter>
+    </ClCompile>
+    <ClCompile Include="strings.c">
       <Filter>Файлы ресурсов</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="taskMenu.h">
+    <ClInclude Include="tasks.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="strings.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

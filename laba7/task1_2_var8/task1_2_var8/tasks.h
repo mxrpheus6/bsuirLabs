@@ -1,0 +1,1 @@
+void task1();
