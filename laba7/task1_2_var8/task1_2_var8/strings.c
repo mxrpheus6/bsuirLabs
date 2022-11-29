@@ -2,17 +2,7 @@
 #include <stdlib.h>
 #include "strings.h"
 
-void getString(char** string) {
-
-	int chr, i = 0;
-	while ((chr = getchar()) != EOF && chr != '\n') {
-		(*string)[i++] = chr;
-		(*string) = (char*)realloc((*string), (i + 1) * sizeof(char));
-	}
-	(*string)[i] = '\0';
-}
-
-int stringLength(char* string) {
+int stringLength(const char* string) {
 	int i = 0;
 	while (string[i] != '\0') {
 		i++;
@@ -20,10 +10,21 @@ int stringLength(char* string) {
 	return i;
 }
 
+void getString(char** string) {
+
+	int chr;
+	int i = 0;
+	while ((chr = getchar()) != EOF && chr != '\n') {
+		(*string)[i++] = chr;
+		(*string) = (char*)realloc((*string), (i + 1) * sizeof(char));
+	}
+	(*string)[i] = '\0';
+}
+
 void stringRemoveTrailingSpaces(char** string) {
 	int strLen = stringLength((*string));
-	int j, k;
-	int flag = 0;
+	int j;
+	int k;
 	for (int i = 0; i < strLen - 1; i++)
 	{
 		if ((*string)[i] == ' ' && (*string)[i + 1] == ' ') {
@@ -43,8 +44,7 @@ void stringRemoveTrailingSpaces(char** string) {
 		strLen--;
 	}
 	if ((*string)[strLen - 1] == ' ') {
-		int l;
-		for (l = strLen - 1; l > 0; l--) {
+		for (int l = strLen - 1; l > 0; l--) {
 			if ((*string)[l - 1] != ' ') {
 				(*string)[l] = '\0';
 				break;
@@ -60,11 +60,10 @@ void stringRemoveTrailingSpaces(char** string) {
 
 void stringRemoveWord(char** string, int k) {
 	int strLen = stringLength((*string)) + 1;
-	int i;
 	int wordLen = 0;
 	(*string)[strLen] = '\0';
 	(*string)[strLen - 1] = ' ';
-	for (i = 0; i < strLen; i++) {
+	for (int i = 0; i < strLen; i++) {
 		if ((*string)[i] == ' ') {
 			if (wordLen < k) {
 				i -= wordLen;
@@ -80,5 +79,32 @@ void stringRemoveWord(char** string, int k) {
 	}
 	if ((*string)[strLen - 1] = ' ') {
 		(*string)[strLen - 1] = '\0';
+	}
+}
+
+void findDeleteSubstring(char** string1, char** string2) {
+	int strLen1 = stringLength(*string1);
+	int strLen2 = stringLength(*string2);
+	int i, counter = 0;
+	int a = strLen1 - 1;
+	for (i = 0; i < strLen1; i++) {
+		if ((*string1)[i] == (*string2)[0]) {
+			int k = 0, l;
+			int border = i + strLen2;
+			for (int j = i; j < border; j++) {
+				if ((*string1)[j] != (*string2)[k]) {
+					break;
+				}
+				k++;
+			}
+			for (l = i; l < strLen1; l++) {
+				(*string1)[l] = (*string1)[l + 1];
+				counter++;
+			}
+			for (int j = strLen1 - 1; i > strLen1 - 1 - counter; i--) {
+				(*string1)[i] = '\0';
+			}
+			break;
+		}
 	}
 }
