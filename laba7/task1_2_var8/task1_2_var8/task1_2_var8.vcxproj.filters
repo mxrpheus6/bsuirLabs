@@ -24,12 +24,18 @@
     <ClCompile Include="strings.c">
       <Filter>Файлы ресурсов</Filter>
     </ClCompile>
+    <ClCompile Include="input.c">
+      <Filter>Файлы ресурсов</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="tasks.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="strings.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="intput.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

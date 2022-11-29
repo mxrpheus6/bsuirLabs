@@ -85,25 +85,40 @@ void stringRemoveWord(char** string, int k) {
 void findDeleteSubstring(char** string1, char** string2) {
 	int strLen1 = stringLength(*string1);
 	int strLen2 = stringLength(*string2);
-	int i, counter = 0;
-	int a = strLen1 - 1;
+	int temp = strLen1 - strLen2;
+	int i;
+	int m;
+	int flag;
 	for (i = 0; i < strLen1; i++) {
+		flag = 0;
 		if ((*string1)[i] == (*string2)[0]) {
 			int k = 0, l;
 			int border = i + strLen2;
 			for (int j = i; j < border; j++) {
 				if ((*string1)[j] != (*string2)[k]) {
+					flag = 1;
 					break;
 				}
 				k++;
 			}
-			for (l = i; l < strLen1; l++) {
-				(*string1)[l] = (*string1)[l + 1];
-				counter++;
+			if (flag == 0) {
+				for (l = i; l < l + strLen2; l++)
+				{
+					for (m = l; m < strLen1 - 1; m++)
+					{
+						(*string1)[m] = (*string1)[m + 1];
+					}
+					(*string1)[m] = '\0';
+					l--;
+					strLen1--;
+					if (strLen1 == temp) {
+						break;
+					}
+				}
 			}
-			for (int j = strLen1 - 1; i > strLen1 - 1 - counter; i--) {
-				(*string1)[i] = '\0';
-			}
+			
+		}
+		if (strLen1 == temp) {
 			break;
 		}
 	}

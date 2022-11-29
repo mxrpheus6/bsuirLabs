@@ -27,5 +27,4 @@ void task2() {
 	getString(&S0);
 	findDeleteSubstring(&S, &S0);
 	printf("%s", S);
-	printf("%d", 1);
 }
