@@ -1,0 +1,7 @@
+﻿  main.c
+C:\BSUIR\finished\OAiP\laba8\task3_var8\task3_var8\main.c(4,9): warning C4473: "printf": передано недостаточно аргументов для строки формата
+C:\BSUIR\finished\OAiP\laba8\task3_var8\task3_var8\main.c(4,9): message : заполнители и их параметры ожидают переменное число аргументов в количестве 1, но было предоставлено 0
+C:\BSUIR\finished\OAiP\laba8\task3_var8\task3_var8\main.c(4,9): message : отсутствующий вариативный аргумент "1" требуется для строки форматирования "%d"
+C:\BSUIR\finished\OAiP\laba8\task3_var8\task3_var8\main.c(7,15): warning C4047: функция: "const char *" отличается по уровням косвенного обращения от "char **"
+C:\BSUIR\finished\OAiP\laba8\task3_var8\task3_var8\main.c(7,12): warning C4024: puts: различные типы для формального и фактического параметров 1
+  task3_var8.vcxproj -> C:\BSUIR\finished\OAiP\laba8\task3_var8\x64\Debug\task3_var8.exe

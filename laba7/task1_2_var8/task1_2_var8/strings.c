@@ -86,13 +86,12 @@ void findDeleteSubstring(char** string1, char** string2) {
 	int strLen1 = stringLength(*string1);
 	int strLen2 = stringLength(*string2);
 	int temp = strLen1 - strLen2;
-	int i;
 	int m;
 	int flag;
-	for (i = 0; i < strLen1; i++) {
+	for (int i = 0; i < strLen1; i++) {
 		flag = 0;
 		if ((*string1)[i] == (*string2)[0]) {
-			int k = 0, l;
+			int k = 0;
 			int border = i + strLen2;
 			for (int j = i; j < border; j++) {
 				if ((*string1)[j] != (*string2)[k]) {
@@ -102,7 +101,7 @@ void findDeleteSubstring(char** string1, char** string2) {
 				k++;
 			}
 			if (flag == 0) {
-				for (l = i; l < l + strLen2; l++)
+				for (int l = i; l < l + strLen2; l++)
 				{
 					for (m = l; m < strLen1 - 1; m++)
 					{
