@@ -30,6 +30,10 @@ void task2() {
 	getString(&S0);
 	findDeleteSubstring(&S, &S0);
 	printf("%s", S);
-	//free(S);
-	//free(S0);
+	if (stringLength(S) > 1) {
+		free(S);
+	}
+	if (stringLength(S0) > 1) {
+		free(S0);
+	}
 }
