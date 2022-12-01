@@ -16,6 +16,9 @@ void task1() {
 	stringRemoveTrailingSpaces(&string);
 	stringRemoveWord(&string, k);
 	printf("%s", string);
+	if (stringLength(string) > 1) {
+		free(string);
+	}
 }
 
 void task2() {
@@ -27,4 +30,6 @@ void task2() {
 	getString(&S0);
 	findDeleteSubstring(&S, &S0);
 	printf("%s", S);
+	//free(S);
+	//free(S0);
 }
