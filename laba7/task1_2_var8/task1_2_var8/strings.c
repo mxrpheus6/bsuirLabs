@@ -34,9 +34,6 @@ void stringRemoveTrailingSpaces(char** string) {
 			(*string)[j] = '\0';
 			strLen--;
 			i--;
-			if (strLen > 0) {
-				(*string) = (char*)realloc((*string), strLen + 1);
-			}
 		}
 		if ((*string)[0] == ' ') {
 			for (k = 0; k < strLen - 1; k++) {
@@ -44,9 +41,6 @@ void stringRemoveTrailingSpaces(char** string) {
 			}
 			(*string)[k] = '\0';
 			strLen--;
-			if (strLen > 0) {
-				(*string) = (char*)realloc((*string), strLen + 1);
-			}
 			if ((*string)[strLen - 1] == ' ') {
 				for (int l = strLen - 1; l > 0; l--) {
 					if ((*string)[l - 1] != ' ') {
@@ -59,12 +53,12 @@ void stringRemoveTrailingSpaces(char** string) {
 						(*string)[l] = '\0';
 						strLen--;
 					}
-					if (strLen > 0) {
-						(*string) = (char*)realloc((*string), strLen + 1);
-					}
 				}
 			}
 		}
+	}
+	if (strLen > 0) {
+		(*string) = (char*)realloc((*string), strLen + 1);
 	}
 }
 
@@ -82,9 +76,6 @@ void stringRemoveWord(char** string, int k) {
 				}
 				i--;
 				strLen = strLen - wordLen - 1;
-				if (strLen > 0) {
-					(*string) = (char*)realloc((*string), strLen + 1);
-				}
 			}
 			wordLen = -1;
 		}
@@ -93,13 +84,10 @@ void stringRemoveWord(char** string, int k) {
 	if ((*string)[strLen - 1] = ' ') {
 		(*string)[strLen - 1] = '\0';
 		strLen--;
-		if (strLen > 0) {
-			(*string) = (char*)realloc((*string), strLen + 1);
-		}
 	}
-	/*if (strLen > 0) {
+	if (strLen > 0) {
 		(*string) = (char*)realloc((*string), strLen + 1);
-	}*/
+	}
 }
 
 void findDeleteSubstring(char** string1, char** string2) {
