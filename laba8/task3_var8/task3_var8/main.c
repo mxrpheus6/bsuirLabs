@@ -1,10 +1,10 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-int main(int argc, char **argv[]) {
-	printf("%d\n");
-
-	for (int i = 0; i < argc; i++) {
-		puts(argv[i]);
+int main(int argc, char **argv) {
+	int i;
+	for (i = 0; i < argc; i++) {
+		printf("%s ", argv[i]);
 	}
 	return 0;
 }
