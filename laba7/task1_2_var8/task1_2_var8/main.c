@@ -6,7 +6,7 @@
 
 int main(void) {
 	int num;
-	void (*function[2])(void) = { task1, task2 };
+	void (*function[2])(void) = { &task1, &task2 };
 	taskNum(&num);
 	function[num - 1]();
 	return 0;
