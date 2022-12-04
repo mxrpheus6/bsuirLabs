@@ -2,7 +2,7 @@ name: SonarCloud
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:
@@ -19,9 +19,9 @@ jobs:
         uses: microsoft/setup-msbuild@v1.1
       - name: Install sonar-scanner and build-wrapper
         uses: SonarSource/sonarcloud-github-c-cpp@v1
-      - name: Run build-wrapper    
+      - name: Run build-wrapper
         run: |
-          build-wrapper-win-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} msbuild laba6/task1_var8/task1_var8/task1_var8.vcxproj /t:rebuild /nodeReuse:false          
+          build-wrapper-win-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} msbuild laba6/task1_var8/task1_var8/task1_var8.vcxproj /t:rebuild /nodeReuse:false
       - name: Run sonar-scanner
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
