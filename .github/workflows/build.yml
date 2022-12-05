@@ -19,7 +19,7 @@ jobs:
       - name: Install sonar-scanner and build-wrapper
         uses: SonarSource/sonarcloud-github-c-cpp@v1
         with:
-          projectBaseDir: laba1/task1_var8/task1_var8/
+          projectBaseDir: laba1/task1_var8/task1_var8/sonar-project.properties
       - name: Run build-wrapper    
         run: |
           build-wrapper-win-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} msbuild laba1/task1_var8/task1_var8/task1_var8.vcxproj /t:rebuild /nodeReuse:false          
