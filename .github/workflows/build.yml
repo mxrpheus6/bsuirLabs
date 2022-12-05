@@ -3,14 +3,8 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'laba1/**'
-      - '.github/workflows/**'
   pull_request:
     types: [opened, synchronize, reopened]
-    paths:
-      - 'laba1/**'
-      - '.github/workflows/**'
 jobs:
   laba1_task1:
     runs-on: windows-latest
