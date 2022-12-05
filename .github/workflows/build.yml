@@ -3,8 +3,16 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'laba1/**'
+      - 'laba2/**'
+      - '.github/workflows/**'
   pull_request:
     types: [opened, synchronize, reopened]
+    paths:
+      - 'laba1/**'
+      - 'laba2/**'
+      - '.github/workflows/**'
 jobs:
   laba1_task1:
     runs-on: windows-latest
@@ -14,11 +22,12 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
-          projectBaseDir: laba1_task1
       - name: Set up msbuild
         uses: microsoft/setup-msbuild@v1.1
       - name: Install sonar-scanner and build-wrapper
         uses: SonarSource/sonarcloud-github-c-cpp@v1
+        with:
+          projectBaseDir: laba1_task1
       - name: Run build-wrapper    
         run: |
           build-wrapper-win-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} msbuild laba1/task1_var8/task1_var8/task1_var8.vcxproj /t:rebuild /nodeReuse:false          
@@ -42,10 +51,12 @@ jobs:
         uses: microsoft/setup-msbuild@v1.1
       - name: Install sonar-scanner and build-wrapper
         uses: SonarSource/sonarcloud-github-c-cpp@v1
+        with:
+          projectBaseDir: laba1_task2
       - name: Run build-wrapper    
         run: |
           build-wrapper-win-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} msbuild laba1/task2_var8/task2_var8/task2_var8.vcxproj /t:rebuild /nodeReuse:false          
-      - name: Run sonar-scanner
+      - name: Run sonar-scanner        
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
