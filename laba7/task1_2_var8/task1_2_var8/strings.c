@@ -12,12 +12,15 @@ int stringLength(const char* string) {
 
 void getString(char** string) {
 
-	int chr;
+	char chr;
 	int i = 0;
 	while ((chr = getchar()) != EOF && chr != '\n') {
 		(*string)[i++] = chr;
-		(*string) = (char*)realloc((*string), (i + 1) * sizeof(char));
+		if (i == 255) {
+			(*string) = (char*)realloc((*string), (i * 2) * sizeof(char));
+		}
 	}
+	(*string) = (char*)realloc((*string), (i + 1) * sizeof(char));
 	(*string)[i] = '\0';
 }
 
