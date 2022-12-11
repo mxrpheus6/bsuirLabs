@@ -1,3 +1,2 @@
 ﻿  strings.c
-C:\BSUIR\finished\OAiP\laba8\task3_var8\task3_var8\strings.c(30,48): warning C4013: 'symCounter' undefined; assuming extern returning int
   task3_var8.vcxproj -> C:\BSUIR\finished\OAiP\laba8\task3_var8\x64\Debug\task3_var8.exe
