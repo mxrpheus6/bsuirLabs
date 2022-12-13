@@ -37,6 +37,7 @@ void stringsOutput1(char*** strings, int argc) {
 }
 
 void stringsOutput2(char*** strings, int*** indexes, int argc) {
+	printf("\n\n");
 	printf("Strings after sorting:\n");
 	for (int i = 0; i < argc - 1; i++) {
 		int index = (*indexes)[i][0];
