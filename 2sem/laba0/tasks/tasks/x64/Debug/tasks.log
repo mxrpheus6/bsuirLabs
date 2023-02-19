@@ -1,0 +1,9 @@
+﻿  tasks.c
+C:\BSUIR\finished\OAiP\2sem\laba1\tasks\tasks\tasks.c(15,8): warning C4101: 'out': unreferenced local variable
+C:\BSUIR\finished\OAiP\2sem\laba1\tasks\tasks\tasks.c(13,7): warning C4101: 'ch': unreferenced local variable
+C:\BSUIR\finished\OAiP\2sem\laba1\tasks\tasks\tasks.c(51,7): warning C4101: 'ch': unreferenced local variable
+C:\BSUIR\finished\OAiP\2sem\laba1\tasks\tasks\tasks.c(111,8): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\BSUIR\finished\OAiP\2sem\laba1\tasks\tasks\tasks.c(44): warning C4715: 'task1': not all control paths return a value
+C:\BSUIR\finished\OAiP\2sem\laba1\tasks\tasks\tasks.c(90): warning C4715: 'task2': not all control paths return a value
+C:\BSUIR\finished\OAiP\2sem\laba1\tasks\tasks\tasks.c(119): warning C4715: 'task3': not all control paths return a value
+  tasks.vcxproj -> C:\BSUIR\finished\OAiP\2sem\laba1\tasks\x64\Debug\tasks.exe

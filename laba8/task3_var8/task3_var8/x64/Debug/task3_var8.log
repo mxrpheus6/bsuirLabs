@@ -1,6 +1,0 @@
-﻿  main.c
-C:\BSUIR\finished\OAiP\laba8\task3_var8\task3_var8\main.c(9,23): warning C4047: 'function': 'char **' differs in levels of indirection from 'char ***'
-C:\BSUIR\finished\OAiP\laba8\task3_var8\task3_var8\main.c(9,15): warning C4024: 'stringsInput': different types for formal and actual parameter 1
-C:\BSUIR\finished\OAiP\laba8\task3_var8\task3_var8\main.c(12,20): warning C4047: 'function': 'int **' differs in levels of indirection from 'int ***'
-C:\BSUIR\finished\OAiP\laba8\task3_var8\task3_var8\main.c(12,12): warning C4024: 'mergeSort': different types for formal and actual parameter 1
-  task3_var8.vcxproj -> C:\BSUIR\finished\OAiP\laba8\task3_var8\x64\Debug\task3_var8.exe
