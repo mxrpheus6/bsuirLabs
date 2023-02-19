@@ -1,88 +1,30 @@
 name: Build
 on:
   push:
-    paths:
-      - 'laba1/task1_var8/task1_var8/**'
-      - 'laba1/task2_var8/task2_var8/**'
-      - 'laba8/task3_var8/task3_var8/**'
-      - '.github/workflows/**'
     branches:
       - main
   pull_request:
     types: [opened, synchronize, reopened]
-    paths:
-      - 'laba1/task1_var8/task1_var8/**'
-      - 'laba1/task2_var8/task2_var8/**'
-      - '.github/workflows/**'
 jobs:
-  laba1_task1:
+  build:
+    name: Build
     runs-on: windows-latest
     env:
-      BUILD_WRAPPER_OUT_DIR: build_wrapper_output_directory # Directory where build-wrapper output will be placed
+      BUILD_WRAPPER_OUT_DIR: build_wrapper_output_directory OAiP
     steps:
       - uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+          fetch-depth: 0 # Shallow clones should be disabled for a better relevancy of analysis
       - name: Set up msbuild
         uses: microsoft/setup-msbuild@v1.1
       - name: Install sonar-scanner and build-wrapper
         uses: SonarSource/sonarcloud-github-c-cpp@v1
-        with:
-          projectBaseDir: laba1/task1_var8/task1_var8
-      - name: Run build-wrapper    
+      - name: Run build-wrapper
         run: |
-          build-wrapper-win-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} msbuild laba1/task1_var8/task1_var8/task1_var8.vcxproj /t:rebuild /nodeReuse:false          
+          build-wrapper-win-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} msbuild 2sem/laba1/laba/laba/ /t:rebuild /nodeReuse:false
       - name: Run sonar-scanner
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONARCLOUD_TOKEN }} SONAR_TOKEN
         run: |
-          sonar-scanner --define sonar.cfamily.build-wrapper-output="${{ env.BUILD_WRAPPER_OUT_DIR }}" 
-          
-  laba1_task2:
-    runs-on: windows-latest
-    env:
-      BUILD_WRAPPER_OUT_DIR: build_wrapper_output_directory # Directory where build-wrapper output will be placed
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
-      - name: Set up msbuild
-        uses: microsoft/setup-msbuild@v1.1
-      - name: Install sonar-scanner and build-wrapper
-        uses: SonarSource/sonarcloud-github-c-cpp@v1
-        with:
-          projectBaseDir: laba1/task2_var8/task2_var8
-      - name: Run build-wrapper    
-        run: |
-          build-wrapper-win-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} msbuild laba1/task2_var8/task2_var8/task2_var8.vcxproj /t:rebuild /nodeReuse:false          
-      - name: Run sonar-scanner        
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: |
-          sonar-scanner --define sonar.cfamily.build-wrapper-output="${{ env.BUILD_WRAPPER_OUT_DIR }}"  
-          
-  laba8:
-    runs-on: windows-latest
-    env:
-      BUILD_WRAPPER_OUT_DIR: build_wrapper_output_directory # Directory where build-wrapper output will be placed
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
-      - name: Set up msbuild
-        uses: microsoft/setup-msbuild@v1.1
-      - name: Install sonar-scanner and build-wrapper
-        uses: SonarSource/sonarcloud-github-c-cpp@v1
-        with:
-          projectBaseDir: 'laba8'
-      - name: Run build-wrapper    
-        run: |
-          build-wrapper-win-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} msbuild laba8/task3_var8/task3_var8/task3_var8.vcxproj /t:rebuild /nodeReuse:false          
-      - name: Run sonar-scanner        
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: |
-          sonar-scanner --define sonar.cfamily.build-wrapper-output="${{ env.BUILD_WRAPPER_OUT_DIR }}"  
+          sonar-scanner --define sonar.cfamily.build-wrapper-output="${{ env.BUILD_WRAPPER_OUT_DIR }}"
