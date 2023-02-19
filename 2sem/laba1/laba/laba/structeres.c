@@ -13,24 +13,34 @@ void initStruct(Smartphone* pointer) {
 	fgets(pointer->name, 255, stdin);
 	charMemoryRelocate(&pointer->name);
 	printf("Введите диагональ экрана: ");
-	scanf_s(" %f", &pointer->screenSize);
+	while ((scanf_s(" %f", &pointer->screenSize)) != 1 || getchar() != '\n' || pointer->screenSize <= 0) {
+		printf("Ошибка ввода. Введите корректную диагональ: ");
+		rewind(stdin);
+	}
 	printf("Введите оперативную память (GB): ");
-	scanf_s(" %d", &userInput);
+	while ((scanf_s(" %d", &userInput)) != 1 || getchar() != '\n' || (userInput != 2 && userInput != 4 && userInput != 6 && userInput != 8)) {
+		printf("Ошибка ввода. Введите корректную память: ");
+		rewind(stdin);
+	}
 	capacity = (RamTypes)userInput;
+	pointer->ram = capacity;
 	printf("Введите постоянную память (GB): ");
-	scanf_s(" %d", &pointer->memory);
+	while ((scanf_s(" %d", &pointer->memory)) != 1 || getchar() != '\n' || pointer->memory <= 0) {
+		printf("Ошибка ввода. Введите корректную память: ");
+		rewind(stdin);
+	}
 	rewind(stdin);
-	printf("Введите версию ОС: ");
-	charMemoryAllocate(&pointer->osVersion);
-	fflush(stdin);
-	fgets(pointer->osVersion, 255, stdin);
-	charMemoryRelocate(&pointer->osVersion);
 	printf("Введите разрешение камеры (mp): ");
-	scanf_s(" %d", &pointer->cameraResolution);
-	printf("Введите количество SIM карт: ");
-	scanf_s(" %d", &pointer->simCardAmount);
+	while ((scanf_s(" %d", &pointer->cameraResolution)) != 1 || getchar() != '\n' || pointer->cameraResolution <= 0) {
+		printf("Ошибка ввода. Введите корректное разрешение: ");
+		rewind(stdin);
+	}
 	printf("Введите емкость батареи (mAh): ");
-	scanf_s(" %d", &pointer->battery);
+	while ((scanf_s(" %d", &pointer->battery)) != 1 || getchar() != '\n' || pointer->battery <= 0) {
+		printf("Ошибка ввода. Введите корректную емкость батареи: ");
+		rewind(stdin);
+	}
+	rewind(stdin);
 }
 
 void createStructArr(Smartphone** pointer, int* count) {
@@ -43,7 +53,7 @@ void createStructArr(Smartphone** pointer, int* count) {
 	for (int i = 0; i < *count; i++) {
 		printf("Инициализируем %d структуру в массиве\n\n", i + 1);
 		initStruct(*pointer + i);
-		printf("\nSuccess!");
+		printf("\nУспех!");
 		Sleep(3000);
 		system("cls");
 		rewind(stdin);
@@ -51,7 +61,18 @@ void createStructArr(Smartphone** pointer, int* count) {
 }
 
 void printStructArray(Smartphone* array, int count) {
-	for (int i = 0; i < count; i++) {
-		printf("%s\n", array[i].name);
+	for (int i = 0; i < count; ) {
+		printf("Структура номер %d\n\n", i + 1);
+		printf("Название: %s\n", array[i].name);
+		printf("Диагональ экрана: %.1f\n", array[i].screenSize);
+		printf("Оперативная память (Gb): %d\n", array[i].ram);
+		printf("Постоянная память (Gb): %d\n", array[i].memory);
+		printf("Разрешение камеры: %d\n", array[i].cameraResolution);
+		printf("Емкость батареи: %d\n", array[i].battery);
+		printf("\nНажмите клавишу 'Enter' чтобы перейти к следующей структуре.");
+		if (getchar() != 0) {
+			system("cls");
+			i++;
+		}
 	}
 }

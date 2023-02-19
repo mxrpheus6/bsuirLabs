@@ -13,9 +13,7 @@ typedef struct {
 	float screenSize;
 	RamTypes ram;
 	int memory;
-	char* osVersion;
 	int cameraResolution;
-	int simCardAmount;
 	int battery;
 } Smartphone;
 

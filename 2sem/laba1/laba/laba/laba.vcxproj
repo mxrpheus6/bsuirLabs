@@ -130,14 +130,18 @@
     <ClCompile Include="main.c" />
     <ClCompile Include="memory.c" />
     <ClCompile Include="menu.c" />
+    <ClCompile Include="sort.c" />
     <ClCompile Include="strings.c" />
     <ClCompile Include="structeres.c" />
+    <ClCompile Include="tasks.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="memory.h" />
     <ClInclude Include="menu.h" />
+    <ClInclude Include="sort.h" />
     <ClInclude Include="strings.h" />
     <ClInclude Include="structeres.h" />
+    <ClInclude Include="tasks.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

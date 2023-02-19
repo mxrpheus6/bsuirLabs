@@ -1,3 +1,3 @@
-﻿  memory.c
-C:\BSUIR\finished\OAiP\2sem\laba1\laba\laba\memory.c(7,32): warning C4028: formal parameter 1 different from declaration
+﻿  menu.c
+C:\BSUIR\finished\OAiP\2sem\laba1\laba\laba\menu.c(81,55): warning C4027: function declared without formal parameter list
   laba.vcxproj -> C:\BSUIR\finished\OAiP\2sem\laba1\laba\x64\Debug\laba.exe
