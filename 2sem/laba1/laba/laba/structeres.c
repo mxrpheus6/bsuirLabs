@@ -8,6 +8,7 @@
 void initStruct(Smartphone* pointer) {
 	int userInput;
 	RamTypes capacity;
+	int ram;
 	printf("¬ведите название: ");
 	charMemoryAllocate(&pointer->name);
 	fgets(pointer->name, 255, stdin);
@@ -17,6 +18,7 @@ void initStruct(Smartphone* pointer) {
 	printf("¬ведите оперативную пам€ть (GB): ");
 	scanf_s(" %d", &userInput);
 	capacity = (RamTypes)userInput;
+	pointer->ram = capacity;
 	printf("¬ведите посто€нную пам€ть (GB): ");
 	scanf_s(" %d", &pointer->memory);
 	rewind(stdin);
