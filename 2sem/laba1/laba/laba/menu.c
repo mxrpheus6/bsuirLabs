@@ -4,7 +4,7 @@
 
 #include "menu.h"
 #include "structeres.h"
-#include "tasks.h"
+
 #include "sort.h"
 
 void menuInformation() {
@@ -20,19 +20,19 @@ void menuInformation() {
 
 void menu1(Smartphone** pointer, int* sizeOfArray) {
 	printf("Создадим массив структур и инициализируем его!");
-	//Sleep(5000);
+	Sleep(5000);
 	system("cls");
 	createStructArr(pointer, sizeOfArray);
 }
 
-void menu2(Smartphone** pointer, int* sizeOfArray) {
+void menu2(Smartphone** pointer, const int* sizeOfArray) {
 	printf("Выводим...");
-	//Sleep(2000);
+	Sleep(2000);
 	system("cls");
 	printStructArray(*pointer, *sizeOfArray);
 }
 
-void menu3(Smartphone** pointer, int* sizeOfArray) {
+void menu3(Smartphone** pointer, const int* sizeOfArray) {
 	int userInput;
 	system("cls");
 	printf("Что вы хотите отсортировать?\n");
@@ -68,21 +68,23 @@ void menu3(Smartphone** pointer, int* sizeOfArray) {
 		break;
 	case 7:
 		break;
+	default:
+		break;
 	}
 	printf("Успех!");
 	Sleep(2000);
 	system("cls");
 }
 
-void menu4(Smartphone** pointer, int* sizeOfArray) {
-	exit(0);
-}
+//void menu4(Smartphone** pointer, int* sizeOfArray) {
+//	exit(0);
+//}
 
 void mainMenu(Smartphone** pointer, int* sizeOfArray) {
 	int userInput;
 	while (1) {
 		menuInformation();
-		void (*function[4])(Smartphone**, int*) = { &menu1, &menu2, &menu3, &menu4 };
+		void (*function[3])(Smartphone**, int*) = { &menu1, &menu2, &menu3 };
 		while ((scanf_s(" %d", &userInput)) != 1 || getchar() != '\n' || (userInput < 1 || userInput > 4)) {
 			printf("Такого задания не существует. Введите корректный номер: ");
 			rewind(stdin);
