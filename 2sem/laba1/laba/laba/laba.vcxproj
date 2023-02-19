@@ -130,11 +130,13 @@
     <ClCompile Include="main.c" />
     <ClCompile Include="memory.c" />
     <ClCompile Include="menu.c" />
+    <ClCompile Include="strings.c" />
     <ClCompile Include="structeres.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="memory.h" />
     <ClInclude Include="menu.h" />
+    <ClInclude Include="strings.h" />
     <ClInclude Include="structeres.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

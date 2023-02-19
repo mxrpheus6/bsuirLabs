@@ -1,0 +1,1 @@
+int strlen_n(char* string);
