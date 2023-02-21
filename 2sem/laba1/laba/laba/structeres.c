@@ -96,7 +96,7 @@ void deleteStruct(Smartphone** array, int* count) {
 	int index;
 	int i;
 	printf("Введите номер структуры, которую вы хотите удалить: ");
-	while ((scanf_s(" %d", &index)) != 1 || getchar() != '\n' || (index < 0 || index > count)) {
+	while ((scanf_s(" %d", &index)) != 1 || getchar() != '\n' || (index < 1 || index > count)) {
 		printf("Некорректный ввод. Введите номер существующей стркутры для удаления: ");
 		rewind(stdin);
 	}
