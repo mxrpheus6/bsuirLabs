@@ -64,22 +64,22 @@ void menu3(Smartphone** pointer, const int* sizeOfArray) {
 		}
 		switch (userInput) {
 		case 1:
-			qsort(*pointer, (int)(*sizeOfArray), sizeof(Smartphone), compareName);
+			qsort(*pointer, (*sizeOfArray), sizeof(Smartphone), compareName);
 			break;
 		case 2:
-			qsort(*pointer, (int)(*sizeOfArray), sizeof(Smartphone), compareDiag);
+			qsort(*pointer, (*sizeOfArray), sizeof(Smartphone), compareDiag);
 			break;
 		case 3:
-			qsort(*pointer, (int)(*sizeOfArray), sizeof(Smartphone), compareRam);
+			qsort(*pointer, (*sizeOfArray), sizeof(Smartphone), compareRam);
 			break;
 		case 4:
-			qsort(*pointer, (int)(*sizeOfArray), sizeof(Smartphone), compareMemory);
+			qsort(*pointer, (*sizeOfArray), sizeof(Smartphone), compareMemory);
 			break;
 		case 5:
-			qsort(*pointer, (int)(*sizeOfArray), sizeof(Smartphone), compareCamera);
+			qsort(*pointer, (*sizeOfArray), sizeof(Smartphone), compareCamera);
 			break;
 		case 6:
-			qsort(*pointer, (int)(*sizeOfArray), sizeof(Smartphone), compareBattery);
+			qsort(*pointer, (*sizeOfArray), sizeof(Smartphone), compareBattery);
 			break;
 		case 7:
 			break;
@@ -121,7 +121,7 @@ void menu5(Smartphone** pointer, int* sizeOfArray) {
 
 void menu6(Smartphone** pointer, int* sizeOfArray) {
 	//insertionSort(pointer, *sizeOfArray, sizeof(Smartphone), compareTwoDiff);
-	qsort(*pointer, (int)(*sizeOfArray), sizeof(Smartphone), compareTwoDiff);
+	qsort(*pointer, (*sizeOfArray), sizeof(Smartphone), compareTwoDiff);
 	printf("\nÓñïåõ!");
 	Sleep(2000);
 	system("cls");
