@@ -106,5 +106,12 @@ void deleteStruct(Smartphone** array, int* count) {
 		(*array)[i] = (*array)[i + 1];
 	}
 	(*count)--;
-	(*array) = (Smartphone*)realloc(*array, (*count) * sizeof(Smartphone));
+	if (*count == 0) {
+		free((*array));
+		(*array) = NULL;
+	}
+	else {
+		(*array) = (Smartphone*)realloc(*array, (*count) * sizeof(Smartphone));
+	}
+
 }
