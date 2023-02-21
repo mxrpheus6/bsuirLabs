@@ -119,8 +119,7 @@ void menu5(Smartphone** pointer, int* sizeOfArray) {
 	system("cls");
 }
 
-void menu6(Smartphone** pointer, int* sizeOfArray) {
-	//insertionSort(pointer, *sizeOfArray, sizeof(Smartphone), compareTwoDiff);
+void menu6(Smartphone** pointer, const int* sizeOfArray) {
 	qsort(*pointer, (*sizeOfArray), sizeof(Smartphone), compareTwoDiff);
 	printf("\nУспех!");
 	Sleep(2000);

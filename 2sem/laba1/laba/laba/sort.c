@@ -78,19 +78,3 @@ int compareTwoDiff(const void* a, const void* b) {
 	}
 
 }
-
-//void insertionSort(Smartphone** array, int num, int size, int (*cmp)(const void*, const void*)) {
-//	int i;
-//	int j;
-//	Smartphone* key;
-//	for (i = 1; i < num; i++) {
-//		key = (Smartphone*)malloc(sizeof(Smartphone));
-//		*key = (*array)[i];
-//		j = i - 1;
-//		while (j >= 0 && cmp(array[j], key) > 0) {
-//			(*array)[j + 1] = (*array)[j];
-//			j--;
-//		}
-//		(*array)[j + 1] = *key;
-//	}
-//}

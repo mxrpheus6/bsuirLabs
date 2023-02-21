@@ -7,5 +7,3 @@ int compareMemory(const void* a, const void* b);
 int compareCamera(const void* a, const void* b);
 int compareBattery(const void* a, const void* b);
 int compareTwoDiff(const void* a, const void* b);
-
-//void insertionSort(Smartphone** array, int num, int size, int (*cmp)(const void*, const void*));
