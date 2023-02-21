@@ -60,6 +60,21 @@ void createStructArr(Smartphone** pointer, int* count) {
 	}
 }
 
+void addToStruct(Smartphone** pointer, int* count) {
+	Smartphone* temp = NULL;
+	(*count)++;
+	temp = (Smartphone*)malloc(sizeof(Smartphone));
+	initStruct(temp);
+	if ((*pointer) == NULL) {
+		(*pointer) = (Smartphone*)malloc((*count) * sizeof(Smartphone));
+		(*pointer)[(*count) - 1] = *temp;
+	}
+	else {
+		(*pointer) = (Smartphone*)realloc((*pointer), (*count) * sizeof(Smartphone));
+		(*pointer)[(*count) - 1] = *temp;
+	}
+}
+
 void printStructArray(Smartphone* array, int count) {
 	for (int i = 0; i < count; ) {
 		printf("Структура номер %d\n\n", i + 1);
@@ -75,4 +90,21 @@ void printStructArray(Smartphone* array, int count) {
 			i++;
 		}
 	}
+}
+
+void deleteStruct(Smartphone** array, int* count) {
+	int index;
+	int i;
+	printf("Введите номер структуры, которую вы хотите удалить: ");
+	while ((scanf_s(" %d", &index)) != 1 || getchar() != '\n' || (index < 0 || index > count)) {
+		printf("Некорректный ввод. Введите номер существующей стркутры для удаления: ");
+		rewind(stdin);
+	}
+	i = index - 1;
+	free((*array)[i].name);
+	for (; i < (*count); i++) {
+		(*array)[i] = (*array)[i + 1];
+	}
+	(*count)--;
+	(*array) = (Smartphone*)realloc(*array, (*count) * sizeof(Smartphone));
 }

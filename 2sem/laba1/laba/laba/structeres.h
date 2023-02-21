@@ -19,4 +19,6 @@ typedef struct {
 
 void initStruct(Smartphone* pointer);
 void createStructArr(Smartphone** pointer, int* count);
+void addToStruct(Smartphone** pointer, int* count);
 void printStructArray(Smartphone* pointer, int count);
+void deleteStruct(Smartphone** array, int* count);

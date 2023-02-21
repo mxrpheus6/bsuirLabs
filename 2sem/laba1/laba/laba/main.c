@@ -8,9 +8,9 @@
 
 int main(void) {
 	setlocale(LC_ALL, "Rus");
-	Smartphone* iphone = NULL;
-	int size;
-	mainMenu(&iphone, &size);
-	free(iphone);
+	Smartphone* telephone = NULL;
+	int size = 0;
+	mainMenu(&telephone, &size);
+	free(telephone);
 	return 0;
 }

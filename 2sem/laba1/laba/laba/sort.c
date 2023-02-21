@@ -56,19 +56,41 @@ int compareBattery(const void* a, const void* b) {
 	return firstThing->battery - secondThing->battery;
 }
 
+int compareTwoDiff(const void* a, const void* b) {
+	const Smartphone* firstThing = (const Smartphone*)a;
+	const Smartphone* secondThing = (const Smartphone*)b;
+	if (firstThing->battery < secondThing->battery) {
+		return -1;
+	}
+	else if (firstThing->battery > secondThing->battery) {
+		return 1;
+	}
+	else {
+		if (firstThing->cameraResolution < secondThing->cameraResolution) {
+			return -1;
+		}
+		else if (firstThing->cameraResolution > secondThing->cameraResolution) {
+			return 1;
+		}
+		else {
+			return 0;
+		}
+	}
 
+}
 
-//void insertionSort(void* array, int num, int size, int (*cmp)(const void*, const void*)) {
+//void insertionSort(Smartphone** array, int num, int size, int (*cmp)(const void*, const void*)) {
 //	int i;
 //	int j;
-//	char* elem = (char*)array;
+//	Smartphone* key;
 //	for (i = 1; i < num; i++) {
-//		key = (*array)[i];
+//		key = (Smartphone*)malloc(sizeof(Smartphone));
+//		*key = (*array)[i];
 //		j = i - 1;
-//		while (j >= 0) { 
+//		while (j >= 0 && cmp(array[j], key) > 0) {
 //			(*array)[j + 1] = (*array)[j];
 //			j--;
 //		}
-//		(*array)[j + 1] = key;
+//		(*array)[j + 1] = *key;
 //	}
 //}
