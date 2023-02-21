@@ -131,8 +131,8 @@ void mainMenu(Smartphone** pointer, int* sizeOfArray) {
 	int userInput;
 	while (1) {
 		menuInformation();
-		void (*function[7])(Smartphone**, int*) = { &menu1, &menu2, &menu3, &menu4, &menu5, &menu6 };
-		while ((scanf_s(" %d", &userInput)) != 1 || getchar() != '\n' || (userInput < 1 || userInput > 8)) {
+		void (*function[6])(Smartphone**, int*) = { &menu1, &menu2, &menu3, &menu4, &menu5, &menu6 };
+		while ((scanf_s(" %d", &userInput)) != 1 || getchar() != '\n' || (userInput < 1 || userInput > 7)) {
 			printf("Такого задания не существует. Введите корректный номер: ");
 			rewind(stdin);
 		}
