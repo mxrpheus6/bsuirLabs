@@ -257,7 +257,7 @@ void parseMemory(FILE* pointer) {
             fgetws(bigBuf, 10000, pointer);
             while (1) {
                 wchar_t* temp2 = wcsstr(bigBuf, L"Постоянная память");
-                temp2 = wcsstr(temp2, L"cr-result__attr_odd");
+                temp2 = wcsstr(temp2, L"result__attr_val");
                 i = 0;
                 counter = 0;
                 while (temp2[i] != '<') {
@@ -271,6 +271,90 @@ void parseMemory(FILE* pointer) {
                 }
                 i -= counter;
                 while (temp2[i] != ' ') {
+                    wprintf(L"%c", temp2[i]);
+                    i++;
+                }
+                printf("\n");
+                break;
+            }
+        }
+    }
+    free(buf);
+    free(bigBuf);
+    rewind(pointer);
+}
+
+void parseCameraResolution(FILE* pointer) {
+    setlocale(LC_ALL, "ru_RU.UTF-8");
+    wchar_t* buf = (wchar_t*)calloc(255, sizeof(wchar_t));
+    wchar_t* bigBuf = (wchar_t*)calloc(10000, sizeof(wchar_t));
+    int i = 0;
+    int counter;
+    for (int i = 0; i < 1270; i++) {
+        fgetws(buf, 255, pointer);
+    }
+    while (fgetws(buf, 255, pointer) != NULL && !feof(pointer)) {
+        wchar_t* start = wcsstr(buf, L"result__attrs");
+        if (start != NULL) {
+            fgetws(bigBuf, 10000, pointer);
+            while (1) {
+                wchar_t* temp2 = wcsstr(bigBuf, L"Разрешение камеры");
+                temp2 = wcsstr(temp2, L"result__attr_val");
+                i = 0;
+                counter = 0;
+                while (temp2[i] != '<') {
+                    if (temp2[i] == '>') {
+                        counter = 0;
+                    }
+                    else {
+                        counter++;
+                    }
+                    i++;
+                }
+                i -= counter;
+                while (temp2[i] != ' ') {
+                    wprintf(L"%c", temp2[i]);
+                    i++;
+                }
+                printf("\n");
+                break;
+            }
+        }
+    }
+    free(buf);
+    free(bigBuf);
+    rewind(pointer);
+}
+
+void parseBattery(FILE* pointer) {
+    setlocale(LC_ALL, "ru_RU.UTF-8");
+    wchar_t* buf = (wchar_t*)calloc(255, sizeof(wchar_t));
+    wchar_t* bigBuf = (wchar_t*)calloc(10000, sizeof(wchar_t));
+    int i = 0;
+    int counter;
+    for (int i = 0; i < 1270; i++) {
+        fgetws(buf, 255, pointer);
+    }
+    while (fgetws(buf, 255, pointer) != NULL && !feof(pointer)) {
+        wchar_t* start = wcsstr(buf, L"result__attrs");
+        if (start != NULL) {
+            fgetws(bigBuf, 10000, pointer);
+            while (1) {
+                wchar_t* temp2 = wcsstr(bigBuf, L"Емкость аккумулятора");
+                temp2 = wcsstr(temp2, L"result__attr_val");
+                i = 0;
+                counter = 0;
+                while (temp2[i] != '<') {
+                    if (temp2[i] == '>') {
+                        counter = 0;
+                    }
+                    else {
+                        counter++;
+                    }
+                    i++;
+                }
+                i -= counter;
+                while (temp2[i] != '&') {
                     wprintf(L"%c", temp2[i]);
                     i++;
                 }

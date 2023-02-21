@@ -17,6 +17,8 @@ int main(void) {
 	parseDiag(pointer);	
 	parseRam(pointer);
 	parseMemory(pointer);
+	parseCameraResolution(pointer);
+	parseBattery(pointer);
 	//mainMenu(&telephone, &size);
 	//free(telephone);
 	return 0;
