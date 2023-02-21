@@ -1,4 +1,7 @@
-﻿  structeres.c
+﻿  menu.c
+C:\BSUIR\finished\OAiP\2sem\laba1\laba\laba\menu.c(130,55): warning C4027: function declared without formal parameter list
+  structeres.c
 C:\BSUIR\finished\OAiP\2sem\laba1\laba\laba\structeres.c(12,35): warning C4047: 'function': 'char *' differs in levels of indirection from 'char **'
 C:\BSUIR\finished\OAiP\2sem\laba1\laba\laba\structeres.c(12,21): warning C4024: 'charMemoryAllocate': different types for formal and actual parameter 1
+  Generating Code...
   laba.vcxproj -> C:\BSUIR\finished\OAiP\2sem\laba1\laba\x64\Debug\laba.exe
