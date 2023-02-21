@@ -130,6 +130,7 @@
     <ClCompile Include="main.c" />
     <ClCompile Include="memory.c" />
     <ClCompile Include="menu.c" />
+    <ClCompile Include="parser.c" />
     <ClCompile Include="sort.c" />
     <ClCompile Include="strings.c" />
     <ClCompile Include="structeres.c" />
@@ -137,6 +138,7 @@
   <ItemGroup>
     <ClInclude Include="memory.h" />
     <ClInclude Include="menu.h" />
+    <ClInclude Include="parser.h" />
     <ClInclude Include="sort.h" />
     <ClInclude Include="strings.h" />
     <ClInclude Include="structeres.h" />

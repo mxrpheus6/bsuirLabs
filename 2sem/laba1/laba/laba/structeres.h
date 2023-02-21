@@ -3,6 +3,7 @@
 
 typedef enum {
 	SMALL = 2,
+	CHINA = 3,
 	MEDIUM = 4,
 	INTERMEDIATE = 6,
 	HIGH = 8

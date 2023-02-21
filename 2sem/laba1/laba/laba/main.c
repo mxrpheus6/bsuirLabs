@@ -5,12 +5,19 @@
 
 #include "structeres.h"
 #include "menu.h"
+#include "parser.h"
 
 int main(void) {
 	setlocale(LC_ALL, "Rus");
 	Smartphone* telephone = NULL;
 	int size = 0;
-	mainMenu(&telephone, &size);
-	free(telephone);
+	FILE* pointer;
+	fopen_s(&pointer, "D:/Work/html.txt", "r, ccs=UTF-8");
+	parseName(pointer);
+	parseDiag(pointer);	
+	parseRam(pointer);
+	parseMemory(pointer);
+	//mainMenu(&telephone, &size);
+	//free(telephone);
 	return 0;
 }
