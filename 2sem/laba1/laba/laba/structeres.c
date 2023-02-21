@@ -102,10 +102,10 @@ void deleteStruct(Smartphone** array, int* count) {
 	}
 	i = index - 1;
 	free((*array)[i].name);
-	for (; i + 1 < (*count); i++) {
+	(*count)--;
+	for (; i < (*count); i++) {
 		(*array)[i] = (*array)[i + 1];
 	}
-	(*count)--;
 	if (*count == 0) {
 		free((*array));
 		(*array) = NULL;
