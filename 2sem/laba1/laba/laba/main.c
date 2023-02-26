@@ -10,7 +10,6 @@
 int main(void) {
 	Smartphone* telephone = NULL;
 	int size = 0;
-	int flag = 0;
 	FILE* pointer;
 	fopen_s(&pointer, "D:/Work/test228.txt", "r");
 	mainMenu(&telephone, &size, pointer);

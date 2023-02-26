@@ -23,10 +23,9 @@ char** parseName(FILE* pointer) {
     int i;
     int j = 0;
     int k;
-    int pos;
     int counter;
     while (fgets(buf, 255, pointer) != NULL && !feof(pointer)) {
-        char* start = strstr(buf, "result__name");
+        const char* start = strstr(buf, "result__name");
         if (start != NULL) {
             i = 0;
             k = 0;
@@ -61,7 +60,7 @@ float* parseDiag(FILE* pointer) {
     int k = 0;
     int counter;
     while (fgets(buf, 255, pointer) != NULL && !feof(pointer)) {
-        char* start = strstr(buf, "result__attrs");
+        const char* start = strstr(buf, "result__attrs");
         if (start != NULL) {
             fgets(bigBuf, 4096, pointer);
             i = 0;
@@ -107,13 +106,13 @@ int* parseInt(FILE* pointer, int len) {
     int counterOut;
 
     while (fgets(buf, 255, pointer) != NULL && !feof(pointer)) {
-        char* start = strstr(buf, "result__attrs");
+        const char* start = strstr(buf, "result__attrs");
         if (start != NULL) {
             flag = 0;
             i = 0;
             j = 0;
             fgets(bigBuf, 4096, pointer);
-            char* cutBuf = strstr(bigBuf, "result__attr_var  cr-result__attr_odd");
+            const char* cutBuf = strstr(bigBuf, "result__attr_var  cr-result__attr_odd");
             while (flag != 1) {
                 counterOut = 0;
                 while (cutBuf[i] != '>') {
@@ -169,10 +168,10 @@ void parse(Smartphone** array, FILE* pointer, int* size) {
         *array = (Smartphone*)realloc(*array, (*size) * sizeof(Smartphone));
     }
     char** name = parseName(pointer);
-    float* diag = parseDiag(pointer);
-    int* memory = parseInt(pointer, MEMORY);
-    int* ram = parseInt(pointer, RAM);
-    int* battery = parseInt(pointer, BATTERY);
+    const float* diag = parseDiag(pointer);
+    const int* memory = parseInt(pointer, MEMORY);
+    const int* ram = parseInt(pointer, RAM);
+    const int* battery = parseInt(pointer, BATTERY);
     for ( ; i < *size; i++) {
         charMemoryAllocate(&(*array)[i].name);
         (*array)[i].name = name[i];
