@@ -8,18 +8,13 @@
 #include "parser.h"
 
 int main(void) {
-	setlocale(LC_ALL, "Rus");
 	Smartphone* telephone = NULL;
 	int size = 0;
+	int flag = 0;
 	FILE* pointer;
-	fopen_s(&pointer, "D:/Work/html.txt", "r, ccs=UTF-8");
-	parseName(pointer);
-	parseDiag(pointer);	
-	parseRam(pointer);
-	parseMemory(pointer);
-	parseCameraResolution(pointer);
-	parseBattery(pointer);
-	//mainMenu(&telephone, &size);
-	//free(telephone);
+	fopen_s(&pointer, "D:/Work/test228.txt", "r");
+	mainMenu(&telephone, &size, pointer);
+	free(telephone);
+	fclose(pointer);
 	return 0;
 }

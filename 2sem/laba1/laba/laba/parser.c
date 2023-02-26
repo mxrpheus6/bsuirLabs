@@ -2,368 +2,183 @@
 #include <stdlib.h>
 #include <string.h>
 #include <locale.h>
+#include <wchar.h>
 
 #include "parser.h"
+#include "structeres.h"
+#include "memory.h"
 
-//void fileParse() {
-//    setlocale(LC_ALL, "ru_RU.UTF-8");
-//    FILE* filePointer;
-//    wchar_t* buf = (wchar_t*)calloc(255, sizeof(wchar_t));
-//    wchar_t* bigBuf = (wchar_t*)calloc(2048, sizeof(wchar_t));
-//    wchar_t* bigBufPointer;
-//    wchar_t test[200];
-//    wchar_t testChar;
-//    int i = 0;
-//    fopen_s(&filePointer, "D:/Work/html.txt", "r, ccs=UTF-8");
-//    if (filePointer == NULL) {
-//        printf("Ошибка. Не удается открыть файл.");
-//    }
-//    for (int i = 0; i < 1270; i++) {
-//        fgetws(buf, 255, filePointer);
-//    }
-//    while (fgetws(buf, 255, filePointer)) {
-//        wchar_t* start = wcsstr(buf, L"lseparator_catalog");
-//        if (start != NULL) {
-//            while (wcsstr(buf, L"</li>") == NULL) {
-//                fgetws(buf, 255, filePointer);
-//                wchar_t* temp = wcsstr(buf, L"result__name");
-//                if (temp != NULL) {
-//                    i = 0;
-//                    while (buf[i] != '>') {
-//                        i++;
-//                    }
-//                    i++;
-//                    while (buf[i] != '<') {
-//                        wprintf(L"%c", buf[i]);
-//                        i++;
-//                    }
-//                    printf("\n");
-//                }
-//                temp = wcsstr(buf, L"result__attrs");
-//                if (temp != NULL) {
-//                    fgetws(bigBuf, 2048, filePointer);
-//                    bigBuf = wcsstr(bigBuf, L"Диагональ экрана");
-//                    bigBuf = wcsstr(bigBuf, L"cr-result__attr_odd");
-//                    bigBuf = wcsstr(bigBuf, L">");
-//                    i = 1;
-//                    while (bigBuf[i] != '&') {
-//                        wprintf(L"%c", bigBuf[i]);
-//                        i++;
-//                    }
-//                    printf("\n");
-//                }
-//            }
-//            }
-//        }
-//    fclose(filePointer);
-//    free(buf);
-//}
+typedef enum { 
+    MEMORY = 34,
+    RAM = 36,
+    BATTERY = 40
+} ParseTypes;
 
-//void fileParse() {
-//    setlocale(LC_ALL, "ru_RU.UTF-8");
-//    FILE* filePointer;
-//    wchar_t* buf = (wchar_t*)calloc(255, sizeof(wchar_t));
-//    wchar_t* bigBuf = (wchar_t*)calloc(10000, sizeof(wchar_t));
-//    wchar_t test[200];
-//    wchar_t testChar;
-//    int i = 0;
-//    int counter;
-//    fopen_s(&filePointer, "D:/Work/html.txt", "r, ccs=UTF-8");
-//    if (filePointer == NULL) {
-//        printf("Ошибка. Не удается открыть файл.");
-//    }
-//    for (int i = 0; i < 1270; i++) {
-//        fgetws(buf, 255, filePointer);
-//    }
-//    while (fgetws(buf, 255, filePointer) != NULL && !feof(filePointer)) {
-//        wchar_t* start = wcsstr(buf, L"lseparator_catalog");
-//        if (start != NULL) {
-//            while (wcsstr(buf, L"</li>") == NULL) {
-//                fgetws(buf, 255, filePointer);
-//                wchar_t* temp = wcsstr(buf, L"result__name");
-//                if (temp != NULL) {
-//                    i = 0;
-//                    while (buf[i] != '>') {
-//                        i++;
-//                    }
-//                    i++;
-//                    while (buf[i] != '<') {
-//                        wprintf(L"%c", buf[i]);
-//                        i++;
-//                    }
-//                    printf("\n");
-//                }
-//                wchar_t* temp1 = wcsstr(buf, L"result__attrs");
-//                if (temp1 != NULL) {
-//                    fgetws(bigBuf, 10000, filePointer);
-//                    while (1) {
-//                        //bigBuf = wcsstr(bigBuf, L"Диагональ экрана");
-//                        wchar_t* temp2 = wcsstr(bigBuf, L"Диагональ экрана");
-//                        i = 0;
-//                        counter = 0;
-//                        while (temp2[i] != '&') {
-//                            if (temp2[i] == '>') {
-//                                counter = 0;
-//                            }
-//                            else {
-//                                counter++;
-//                            }
-//                            i++;
-//                        }
-//                        i -= counter;
-//                        while (temp2[i] != '&') {
-//                            wprintf(L"%c", temp2[i]);
-//                            i++;
-//                        }
-//                        printf("\n");
-//                        break;
-//                    }
-//                }
-//            }
-//        }
-//    }
-//    fclose(filePointer);
-//    free(bigBuf);
-//    free(buf);
-//}
-
-void parseName(FILE* pointer) {
-    setlocale(LC_ALL, "ru_RU.UTF-8");
-    wchar_t* buf = (wchar_t*)calloc(255, sizeof(wchar_t));
-    int i = 0;
-    for (int i = 0; i < 1270; i++) {
-        fgetws(buf, 255, pointer);
+char** parseName(FILE* pointer) {
+    char* buf = (char*)calloc(255, sizeof(char));
+    char** result = (char**)calloc(60, sizeof(char*));
+    for (int i = 0; i < 60; i++) {
+        result[i] = (char*)calloc(255, sizeof(char));
     }
-    while (fgetws(buf, 255, pointer) != NULL && !feof(pointer)) {
-        wchar_t* start = wcsstr(buf, L"lseparator_catalog");
+    int i;
+    int j = 0;
+    int k;
+    int pos;
+    int counter;
+    while (fgets(buf, 255, pointer) != NULL && !feof(pointer)) {
+        char* start = strstr(buf, "result__name");
         if (start != NULL) {
-            while (wcsstr(buf, L"</li>") == NULL) {
-                fgetws(buf, 255, pointer);
-                wchar_t* temp = wcsstr(buf, L"result__name");
-                if (temp != NULL) {
-                    i = 0;
-                    while (buf[i] != '>') {
-                        i++;
-                    }
-                    i++;
-                    while (buf[i] != '<') {
-                        wprintf(L"%c", buf[i]);
-                        i++;
-                    }
-                    printf("\n");
-                }
+            i = 0;
+            k = 0;
+            counter = 0;
+            while (buf[i] != '>') {
+                i++;
             }
+            i++;
+            i += 17;
+            while (buf[i] != '/') {
+                result[j][k] = buf[i];
+                i++;
+                k++;
+            }
+            result[j] = (char*)realloc(result[j], strlen(result[j]) - counter + 1);
+            result[j][k - counter] = '\0';
+            j++;
         }
     }
     free(buf);
     rewind(pointer);
+    return result;
 }
 
-void parseDiag(FILE* pointer) {
-    setlocale(LC_ALL, "ru_RU.UTF-8");
-    wchar_t* buf = (wchar_t*)calloc(255, sizeof(wchar_t));
-    wchar_t* bigBuf = (wchar_t*)calloc(10000, sizeof(wchar_t));
-    int i = 0;
+float* parseDiag(FILE* pointer) {
+    char* buf = (char*)calloc(255, sizeof(char));
+    char* bigBuf = (char*)calloc(4096, sizeof(char));
+    char* temp;
+    float* result = (float*)calloc(60, sizeof(float));
+    int i;
+    int j;
+    int k = 0;
     int counter;
-    for (int i = 0; i < 1270; i++) {
-        fgetws(buf, 255, pointer);
-    }
-    while (fgetws(buf, 255, pointer) != NULL && !feof(pointer)) {
-        wchar_t* start = wcsstr(buf, L"result__attrs");
+    while (fgets(buf, 255, pointer) != NULL && !feof(pointer)) {
+        char* start = strstr(buf, "result__attrs");
         if (start != NULL) {
-            fgetws(bigBuf, 10000, pointer);
-            while (1) {
-                wchar_t* temp2 = wcsstr(bigBuf, L"Диагональ экрана");
-                i = 0;
-                counter = 0;
-                while (temp2[i] != '&') {
-                    if (temp2[i] == '>') {
-                        counter = 0;
+            fgets(bigBuf, 4096, pointer);
+            i = 0;
+            j = 0;
+            counter = 0;
+            while (bigBuf[i] != '&') {
+                if (bigBuf[i] == '>') {
+                    counter = 0;
+                }
+                else {
+                    counter++;
+                }
+                i++;
+            }
+            i -= counter;
+            temp = (char*)calloc(counter, sizeof(char));
+            while (bigBuf[i] != '&') {
+                temp[j] = bigBuf[i];
+                i++;
+                j++;
+            }
+            temp = (char*)realloc(temp, counter * sizeof(char));
+            temp[j] = '\0';
+            result[k] = atof(temp);
+            k++;
+        }
+    }
+    free(buf);
+    free(bigBuf);
+    rewind(pointer);
+    return result;
+}
+
+int* parseInt(FILE* pointer, int len) {
+    char* buf = (char*)calloc(255, sizeof(char));
+    char* bigBuf = (char*)calloc(4096, sizeof(char));
+    char* temp = (char*)calloc(8, sizeof(char));
+    int* result = (int*)calloc(60, sizeof(int));
+    int i;
+    int j;
+    int k = 0;
+    int flag;
+    int counterOut;
+
+    while (fgets(buf, 255, pointer) != NULL && !feof(pointer)) {
+        char* start = strstr(buf, "result__attrs");
+        if (start != NULL) {
+            flag = 0;
+            i = 0;
+            j = 0;
+            fgets(bigBuf, 4096, pointer);
+            char* cutBuf = strstr(bigBuf, "result__attr_var  cr-result__attr_odd");
+            while (flag != 1) {
+                counterOut = 0;
+                while (cutBuf[i] != '>') {
+                    i++;
+                }
+                while (cutBuf[i] != '<') {
+                    i++;
+                    counterOut++;
+                }
+                if (counterOut == len) {
+                    i += 35;
+                    if (cutBuf[i] > 47 && cutBuf[i] < 58) {
+                        while (cutBuf[i] != '<') {
+                            temp[j] = cutBuf[i];
+                            i++;
+                            j++;
+                        }
+                        result[k] = atoi(temp);
+                        flag = 1;
+                        k++;
                     }
                     else {
-                        counter++;
+                        i += 20;
+                        while (cutBuf[i] != '<') {
+                            temp[j] = cutBuf[i];
+                            i++;
+                            j++;
+                        }
+
+                        result[k] = atoi(temp);
+                        flag = 1;
+                        k++;
+
                     }
-                    i++;
                 }
-                i -= counter;
-                while (temp2[i] != '&') {
-                    wprintf(L"%c", temp2[i]);
-                    i++;
-                }
-                printf("\n");
-                break;
             }
         }
     }
     free(buf);
     free(bigBuf);
     rewind(pointer);
+    return result;
 }
 
-void parseRam(FILE* pointer) {
-    setlocale(LC_ALL, "ru_RU.UTF-8");
-    wchar_t* buf = (wchar_t*)calloc(255, sizeof(wchar_t));
-    wchar_t* bigBuf = (wchar_t*)calloc(10000, sizeof(wchar_t));
-    int i = 0;
-    int counter;
-    for (int i = 0; i < 1270; i++) {
-        fgetws(buf, 255, pointer);
+void parse(Smartphone** array, FILE* pointer, int* size) {
+    int i;
+    i = *size;
+    (*size) += 60;
+    if (*array == NULL) {
+        *array = (Smartphone*)malloc((*size) * sizeof(Smartphone));
     }
-    while (fgetws(buf, 255, pointer) != NULL && !feof(pointer)) {
-        wchar_t* start = wcsstr(buf, L"result__attrs");
-        if (start != NULL) {
-            fgetws(bigBuf, 10000, pointer);
-            while (1) {
-                wchar_t* temp2 = wcsstr(bigBuf, L"Оперативная память");
-                temp2 = wcsstr(temp2, L"result__attr_val");
-                i = 0;
-                counter = 0;
-                while (temp2[i] != '<') {
-                    if (temp2[i] == '>') {
-                        counter = 0;
-                    }
-                    else {
-                        counter++;
-                    }
-                    i++;
-                }
-                i -= counter;
-                while (temp2[i] != ' ') {
-                    wprintf(L"%c", temp2[i]);
-                    i++;
-                }
-                printf("\n");
-                break;
-            }
-        }
+    else {
+        *array = (Smartphone*)realloc(*array, (*size) * sizeof(Smartphone));
     }
-    free(buf);
-    free(bigBuf);
-    rewind(pointer);
-}
-
-void parseMemory(FILE* pointer) {
-    setlocale(LC_ALL, "ru_RU.UTF-8");
-    wchar_t* buf = (wchar_t*)calloc(255, sizeof(wchar_t));
-    wchar_t* bigBuf = (wchar_t*)calloc(10000, sizeof(wchar_t));
-    int i = 0;
-    int counter;
-    for (int i = 0; i < 1270; i++) {
-        fgetws(buf, 255, pointer);
+    char** name = parseName(pointer);
+    float* diag = parseDiag(pointer);
+    int* memory = parseInt(pointer, MEMORY);
+    int* ram = parseInt(pointer, RAM);
+    int* battery = parseInt(pointer, BATTERY);
+    for ( ; i < *size; i++) {
+        charMemoryAllocate(&(*array)[i].name);
+        (*array)[i].name = name[i];
+        (*array)[i].screenSize = diag[i];
+        (*array)[i].memory = memory[i];
+        (*array)[i].ram = ram[i];
+        (*array)[i].battery = battery[i];
     }
-    while (fgetws(buf, 255, pointer) != NULL && !feof(pointer)) {
-        wchar_t* start = wcsstr(buf, L"result__attrs");
-        if (start != NULL) {
-            fgetws(bigBuf, 10000, pointer);
-            while (1) {
-                wchar_t* temp2 = wcsstr(bigBuf, L"Постоянная память");
-                temp2 = wcsstr(temp2, L"result__attr_val");
-                i = 0;
-                counter = 0;
-                while (temp2[i] != '<') {
-                    if (temp2[i] == '>') {
-                        counter = 0;
-                    }
-                    else {
-                        counter++;
-                    }
-                    i++;
-                }
-                i -= counter;
-                while (temp2[i] != ' ') {
-                    wprintf(L"%c", temp2[i]);
-                    i++;
-                }
-                printf("\n");
-                break;
-            }
-        }
-    }
-    free(buf);
-    free(bigBuf);
-    rewind(pointer);
-}
-
-void parseCameraResolution(FILE* pointer) {
-    setlocale(LC_ALL, "ru_RU.UTF-8");
-    wchar_t* buf = (wchar_t*)calloc(255, sizeof(wchar_t));
-    wchar_t* bigBuf = (wchar_t*)calloc(10000, sizeof(wchar_t));
-    int i = 0;
-    int counter;
-    for (int i = 0; i < 1270; i++) {
-        fgetws(buf, 255, pointer);
-    }
-    while (fgetws(buf, 255, pointer) != NULL && !feof(pointer)) {
-        wchar_t* start = wcsstr(buf, L"result__attrs");
-        if (start != NULL) {
-            fgetws(bigBuf, 10000, pointer);
-            while (1) {
-                wchar_t* temp2 = wcsstr(bigBuf, L"Разрешение камеры");
-                temp2 = wcsstr(temp2, L"result__attr_val");
-                i = 0;
-                counter = 0;
-                while (temp2[i] != '<') {
-                    if (temp2[i] == '>') {
-                        counter = 0;
-                    }
-                    else {
-                        counter++;
-                    }
-                    i++;
-                }
-                i -= counter;
-                while (temp2[i] != ' ') {
-                    wprintf(L"%c", temp2[i]);
-                    i++;
-                }
-                printf("\n");
-                break;
-            }
-        }
-    }
-    free(buf);
-    free(bigBuf);
-    rewind(pointer);
-}
-
-void parseBattery(FILE* pointer) {
-    setlocale(LC_ALL, "ru_RU.UTF-8");
-    wchar_t* buf = (wchar_t*)calloc(255, sizeof(wchar_t));
-    wchar_t* bigBuf = (wchar_t*)calloc(10000, sizeof(wchar_t));
-    int i = 0;
-    int counter;
-    for (int i = 0; i < 1270; i++) {
-        fgetws(buf, 255, pointer);
-    }
-    while (fgetws(buf, 255, pointer) != NULL && !feof(pointer)) {
-        wchar_t* start = wcsstr(buf, L"result__attrs");
-        if (start != NULL) {
-            fgetws(bigBuf, 10000, pointer);
-            while (1) {
-                wchar_t* temp2 = wcsstr(bigBuf, L"Емкость аккумулятора");
-                temp2 = wcsstr(temp2, L"result__attr_val");
-                i = 0;
-                counter = 0;
-                while (temp2[i] != '<') {
-                    if (temp2[i] == '>') {
-                        counter = 0;
-                    }
-                    else {
-                        counter++;
-                    }
-                    i++;
-                }
-                i -= counter;
-                while (temp2[i] != '&') {
-                    wprintf(L"%c", temp2[i]);
-                    i++;
-                }
-                printf("\n");
-                break;
-            }
-        }
-    }
-    free(buf);
-    free(bigBuf);
-    rewind(pointer);
 }

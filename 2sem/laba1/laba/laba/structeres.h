@@ -14,7 +14,6 @@ typedef struct {
 	float screenSize;
 	RamTypes ram;
 	int memory;
-	int cameraResolution;
 	int battery;
 } Smartphone;
 

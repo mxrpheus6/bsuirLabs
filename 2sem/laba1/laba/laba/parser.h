@@ -1,8 +1,12 @@
-#pragma once
-//void fileParse();
-void parseName(FILE* pointer);
-void parseDiag(FILE* pointer);
-void parseRam(FILE* pointer);
-void parseMemory(FILE* pointer);
-void parseCameraResolution(FILE* pointer);
-void parseBattery(FILE* pointer);
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <string.h>
+
+#include "structeres.h"
+#include "menu.h"
+
+char** parseName(FILE* pointer);
+float* parseDiag(FILE* pointer);
+int* parseInt(FILE* pointer, int len);
+void parse(Smartphone** array, FILE* pointer, int* size);

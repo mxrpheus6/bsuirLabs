@@ -44,12 +44,6 @@ int compareMemory(const void* a, const void* b) {
 	return firstThing->memory - secondThing->memory;
 }
 
-int compareCamera(const void* a, const void* b) {
-	const Smartphone* firstThing = (const Smartphone*)a;
-	const Smartphone* secondThing = (const Smartphone*)b;
-	return firstThing->cameraResolution - secondThing->cameraResolution;
-}
-
 int compareBattery(const void* a, const void* b) {
 	const Smartphone* firstThing = (const Smartphone*)a;
 	const Smartphone* secondThing = (const Smartphone*)b;
@@ -66,10 +60,10 @@ int compareTwoDiff(const void* a, const void* b) {
 		return 1;
 	}
 	else {
-		if (firstThing->cameraResolution < secondThing->cameraResolution) {
+		if (firstThing->screenSize < secondThing->screenSize) {
 			return -1;
 		}
-		else if (firstThing->cameraResolution > secondThing->cameraResolution) {
+		else if (firstThing->screenSize > secondThing->screenSize) {
 			return 1;
 		}
 		else {
