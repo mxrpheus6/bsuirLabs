@@ -182,4 +182,8 @@ void parse(Smartphone** array, FILE* pointer, int* size) {
         (*array)[i].ram = ram[i];
         (*array)[i].battery = battery[i];
     }
+    free(diag);
+    free(battery);
+    free(ram);
+    free(memory);
 }
