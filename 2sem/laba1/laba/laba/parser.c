@@ -88,7 +88,7 @@ float* parseDiag(FILE* pointer) {
             k++;
         }
     }
-
+    free(buf);
     free(bigBuf);
     rewind(pointer);
     return result;
