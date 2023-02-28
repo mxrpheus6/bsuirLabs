@@ -35,16 +35,17 @@ char** parseChar(FILE* pointer) {
             }
             i++;
             i += 17;
-            while (buf[i] != '/') {
+            while (buf[i] != ')') {
                 result[j][k] = buf[i];
                 i++;
                 k++;
             }
-            size_t newLen = strlen(result[j]) - counter + 1;
+            size_t newLen = strlen(result[j]) - counter + 2;
             if (newLen > 0) {
                 result[j] = (char*)realloc(result[j], newLen);
             }
-            result[j][k - counter] = '\0';
+            result[j][k - counter] = ')';
+            result[j][k - counter + 1] = '\0';
             j++;
         }
     }

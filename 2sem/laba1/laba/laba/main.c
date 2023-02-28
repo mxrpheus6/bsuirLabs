@@ -8,6 +8,8 @@
 #include "parser.h"
 
 int main(void) {
+	system("chcp 65001");
+	system("cls");
 	Smartphone* telephone = NULL;
 	int size = 0;
 	FILE* pointer;

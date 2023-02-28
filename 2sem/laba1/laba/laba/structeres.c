@@ -72,13 +72,13 @@ void addToStruct(Smartphone** pointer, int* count) {
 
 void printStructArray(Smartphone* array, int count) {
 	for (int i = 0; i < count; ) {
-		printf("-------Structure number %d-------\n", i + 1);
+		printf("-----------------------------Structure number %d-----------------------------\n", i + 1);
 		printf("Name: %s\n", array[i].name);
 		printf("Screen size: %.2f\n", array[i].screenSize);
 		printf("RAM (GB): %d\n", array[i].ram);
 		printf("Memory (GB): %d\n", array[i].memory);
 		printf("Battery capacity: %d\n", array[i].battery);
-		printf("---------------------------------\n\n\n");
+		printf("-----------------------------------------------------------------------------\n\n\n");
 		i++;
 		
 	}

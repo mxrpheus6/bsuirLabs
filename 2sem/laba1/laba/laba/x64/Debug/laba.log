@@ -1,17 +1,4 @@
-﻿  main.c
-  menu.c
-C:\BSUIR\finished\OAiP\2sem\laba1\laba\laba\menu.c(30,45): warning C4028: formal parameter 2 different from declaration
-C:\BSUIR\finished\OAiP\2sem\laba1\laba\laba\menu.c(45,45): warning C4028: formal parameter 2 different from declaration
-C:\BSUIR\finished\OAiP\2sem\laba1\laba\laba\menu.c(120,45): warning C4028: formal parameter 2 different from declaration
-C:\BSUIR\finished\OAiP\2sem\laba1\laba\laba\menu.c(141,52): warning C4113: 'void (__cdecl *)(Smartphone **,int *)' differs in parameter lists from 'void (__cdecl *)(Smartphone **,int *,FILE *)'
-C:\BSUIR\finished\OAiP\2sem\laba1\laba\laba\menu.c(141,52): warning C4113: 'void (__cdecl *)(Smartphone **,const int *)' differs in parameter lists from 'void (__cdecl *)(Smartphone **,int *,FILE *)'
-  parser.c
-C:\BSUIR\finished\OAiP\2sem\laba1\laba\laba\parser.c(90,25): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\BSUIR\finished\OAiP\2sem\laba1\laba\laba\parser.c(181,45): warning C4047: 'function': 'char *' differs in levels of indirection from 'char **'
-C:\BSUIR\finished\OAiP\2sem\laba1\laba\laba\parser.c(181,28): warning C4024: 'charMemoryAllocate': different types for formal and actual parameter 1
-C:\BSUIR\finished\OAiP\2sem\laba1\laba\laba\parser.c(188,14): warning C4090: 'function': different 'const' qualifiers
-C:\BSUIR\finished\OAiP\2sem\laba1\laba\laba\parser.c(189,17): warning C4090: 'function': different 'const' qualifiers
-C:\BSUIR\finished\OAiP\2sem\laba1\laba\laba\parser.c(190,13): warning C4090: 'function': different 'const' qualifiers
-C:\BSUIR\finished\OAiP\2sem\laba1\laba\laba\parser.c(191,16): warning C4090: 'function': different 'const' qualifiers
-  Generating Code...
+﻿  structeres.c
+C:\BSUIR\finished\OAiP\2sem\laba1\laba\laba\structeres.c(12,35): warning C4047: 'function': 'char *' differs in levels of indirection from 'char **'
+C:\BSUIR\finished\OAiP\2sem\laba1\laba\laba\structeres.c(12,21): warning C4024: 'charMemoryAllocate': different types for formal and actual parameter 1
   laba.vcxproj -> C:\BSUIR\finished\OAiP\2sem\laba1\laba\x64\Debug\laba.exe
