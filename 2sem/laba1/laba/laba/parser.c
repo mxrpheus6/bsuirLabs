@@ -82,7 +82,7 @@ float* parseDiag(FILE* pointer) {
                 i++;
                 j++;
             }
-            temp = (char*)realloc(temp, counter * sizeof(char));
+            temp = (char*)realloc(temp, counter * sizeof(char) + 1);
             temp[j] = '\0';
             result[k] = atof(temp);
             k++;

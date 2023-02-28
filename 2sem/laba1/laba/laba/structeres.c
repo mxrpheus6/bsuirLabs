@@ -79,10 +79,8 @@ void printStructArray(Smartphone* array, int count) {
 		printf("Memory (GB): %d\n", array[i].memory);
 		printf("Battery capacity: %d\n", array[i].battery);
 		printf("---------------------------------\n\n\n");
-		//if (getchar() != 0) {
-			//system("cls");
 		i++;
-		//}
+		
 	}
 }
 
