@@ -6,7 +6,7 @@
 #include "structeres.h"
 #include "menu.h"
 
-char** parseName(FILE* pointer);
-float* parseDiag(FILE* pointer);
+char** parseChar(FILE* pointer);
+float* parseFloat(FILE* pointer);
 int* parseInt(FILE* pointer, int len);
 void parse(Smartphone** array, FILE* pointer, int* size);

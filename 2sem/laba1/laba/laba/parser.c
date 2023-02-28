@@ -14,7 +14,7 @@ typedef enum {
     BATTERY = 40
 } ParseTypes;
 
-char** parseName(FILE* pointer) {
+char** parseChar(FILE* pointer) {
     char* buf = (char*)calloc(255, sizeof(char));
     char** result = (char**)calloc(60, sizeof(char*));
     for (int i = 0; i < 60; i++) {
@@ -40,7 +40,10 @@ char** parseName(FILE* pointer) {
                 i++;
                 k++;
             }
-            result[j] = (char*)realloc(result[j], strlen(result[j]) - counter + 1);
+            size_t newLen = strlen(result[j]) - counter + 1;
+            if (newLen > 0) {
+                result[j] = (char*)realloc(result[j], newLen);
+            }
             result[j][k - counter] = '\0';
             j++;
         }
@@ -50,7 +53,7 @@ char** parseName(FILE* pointer) {
     return result;
 }
 
-float* parseDiag(FILE* pointer) {
+float* parseFloat(FILE* pointer) {
     char* buf = (char*)calloc(255, sizeof(char));
     char* bigBuf = (char*)calloc(4096, sizeof(char));
     char* temp;
@@ -169,8 +172,8 @@ void parse(Smartphone** array, FILE* pointer, int* size) {
     else {
         *array = (Smartphone*)realloc(*array, (*size) * sizeof(Smartphone));
     }
-    char** name = parseName(pointer);
-    const float* diag = parseDiag(pointer);
+    char** name = parseChar(pointer);
+    const float* diag = parseFloat(pointer);
     const int* memory = parseInt(pointer, MEMORY);
     const int* ram = parseInt(pointer, RAM);
     const int* battery = parseInt(pointer, BATTERY);
