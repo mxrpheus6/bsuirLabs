@@ -1,5 +1,5 @@
 ﻿  parser.c
 C:\BSUIR\finished\OAiP\2sem\laba1\laba\laba\parser.c(87,25): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\BSUIR\finished\OAiP\2sem\laba1\laba\laba\parser.c(176,45): warning C4047: 'function': 'char *' differs in levels of indirection from 'char **'
-C:\BSUIR\finished\OAiP\2sem\laba1\laba\laba\parser.c(176,28): warning C4024: 'charMemoryAllocate': different types for formal and actual parameter 1
+C:\BSUIR\finished\OAiP\2sem\laba1\laba\laba\parser.c(179,45): warning C4047: 'function': 'char *' differs in levels of indirection from 'char **'
+C:\BSUIR\finished\OAiP\2sem\laba1\laba\laba\parser.c(179,28): warning C4024: 'charMemoryAllocate': different types for formal and actual parameter 1
   laba.vcxproj -> C:\BSUIR\finished\OAiP\2sem\laba1\laba\x64\Debug\laba.exe

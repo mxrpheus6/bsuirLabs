@@ -86,6 +86,9 @@ float* parseDiag(FILE* pointer) {
             temp[j] = '\0';
             result[k] = atof(temp);
             k++;
+            if (temp != NULL) {
+                free(temp);
+            }
         }
     }
     free(buf);
