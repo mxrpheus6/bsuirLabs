@@ -100,7 +100,7 @@ float* parseDiag(FILE* pointer) {
 int* parseInt(FILE* pointer, int len) {
     char* buf = (char*)calloc(255, sizeof(char));
     char* bigBuf = (char*)calloc(4096, sizeof(char));
-    char* temp = (char*)calloc(8, sizeof(char));
+    char* temp = (char*)calloc(64, sizeof(char));
     int* result = (int*)calloc(60, sizeof(int));
     int i;
     int j;
@@ -144,11 +144,9 @@ int* parseInt(FILE* pointer, int len) {
                             i++;
                             j++;
                         }
-
                         result[k] = atoi(temp);
                         flag = 1;
                         k++;
-
                     }
                 }
             }
@@ -156,6 +154,7 @@ int* parseInt(FILE* pointer, int len) {
     }
     free(buf);
     free(bigBuf);
+    free(temp);
     rewind(pointer);
     return result;
 }
