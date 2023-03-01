@@ -6,6 +6,12 @@
 #include "structeres.h"
 #include "menu.h"
 
+typedef enum {
+    MEMORY = 34,
+    RAM = 36,
+    BATTERY = 40
+} ParseTypes;
+
 char** parseChar(FILE* pointer);
 float* parseFloat(FILE* pointer);
 int* parseInt(FILE* pointer, int len);

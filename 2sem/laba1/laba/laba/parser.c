@@ -2,17 +2,11 @@
 #include <stdlib.h>
 #include <string.h>
 #include <locale.h>
-#include <wchar.h>
 
 #include "parser.h"
 #include "structeres.h"
 #include "memory.h"
 
-typedef enum { 
-    MEMORY = 34,
-    RAM = 36,
-    BATTERY = 40
-} ParseTypes;
 
 char** parseChar(FILE* pointer) {
     char* buf = (char*)calloc(255, sizeof(char));
