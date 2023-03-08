@@ -27,6 +27,9 @@
     <ClCompile Include="stack.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="files.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="strings.h">
@@ -36,6 +39,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="stack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="files.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

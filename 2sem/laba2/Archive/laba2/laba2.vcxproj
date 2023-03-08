@@ -127,12 +127,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="files.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="stack.c" />
     <ClCompile Include="strings.c" />
     <ClCompile Include="structeres.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="files.h" />
     <ClInclude Include="stack.h" />
     <ClInclude Include="strings.h" />
     <ClInclude Include="structeres.h" />
