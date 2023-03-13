@@ -6,4 +6,14 @@ typedef enum {
 typedef struct WordFrequency {
 	char* word;
 	int frequency;
-} WordFreauency;
+	int length;
+	int size;
+} WordFrequency;
+
+typedef struct Dictionary {
+	char* originalWord;
+	char* changeWord;
+} Dictionary;
+
+void printStructArray(WordFrequency* array, int size);
+void printDictionary(Dictionary* array, int size);

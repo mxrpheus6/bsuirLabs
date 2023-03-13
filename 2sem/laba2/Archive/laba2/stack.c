@@ -24,7 +24,7 @@ StackNode* popStackNode(StackNode* topOfStack) {
 
 void freeStack(StackNode* topOfStack) {
 	while (topOfStack)
-		popStackNode(topOfStack);
+		topOfStack = popStackNode(topOfStack);
 }
 
 void setStackNodeName(StackNode* topOfStack, char* name) {
@@ -53,38 +53,85 @@ StackNode* stackCheck(StackNode* topOfStack, char* string) {
 	return newNode;
 }
 
+//void initStackFromFile(StackNode** topOfStack, FILE* pointer) {
+//	char bufFromFile[4096];
+//	char* temp;
+//	int size;
+//	int i;
+//	int j;
+//	while (fgets(bufFromFile, 4096, pointer) != NULL && !feof(pointer)) {
+//		i = 0;
+//		j = 0;
+//		size = 1;
+//		temp = (char*)malloc(size);
+//		while (bufFromFile[i] != '\n' && bufFromFile[i] != '\0') {
+//			if (bufFromFile[i] == ' ' || bufFromFile[i] == '-' || bufFromFile[i] == '.' || bufFromFile[i] == ',' || bufFromFile[i] == '?' || bufFromFile[i] == '!' || bufFromFile[i] == '"' || bufFromFile[i] == '\'' || bufFromFile == ':' || bufFromFile == ';') {
+//				temp[j] = '\0';
+//				if (strlen(temp) > 1) {
+//					*topOfStack = stackCheck(*topOfStack, temp);
+//				}
+//				i++;
+//				j = 0;
+//				size = 1;
+//				free(temp);
+//				temp = (char*)malloc(size);
+//			}
+//			else {
+//				size++;
+//				temp[j] = convertUpperChar(bufFromFile[i]);
+//				temp = (char*)realloc(temp, size);
+//				i++;
+//				j++;
+//
+//			}
+//		}
+//		if (bufFromFile[i] == '\n') {
+//			temp[j] = '\0';
+//			if (strlen(temp) > 1 && isWord(temp) == TRUE) {
+//				*topOfStack = stackCheck(*topOfStack, temp);
+//			}
+//			i++;
+//			j = 0;
+//			size = 1;
+//			free(temp);
+//			temp = (char*)malloc(size);
+//		}
+//	}
+//}
+
 void initStackFromFile(StackNode** topOfStack, FILE* pointer) {
 	char bufFromFile[4096];
-	char* temp;
-	int size;
-	int i;
-	int j;
+	char delimiters[] = "()-,.?!;:'\" \n";
+	int counter = 0;
 	while (fgets(bufFromFile, 4096, pointer) != NULL && !feof(pointer)) {
-		i = 0;
-		j = 0;
-		size = 1;
-		temp = (char*)malloc(size);
-		while (bufFromFile[i] != '\n' && bufFromFile[i] != '\0') {
-			if (bufFromFile[i] == ' ' || bufFromFile[i] == '-' || bufFromFile[i] == '.' || bufFromFile[i] == ',' || bufFromFile[i] == '?' || bufFromFile[i] == '!' || bufFromFile[i] == '"' || bufFromFile[i] == '\'' || bufFromFile == ':' || bufFromFile == ';') {
-				temp[j] = '\0';
-				if (strlen(temp) > 1) {
-					*topOfStack = stackCheck(*topOfStack, temp);
-				}
-				i++;
-				j = 0;
-				size = 1;
-				free(temp);
-				temp = (char*)malloc(size);
-			}
-			else {
-				size++;
-				temp[j] = convertUpperChar(bufFromFile[i]);
-				temp = (char*)realloc(temp, size);
-				i++;
-				j++;
-
-			}
+		char* pch = strtok(bufFromFile, delimiters);
+		while (pch != NULL)
+		{
+			if (stringASCII(pch) > 1)
+				*topOfStack = stackCheck(*topOfStack, pch);
+			pch = strtok(NULL, delimiters);
+			counter++;
 		}
+	}
+}
+
+void stackToArray(StackNode** topOfStack, WordFrequency** array, int* size) {
+	StackNode* currentNode;
+	*array = (WordFrequency*)malloc(1 * sizeof(WordFrequency));
+	int i = 0;
+	int len;
+	while (*topOfStack != NULL) {
+		currentNode = *topOfStack;
+		(*size)++;
+		(*array) = (WordFrequency*)realloc((*array), (*size) * sizeof(WordFrequency));
+		len = strlen(currentNode->name);
+		(*array)[i].word = (char*)malloc(len + 1);
+		strcpy((*array)[i].word, currentNode->name);
+		(*array)[i].frequency = currentNode->num;
+		(*array)[i].length = len;
+		(*array)[i].size = currentNode->num * len;
+		(*topOfStack) = popStackNode(*topOfStack);
+		i++;
 	}
 }
 

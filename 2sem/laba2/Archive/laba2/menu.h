@@ -1,0 +1,1 @@
+void mainMenu(struct StackNode* topOfStack, struct WordFrequency* words, struct Dictionary* changes, FILE* pointerOg, int* sizeOfArray, int* sizeOfDict);

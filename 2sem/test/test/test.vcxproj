@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{135bb215-a973-4342-8335-21aeec650a99}</ProjectGuid>
-    <RootNamespace>laba2</RootNamespace>
+    <ProjectGuid>{3a2a36e0-edc1-495e-99fe-126856865ee5}</ProjectGuid>
+    <RootNamespace>test</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,25 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="archive.c" />
-    <ClCompile Include="comparators.c" />
-    <ClCompile Include="files.c" />
-    <ClCompile Include="main.c" />
-    <ClCompile Include="memory.c" />
-    <ClCompile Include="menu.c" />
-    <ClCompile Include="stack.c" />
-    <ClCompile Include="strings.c" />
-    <ClCompile Include="structeres.c" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="archive.h" />
-    <ClInclude Include="comparators.h" />
-    <ClInclude Include="files.h" />
-    <ClInclude Include="memory.h" />
-    <ClInclude Include="menu.h" />
-    <ClInclude Include="stack.h" />
-    <ClInclude Include="strings.h" />
-    <ClInclude Include="structeres.h" />
+    <ClCompile Include="test.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
