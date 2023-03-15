@@ -23,6 +23,6 @@ void mainMenu(struct StackNode* topOfStack, struct WordFrequency* words, struct 
 	qsort(words, *sizeOfArray, sizeof(WordFrequency), compareSize);
 	fillDictionaryArray(&words, pointerOg, &changes, *sizeOfArray, sizeOfDict);
 	pushDictionaryToFile(&changes, &pointerArch, *sizeOfDict);
-	fclose(pointerArch);
-    archiveFile(pointerOg, pointerArch, changes, *sizeOfDict);
+	archiveFile(pointerOg, pointerArch, &changes, sizeOfDict);
+	//fclose(pointerArch);
 }

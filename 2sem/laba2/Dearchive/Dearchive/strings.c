@@ -1,36 +1,9 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-#include "structeres.h"
-
-int isLetter(char symbol) {
-	if ((symbol > 64 && symbol < 91 || symbol > 96 && symbol < 123)) {
-		return TRUE;
-	}
-	return FALSE;
-}
-
-int isWord(char* string) {
-	int i = 0;
-	while (string[i] != '\n' && string[i] != '\0') {
-		if (isLetter(string[i]) == FALSE) {
-			return FALSE;
-		}
-		i++;
-	}
-	return TRUE;
-}
-
-
-int stringASCII(char* string) {
-	int i = 0;
-	while (string[i] != '\0') {
-		if ((!(string[i] >= 97 && string[i] <= 122) && !(string[i] >= 65 && string[i] <= 90)))
-			return 0;
-		i++;
-	}
-	return i;
-}
+#include "strings.h"
+#include "structures.h"
 
 int charASCII(char symbol) {
 	if (((symbol >= 'a' && symbol <= 'z') || (symbol >= 'A' && symbol <= 'Z')))
@@ -51,13 +24,13 @@ int deliCheck(char symbol) {
 
 int wordIndex(const char* string, int* index) {
 	while (string[(*index)] != '\0') {
-		if ((*index) == 0) {
-			if (charASCII(string[(*index)]) != FALSE) {
+		if ((*index) > 0) {
+			if (string[(*index) - 1] != '-' && charASCII(string[(*index) - 1]) == FALSE && charASCII(string[(*index)]) != FALSE) {
 				return (*index);
 			}
 		}
-		else if ((*index) > 0) {
-			if (string[(*index) - 1] != '-' && charASCII(string[(*index) - 1]) == FALSE && charASCII(string[(*index)]) != FALSE) {
+		else if ((*index) == 0) {
+			if (charASCII(string[(*index)]) != FALSE) {
 				return (*index);
 			}
 		}
@@ -83,17 +56,16 @@ char* getChangeForWord(struct Dictionary** array, const char* string, const int*
 	char* changedWord = NULL;
 	int len;
 	for (int i = 0; i < *size; i++) {
-		if (strcmp(string, (*array)[i].originalWord) == 0) {
-			len = strlen((*array)[i].changeWord);
-			changedWord = (char*)malloc(len + 1);
-			strcpy(changedWord, (*array)[i].changeWord);
-			break;
-		}
-
 		if (strcmp(string, (*array)[i].changeWord) == 0) {
 			len = strlen((*array)[i].originalWord);
 			changedWord = (char*)malloc(len + 1);
 			strcpy(changedWord, (*array)[i].originalWord);
+			break;
+		}
+		if (strcmp(string, (*array)[i].originalWord) == 0) {
+			len = strlen((*array)[i].changeWord);
+			changedWord = (char*)malloc(len + 1);
+			strcpy(changedWord, (*array)[i].changeWord);
 			break;
 		}
 	}

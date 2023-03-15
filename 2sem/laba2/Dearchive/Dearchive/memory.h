@@ -1,0 +1,1 @@
+void allocateDictArray(struct Dictionary** array, int size);
