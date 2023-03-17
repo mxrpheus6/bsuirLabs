@@ -89,7 +89,6 @@ char* getChangeForWord(struct Dictionary** array, const char* string, const int*
 			strcpy(changedWord, (*array)[i].changeWord);
 			break;
 		}
-
 		if (strcmp(string, (*array)[i].changeWord) == 0) {
 			len = strlen((*array)[i].originalWord);
 			changedWord = (char*)malloc(len + 1);

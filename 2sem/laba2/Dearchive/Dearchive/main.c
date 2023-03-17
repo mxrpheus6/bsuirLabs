@@ -14,6 +14,8 @@ int main(void) {
 	fileOpen(&pointerArch);
 	fileCreate(&pointerNew);
 	fillDictionaryFromFile(pointerArch, &array, &size);
+	printf("Dictionary filled.\n");
 	dearchiveFile(pointerArch, pointerNew, &array, &size);
+	printf("File succesifully dearchived");
 	return 0;
 }

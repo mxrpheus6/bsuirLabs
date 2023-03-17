@@ -13,7 +13,7 @@ int main(void) {
 	Smartphone* telephone = NULL;
 	int size = 0;
 	FILE* pointer;
-	fopen_s(&pointer, "D:/Work/test228.txt", "r");
+	fopen_s(&pointer, "D:/Work/test1337.txt", "r");
 	mainMenu(&telephone, &size, pointer);
 	free(telephone);
 	fclose(pointer);

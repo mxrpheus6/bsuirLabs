@@ -39,7 +39,7 @@ void changeWords(char** buf, const char* word, const char* changedWord, int* ind
 		(*index) += strlen(changedWord) - 1;
 	}
 	else {
-		difference = strlen(changedWord) - strlen(word);
+		difference = -difference;
 		beginIndex = (strlen((*buf)) + 1);
 		for (int i = 0; i < difference; i++) {
 			while (beginIndex != (*index)) {
@@ -64,14 +64,12 @@ void dearchiveFile(FILE* pointerOg, FILE* pointerArch, Dictionary** array, int* 
 	char* bufFromFile = (char*)malloc(4096);
 	char* word = NULL;
 	char* changedWord = NULL;
-	fgets(bufFromFile, 4096, pointerOg);
-	while (!feof(pointerOg)) {
+	while (fgets(bufFromFile, 4096, pointerOg) != NULL && !feof(pointerOg)) {
 		while ((beginIndex = wordIndex(bufFromFile, &index)) != -1) {
 			processText(array, sizeOfDictionary, word, bufFromFile, &beginIndex, changedWord, &index);
 		}
 		fprintf(pointerArch, "%s", bufFromFile);
 		index = 0;
-		fgets(bufFromFile, 4096, pointerOg);
 	}
 	free(bufFromFile);
 	free(word);

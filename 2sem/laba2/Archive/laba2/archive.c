@@ -166,19 +166,12 @@ void archiveFile(FILE* pointerOg, FILE* pointerArch, Dictionary** array, int* si
 	char* word = NULL;
 	char* changedWord = NULL;
 	fseek(pointerOg, 0, 0);
-	fgets(bufFromFile, 4096, pointerOg);
-	while (!feof(pointerOg)) {
+	while (fgets(bufFromFile, 4096, pointerOg) != NULL && !feof(pointerOg)) {
 		while ((beginIndex = wordIndex(bufFromFile, &index)) != -1) {
 			processText(array, sizeOfDictionary, word, bufFromFile, &beginIndex, changedWord, &index);
-			//word = getWordFromTxt(bufFromFile, beginIndex);
-			//changedWord = getChangeForWord(array, word, sizeOfDictionary);
-			//changeWords(&bufFromFile, word, changedWord, &index);
-			//index++;
 		}
 		fprintf(pointerArch, "%s", bufFromFile);
-		//fputs(bufFromFile, pointerArch);
 		index = 0;
-		fgets(bufFromFile, 4096, pointerOg);
 	}
 	free(bufFromFile);
 	free(word);

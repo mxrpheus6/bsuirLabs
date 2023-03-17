@@ -10,7 +10,6 @@ void fileOpen(FILE** pointer) {
 		exit(1);
 	}
 	printf("Success!");
-	//Sleep(2000);
 }
 
 void fileCreate(FILE** pointer) {

@@ -9,8 +9,6 @@ void fileOpen(FILE** pointer) {
 		printf("Error! Cannot open file.");
 		exit(1);
 	}
-	printf("Success!");
-	Sleep(2000);
 }
 
 void fileCreate(FILE** pointer) {
@@ -19,5 +17,4 @@ void fileCreate(FILE** pointer) {
 		printf("Unknown error happend. Please try again...");
 		exit(1);
 	}
-	printf("Success!");
 }

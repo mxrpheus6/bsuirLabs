@@ -17,12 +17,13 @@ void mainMenu(struct StackNode* topOfStack, struct WordFrequency* words, struct 
 	getchar();
 	system("cls");
 	stackToArray(&topOfStack, &words, sizeOfArray);
-	printf("Stack placed into array and deleted.\nNow we fill dictionary");
+	printf("Stack placed into array and deleted.\nNow we fill dictionary and archive file");
 	printf("\n\nPress button 'Enter' to continue");
 	getchar();
 	qsort(words, *sizeOfArray, sizeof(WordFrequency), compareSize);
 	fillDictionaryArray(&words, pointerOg, &changes, *sizeOfArray, sizeOfDict);
 	pushDictionaryToFile(&changes, &pointerArch, *sizeOfDict);
+	printf("Dictionary filled.\n");
 	archiveFile(pointerOg, pointerArch, &changes, sizeOfDict);
-	//fclose(pointerArch);
+	printf("FIle successifully archived");
 }
