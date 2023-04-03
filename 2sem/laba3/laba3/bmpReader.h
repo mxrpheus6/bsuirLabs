@@ -13,7 +13,7 @@ typedef struct BITMAPINFOHEADER {
 	unsigned int height;
 	unsigned short colorPlanes;
 	unsigned short bitsPerPixel;
-	unsigned int comprassionMethod;
+	unsigned int compressionMethod;
 	unsigned int sizeData;
 	unsigned int pWidth;
 	unsigned int pHeight;
@@ -25,7 +25,6 @@ typedef struct Pixel {
 	unsigned char blue;
 	unsigned char green;
 	unsigned char red;
-	unsigned char alpha;
 } Pixel;
 
 #pragma pack (pop)
@@ -42,7 +41,8 @@ void readBMPRowByRow(FILE* filePointer, BMPFile* bmpFile);
 BMPFile* loadBMPFile(char* fileName);
 void freeBMPFile(BMPFile* bmpFile);
 void printBMP(BMPFile* bmpFile);
-void createCopy(BMPFile* bmpFile, FILE** newFile);
-void createNegativeImage(BMPFile* bmpFile, FILE** newFile);
-void createBWImage(BMPFile* bmpFile, FILE** newFile);
-void GammaCorrection(BMPFile* bmpFile, FILE** newFile, float gamma);
+void createCopy(BMPFile* bmpFile, FILE** newFile, char* fileName);
+void createNegativeImage(BMPFile* bmpFile, FILE** newFile, char* fileName);
+void createBWImage(BMPFile* bmpFile, FILE** newFile, char* fileName);
+void GammaCorrection(BMPFile* bmpFile, FILE** newFile, float gamma, char* fileName);
+void medianFilter(BMPFile* bmpFile, FILE** newFile, char* fileName, int filterSize);

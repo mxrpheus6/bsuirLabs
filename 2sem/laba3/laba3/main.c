@@ -2,19 +2,16 @@
 #include <stdlib.h>
 
 #include "bmpReader.h"
+#include "menu.h"
 
 int main(void) {
 	char path[256];
-	fgets(path, 256, stdin);
-	path[strlen(path) - 1] = '\0';
-	BMPFile* bmpf = loadBMPFile(path);
-	BMPFile* newbmpf;
 	FILE* newFile;
 	float gamma;
-	printf("ID:%c%c\n", bmpf->bhdr.ID[0], bmpf->bhdr.ID[1]);
-	printf("size:%d\n", bmpf->bhdr.sizeOfFile);
-	printf("pixel offset:%d\n", bmpf->bhdr.pixelOffset);
-	printf(
+	/*printf(
+		"ID:%c%c\n"
+		"size:%d\n"
+		"pixel offset:%d\n"
 		"sizeOfHeader: %d\n"
 		"width: %d\n"
 		"height: %d\n"
@@ -26,23 +23,21 @@ int main(void) {
 		"pHeight: %d\n"
 		"colorsCount: %d\n"
 		"colorsImp: %d\n",
+		bmpf->bhdr.ID[0], 
+		bmpf->bhdr.ID[1],
+		bmpf->bhdr.sizeOfFile,
+		bmpf->bhdr.pixelOffset,
 		bmpf->dhdr.sizeOfHeader,
 		bmpf->dhdr.width,
 		bmpf->dhdr.height,
 		bmpf->dhdr.colorPlanes,
 		bmpf->dhdr.bitsPerPixel,
-		bmpf->dhdr.comprassionMethod,
+		bmpf->dhdr.compressionMethod,
 		bmpf->dhdr.sizeData,
 		bmpf->dhdr.pWidth,
 		bmpf->dhdr.pHeight,
 		bmpf->dhdr.colorsCount,
-		bmpf->dhdr.colorsImp);
-	//printBMP(bmpf);
-	//createCopy(bmpf, &newbmpf, &newFile);
-	//createNegativeImage(bmpf, &newFile);
-	//createBWImage(bmpf, &newFile);
-	scanf_s("%f", &gamma);
-	GammaCorrection(bmpf, &newFile, gamma);
-	freeBMPFile(bmpf);
+		bmpf->dhdr.colorsImp);*/
+	mainMenu(path, &newFile, &gamma);
 	return 0;
 }
