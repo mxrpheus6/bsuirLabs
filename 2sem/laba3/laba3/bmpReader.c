@@ -32,7 +32,6 @@ BMPFile* loadBMPFile(char* fileName) {
 
 	bmpFile->array = (Pixel*)malloc(width * height * sizeof(Pixel));
 
-	int alphaChannel = (bytesPerPixel == 4);
 	int j = 0;
 	for (int i = 0; i < height * width * bytesPerPixel; i += bytesPerPixel) {
 		bmpFile->array[j].blue = bmpFile->data[i];
@@ -65,8 +64,6 @@ void createCopy(BMPFile* bmpFile, FILE** newFile, char* fileName) {
 	fwrite(bmpFile->data, bmpFile->dhdr.sizeData, 1, *newFile);
 
 	int bytesPerPixel = bmpFile->dhdr.bitsPerPixel / 8;
-	int width = bmpFile->dhdr.width;
-	int height = bmpFile->dhdr.height;
 
 	bmpFile->array = (Pixel*)malloc(bmpFile->dhdr.sizeData * sizeof(Pixel));
 	fseek(*newFile, bmpFile->bhdr.pixelOffset, SEEK_SET);
@@ -85,10 +82,8 @@ void createNegativeImage(BMPFile* bmpFile, FILE** newFile, char* fileName) {
 	createCopy(bmpFile, newFile, fileName);
 	fseek(*newFile, bmpFile->bhdr.pixelOffset, SEEK_SET);
 	int bytesPerPixel = bmpFile->dhdr.bitsPerPixel / 8;
-	int width = bmpFile->dhdr.width;
-	int height = bmpFile->dhdr.height;
 
-	for (int i = 0; i < width * height * (bytesPerPixel); i += bytesPerPixel) {
+	for (int i = 0; i < bmpFile->dhdr.sizeData; i += bytesPerPixel) {
 		unsigned char byte0 = 255 - bmpFile->array[i].blue;
 		unsigned char byte1 = 255 - bmpFile->array[i].green;
 		unsigned char byte2 = 255 - bmpFile->array[i].red;
@@ -104,8 +99,6 @@ void createBWImage(BMPFile* bmpFile, FILE** newFile, char* fileName) {
 	createCopy(bmpFile, newFile, fileName);
 	fseek(*newFile, bmpFile->bhdr.pixelOffset, SEEK_SET);
 	int bytesPerPixel = bmpFile->dhdr.bitsPerPixel / 8;
-	int width = bmpFile->dhdr.width;
-	int height = bmpFile->dhdr.height;
 
 	for (int i = 0; i < bmpFile->dhdr.sizeData; i += bytesPerPixel) {
 		unsigned char byte = (bmpFile->array[i].blue * 0.11 + bmpFile->array[i].red * 0.3 + bmpFile->array[i].green * 0.59);
@@ -120,8 +113,6 @@ void GammaCorrection(BMPFile* bmpFile, FILE** newFile, float gamma, char* fileNa
 	createCopy(bmpFile, newFile, fileName);
 	fseek(*newFile, bmpFile->bhdr.pixelOffset, SEEK_SET);
 	int bytesPerPixel = bmpFile->dhdr.bitsPerPixel / 8;
-	int width = bmpFile->dhdr.width;
-	int height = bmpFile->dhdr.height;
 
 	for (int i = 0; i < bmpFile->dhdr.sizeData; i += bytesPerPixel) {
 		float blue = (float)bmpFile->array[i].blue / 255.0;
