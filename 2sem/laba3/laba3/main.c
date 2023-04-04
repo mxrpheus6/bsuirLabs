@@ -39,6 +39,6 @@ int main(void) {
 		bmpf->dhdr.pHeight,
 		bmpf->dhdr.colorsCount,
 		bmpf->dhdr.colorsImp);*/
-	mainMenu(path, &newFile, &gamma);
+	mainMenu(path, &newFile, &gamma, &window);
 	return 0;
 }
