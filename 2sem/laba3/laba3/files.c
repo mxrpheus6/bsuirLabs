@@ -5,12 +5,12 @@
 
 int checkNewFile(char* fileName) {
 	if (strstr(fileName, ".bmp") == NULL) {
-		printf("Can't create file, incorrect format %s", fileName);
+		printf("Can't create file, incorrect format %s\nPlease, enter correct path: ", fileName);
 		return 1;
 	}
 	FILE* filePointer = fopen(fileName, "wb");
 	if (!filePointer) {
-		printf("Can't create file %s", fileName);
+		printf("Can't create file %s\nPlease, enter correct path: ", fileName);
 		return 1;
 	}
 	fclose(filePointer);

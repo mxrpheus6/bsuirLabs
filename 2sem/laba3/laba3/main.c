@@ -8,6 +8,7 @@ int main(void) {
 	char path[256];
 	FILE* newFile;
 	float gamma;
+	int window;
 	/*printf(
 		"ID:%c%c\n"
 		"size:%d\n"
