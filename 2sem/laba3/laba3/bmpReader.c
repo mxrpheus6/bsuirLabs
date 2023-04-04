@@ -18,6 +18,7 @@ BMPFile* loadBMPFile(char* fileName) {
 	
 	if (bmpFile->dhdr.bitsPerPixel != 24) {
 		printf("Invalid bits. Programm supports only 24 bit images.\nPlease, enter other path: ", fileName);
+		free(bmpFile);
 		return 2;
 	}
 
@@ -87,8 +88,7 @@ void createNegativeImage(BMPFile* bmpFile, FILE** newFile, char* fileName) {
 	int width = bmpFile->dhdr.width;
 	int height = bmpFile->dhdr.height;
 
-	int alphaChannel = (bytesPerPixel == 4);
-	for (int i = 0; i < bmpFile->dhdr.sizeData; i += bytesPerPixel) {
+	for (int i = 0; i < width * height * (bytesPerPixel); i += bytesPerPixel) {
 		unsigned char byte0 = 255 - bmpFile->array[i].blue;
 		unsigned char byte1 = 255 - bmpFile->array[i].green;
 		unsigned char byte2 = 255 - bmpFile->array[i].red;
@@ -96,9 +96,6 @@ void createNegativeImage(BMPFile* bmpFile, FILE** newFile, char* fileName) {
 		fwrite(&byte0, sizeof(unsigned char), 1, *newFile);
 		fwrite(&byte1, sizeof(unsigned char), 1, *newFile);
 		fwrite(&byte2, sizeof(unsigned char), 1, *newFile);
-		if (alphaChannel) {
-			fwrite(&byte3, sizeof(unsigned char), 1, *newFile);
-		}
 	}
 	fclose(*newFile);
 }
@@ -110,15 +107,11 @@ void createBWImage(BMPFile* bmpFile, FILE** newFile, char* fileName) {
 	int width = bmpFile->dhdr.width;
 	int height = bmpFile->dhdr.height;
 
-	int alphaChannel = (bytesPerPixel == 4);
 	for (int i = 0; i < bmpFile->dhdr.sizeData; i += bytesPerPixel) {
 		unsigned char byte = (bmpFile->array[i].blue * 0.11 + bmpFile->array[i].red * 0.3 + bmpFile->array[i].green * 0.59);
 		fwrite(&byte, sizeof(unsigned char), 1, *newFile);
 		fwrite(&byte, sizeof(unsigned char), 1, *newFile);
 		fwrite(&byte, sizeof(unsigned char), 1, *newFile);
-		if (alphaChannel) {
-			fwrite(&byte, sizeof(unsigned char), 1, *newFile);
-		}
 	}
 	fclose(*newFile);
 }
@@ -129,8 +122,6 @@ void GammaCorrection(BMPFile* bmpFile, FILE** newFile, float gamma, char* fileNa
 	int bytesPerPixel = bmpFile->dhdr.bitsPerPixel / 8;
 	int width = bmpFile->dhdr.width;
 	int height = bmpFile->dhdr.height;
-
-	int alphaChannel = (bytesPerPixel == 4);
 
 	for (int i = 0; i < bmpFile->dhdr.sizeData; i += bytesPerPixel) {
 		float blue = (float)bmpFile->array[i].blue / 255.0;
