@@ -19,7 +19,6 @@ void menuInformation(void) {
 
 void mainMenu(char* path, FILE** newFile, float* gamma, int* window) {
 	BMPFile* bmpf;
-	int flag = 0;
 	printf("Welcome!\nPlease, enter name of original bmp file: ");
 	fgets(path, 256, stdin);
 	path[strlen(path) - 1] = '\0';

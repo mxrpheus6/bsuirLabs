@@ -48,7 +48,7 @@ void freeBMPFile(BMPFile* bmpFile) {
 		free(bmpFile);
 }
 
-void printBMP(BMPFile* bmpf) {
+void printBMP(const BMPFile* bmpf) {
 	printf(
 		"ID:%c%c\n"
 		"size:%d\n"
@@ -92,7 +92,6 @@ void createCopy(BMPFile* bmpFile, FILE** newFile, char* fileName) {
 
 	bmpFile->array = (Pixel*)malloc(bmpFile->dhdr.sizeData * sizeof(Pixel));
 	fseek(*newFile, bmpFile->bhdr.pixelOffset, SEEK_SET);
-	int alphaChannel = (bytesPerPixel == 4);
 	for (int i = 0; i < bmpFile->dhdr.sizeData; i += bytesPerPixel) {
 		bmpFile->array[i].blue = bmpFile->data[i];
 		bmpFile->array[i].green = bmpFile->data[i + 1];
