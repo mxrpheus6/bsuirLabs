@@ -31,18 +31,14 @@ void mainMenu(char* path, FILE** newFile, float* gamma, int* window) {
 	system("cls");
 	while (1) {
 		menuInformation();
-		flag = 0;
 		while (((scanf_s(" %d", &userInput)) != 1 || getchar() != '\n') || (userInput < 0 || userInput > 6)) {
 			printf("Invalid input. Please, enter correct number: ");
 			rewind(stdin);
-			if (flag == 1) {
-				break;
-			}
 		}
 		if (userInput == 6) {
+			freeBMPFile(bmpf);
 			exit(0);
 		}
-		flag = 1;
 		switch (userInput) {
 		case 1:
 			createNewFile(path);
@@ -100,5 +96,4 @@ void mainMenu(char* path, FILE** newFile, float* gamma, int* window) {
 			break;
 		}
 	}
-	freeBMPFile(bmpf);
 }

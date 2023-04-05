@@ -48,12 +48,37 @@ void freeBMPFile(BMPFile* bmpFile) {
 		free(bmpFile);
 }
 
-void printBMP(BMPFile* bmpFile) {
-	for (int i = 0; i < bmpFile->dhdr.sizeData; i++) {
-		if (i % 16 == 0) 
-			printf("\n%04x: ", i);
-		printf("%02x ", bmpFile->data[i]);
-	}
+void printBMP(BMPFile* bmpf) {
+	printf(
+		"ID:%c%c\n"
+		"size:%d\n"
+		"pixel offset:%d\n"
+		"sizeOfHeader: %d\n"
+		"width: %d\n"
+		"height: %d\n"
+		"colorPlanes: %d\n"
+		"bitsPerPixel: %d\n"
+		"comprassionMethod: %d\n"
+		"sizeData: %d\n"
+		"pWidth: %d\n"
+		"pHeight: %d\n"
+		"colorsCount: %d\n"
+		"colorsImp: %d\n",
+		bmpf->bhdr.ID[0],
+		bmpf->bhdr.ID[1],
+		bmpf->bhdr.sizeOfFile,
+		bmpf->bhdr.pixelOffset,
+		bmpf->dhdr.sizeOfHeader,
+		bmpf->dhdr.width,
+		bmpf->dhdr.height,
+		bmpf->dhdr.colorPlanes,
+		bmpf->dhdr.bitsPerPixel,
+		bmpf->dhdr.compressionMethod,
+		bmpf->dhdr.sizeData,
+		bmpf->dhdr.pWidth,
+		bmpf->dhdr.pHeight,
+		bmpf->dhdr.colorsCount,
+		bmpf->dhdr.colorsImp);
 }
 
 void createCopy(BMPFile* bmpFile, FILE** newFile, char* fileName) {
@@ -87,7 +112,6 @@ void createNegativeImage(BMPFile* bmpFile, FILE** newFile, char* fileName) {
 		unsigned char byte0 = 255 - bmpFile->array[i].blue;
 		unsigned char byte1 = 255 - bmpFile->array[i].green;
 		unsigned char byte2 = 255 - bmpFile->array[i].red;
-		unsigned char byte3 = 255;
 		fwrite(&byte0, sizeof(unsigned char), 1, *newFile);
 		fwrite(&byte1, sizeof(unsigned char), 1, *newFile);
 		fwrite(&byte2, sizeof(unsigned char), 1, *newFile);
@@ -123,10 +147,12 @@ void GammaCorrection(BMPFile* bmpFile, FILE** newFile, float gamma, char* fileNa
 		green = (powf(green, 1.0 / gamma) * 255.0);
 		red = (powf(red, 1.0 / gamma) * 255.0);
 
-		unsigned char r, g, b;
-		r = red;
-		g = green;
+		unsigned char b;
+		unsigned char g;
+		unsigned char r;
 		b = blue;
+		g = green;
+		r = red;
 
 		fwrite(&b, sizeof(unsigned char), 1, *newFile);
 		fwrite(&g, sizeof(unsigned char), 1, *newFile);
