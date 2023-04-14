@@ -43,14 +43,14 @@ void mainMenu(char* path, FILE** newFile, float* gamma, int* window) {
 			createNewFile(path);
 			createBWImage(bmpf, newFile, path);
 			printf("\nSuccess!");
-			//Sleep(1000);
+			Sleep(1000);
 			system("cls");
 			break;
 		case 2:
 			createNewFile(path);
 			createNegativeImage(bmpf, newFile, path);
 			printf("\nSuccess!");
-			//Sleep(1000);
+			Sleep(1000);
 			system("cls");
 			break;
 		case 3:
@@ -63,7 +63,7 @@ void mainMenu(char* path, FILE** newFile, float* gamma, int* window) {
 			}
 			GammaCorrection(bmpf, newFile, *gamma, path);
 			printf("\nSuccess!");
-			//Sleep(1000);
+			Sleep(1000);
 			system("cls");
 			break;
 		case 4:
@@ -76,7 +76,7 @@ void mainMenu(char* path, FILE** newFile, float* gamma, int* window) {
 			}
 			medianFilter(bmpf, newFile, path, *window);
 			printf("\nSuccess!");
-			//Sleep(1000);
+			Sleep(1000);
 			system("cls");
 			break;
 		case 5:
@@ -88,7 +88,7 @@ void mainMenu(char* path, FILE** newFile, float* gamma, int* window) {
 				path[strlen(path) - 1] = '\0';
 			}
 			printf("\nSuccess!");
-			//Sleep(1000);
+			Sleep(1000);
 			system("cls");
 			break;
 		default:
