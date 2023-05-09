@@ -15,8 +15,34 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="test.c">
+    <ClCompile Include="main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="hash.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="list.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="file.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="menu.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="hash.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="list.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="file.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="menu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

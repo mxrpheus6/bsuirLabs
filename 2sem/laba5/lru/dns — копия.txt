@@ -1,0 +1,6 @@
+lms.bsuir.by IN A 192.168.251.231
+dota2.com IN A 168.234.23.123
+youtube.com IN A 208.65.153.238
+csgo.com IN A 123.254.121.22
+lms2.bsuir.by IN CNAME lms.bsuir.by
+youtu.be IN CNAME youtube.com

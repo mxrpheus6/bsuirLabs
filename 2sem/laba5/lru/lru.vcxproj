@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{3a2a36e0-edc1-495e-99fe-126856865ee5}</ProjectGuid>
-    <RootNamespace>test</RootNamespace>
+    <ProjectGuid>{b98629a0-cc0c-42f0-9b04-421ff672f3de}</ProjectGuid>
+    <RootNamespace>lru</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,7 +127,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="test.c" />
+    <ClCompile Include="file.c" />
+    <ClCompile Include="hash.c" />
+    <ClCompile Include="list.c" />
+    <ClCompile Include="main.c" />
+    <ClCompile Include="menu.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="file.h" />
+    <ClInclude Include="hash.h" />
+    <ClInclude Include="list.h" />
+    <ClInclude Include="menu.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
