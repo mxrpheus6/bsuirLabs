@@ -194,7 +194,7 @@ int checkCNAME(FILE* filePointer, char* tempValue, char** ip) {
 }
 
 
-char* cacheSearch(Cache* cache, char* key) {
+char* cacheSearch(Cache* cache, char* key) { //result
 	char* searchResult = (char*)malloc(STRING_SIZE);
 	QNode* tempNode = hashTableSearch(cache->hashTable, key, &searchResult);
 
