@@ -142,9 +142,9 @@ void GammaCorrection(BMPFile* bmpFile, FILE** newFile, float gamma, char* fileNa
 		double green = (double)bmpFile->array[i].green / 255.0;
 		double red = (double)bmpFile->array[i].red / 255.0;
 
-		blue = (powf(blue, 1.0 / gamma) * 255.0);
-		green = (powf(green, 1.0 / gamma) * 255.0);
-		red = (powf(red, 1.0 / gamma) * 255.0);
+		blue = (pow(blue, 1.0 / gamma) * 255.0);
+		green = (pow(green, 1.0 / gamma) * 255.0);
+		red = (pow(red, 1.0 / gamma) * 255.0);
 
 		unsigned char b;
 		unsigned char g;
