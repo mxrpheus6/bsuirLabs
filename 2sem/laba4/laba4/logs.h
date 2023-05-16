@@ -1,4 +1,4 @@
-char* getString(char* string);
+void getString(char* string);
 struct tm* getTime(void);
 void createLog(FILE** fp);
 char* fileMark(void);

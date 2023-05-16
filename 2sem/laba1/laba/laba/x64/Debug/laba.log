@@ -1,9 +1,12 @@
 ﻿  parser.c
-C:\BSUIR\finished\OAiP\2sem\laba1\laba\laba\parser.c(86,29): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
 C:\BSUIR\finished\OAiP\2sem\laba1\laba\laba\parser.c(178,45): warning C4047: 'function': 'char *' differs in levels of indirection from 'char **'
 C:\BSUIR\finished\OAiP\2sem\laba1\laba\laba\parser.c(178,28): warning C4024: 'charMemoryAllocate': different types for formal and actual parameter 1
 C:\BSUIR\finished\OAiP\2sem\laba1\laba\laba\parser.c(185,14): warning C4090: 'function': different 'const' qualifiers
 C:\BSUIR\finished\OAiP\2sem\laba1\laba\laba\parser.c(186,17): warning C4090: 'function': different 'const' qualifiers
 C:\BSUIR\finished\OAiP\2sem\laba1\laba\laba\parser.c(187,13): warning C4090: 'function': different 'const' qualifiers
 C:\BSUIR\finished\OAiP\2sem\laba1\laba\laba\parser.c(188,16): warning C4090: 'function': different 'const' qualifiers
+  structeres.c
+C:\BSUIR\finished\OAiP\2sem\laba1\laba\laba\structeres.c(12,35): warning C4047: 'function': 'char *' differs in levels of indirection from 'char **'
+C:\BSUIR\finished\OAiP\2sem\laba1\laba\laba\structeres.c(12,21): warning C4024: 'charMemoryAllocate': different types for formal and actual parameter 1
+  Generating Code...
   laba.vcxproj -> C:\BSUIR\finished\OAiP\2sem\laba1\laba\x64\Debug\laba.exe

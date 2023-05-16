@@ -5,7 +5,7 @@
 
 #include "logs.h"
 
-char* getString(char* string) {
+void getString(char* string) {
 	fgets(string, 256, stdin);
 	string[strlen(string) - 1] = '\0';
 }
@@ -56,7 +56,7 @@ void createLog(FILE** fp) {
 	int day;
 	int month;
 	int year;
-	char* fileName = (char*)malloc(30);
+	char fileName[256];
 
 	seconds = local->tm_sec;
 	minutes = local->tm_min;

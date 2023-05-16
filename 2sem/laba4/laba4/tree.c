@@ -28,28 +28,32 @@ struct binaryTree* show(struct binaryTree** tree, FILE* logPointer) {
 	if ((*tree)->left == NULL && (*tree)->right == NULL) {
 		return *tree;
 	}
-	createAddMessage(&logPointer, "[INFO] User answering question: ", (*tree)->data);
+	createAddMessage(logPointer, "[INFO] User answering question: ", (*tree)->data);
 	printf("%s\nAnswer (y\\n): ", (*tree)->data);
-	while ((scanf_s(" %c", &answer, 1)) != 1 || getchar() != '\n' || (answer != 'y' && answer != 'n')) {
-		createMessage(&logPointer, "[WARN] User entered invalid input while answering (y\\n)");
+
+	while (scanf(" %c", &answer) != 1 || getchar() != '\n' || (answer != 'y' && answer != 'n')) {
+		createMessage(logPointer, "[WARN] User entered invalid input while answering (y\\n)");
 		printf("Invalid input. Please, enter correct answer (y\\n): ");
 		rewind(stdin);
 	}
+
 	if (answer == 'y') {
-		createMessage(&logPointer, "[INFO] User choosed 'y'");
-		show(&(*tree)->left, logPointer);
+		createMessage(logPointer, "[INFO] User chose 'y'");
+		return show(&(*tree)->left, logPointer);
 	}
 	else if (answer == 'n') {
-		createMessage(&logPointer, "[INFO] User choosed 'n'");
-		show(&(*tree)->right, logPointer);
+		createMessage(logPointer, "[INFO] User chose 'n'");
+		return show(&(*tree)->right, logPointer);
 	}
-		
+
+	return NULL;
 }
 
+
 void push(struct binaryTree** tree, char* answer, FILE* logPointer) {
-	char* playerNew = (char*)malloc(256);
-	char* playerOld = (char*)malloc(256);
-	char* question = (char*)malloc(256);
+	char playerNew[256];
+	char playerOld[256];
+	char question[256];
 
 	struct binaryTree* temp = show(tree, logPointer);
 	printf("Is it %s?\nAnswer (y\\n): ", temp->data);
@@ -91,10 +95,6 @@ void push(struct binaryTree** tree, char* answer, FILE* logPointer) {
 		temp->right = createNode(playerOld, logPointer);
 		temp->data = (char*)realloc(temp->data, strlen(question) + 1);
 		strcpy(temp->data, question);
-
-		free(question);
-		free(playerNew);
-		free(playerOld);
 
 		system("cls");
 	}

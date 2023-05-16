@@ -170,7 +170,7 @@ int fileSearch(const char* key, char** ip) {
 	return -1;
 }
 
-int checkCNAME(FILE* filePointer, const char* tempValue, char** ip) {
+int checkCNAME(FILE* filePointer, char* tempValue, char** ip) {
 	char tempLine[STRING_SIZE];
 	char tempDomain[DOMEN_SIZE];
 	char tempIN[IN_SIZE];

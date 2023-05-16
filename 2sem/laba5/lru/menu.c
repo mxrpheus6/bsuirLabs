@@ -44,7 +44,6 @@ void mainMenu(Cache* cache) {
 			printf("Bye!");
 			freeDoubleLinkedList(cache);
 			exit(0);
-			break;
 		default:
 			break;
 		}

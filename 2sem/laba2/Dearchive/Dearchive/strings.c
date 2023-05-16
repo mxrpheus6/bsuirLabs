@@ -67,4 +67,5 @@ char* getChangeForWord(struct Dictionary** array, const char* string, const int*
 			return changedWord;
 		}
 	}
+	return changedWord;
 }
