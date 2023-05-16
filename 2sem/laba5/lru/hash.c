@@ -1,6 +1,6 @@
 #include "hash.h"
 
-unsigned long hashFunc(char* key) {
+unsigned long hashFunc(const char* key) {
 	unsigned long hash = 5381;
 	int symbol;
 	while (symbol = *key++) {
@@ -58,7 +58,7 @@ void freeLinkedList(LinkedList* head) {
 	}
 }
 
-LinkedList** createOverflowBuckets(HashTable* hashTable) {
+LinkedList** createOverflowBuckets(const HashTable* hashTable) {
 	LinkedList** buckets = (LinkedList**)calloc(hashTable->capacity, hashTable->capacity * sizeof(LinkedList*));
 
 	if (buckets == NULL) {
@@ -70,14 +70,13 @@ LinkedList** createOverflowBuckets(HashTable* hashTable) {
 }
 
 void freeOverflowBuckets(HashTable* hashTable) {
-	int i;
 	LinkedList** buckets = hashTable->overflowBuckets;
-	for (i = 0; i < hashTable->capacity; i++)
+	for (int i = 0; i < hashTable->capacity; i++)
 		freeLinkedList(buckets[i]);
 	free(buckets);
 }
 
-HashTableItem* createItem(char* key, QNode* head) {
+HashTableItem* createItem(const char* key, QNode* head) {
 	HashTableItem* item = (HashTableItem*)malloc(sizeof(HashTableItem));
 
 	if (item == NULL) {
@@ -125,9 +124,8 @@ void freeItem(HashTableItem* item) {
 }
 
 void freeTable(HashTable* hashTable) {
-	int i;
 	HashTableItem* item = NULL;
-	for (i = 0; i < hashTable->capacity; i++) {
+	for (int i = 0; i < hashTable->capacity; i++) {
 		item = hashTable->items[i];
 		if (item != NULL)
 			freeItem(item);
@@ -148,11 +146,6 @@ void handleCollision(HashTable* hashTable, int index, HashTableItem* item) {
 	else {
 		LinkedList* current = hashTable->overflowBuckets[index];
 		while (current != NULL) {
-			//if (strcmp(current->item->key, item->key) == 0) { 
-			//	free(current->item->head->value);
-			//	current->item->head->value = item->head->value;
-			//	return;
-			//}
 			current = current->next;
 		}
 		hashTable->overflowBuckets[index] = insertLinkedList(head, item);
@@ -163,26 +156,19 @@ void handleCollision(HashTable* hashTable, int index, HashTableItem* item) {
 void hashTableInsert(HashTable* hashTable, char* key, QNode* head) {
 	int index = hashFunc(key) % hashTable->capacity;
 	HashTableItem* item = createItem(key, head);
-	HashTableItem* currentItem = hashTable->items[index];
+	const HashTableItem* currentItem = hashTable->items[index];
 	
 	if (currentItem == NULL) {
 		hashTable->items[index] = item;
 		hashTable->count++;
 	}
 	else {
-		//if (strcmp(currentItem->key, key) == 0) {
-		//	free(currentItem->head->value);
-		//	currentItem->head->value = head->value;
-		//	return;
-		//}
-		//else {
 		handleCollision(hashTable, index, item);
 		return;
-		/*}*/
 	}
 }
 
-QNode* hashTableSearch(HashTable* hashTable, char* key, char** string) {
+QNode* hashTableSearch(const HashTable* hashTable, char* key, char** string) {
 	int index = hashFunc(key) % hashTable->capacity;
 	HashTableItem* currentItem = hashTable->items[index];
 	LinkedList* head = hashTable->overflowBuckets[index];

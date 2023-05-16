@@ -8,7 +8,7 @@
 #define NULL_MARKER 1
 #define BUF_SIZE 256
 
-struct binaryTree* createNode(char* data, FILE* logPointer) {
+struct binaryTree* createNode(const char* data, FILE* logPointer) {
 	struct binaryTree* newNode = (struct binaryTree*)malloc(sizeof(struct binaryTree));
 	if (newNode == NULL) {
 		createMessage(&logPointer, "[ERROR] Memory allocation for new node failed");
@@ -69,9 +69,6 @@ void push(struct binaryTree** tree, char* answer, FILE* logPointer) {
 	else if (*answer == 'n') {
 		createMessage(&logPointer, "[INFO] Program lose");
 		printf("Damn I think I've lost. Who is it?\n");
-
-		//fgets(playerNew, 256, stdin);
-		//playerNew[strlen(playerNew) - 1] = '\0';
 		getString(playerNew);
 		while (atoi(playerNew) == 1) {
 			createMessage(&logPointer, "[WARN] User entered reserved word");
@@ -82,8 +79,6 @@ void push(struct binaryTree** tree, char* answer, FILE* logPointer) {
 		strcpy(playerOld, temp->data);
 
 		printf("Please, write distinctive question for your person: ");
-		//fgets(question, 256, stdin);
-		//question[strlen(question) - 1] = '\0';
 		getString(question);
 		while (atoi(question) == 1) {
 			createMessage(&logPointer, "[WARN] User entered reserved word");

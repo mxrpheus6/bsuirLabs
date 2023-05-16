@@ -26,7 +26,15 @@ char* fileMark(void) {
 	int year;
 	char* result = (char*)malloc(20);
 
-	struct tm* local = getTime();
+	struct tm* local;
+	struct tm resultTM;
+	time_t current_time;
+
+	local = getTime();
+	current_time = time(NULL);
+
+	localtime_s(&current_time, &resultTM);
+	local = &resultTM;
 
 	seconds = local->tm_sec;
 	minutes = local->tm_min;
@@ -42,7 +50,7 @@ char* fileMark(void) {
 
 
 void createLog(FILE** fp) {
-	struct tm* local = getTime();
+	const struct tm* local = getTime();
 	int seconds;
 	int minutes;
 	int hours;

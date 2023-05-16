@@ -138,9 +138,9 @@ void GammaCorrection(BMPFile* bmpFile, FILE** newFile, float gamma, char* fileNa
 	int bytesPerPixel = bmpFile->dhdr.bitsPerPixel / 8;
 
 	for (int i = 0; i < bmpFile->dhdr.sizeData; i += bytesPerPixel) {
-		float blue = (float)bmpFile->array[i].blue / 255.0;
-		float green = (float)bmpFile->array[i].green / 255.0;
-		float red = (float)bmpFile->array[i].red / 255.0;
+		double blue = (double)bmpFile->array[i].blue / 255.0;
+		double green = (double)bmpFile->array[i].green / 255.0;
+		double red = (double)bmpFile->array[i].red / 255.0;
 
 		blue = (powf(blue, 1.0 / gamma) * 255.0);
 		green = (powf(green, 1.0 / gamma) * 255.0);

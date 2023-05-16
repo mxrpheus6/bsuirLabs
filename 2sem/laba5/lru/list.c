@@ -14,7 +14,7 @@ Cache* createCache(int size) {
 	return cache;
 }
 
-QNode* createNode(char* key, char* value) {
+QNode* createNode(const char* key, const char* value) {
 	QNode* node = (QNode*)calloc(1, sizeof(QNode));
 
 	if (node == NULL) {
@@ -47,7 +47,7 @@ void freeDoubleLinkedList(Cache* cache) {
 	free(cache);
 }
 
-void moveToHead(QNode** head, QNode** tail, QNode* elem) {
+void moveToHead(QNode** head, QNode** tail, const QNode* elem) {
 	if (*head == NULL || elem == *head) {
 		return;
 	}

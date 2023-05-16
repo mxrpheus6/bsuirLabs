@@ -1,6 +1,6 @@
 #include "file.h"
 
-int typeIdentify(char* string) {
+int typeIdentify(const char* string) {
 	char* duplicate = (char*)malloc(strlen(string) + 1);
 
 	if (duplicate == NULL) {
@@ -8,66 +8,81 @@ int typeIdentify(char* string) {
 		exit(1);
 	}
 
-	strcpy(duplicate, string);
-	char* pointer = strtok(duplicate, " ");
-	while (strcmp(pointer, "A") != 0 && strcmp(pointer, "CNAME") != 0) {
-		pointer = strtok(NULL, " ");
+	strcpy_s(duplicate, strlen(string) + 1, string);
+	const char* pointer;
+	char* nextToken;
+
+	pointer = strtok_s(duplicate, " ", &nextToken);
+	while (pointer != NULL) {
+		if (strcmp(pointer, "A") == 0)
+			return A;
+		else if (strcmp(pointer, "CNAME") == 0)
+			return CNAME;
+
+		pointer = strtok_s(NULL, " ", &nextToken);
 	}
-	if (strcmp(pointer, "A") == 0)
-		return A;
-	else if (strcmp(pointer, "CNAME") == 0)
-		return CNAME;
-	else
-		return -1;
+
+	free(duplicate);
+	return -1;
 }
 
-int typeValid(char* string) {
+int typeValid(const char* string) {
 	FILE* filePointer;
-	filePointer = fopen("dns.txt", "r");
+	errno_t err = fopen_s(&filePointer, "dns.txt", "r");
+	if (err != 0) {
+		printf("Error opening file");
+		exit(1);
+	}
+
 	char temp[STRING_SIZE];
-	char* pointer;
+	const char* pointer;
+	char* nextToken;
+
 	while (fgets(temp, STRING_SIZE, filePointer) != NULL) {
 		if (typeIdentify(temp) == A) {
-			pointer = strtok(temp, " ");
+			pointer = strtok_s(temp, " ", &nextToken);
 			if (strcmp(pointer, string) == 0)
 				return 0;
 		}
 	}
+
+	fclose(filePointer);
 	return 1;
 }
 
-int checkIP(char* ip) {
+int checkIP(const char* ip) {
 	int num;
 	int dots = 0;
 	char* duplicate = (char*)malloc(IP_SIZE);
-	
+
 	if (duplicate == NULL) {
 		printf("Error. Memory allocation failed");
 		exit(1);
 	}
 
-	strcpy(duplicate, ip);
-	char* pointer;
-	
+	strcpy_s(duplicate, IP_SIZE, ip);
+	const char* pointer;
+	char* nextToken;
+
 	if (ip == NULL)
 		return 0;
 
-	pointer = strtok(duplicate, ".");
+	pointer = strtok_s(duplicate, ".", &nextToken);
 	if (pointer == NULL) {
 		return 0;
 	}
 
 	while (pointer != NULL) {
-		if (isdigit(*pointer) == 0)
+		if (!isdigit(*pointer))
 			return 0;
 
 		num = atoi(pointer);
 		if (num < 0 || num > 255)
 			return 0;
 		dots++;
-		pointer = strtok(NULL, ".");
+		pointer = strtok_s(NULL, ".", &nextToken);
 	}
-	
+
 	if (dots != 4)
 		return 0;
 
@@ -117,8 +132,14 @@ void addToFile(char* domenName) {
 	fclose(dnsFile);
 }
 
-int fileSearch(char* key, char** ip) {
-	FILE* filePointer = fopen("dns.txt", "r");
+int fileSearch(const char* key, char** ip) {
+	FILE* filePointer;
+	errno_t err = fopen_s(&filePointer, "dns.txt", "r");
+	if (err != 0) {
+		printf("Error. Can't open\\create file. Try again");
+		exit(1);
+	}
+
 	char tempLine[STRING_SIZE];
 	char tempDomain[DOMEN_SIZE];
 	char tempIN[IN_SIZE];
@@ -131,10 +152,6 @@ int fileSearch(char* key, char** ip) {
 		exit(1);
 	}
 
-	if (filePointer == NULL) {
-		printf("Error. Can't open\\create file. Try again");
-		exit(1);
-	}
 	while (fgets(tempLine, STRING_SIZE, filePointer) != NULL) {
 		if (sscanf(tempLine, "%s %s %s %s", tempDomain, tempIN, tempType, tempValue) != 4) {
 			printf("Inavlid format of string: %s\n", tempLine);
@@ -144,27 +161,27 @@ int fileSearch(char* key, char** ip) {
 		if (strcmp(tempDomain, key) == 0) {
 			if (strcmp(tempType, "A") == 0) {
 				tempValue[strlen(tempValue)] = '\0';
-				strcpy(*ip, tempValue);
+				strcpy_s(*ip, STRING_SIZE, tempValue);
 				fclose(filePointer);
 				return 0;
 			}
+
 			else if (strcmp(tempType, "CNAME") == 0) {
 				char tempNewDomain[STRING_SIZE];
-				strcpy(tempNewDomain, tempValue);
+				strcpy_s(tempNewDomain, STRING_SIZE, tempValue);
 				fseek(filePointer, 0, SEEK_SET);
+
 				while (fgets(tempLine, STRING_SIZE, filePointer) != NULL) {
 					if (sscanf(tempLine, "%s %s %s %s", tempDomain, tempIN, tempType, tempValue) != 4) {
 						printf("Inavlid format of string: %s\n", tempLine);
 						exit(1);
 					}
 
-					if (strcmp(tempDomain, tempNewDomain) == 0) {
-						if (strcmp(tempType, "A") == 0) {
-							tempValue[strlen(tempValue)] = '\0';
-							strcpy(*ip, tempValue);
-							fclose(filePointer);
-							return 0;
-						}
+					if (strcmp(tempDomain, tempNewDomain) == 0 && strcmp(tempType, "A") == 0) {
+						tempValue[strlen(tempValue)] = '\0';
+						strcpy_s(*ip, STRING_SIZE, tempValue);
+						fclose(filePointer);
+						return 0;
 					}
 				}
 			}
@@ -174,10 +191,10 @@ int fileSearch(char* key, char** ip) {
 	return -1;
 }
 
+
 char* cacheSearch(Cache* cache, char* key) {
 	char* searchResult = (char*)malloc(STRING_SIZE);
 	QNode* tempNode = hashTableSearch(cache->hashTable, key, &searchResult);
-	char* temp = NULL;
 
 	if (tempNode != NULL) {
 		printf("HIT\n");

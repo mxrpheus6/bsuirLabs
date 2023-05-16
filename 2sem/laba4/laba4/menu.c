@@ -38,8 +38,6 @@ void mainMenu(struct binaryTree** tree) {
 			createMessage(&logPointer, "[INFO] User choosed 1 option in menu");
 			if (*tree == NULL) {
 				printf("Who will be the first person in our game?\nAnswer: ");
-				//fgets(temp, 256, stdin);
-				//temp[strlen(temp) - 1] = '\0';
 				getString(temp);
 				while (atoi(temp) == 1) {
 					createMessage(&logPointer, "[WARN] User entered reserved word");

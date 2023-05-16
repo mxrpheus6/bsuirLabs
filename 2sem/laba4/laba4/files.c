@@ -5,7 +5,7 @@
 #include "logs.h"
 #include "files.h"
 
-int openFile(FILE** fp, char* fileName, char* access, FILE* logPointer) {
+int openFile(FILE** fp, char* fileName, const char* access, FILE* logPointer) {
 	if (strstr(fileName, ".txt") == NULL) {
 		createMessage(&logPointer, "[WARN] User entered invalid file format");
 		printf("Error. Incorrect file format. Try again.\nPlease, enter correct path: ");
@@ -22,8 +22,6 @@ int openFile(FILE** fp, char* fileName, char* access, FILE* logPointer) {
 
 void getPath(FILE** fp, char* fileName, char* access, FILE* logPointer) {
 	printf("Enter path with file name: ");
-	//fgets(fileName, 256, stdin);
-	//fileName[strlen(fileName) - 1] = '\0';
 	getString(fileName);
 	while (openFile(fp, fileName, access, logPointer) != 0) {
 		fgets(fileName, 256, stdin);
