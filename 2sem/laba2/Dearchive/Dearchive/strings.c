@@ -29,10 +29,8 @@ int wordIndex(const char* string, int* index) {
 				return (*index);
 			}
 		}
-		else if ((*index) == 0) {
-			if (charASCII(string[(*index)]) != FALSE) {
-				return (*index);
-			}
+		else if ((*index) == 0 && charASCII(string[(*index)]) != FALSE) {
+			return (*index);
 		}
 		(*index)++;
 	}

@@ -175,7 +175,6 @@ int checkCNAME(FILE* filePointer, const char* tempValue, char** ip) {
 	char tempDomain[DOMEN_SIZE];
 	char tempIN[IN_SIZE];
 	char tempType[TYPE_SIZE];
-	char tempNewDomain[STRING_SIZE];
 
 	fseek(filePointer, 0, SEEK_SET);
 

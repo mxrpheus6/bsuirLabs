@@ -74,18 +74,20 @@ float* parseFloat(FILE* pointer) {
                 i++;
             }
             i -= counter;
-            temp = (char*)calloc(counter, sizeof(char));
-            while (bigBuf[i] != '&') {
-                temp[j] = bigBuf[i];
-                i++;
-                j++;
-            }
-            temp = (char*)realloc(temp, counter * sizeof(char) + 1);
-            temp[j] = '\0';
-            result[k] = atof(temp);
-            k++;
-            if (temp != NULL) {
-                free(temp);
+            if (counter > 0) {
+                temp = (char*)calloc(counter, sizeof(char));
+                while (bigBuf[i] != '&') {
+                    temp[j] = bigBuf[i];
+                    i++;
+                    j++;
+                }
+                temp = (char*)realloc(temp, counter * sizeof(char) + 1);
+                temp[j] = '\0';
+                result[k] = (float)atof(temp);
+                k++;
+                if (temp != NULL) {
+                    free(temp);
+                }
             }
         }
     }
