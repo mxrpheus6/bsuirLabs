@@ -148,11 +148,11 @@ void handleCollision(HashTable* hashTable, int index, HashTableItem* item) {
 	else {
 		LinkedList* current = hashTable->overflowBuckets[index];
 		while (current != NULL) {
-			if (strcmp(current->item->key, item->key) == 0) { 
-				free(current->item->head->value);
-				current->item->head->value = item->head->value;
-				return;
-			}
+			//if (strcmp(current->item->key, item->key) == 0) { 
+			//	free(current->item->head->value);
+			//	current->item->head->value = item->head->value;
+			//	return;
+			//}
 			current = current->next;
 		}
 		hashTable->overflowBuckets[index] = insertLinkedList(head, item);
@@ -178,7 +178,7 @@ void hashTableInsert(HashTable* hashTable, char* key, QNode* head) {
 		//else {
 		handleCollision(hashTable, index, item);
 		return;
-		//}
+		/*}*/
 	}
 }
 
@@ -208,8 +208,8 @@ void hashTableDelete(HashTable* hashTable, char* key) {
 		return;
 	else {
 		if (head == NULL && strcmp(item->key, key) == 0) {
+			freeItem(item);//
 			hashTable->items[index] = NULL;
-			freeItem(item);
 			hashTable->count--;
 		}
 		else if (head != NULL) {

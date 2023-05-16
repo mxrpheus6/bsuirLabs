@@ -59,7 +59,7 @@ void mainMenu(struct binaryTree** tree) {
 			serialize(tree, fp);
 			createAddMessage(&logPointer, "[INFO] User saved base as file: ", fileName);
 			printf("Saving...");
-			Sleep(2000);
+			//Sleep(2000);
 			system("cls");
 			fclose(fp);
 			break;
@@ -71,7 +71,7 @@ void mainMenu(struct binaryTree** tree) {
 			deserialize(tree, fp, logPointer);
 			createAddMessage(&logPointer, "[INFO] User imported base from file: ", fileName);
 			printf("Importing...");
-			Sleep(2000);
+			//Sleep(2000);
 			system("cls");
 			fclose(fp);
 			break;

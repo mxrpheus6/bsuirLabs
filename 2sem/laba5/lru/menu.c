@@ -30,13 +30,13 @@ void mainMenu(Cache* cache) {
 
 			if (cacheSearchResult != NULL)
 				printf("Found IP-adress: %s\n\n", cacheSearchResult);
-			Sleep(4000);
+			//Sleep(4000);
 			system("cls");
 			break;
 		case 2:
 			printf("\nCache:\n");
 			printCache(cache);
-			Sleep(5000);
+			//Sleep(5000);
 			system("cls");
 			break;
 		case 3:

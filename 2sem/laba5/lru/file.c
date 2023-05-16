@@ -180,14 +180,14 @@ char* cacheSearch(Cache* cache, char* key) {
 	char* temp = NULL;
 
 	if (tempNode != NULL) {
-		printf("\nHIT\n\n");
+		printf("HIT\n");
 		moveToHead(&cache->head, &cache->tail, tempNode);
 		return searchResult;
 	}
 	else {
 		char* domainName = NULL;
 		char* ip = NULL;
-		printf("\nMISS\n\n");
+		printf("MISS\n");
 		int fileSearchResult = fileSearch(key, &ip);
 
 		if (fileSearchResult == -1) {

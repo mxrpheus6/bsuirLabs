@@ -22,18 +22,18 @@ void menuInformation(void) {
 
 void menu1(Smartphone** pointer, int* sizeOfArray) {
 	printf("Creating array and initializing it!");
-	Sleep(3000);
+	//Sleep(3000);
 	system("cls");
 	createStructArr(pointer, sizeOfArray);
 }
 
 void menu2(Smartphone** pointer, const int* sizeOfArray) {
 	printf("Printing...");
-	Sleep(2000);
+	//Sleep(2000);
 	system("cls");
 	if ((*pointer) == NULL) {
 		printf("Nothing to print - array is empty : (");
-		Sleep(2000);
+		//Sleep(2000);
 		system("cls");
 	}
 	else {
@@ -47,7 +47,7 @@ void menu3(Smartphone** pointer, const int* sizeOfArray) {
 	if ((*pointer) == NULL) {
 		system("cls");
 		printf("Nothing to sort - array is empty : (");
-		Sleep(2000);
+		//Sleep(2000);
 		system("cls");
 	}
 	else {
@@ -85,7 +85,7 @@ void menu3(Smartphone** pointer, const int* sizeOfArray) {
 			break;
 		}
 		printf("Success!");
-		Sleep(2000);
+		//Sleep(2000);
 		system("cls");
 	}
 
@@ -93,19 +93,19 @@ void menu3(Smartphone** pointer, const int* sizeOfArray) {
 
 void menu4(Smartphone** pointer, int* sizeOfArray) {
 	printf("Deleting structure from the array!\n");
-	Sleep(2000);
+	//Sleep(2000);
 	if ((*pointer) == NULL) {
 		system("cls");
 		printf("Nothing to delete - array is empty : (");
-		Sleep(2000);
+		//Sleep(2000);
 		system("cls");
 	}
 	else {
-		Sleep(3000);
+		//Sleep(3000);
 		deleteStruct(pointer, sizeOfArray);
 		system("cls");
 		printf("Success!");
-		Sleep(1000);
+		//Sleep(1000);
 	}
 
 }
@@ -113,23 +113,23 @@ void menu4(Smartphone** pointer, int* sizeOfArray) {
 void menu5(Smartphone** pointer, int* sizeOfArray) {
 	addToStruct(pointer, sizeOfArray);
 	printf("\nSuccess!");
-	Sleep(2000);
+	//Sleep(2000);
 	system("cls");
 }
 
 void menu6(Smartphone** pointer, const int* sizeOfArray) {
 	qsort(*pointer, (*sizeOfArray), sizeof(Smartphone), compareTwoDiff);
 	printf("\nSuccess!");
-	Sleep(2000);
+	//Sleep(2000);
 	system("cls");
 }
 
 void menu7(Smartphone** pointer, int* sizeOfArray, FILE* filePointer) {
 	printf("Parsing...\n\n");
-	Sleep(3000);
+	//Sleep(3000);
 	parse(pointer, filePointer, sizeOfArray);
 	printf("Success!");
-	Sleep(2000);
+	//Sleep(2000);
 	system("cls");
 }
 
@@ -146,7 +146,7 @@ void mainMenu(Smartphone** pointer, int* sizeOfArray, FILE* filePointer) {
 		if (userInput == 7) {
 			if (flag == 1) {
 				printf("You've already parsed 21vek.by");
-				Sleep(2000);
+				//Sleep(2000);
 				system("cls");
 				continue;
 			}

@@ -62,7 +62,7 @@ void push(struct binaryTree** tree, char* answer, FILE* logPointer) {
 	if (*answer == 'y') {
 		createMessage(&logPointer, "[INFO] Program win");
 		printf("Haha now i won you!");
-		Sleep(2000);
+		//Sleep(2000);
 		system("cls");
 		return;
 	}

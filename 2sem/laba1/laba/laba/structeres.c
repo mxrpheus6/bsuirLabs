@@ -49,7 +49,7 @@ void createStructArr(Smartphone** pointer, int* count) {
 		printf("Initializing %d structer in array\n\n", i + 1);
 		initStruct(*pointer + i);
 		printf("\nSuccess");
-		Sleep(3000);
+		//Sleep(3000);
 		system("cls");
 		rewind(stdin);
 	}
