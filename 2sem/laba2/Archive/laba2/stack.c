@@ -27,7 +27,7 @@ void freeStack(StackNode* topOfStack) {
 		topOfStack = popStackNode(topOfStack);
 }
 
-void setStackNodeName(StackNode* topOfStack, char* name) {
+void setStackNodeName(StackNode* topOfStack, const char* name) {
 	if (topOfStack->name)
 		free(topOfStack->name);
 	topOfStack->name = (char*)malloc(strlen(name) + 1);
@@ -53,63 +53,19 @@ StackNode* stackCheck(StackNode* topOfStack, char* string) {
 	return newNode;
 }
 
-//void initStackFromFile(StackNode** topOfStack, FILE* pointer) {
-//	char bufFromFile[4096];
-//	char* temp;
-//	int size;
-//	int i;
-//	int j;
-//	while (fgets(bufFromFile, 4096, pointer) != NULL && !feof(pointer)) {
-//		i = 0;
-//		j = 0;
-//		size = 1;
-//		temp = (char*)malloc(size);
-//		while (bufFromFile[i] != '\n' && bufFromFile[i] != '\0') {
-//			if (bufFromFile[i] == ' ' || bufFromFile[i] == '-' || bufFromFile[i] == '.' || bufFromFile[i] == ',' || bufFromFile[i] == '?' || bufFromFile[i] == '!' || bufFromFile[i] == '"' || bufFromFile[i] == '\'' || bufFromFile == ':' || bufFromFile == ';') {
-//				temp[j] = '\0';
-//				if (strlen(temp) > 1) {
-//					*topOfStack = stackCheck(*topOfStack, temp);
-//				}
-//				i++;
-//				j = 0;
-//				size = 1;
-//				free(temp);
-//				temp = (char*)malloc(size);
-//			}
-//			else {
-//				size++;
-//				temp[j] = convertUpperChar(bufFromFile[i]);
-//				temp = (char*)realloc(temp, size);
-//				i++;
-//				j++;
-//
-//			}
-//		}
-//		if (bufFromFile[i] == '\n') {
-//			temp[j] = '\0';
-//			if (strlen(temp) > 1 && isWord(temp) == TRUE) {
-//				*topOfStack = stackCheck(*topOfStack, temp);
-//			}
-//			i++;
-//			j = 0;
-//			size = 1;
-//			free(temp);
-//			temp = (char*)malloc(size);
-//		}
-//	}
-//}
-
 void initStackFromFile(StackNode** topOfStack, FILE* pointer) {
 	char bufFromFile[4096];
 	char delimiters[] = "()-,.?!;:'\" \n";
 	int counter = 0;
+	char* context = NULL;
+
 	while (fgets(bufFromFile, 4096, pointer) != NULL && !feof(pointer)) {
-		char* pch = strtok(bufFromFile, delimiters);
+		char* pch = strtok_s(bufFromFile, delimiters, &context);
 		while (pch != NULL)
 		{
 			if (stringASCII(pch) > 1)
 				*topOfStack = stackCheck(*topOfStack, pch);
-			pch = strtok(NULL, delimiters);
+			pch = strtok_s(NULL, delimiters, &context);
 			counter++;
 		}
 	}

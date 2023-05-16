@@ -26,11 +26,10 @@ char* fileMark(void) {
 	int year;
 	char* result = (char*)malloc(20);
 
-	struct tm* local;
+	const struct tm* local;
 	struct tm resultTM;
 	time_t current_time;
 
-	local = getTime();
 	current_time = time(NULL);
 
 	localtime_s(&current_time, &resultTM);

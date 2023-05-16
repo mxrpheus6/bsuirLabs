@@ -21,4 +21,5 @@ int checkIP(char* ip);
 void getIP(char* ip);
 void addToFile(char* domenName);
 int fileSearch(char* key, char** ip);
+int checkCNAME(FILE* filePointer, const char* tempValue, char** ip);
 char* cacheSearch(Cache* cache, char* key);

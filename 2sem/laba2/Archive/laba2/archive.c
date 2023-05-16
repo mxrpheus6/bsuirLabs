@@ -7,16 +7,17 @@
 #include "files.h"
 #include "strings.h"
 
-void fillDictionaryArray(struct WordFrequency** arrayOfWords, FILE* pointer, struct Dictionary** arrayOfChanges, int amountOfWords, int* sizeOfDictionary) {
+void fillDictionaryArray(struct WordFrequency** arrayOfWords, struct Dictionary** arrayOfChanges, int amountOfWords, int* sizeOfDictionary) {
 	int beginIndex = 0;
 	int endIndex = amountOfWords - 1;
 	int i = 0;
 	int len;
-	while ((strlen((*arrayOfWords)[endIndex].word) <= 4)) {
-		if (strlen((*arrayOfWords)[beginIndex].word) <= strlen((*arrayOfWords)[endIndex].word))
+	while (strlen((*arrayOfWords)[endIndex].word) <= 4) {
+		if (strlen((*arrayOfWords)[beginIndex].word) <= strlen((*arrayOfWords)[endIndex].word)) {
 			free((*arrayOfWords)[beginIndex].word);
 			beginIndex++;
-		while ((strlen((*arrayOfWords)[beginIndex].word) > strlen((*arrayOfWords)[endIndex].word))) {
+		}
+		while (strlen((*arrayOfWords)[beginIndex].word) > strlen((*arrayOfWords)[endIndex].word)) {
 			if ((*arrayOfWords)[beginIndex].size > (*arrayOfWords)[endIndex].size) {
 				(*sizeOfDictionary)++;
 				if ((*arrayOfChanges) == NULL)
@@ -95,69 +96,12 @@ void changeWords(char** buf, const char* word, const char* changedWord, int* ind
 	}
 }
 
-void processText(Dictionary** array, int* sizeOfDictionary, char* word, char* bufFromFile, int* beginIndex, char* changedWord, int* index) {
+void processText(Dictionary** array, const int* sizeOfDictionary, const char* word, char* bufFromFile, const int* beginIndex, const char* changedWord, int* index) {
 	word = getWordFromTxt(bufFromFile, *beginIndex);
 	changedWord = getChangeForWord(array, word, sizeOfDictionary);
 	changeWords(&bufFromFile, word, changedWord, index);
 	(*index)++;
 }
-
-//void archiveFile(FILE* pointerOg, FILE* pointerArch, Dictionary* array, int sizeOfDictionary) {
-//    int i;
-//    int len;
-//    char bufFromFile[4096];
-//    char delimiters[] = "()-,.?!;:'\" ";
-//    char* word = (char*)malloc(1000);
-//    char temp = '\0';
-//    char* pch;
-//    int flag = 1;
-//    fileReOpen(&pointerArch);
-//    fseek(pointerOg, 0, 0);
-//    fseek(pointerArch, 0L, SEEK_END);
-//    while (fgets(bufFromFile, 4096, pointerOg) != NULL && !feof(pointerOg)) {
-//        pch = strtok(bufFromFile, " ");
-//        while (pch != NULL) {
-//            word = NULL;
-//            len = strlen(pch);
-//            if (deliCheck(pch[len]) == FALSE) {
-//                temp = pch[len];
-//                pch[len] = '\0';
-//            }
-//            if (pch[len - 1] == '\n') {
-//                pch[len - 1] = '\0';
-//                len--;
-//            }
-//            for (i = 0; i < sizeOfDictionary; i++) {
-//                if (strcmp(array[i].originalWord, pch) == 0) {
-//                    word = NULL;
-//                    fprintf(pointerArch, "%s", array[i].changeWord);
-//                    if (deliCheck(temp) == FALSE) {
-//                        fprintf(pointerArch, "%c", temp);
-//                    }
-//                    else
-//                    {
-//                        fprintf(pointerArch, "%c", ' ');
-//                    }
-//                    break;
-//                }
-//                else {
-//                    word = pch;
-//                }
-//            }
-//            if (word != NULL) {
-//                fprintf(pointerArch, "%s", word);
-//                if (deliCheck(temp) == FALSE) {
-//                    fprintf(pointerArch, "%c", temp);
-//                }
-//                else {
-//                    fprintf(pointerArch, "%c", ' ');
-//                }
-//            }
-//            pch = strtok(NULL, " ");
-//        }
-//        fprintf(pointerArch, "%c", '\n');
-//    }
-//}
 
 void archiveFile(FILE* pointerOg, FILE* pointerArch, Dictionary** array, int* sizeOfDictionary) {
 	int index = 0;

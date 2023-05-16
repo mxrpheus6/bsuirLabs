@@ -4,13 +4,13 @@
 #include "structeres.h"
 
 int isLetter(char symbol) {
-	if ((symbol > 64 && symbol < 91 || symbol > 96 && symbol < 123)) {
+	if (symbol > 64 && symbol < 91 || symbol > 96 && symbol < 123) {
 		return TRUE;
 	}
 	return FALSE;
 }
 
-int isWord(char* string) {
+int isWord(const char* string) {
 	int i = 0;
 	while (string[i] != '\n' && string[i] != '\0') {
 		if (isLetter(string[i]) == FALSE) {
@@ -22,10 +22,10 @@ int isWord(char* string) {
 }
 
 
-int stringASCII(char* string) {
+int stringASCII(const char* string) {
 	int i = 0;
 	while (string[i] != '\0') {
-		if ((!(string[i] >= 97 && string[i] <= 122) && !(string[i] >= 65 && string[i] <= 90)))
+		if (!(string[i] >= 97 && string[i] <= 122) && !(string[i] >= 65 && string[i] <= 90))
 			return 0;
 		i++;
 	}
@@ -33,7 +33,7 @@ int stringASCII(char* string) {
 }
 
 int charASCII(char symbol) {
-	if (((symbol >= 'a' && symbol <= 'z') || (symbol >= 'A' && symbol <= 'Z')))
+	if (symbol >= 'a' && symbol <= 'z' || symbol >= 'A' && symbol <= 'Z')
 		return TRUE;
 	return FALSE;
 }
@@ -56,10 +56,8 @@ int wordIndex(const char* string, int* index) {
 				return (*index);
 			}
 		}
-		else if ((*index) > 0) {
-			if (string[(*index) - 1] != '-' && charASCII(string[(*index) - 1]) == FALSE && charASCII(string[(*index)]) != FALSE) {
-				return (*index);
-			}
+		else if ((*index) > 0 && string[(*index) - 1] != '-' && charASCII(string[(*index) - 1]) == FALSE && charASCII(string[(*index)]) != FALSE) {
+			return (*index);
 		}
 		(*index)++;
 	}
@@ -87,14 +85,13 @@ char* getChangeForWord(struct Dictionary** array, const char* string, const int*
 			len = strlen((*array)[i].changeWord);
 			changedWord = (char*)malloc(len + 1);
 			strcpy(changedWord, (*array)[i].changeWord);
-			break;
+			return changedWord;
 		}
 		if (strcmp(string, (*array)[i].changeWord) == 0) {
 			len = strlen((*array)[i].originalWord);
 			changedWord = (char*)malloc(len + 1);
 			strcpy(changedWord, (*array)[i].originalWord);
-			break;
+			return changedWord;
 		}
 	}
-	return changedWord;
 }

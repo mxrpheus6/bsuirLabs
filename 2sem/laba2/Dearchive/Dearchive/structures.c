@@ -10,7 +10,8 @@ void fillDictionaryFromFile(FILE* pointerArch, Dictionary** array, int* size) {
 	char* pointerChar;
 	int len;
 	int i = 0;
-	//(*array) = (Dictionary*)malloc(1000 * sizeof(Dictionary));
+	char* context = NULL;
+
 	while (1) {
 		fgets(bufFromFile, 256, pointerArch);
 		if (bufFromFile[0] == '&') {
@@ -18,11 +19,11 @@ void fillDictionaryFromFile(FILE* pointerArch, Dictionary** array, int* size) {
 		}
 		(*size)++;
 		allocateDictArray(array, *size);
-		pointerChar = strtok(bufFromFile, "|");
+		pointerChar = strtok_s(bufFromFile, "|", &context);
 		len = strlen(pointerChar);
 		(*array)[i].originalWord = (char*)malloc(len + 1);
 		strcpy((*array)[i].originalWord, pointerChar);
-		pointerChar = strtok(NULL, "|");
+		pointerChar = strtok_s(NULL, "|", &context);
 		pointerChar[strlen(pointerChar) - 1] = '\0';
 		len = strlen(pointerChar);
 		(*array)[i].changeWord = (char*)malloc(len + 1);

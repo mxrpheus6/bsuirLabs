@@ -14,7 +14,6 @@ int main(void) {
 	WordFrequency* words = NULL;
 	Dictionary* changes = NULL;
 	FILE* filePointer;
-	FILE* archivedFilePointer;
 	int sizeOfArray = 0;
 	int sizeOfDictionary = 0;
 	fileOpen(&filePointer);

@@ -135,6 +135,7 @@ void addToFile(char* domenName) {
 int fileSearch(const char* key, char** ip) {
 	FILE* filePointer;
 	errno_t err = fopen_s(&filePointer, "dns.txt", "r");
+
 	if (err != 0) {
 		printf("Error. Can't open\\create file. Try again");
 		exit(1);
@@ -153,41 +154,43 @@ int fileSearch(const char* key, char** ip) {
 	}
 
 	while (fgets(tempLine, STRING_SIZE, filePointer) != NULL) {
+
 		if (sscanf(tempLine, "%s %s %s %s", tempDomain, tempIN, tempType, tempValue) != 4) {
 			printf("Inavlid format of string: %s\n", tempLine);
 			exit(1);
 		}
 
-		if (strcmp(tempDomain, key) == 0) {
-			if (strcmp(tempType, "A") == 0) {
-				tempValue[strlen(tempValue)] = '\0';
-				strcpy_s(*ip, STRING_SIZE, tempValue);
-				fclose(filePointer);
-				return 0;
-			}
-
-			else if (strcmp(tempType, "CNAME") == 0) {
-				char tempNewDomain[STRING_SIZE];
-				strcpy_s(tempNewDomain, STRING_SIZE, tempValue);
-				fseek(filePointer, 0, SEEK_SET);
-
-				while (fgets(tempLine, STRING_SIZE, filePointer) != NULL) {
-					if (sscanf(tempLine, "%s %s %s %s", tempDomain, tempIN, tempType, tempValue) != 4) {
-						printf("Inavlid format of string: %s\n", tempLine);
-						exit(1);
-					}
-
-					if (strcmp(tempDomain, tempNewDomain) == 0 && strcmp(tempType, "A") == 0) {
-						tempValue[strlen(tempValue)] = '\0';
-						strcpy_s(*ip, STRING_SIZE, tempValue);
-						fclose(filePointer);
-						return 0;
-					}
-				}
-			}
+		if (strcmp(tempDomain, key) == 0 && (strcmp(tempType, "A") == 0 || (strcmp(tempType, "CNAME") == 0 && checkCNAME(filePointer, tempValue, ip) == 0))) {
+			fclose(filePointer);
+			return 0;
 		}
 	}
+
 	fclose(filePointer);
+	return -1;
+}
+
+int checkCNAME(FILE* filePointer, const char* tempValue, char** ip) {
+	char tempLine[STRING_SIZE];
+	char tempDomain[DOMEN_SIZE];
+	char tempIN[IN_SIZE];
+	char tempType[TYPE_SIZE];
+	char tempNewDomain[STRING_SIZE];
+
+	fseek(filePointer, 0, SEEK_SET);
+
+	while (fgets(tempLine, STRING_SIZE, filePointer) != NULL) {
+		if (sscanf(tempLine, "%s %s %s %s", tempDomain, tempIN, tempType, tempValue) != 4) {
+			printf("Inavlid format of string: %s\n", tempLine);
+			exit(1);
+		}
+
+		if (strcmp(tempDomain, tempValue) == 0 && strcmp(tempType, "A") == 0) {
+			strcpy_s(*ip, STRING_SIZE, tempValue);
+			return 0;
+		}
+	}
+
 	return -1;
 }
 

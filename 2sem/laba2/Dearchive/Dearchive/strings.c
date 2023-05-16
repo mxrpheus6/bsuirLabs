@@ -6,7 +6,7 @@
 #include "structures.h"
 
 int charASCII(char symbol) {
-	if (((symbol >= 'a' && symbol <= 'z') || (symbol >= 'A' && symbol <= 'Z')))
+	if (symbol >= 'a' && symbol <= 'z' || symbol >= 'A' && symbol <= 'Z')
 		return TRUE;
 	return FALSE;
 }
@@ -60,14 +60,13 @@ char* getChangeForWord(struct Dictionary** array, const char* string, const int*
 			len = strlen((*array)[i].originalWord);
 			changedWord = (char*)malloc(len + 1);
 			strcpy(changedWord, (*array)[i].originalWord);
-			break;
+			return changedWord;
 		}
 		if (strcmp(string, (*array)[i].originalWord) == 0) {
 			len = strlen((*array)[i].changeWord);
 			changedWord = (char*)malloc(len + 1);
 			strcpy(changedWord, (*array)[i].changeWord);
-			break;
+			return changedWord;
 		}
 	}
-	return changedWord;
 }
