@@ -78,7 +78,7 @@ void checkAnalysis(FreqDict mostPopularNotEnc, FreqDict* arrayEnc, char* pathEnc
 		shift = abs(mostPopularNotEnc.symbol - tempDict.symbol);
 		if (shift == 0) {
 			printf("Text that is breaking is already decrypted...");
-			Sleep(5000);
+			//Sleep(5000);
 			break;
 		}
 		buffer[0] = '\0';
@@ -107,13 +107,13 @@ void checkAnalysis(FreqDict mostPopularNotEnc, FreqDict* arrayEnc, char* pathEnc
 			printf("\nCongrats! Key of the text is %d\n\n", shift);
 			decryptFile(pointerEnc, shift);
 			printf("\nSuccessfully decrypted!");
-			Sleep(5000);
+			//Sleep(5000);
 			break;
 		}
 	}
 	if (choice == 'n' && i == ALPHABET_SIZE) {
 		printf("You're probably skipped right variant. Please, try again...");
-		Sleep(5000);
+		//Sleep(5000);
 	}
 	fclose(pointerEnc);
 }
