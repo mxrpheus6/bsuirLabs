@@ -4,3 +4,4 @@ msbuild  2sem/laba2/Dearchive/Dearchive/Dearchive.vcxproj
 msbuild  2sem/laba3/laba3/laba3.vcxproj
 msbuild  2sem/laba4/laba4/laba4.vcxproj
 msbuild  2sem/laba5/lru/lru.vcxproj
+msbuild  2sem/bsuirPractice/breakEncrypt/breakEncrypt.vcxproj
