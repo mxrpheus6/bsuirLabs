@@ -1,0 +1,8 @@
+﻿  file.c
+C:\BSUIR\finished\OAiP\2sem\laba5\lru\file.c(3,30): warning C4028: formal parameter 1 different from declaration
+C:\BSUIR\finished\OAiP\2sem\laba5\lru\file.c(29,27): warning C4028: formal parameter 1 different from declaration
+C:\BSUIR\finished\OAiP\2sem\laba5\lru\file.c(53,25): warning C4028: formal parameter 1 different from declaration
+C:\BSUIR\finished\OAiP\2sem\laba5\lru\file.c(135,28): warning C4028: formal parameter 1 different from declaration
+C:\BSUIR\finished\OAiP\2sem\laba5\lru\file.c(173,41): warning C4028: formal parameter 2 different from declaration
+C:\BSUIR\finished\OAiP\2sem\laba5\lru\file.c(224): warning C4715: 'cacheSearch': not all control paths return a value
+  lru.vcxproj -> C:\BSUIR\finished\OAiP\2sem\laba5\x64\Debug\lru.exe

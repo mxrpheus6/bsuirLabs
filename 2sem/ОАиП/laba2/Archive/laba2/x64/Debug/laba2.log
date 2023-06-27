@@ -1,0 +1,7 @@
+﻿  strings.c
+C:\BSUIR\finished\OAiP\2sem\laba2\Archive\laba2\strings.c(85,10): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\BSUIR\finished\OAiP\2sem\laba2\Archive\laba2\strings.c(91,10): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  structeres.c
+  Generating Code...
+C:\BSUIR\finished\OAiP\2sem\laba2\Archive\laba2\strings.c(97): warning C4715: 'getChangeForWord': not all control paths return a value
+  laba2.vcxproj -> C:\BSUIR\finished\OAiP\2sem\laba2\Archive\x64\Debug\laba2.exe

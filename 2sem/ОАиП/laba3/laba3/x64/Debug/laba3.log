@@ -1,0 +1,16 @@
+﻿  bmpReader.c
+C:\BSUIR\finished\OAiP\2sem\laba3\laba3\bmpReader.c(12,11): warning C4047: 'return': 'BMPFile *' differs in levels of indirection from 'int'
+C:\BSUIR\finished\OAiP\2sem\laba3\laba3\bmpReader.c(20,93): warning C4474: 'printf' : too many arguments passed for format string
+C:\BSUIR\finished\OAiP\2sem\laba3\laba3\bmpReader.c(20,93): message : placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+C:\BSUIR\finished\OAiP\2sem\laba3\laba3\bmpReader.c(22,11): warning C4047: 'return': 'BMPFile *' differs in levels of indirection from 'int'
+C:\BSUIR\finished\OAiP\2sem\laba3\laba3\bmpReader.c(51,30): warning C4028: formal parameter 1 different from declaration
+C:\BSUIR\finished\OAiP\2sem\laba3\laba3\bmpReader.c(95,20): warning C4018: '<': signed/unsigned mismatch
+C:\BSUIR\finished\OAiP\2sem\laba3\laba3\bmpReader.c(110,20): warning C4018: '<': signed/unsigned mismatch
+C:\BSUIR\finished\OAiP\2sem\laba3\laba3\bmpReader.c(126,20): warning C4018: '<': signed/unsigned mismatch
+C:\BSUIR\finished\OAiP\2sem\laba3\laba3\bmpReader.c(127,24): warning C4244: 'initializing': conversion from 'double' to 'unsigned char', possible loss of data
+C:\BSUIR\finished\OAiP\2sem\laba3\laba3\bmpReader.c(140,20): warning C4018: '<': signed/unsigned mismatch
+C:\BSUIR\finished\OAiP\2sem\laba3\laba3\bmpReader.c(152,7): warning C4244: '=': conversion from 'double' to 'unsigned char', possible loss of data
+C:\BSUIR\finished\OAiP\2sem\laba3\laba3\bmpReader.c(153,7): warning C4244: '=': conversion from 'double' to 'unsigned char', possible loss of data
+C:\BSUIR\finished\OAiP\2sem\laba3\laba3\bmpReader.c(154,7): warning C4244: '=': conversion from 'double' to 'unsigned char', possible loss of data
+C:\BSUIR\finished\OAiP\2sem\laba3\laba3\bmpReader.c(178,2): warning C4013: 'memcpy' undefined; assuming extern returning int
+  laba3.vcxproj -> C:\BSUIR\finished\OAiP\2sem\laba3\x64\Debug\laba3.exe

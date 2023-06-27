@@ -1,0 +1,9 @@
+﻿  strings.c
+C:\BSUIR\finished\OAiP\2sem\laba2\Dearchive\Dearchive\strings.c(58,10): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\BSUIR\finished\OAiP\2sem\laba2\Dearchive\Dearchive\strings.c(64,10): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  structures.c
+C:\BSUIR\finished\OAiP\2sem\laba2\Dearchive\Dearchive\structures.c(23,9): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\BSUIR\finished\OAiP\2sem\laba2\Dearchive\Dearchive\structures.c(28,9): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  Generating Code...
+C:\BSUIR\finished\OAiP\2sem\laba2\Dearchive\Dearchive\strings.c(70): warning C4715: 'getChangeForWord': not all control paths return a value
+  Dearchive.vcxproj -> C:\BSUIR\finished\OAiP\2sem\laba2\Dearchive\x64\Debug\Dearchive.exe

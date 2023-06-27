@@ -1,0 +1,48 @@
+[19.04.2023|09:21:25]	[INFO] User choosed 1 option in menu
+[19.04.2023|09:21:30]	[INFO] Object user added to tree: Michael Jordan
+[19.04.2023|09:21:30]	[INFO] Answer of the program is Michael Jordan
+[19.04.2023|09:21:32]	[INFO] Program lose
+[19.04.2023|09:21:36]	[INFO] Object user added to tree: Luka Doncic
+[19.04.2023|09:21:38]	[INFO] Question user added to tree: Dallas?
+[19.04.2023|09:21:40]	[INFO] User choosed 1 option in menu
+[19.04.2023|09:21:40]	[INFO] User answering question: Dallas?
+[19.04.2023|09:21:51]	[WARN] User entered invalid input while answering (y\n)
+[19.04.2023|09:21:54]	[INFO] User choosed 'y'
+[19.04.2023|09:21:54]	[INFO] Answer of the program is Luka Doncic
+[19.04.2023|09:21:55]	[INFO] Program win
+[19.04.2023|09:21:58]	[INFO] User choosed 3 option in menu
+[19.04.2023|09:22:03]	[INFO] User imported base from file: tree.txt
+[19.04.2023|09:22:25]	[INFO] User choosed 1 option in menu
+[19.04.2023|09:22:25]	[INFO] User answering question: Is your player from Europe?
+[19.04.2023|09:22:39]	[INFO] User choosed 'y'
+[19.04.2023|09:22:39]	[INFO] User answering question: Does your player has 77 number?
+[19.04.2023|09:22:42]	[INFO] User choosed 'n'
+[19.04.2023|09:22:42]	[INFO] User answering question: Is your player from BSUIR?
+[19.04.2023|09:22:44]	[INFO] User choosed 'y'
+[19.04.2023|09:22:44]	[INFO] Answer of the program is Pavel Kazachenko
+[19.04.2023|09:22:49]	[INFO] Program win
+[19.04.2023|09:23:06]	[INFO] User choosed 1 option in menu
+[19.04.2023|09:23:06]	[INFO] User answering question: Is your player from Europe?
+[19.04.2023|09:23:10]	[INFO] User choosed 'y'
+[19.04.2023|09:23:10]	[INFO] User answering question: Does your player has 77 number?
+[19.04.2023|09:23:12]	[INFO] User choosed 'n'
+[19.04.2023|09:23:12]	[INFO] User answering question: Is your player from BSUIR?
+[19.04.2023|09:23:15]	[INFO] User choosed 'y'
+[19.04.2023|09:23:15]	[INFO] Answer of the program is Pavel Kazachenko
+[19.04.2023|09:23:16]	[INFO] Program lose
+[19.04.2023|09:23:24]	[INFO] Object user added to tree: Vanya Manko
+[19.04.2023|09:23:38]	[INFO] Question user added to tree: Your player noob?
+[19.04.2023|09:23:39]	[INFO] User choosed 1 option in menu
+[19.04.2023|09:23:39]	[INFO] User answering question: Is your player from Europe?
+[19.04.2023|09:23:40]	[INFO] User choosed 'y'
+[19.04.2023|09:23:40]	[INFO] User answering question: Does your player has 77 number?
+[19.04.2023|09:23:42]	[INFO] User choosed 'n'
+[19.04.2023|09:23:42]	[INFO] User answering question: Is your player from BSUIR?
+[19.04.2023|09:23:44]	[INFO] User choosed 'y'
+[19.04.2023|09:23:44]	[INFO] User answering question: Your player noob?
+[19.04.2023|09:23:49]	[INFO] User choosed 'y'
+[19.04.2023|09:23:49]	[INFO] Answer of the program is Vanya Manko
+[19.04.2023|09:23:53]	[INFO] Program win
+[19.04.2023|09:23:57]	[INFO] User choosed 2 option in menu
+[19.04.2023|09:24:01]	[INFO] User saved base as file: new.txt
+[19.04.2023|09:24:07]	[INFO] User exit
