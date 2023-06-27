@@ -1,0 +1,11 @@
+Fitter Status : Successful - Fri May 26 09:28:26 2023
+Quartus II Version : 9.1 Build 222 10/21/2009 SJ Web Edition
+Revision Name : kuravaya
+Top-level Entity Name : kuravaya
+Family : MAX II
+Device : EPM240T100C5
+Timing Models : Final
+Total logic elements : 3 / 240 ( 1 % )
+Total pins : 8 / 80 ( 10 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

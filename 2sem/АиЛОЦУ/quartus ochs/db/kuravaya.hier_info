@@ -1,0 +1,34 @@
+|kuravaya
+s1 <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+a2 => inst19.IN0
+a2 => inst19.IN1
+a2 => inst10.IN0
+a2 => inst.IN1
+a2 => inst2.IN1
+b2 => inst21.IN0
+b2 => inst21.IN1
+b2 => inst6.IN1
+b2 => inst4.IN1
+b2 => inst10.IN1
+b2 => inst9.IN1
+p => inst22.IN0
+p => inst22.IN1
+p => inst4.IN2
+p => inst5.IN2
+p => inst8.IN2
+p => inst9.IN2
+p => inst.IN2
+p => inst1.IN2
+a1 => inst6.IN0
+a1 => inst18.IN0
+a1 => inst18.IN1
+a1 => inst7.IN0
+a1 => inst9.IN0
+a1 => inst.IN0
+a1 => inst1.IN0
+a1 => inst2.IN0
+s2 <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+perenos <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+b1 => ~NO_FANOUT~
+
+
