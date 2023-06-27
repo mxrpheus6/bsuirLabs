@@ -5,3 +5,4 @@
 
 ### [Второй семестр (2023)](https://github.com/mxrpheus6/bsuirLabs/tree/main/2sem)
 - [ОАиП](https://github.com/mxrpheus6/bsuirLabs/tree/main/2sem/ОАиП) (Сидорович А. С. / Скиба И. Г.)
+- [ОАиП, УПОзн](https://github.com/mxrpheus6/bsuirLabs/tree/main/2sem/ОАиП/bsuirPractice) (Сидорович А. С. / Скиба И. Г.)
