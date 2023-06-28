@@ -1,6 +1,12 @@
 ﻿  files.c
-D:\praktika\CaesarCryptBreaker\bsuirPractice\breakEncrypt\files.c(12,42): warning C4028: formal parameter 2 different from declaration
-D:\praktika\CaesarCryptBreaker\bsuirPractice\breakEncrypt\files.c(12,60): warning C4028: formal parameter 3 different from declaration
-D:\praktika\CaesarCryptBreaker\bsuirPractice\breakEncrypt\files.c(90,64): warning C4028: formal parameter 2 different from declaration
-D:\praktika\CaesarCryptBreaker\bsuirPractice\breakEncrypt\files.c(108,4): warning C4013: 'Sleep' undefined; assuming extern returning int
-  breakEncrypt.vcxproj -> D:\praktika\CaesarCryptBreaker\bsuirPractice\x64\Debug\breakEncrypt.exe
+D:\BSUIR\bsuirLabs\2sem\ОАиП\bsuirPractice\breakEncrypt\files.c(12,42): warning C4028: формальный параметр 2 отличается от объявления
+D:\BSUIR\bsuirLabs\2sem\ОАиП\bsuirPractice\breakEncrypt\files.c(12,60): warning C4028: формальный параметр 3 отличается от объявления
+D:\BSUIR\bsuirLabs\2sem\ОАиП\bsuirPractice\breakEncrypt\files.c(90,64): warning C4028: формальный параметр 2 отличается от объявления
+D:\BSUIR\bsuirLabs\2sem\ОАиП\bsuirPractice\breakEncrypt\files.c(108,4): warning C4013: Sleep: нет определения; предполагается "extern" с возвратом типа "int"
+  main.c
+  menu.c
+  strings.c
+  structures.c
+D:\BSUIR\bsuirLabs\2sem\ОАиП\bsuirPractice\breakEncrypt\structures.c(33,42): warning C4028: формальный параметр 1 отличается от объявления
+  Создание кода...
+  breakEncrypt.vcxproj -> D:\BSUIR\bsuirLabs\2sem\ОАиП\bsuirPractice\x64\Debug\breakEncrypt.exe
