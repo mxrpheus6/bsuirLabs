@@ -5,5 +5,5 @@
 
 ### [Второй семестр (2023)](https://github.com/mxrpheus6/bsuirLabs/tree/main/2sem)
 - [ОАиП](https://github.com/mxrpheus6/bsuirLabs/tree/main/2sem/ОАиП) (Сидорович А. С. / Скиба И. Г.)
-- [АиЛОЦУ, КП](https://github.com/mxrpheus6/bsuirLabs/tree/main/2sem/АиЛОЦУ) (Лукьянова И. В. / Луцик Ю. А.)
+- [АиЛОЦУ, Курсовая работа](https://github.com/mxrpheus6/bsuirLabs/tree/main/2sem/АиЛОЦУ) (Лукьянова И. В. / Луцик Ю. А.)
 
