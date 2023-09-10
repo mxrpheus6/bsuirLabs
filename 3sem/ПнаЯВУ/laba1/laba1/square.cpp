@@ -6,25 +6,16 @@ Square::Square() {
 	perimeter = 0.0;
 }
 
-Square::Square(double length) {
-	square = 0.0;
-	perimeter = 0.0;
-	if (length <= 0.0) {
-		this->length = 0.0;
-		return;
-	}
-	this->length = length;
-}
-
 double Square::getLength() {
 	return length;
 }
 
-void Square::setLength(double length) {
+bool Square::setLength(double length) {
 	if (length <= 0.0) {
-		return;
+		return false;
 	}
 	this->length = length;
+	return true;
 }
 
 double Square::getSquare() {

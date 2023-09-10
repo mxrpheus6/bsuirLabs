@@ -5,19 +5,16 @@
 int main(void) {
 	Square square;
 	double input;
-	while (true) {
-		std::cout<<"Enter length of the square:";
-		std::cin>>input;
-		square.setLength(input);
-		if (square.getLength() != 0.0) {
-			break;
-		}
-		std::cout << "Invalid length. Try again.";
+
+	std::cout << "Enter length of the square side:";
+	while (!(std::cin >> input) || std::cin.peek() != '\n' || square.setLength(input) == false) {
+		std::cin.clear();
+		while (std::cin.get() != '\n');
+		std::cout<< "Invalid error. You must enter real number that more than zero\n"<< "Enter length of the square side:";
 	}
-	square.setLength(input);
 	square.setPerimeter();
 	square.setSquare();
-	std::cout << square.getPerimeter()<<'\n';
-	std::cout << square.getSquare();
+	std::cout<<"Perrimeter = "<< square.getPerimeter()<< '\n';
+	std::cout<<"Square = "<< square.getSquare();
 	return 0;
 }
