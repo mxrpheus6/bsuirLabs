@@ -39,13 +39,7 @@
         pop bp
         ret 2
     output_string ENDP
-
-
-    ; input:
-    ; [bp + 4] -> wordAddr
-    ; [bp + 6] -> stringAddr
-    ; output: 
-    ; ax <- index of word in string        
+ 
     find_word PROC
         push bp
         mov bp, sp  ; [bp + 4] -> word
@@ -95,9 +89,8 @@
                 mov al, [si]
 
                 mov si, bx
-
                 add si, [bp + 4]
-                add si, 2
+                add si, 2   ;si -> word + j + 2
 
                 cmp al, [si]
                 jne skip
