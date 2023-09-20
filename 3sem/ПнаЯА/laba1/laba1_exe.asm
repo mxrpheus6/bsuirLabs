@@ -1,6 +1,7 @@
 .model small
 .stack 100h
 .code
+
 start:
     mov ax, @data
     mov ds, ax

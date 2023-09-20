@@ -7,7 +7,7 @@ start:
     mov dx, offset str
     int 21h
         
-    ret
+    int 20h
 
     str db 'Laba1', 0Dh, 0Ah, 'COM', 0Dh, 0Ah, 'Kazachenko', 0Dh, 0Ah, '$'   
       
