@@ -4,7 +4,6 @@
 .data
     string db 200 dup('$')
     word_to_remove db 200 dup('$')
-    result db 200 dup(?)
     message1 db 'Enter your string:$'
     message2 db 'Enter word to remove:$'
     crlf db 0Dh, 0Ah, '$'
