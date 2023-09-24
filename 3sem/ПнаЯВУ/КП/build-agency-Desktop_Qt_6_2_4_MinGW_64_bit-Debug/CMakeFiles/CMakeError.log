@@ -1,0 +1,95 @@
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: D:/BSUIR/bsuirLabs/3sem/ПнаЯВУ/КП/build-agency-Desktop_Qt_6_2_4_MinGW_64_bit-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):D:/Qt/Tools/Ninja/ninja.exe cmTC_0cf38 && ninja: error: 'D:/BSUIR/bsuirLabs/3sem/╨Я╨╜╨░╨п╨Т╨г/╨Ъ╨Я/build-agency-Desktop_Qt_6_2_4_MinGW_64_bit-Debug/CMakeFiles/CMakeTmp/src.cxx', needed by 'CMakeFiles/cmTC_0cf38.dir/src.cxx.obj', missing and no known rule to make it
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: D:/BSUIR/bsuirLabs/3sem/ПнаЯВУ/КП/build-agency-Desktop_Qt_6_2_4_MinGW_64_bit-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):D:/Qt/Tools/Ninja/ninja.exe cmTC_5ad8f && ninja: error: 'D:/BSUIR/bsuirLabs/3sem/╨Я╨╜╨░╨п╨Т╨г/╨Ъ╨Я/build-agency-Desktop_Qt_6_2_4_MinGW_64_bit-Debug/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx', needed by 'CMakeFiles/cmTC_5ad8f.dir/CheckFunctionExists.cxx.obj', missing and no known rule to make it
+
+
+
+Determining if the function pthread_create exists in the pthread failed with the following output:
+Change Dir: D:/BSUIR/bsuirLabs/3sem/ПнаЯВУ/КП/build-agency-Desktop_Qt_6_2_4_MinGW_64_bit-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):D:/Qt/Tools/Ninja/ninja.exe cmTC_6b456 && ninja: error: 'D:/BSUIR/bsuirLabs/3sem/╨Я╨╜╨░╨п╨Т╨г/╨Ъ╨Я/build-agency-Desktop_Qt_6_2_4_MinGW_64_bit-Debug/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx', needed by 'CMakeFiles/cmTC_6b456.dir/CheckFunctionExists.cxx.obj', missing and no known rule to make it
+
+
+
+Performing C++ SOURCE FILE Test HAVE_STDATOMIC failed with the following output:
+Change Dir: D:/BSUIR/bsuirLabs/3sem/ПнаЯВУ/КП/build-agency-Desktop_Qt_6_2_4_MinGW_64_bit-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):D:/Qt/Tools/Ninja/ninja.exe cmTC_70a25 && ninja: error: 'D:/BSUIR/bsuirLabs/3sem/╨Я╨╜╨░╨п╨Т╨г/╨Ъ╨Я/build-agency-Desktop_Qt_6_2_4_MinGW_64_bit-Debug/CMakeFiles/CMakeTmp/src.cxx', needed by 'CMakeFiles/cmTC_70a25.dir/src.cxx.obj', missing and no known rule to make it
+
+
+Source file was:
+#include <atomic>
+#include <cstdint>
+
+void test(volatile std::atomic<std::int64_t> &a)
+{
+    std::int64_t v = a.load(std::memory_order_acquire);
+    while (!a.compare_exchange_strong(v, v + 1,
+                                      std::memory_order_acq_rel,
+                                      std::memory_order_acquire)) {
+        v = a.exchange(v - 1);
+    }
+    a.store(v + 1, std::memory_order_release);
+}
+
+int main(int, char **)
+{
+    void *ptr = (void*)0xffffffc0; // any random pointer
+    test(*reinterpret_cast<std::atomic<std::int64_t> *>(ptr));
+    return 0;
+}
+Performing C++ SOURCE FILE Test HAVE_STDATOMIC_WITH_LIB failed with the following output:
+Change Dir: D:/BSUIR/bsuirLabs/3sem/ПнаЯВУ/КП/build-agency-Desktop_Qt_6_2_4_MinGW_64_bit-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):D:/Qt/Tools/Ninja/ninja.exe cmTC_de7a2 && ninja: error: 'D:/BSUIR/bsuirLabs/3sem/╨Я╨╜╨░╨п╨Т╨г/╨Ъ╨Я/build-agency-Desktop_Qt_6_2_4_MinGW_64_bit-Debug/CMakeFiles/CMakeTmp/src.cxx', needed by 'CMakeFiles/cmTC_de7a2.dir/src.cxx.obj', missing and no known rule to make it
+
+
+Source file was:
+#include <atomic>
+#include <cstdint>
+
+void test(volatile std::atomic<std::int64_t> &a)
+{
+    std::int64_t v = a.load(std::memory_order_acquire);
+    while (!a.compare_exchange_strong(v, v + 1,
+                                      std::memory_order_acq_rel,
+                                      std::memory_order_acquire)) {
+        v = a.exchange(v - 1);
+    }
+    a.store(v + 1, std::memory_order_release);
+}
+
+int main(int, char **)
+{
+    void *ptr = (void*)0xffffffc0; // any random pointer
+    test(*reinterpret_cast<std::atomic<std::int64_t> *>(ptr));
+    return 0;
+}
