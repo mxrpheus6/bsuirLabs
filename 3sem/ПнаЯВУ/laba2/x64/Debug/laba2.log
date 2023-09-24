@@ -1,0 +1,4 @@
+﻿  mstring.cpp
+D:\BSUIR\bsuirLabs\3sem\ПнаЯВУ\laba2\mstring.cpp(9,14): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+D:\BSUIR\bsuirLabs\3sem\ПнаЯВУ\laba2\mstring.cpp(44,14): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+  laba2.vcxproj -> D:\BSUIR\bsuirLabs\3sem\ПнаЯВУ\laba2\x64\Debug\laba2.exe
