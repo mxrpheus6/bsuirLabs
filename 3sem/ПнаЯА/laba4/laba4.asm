@@ -31,7 +31,6 @@
     wall        db ' ', 5Fh
     red_wall    db ' ', 47h
     black_space     db ' ', 00h
-    space       db ' ', 0Fh
     map_width   equ 40
     map_height  equ 25
     
@@ -286,11 +285,10 @@ death_screen db 80 dup('w')
     random ENDP
 
     generate_coin PROC
-        push cx
 
         generating:
-            mov cx, 0
-            mov coin_position, cx
+            ;mov cx, 0
+            mov coin_position, 0
 
             call random
             cmp dx, 919
@@ -301,7 +299,6 @@ death_screen db 80 dup('w')
             cmp map[bx], 'w'
             je generating
             
-            pop cx
             ret
     generate_coin ENDP
 

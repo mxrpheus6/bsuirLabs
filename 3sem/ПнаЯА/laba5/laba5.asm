@@ -6,7 +6,7 @@
 
 .data
     message_file_error db "Can't open the file. Try again$"
-    file_name db 100 dup('$')
+    file_name db 256 dup('0')
     number_buffer db 9 dup("$")
 .code
 
@@ -69,11 +69,35 @@
         
         xor bx, bx
         mov bl, es:[80h]
+        add bx, 80h
+        mov si, 82h
+        lea di, file_name
 
-        lea dx, number_buffer
-        push dx
-        push bx
-        call output_number
+        cmp si, bx
+        ja bad_arguments
+
+        parse_path:
+            cmp BYTE PTR es:[si], ' '
+            je parsed_path
+
+            mov al, es:[si]
+            mov [dl], al
+
+            inc di
+            inc si
+            cmp si, bx
+            jbe parse_path
+
+        parsed_path:
+
+            ;lea dx, number_buffer
+            ;push dx
+            ;push bx
+            ;call output_number
+            
+            lea dx, file_name
+            mov ah, 09h
+
 
         exit:
             mov ax, 4C00h
