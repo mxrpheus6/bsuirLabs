@@ -6,3 +6,5 @@
 ### [Лабораторная работа №3 (Вариант №7)](https://github.com/mxrpheus6/bsuirLabs/tree/main/3sem/ПнаЯА/laba3)
 Ввести массив целых чисел размерностью 30 элементов. Найти наиболее
 часто встречающееся число.
+### [Лабораторная работа №4 (Вариант №3)](https://github.com/mxrpheus6/bsuirLabs/tree/main/3sem/ПнаЯА/laba4)
+Написать игру Pac-Man
