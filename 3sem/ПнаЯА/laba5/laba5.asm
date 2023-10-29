@@ -7,6 +7,7 @@
 .data
     message_arguments_error     db "Wrong arguments. Try: laba5 file_name.txt$"
     message_file_missing        db "Can't open file. Probably it's missing$"
+    message_success             db "Amount of strings with your word is $"
     
     message_input_word          db "This program counts strings with your word. Please enter the word:$"
     word_to_find                db 128 dup('$')
@@ -400,6 +401,10 @@
             lea dx, file_buffer
             push dx
             call count_strings
+
+            lea dx, message_success
+            push dx
+            call output_string
 
             lea dx, number_buffer
             push dx
