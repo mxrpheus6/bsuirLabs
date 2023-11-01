@@ -1,0 +1,5 @@
+﻿  Assembling func1.asm...
+func1.asm(1): error A2008: syntax error : .
+func1.asm(6): error A2070: invalid instruction operands
+func1.asm(41): error A2070: invalid instruction operands
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\BuildCustomizations\masm.targets(70,5): error MSB3721: выход из команды "ml64.exe /c /nologo /Zi /Fo"x64\Debug\func1.obj" /W3 /errorReport:prompt  /Tafunc1.asm" с кодом "1".
