@@ -65,18 +65,7 @@
         mov ax, [bp + 4]
         mov di, [bp + 6]
 
-        test ax, ax
-        jns positive
-        mov dl, '-'
-        mov [di], dl
-        inc di
 
-        neg ax
-
-        positive:
-            xor bx, bx
-            mov bx, 10
-            xor cx, cx
 
         convert_loop:
             xor dx, dx
