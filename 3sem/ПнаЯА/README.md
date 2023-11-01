@@ -8,3 +8,5 @@
 часто встречающееся число.
 ### [Лабораторная работа №4 (Вариант №3)](https://github.com/mxrpheus6/bsuirLabs/tree/main/3sem/ПнаЯА/laba4)
 Написать игру Pac-Man
+### [Лабораторная работа №5 (Вариант №7)](https://github.com/mxrpheus6/bsuirLabs/tree/main/3sem/ПнаЯА/laba5)
+Подсчитать число строк в файле, в которых есть указанное слово.
