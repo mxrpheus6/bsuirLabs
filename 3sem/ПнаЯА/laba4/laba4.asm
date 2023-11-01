@@ -27,12 +27,12 @@
     lcg_inc_const       equ 13849
 
     ;map
-    position    dw 0
-    wall        db ' ', 5Fh
-    red_wall    db ' ', 47h
+    position        dw 0
+    wall            db ' ', 5Fh
+    red_wall        db ' ', 47h
     black_space     db ' ', 00h
-    map_width   equ 40
-    map_height  equ 25
+    map_width       equ 40
+    map_height      equ 25
     
 map db 40 dup ('w')
     db 'w', 4 dup('s'), 2 dup('w'), 12 dup('s'), 2 dup('w'), 12 dup('s'), 2 dup('w'), 4 dup('s'), 'w'
@@ -60,8 +60,8 @@ map db 40 dup ('w')
     db 40 dup ('w')
 
     ;death screen
-death_screen db 80 dup('w')
-             db 280 dup('s')
+death_screen db 120 dup('w')
+             db 240 dup('s')
              db 3 dup('s'), 'w', 5 dup('s'),  'w', 's', 3 dup('w'), 's', 'w', 's', 'w', 2 dup('s'), 'w', 3 dup('s'), 3 dup('w'), 's', 3 dup('w'), 's', 3 dup('w'), 5 dup('s')
              db 4 dup('s'), 'w', 3 dup('s'), 'w', 2 dup('s'), 'w', 's', 'w', 's', 'w', 's', 'w', 2 dup('s'), 'w', 3 dup('s'), 'w', 's', 'w', 's', 3 dup('w'), 's', 3 dup('w'), 5 dup('s')
              db 5 dup('s'), 'w', 's', 'w', 3 dup('s'), 'w', 's', 'w', 's', 'w', 's', 'w', 2 dup('s'), 'w', 3 dup('s'), 'w', 's', 'w', 's', 2 dup('w'), 2 dup('s'), 'w', 7 dup('s')
@@ -71,7 +71,7 @@ death_screen db 80 dup('w')
              db 6 dup('s'), 'w', 4 dup('s'), 'w', 's', 'w', 's', 'w', 's', 'w', 2 dup('s'), 'w', 3 dup('s'), 'w', 's', 'w', 's', 3 dup('w'), 's', 3 dup('w'), 5 dup('s')
              db 6 dup('s'), 'w', 4 dup('s'), 3 dup('w'), 's', 3 dup('w'), 2 dup('s'), 3 dup('w'), 's', 3 dup('w'), 's', 3 dup('w'), 's', 3 dup('w'), 5 dup('s')
              db 200 dup('s')
-             db 80 dup('w')
+             db 120 dup('w')
 
     ;player
     player_skin         db pac_man, yellow_color
@@ -85,7 +85,7 @@ death_screen db 80 dup('w')
     third_ghost_position    dw 823
 
     ;coin
-    coin_skin  db coin, red_color
+    coin_skin     db coin, red_color
     coin_position dw 764  
 
 .code
@@ -97,7 +97,7 @@ death_screen db 80 dup('w')
             push cx
 
             mov cx, map_width
-            mov di, position
+            mov di, bx
             add di, di
             setting_cols_map:
                 cmp map[bx], 'w'
@@ -106,10 +106,9 @@ death_screen db 80 dup('w')
                 movsw
                 jmp skip2_map
                 skip1_map:
-                    add si, 2
                     add di, 2
                 skip2_map:
-                    inc position
+                    ;inc position
                     inc bx
                     loop setting_cols_map
                     pop cx 
@@ -120,13 +119,13 @@ death_screen db 80 dup('w')
     set_field ENDP
     
     set_death_screen proc
-        mov bx, 0   ;i
+        mov bx, 0   ;position
         mov cx, 25
         setting_rows_screen:
             push cx
 
             mov cx, map_width
-            mov di, position
+            mov di, bx
             add di, di
             setting_cols_screen:
                 cmp death_screen[bx], 'w'
@@ -138,7 +137,7 @@ death_screen db 80 dup('w')
                     lea si, black_space
                     movsw
                 skip2_screen:
-                    inc position
+                    ;inc position
                     inc bx
                     loop setting_cols_screen
                     pop cx 
@@ -432,8 +431,8 @@ death_screen db 80 dup('w')
         mov al, 01h
         int 10h
 
-        mov ah, 01h
-        mov cx, 2607h
+        mov ah, 02h
+        mov dx, 2500h
         int 10h
 
         mov ax, 0B800h
@@ -448,7 +447,7 @@ death_screen db 80 dup('w')
             mov cx, 0
 
             mov ah, 86h
-            mov dx, 65535
+            mov dx, 0FFFFh
             int 15h
             int 15h
             int 15h
@@ -466,6 +465,7 @@ death_screen db 80 dup('w')
 
                 call ghosts_movements
                 call set_player_and_ghosts
+                call set_coin
                 
                 mov ah, 01h
                 int 16h
@@ -515,7 +515,6 @@ death_screen db 80 dup('w')
                     je wall_
                     call clear_player_position
                     sub player_position, 40
-                    call check
                     jmp wall_
                 is_s:
                     mov si, player_position
