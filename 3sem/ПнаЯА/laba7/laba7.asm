@@ -18,7 +18,7 @@
     DTA_size    equ 2Ch
     DTA_block   db DTA_size dup(0)
 
-    EBP_block dw 0
+    EPB_block dw 0
               dw offset command_line, 0
               dw 005Ch, 0, 006Ch, 0
 
@@ -111,8 +111,8 @@
         push dx
 
         mov ax, 4B00h
-        lea bx, EBP_block
-        mov dx, offset DTA_block + 1Eh
+        lea bx, EPB_block
+        lea dx, DTA_block + 1Eh
         int 21h
 
         jc runing_exe_error
@@ -148,11 +148,10 @@
         mov si, 82h      ;first symbol
         lea di, command_line_text 
 
-        cmp si, bx
-        ja wrong_arguments
-
         parse_catalog:
             cmp BYTE PTR es:[si], ' '
+            je parsed_catalog
+            cmp BYTE PTR es:[si], 0Dh
             je parsed_catalog
 
             mov al, es:[si]

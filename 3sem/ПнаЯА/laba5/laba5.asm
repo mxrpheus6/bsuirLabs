@@ -65,7 +65,9 @@
         mov ax, [bp + 4]
         mov di, [bp + 6]
 
-
+        xor bx, bx
+        mov bx, 10
+        xor cx, cx
 
         convert_loop:
             xor dx, dx
@@ -113,8 +115,8 @@
         ret 2
 
         missing_file:
-            mov ah, 3Eh
-            int 21h
+            ;mov ah, 3Eh
+            ;int 21h
 
             lea dx, message_file_missing
             push dx
@@ -137,7 +139,7 @@
     
     read_from_file PROC
         push bp
-        mov bp, sp
+        mov bp, sp  ;[bp + 4] file_descriptor
 
         mov bx, [bp + 4]
         mov cx, file_buffer_size
@@ -149,7 +151,7 @@
         ret 2
     read_from_file ENDP
 
-    strlen PROC
+    strlen PROC ;bx = res
         push bp
         mov bp, sp  ;[bp + 4] word
 
@@ -172,7 +174,7 @@
             ret 2
     strlen ENDP
 
-    strcmp PROC
+    strcmp PROC ;true = 1, false = 0
         push bp
         mov bp, sp  ;[bp + 4] str1
                     ;[bp + 6] str2
@@ -340,11 +342,10 @@
         mov si, 82h      ;first symbol
         lea di, file_name
 
-        cmp si, bx
-        ja wrong_arguments
-
         parse_path:
             cmp BYTE PTR es:[si], ' '
+            je parsed_path
+            cmp BYTE PTR es:[si], 0Dh
             je parsed_path
 
             mov al, es:[si]

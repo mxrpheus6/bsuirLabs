@@ -1,6 +1,6 @@
 #include <iostream>
 
-extern "C" void func(float* arr, float* res);
+extern "C" void _cdecl func(float* arr, float* res);
 
 #define ARR_SIZE 10
 	
