@@ -1,0 +1,13 @@
+release/apartment.o
+release/authorization.o
+release/house.o
+release/main.o
+release/mainwindow.o
+release/menudatawidget.o
+release/office.o
+release/realestate.o
+release/realestatebase.o
+release/moc_authorization.o
+release/moc_mainwindow.o
+release/moc_menudatawidget.o
+release/moc_realestatebase.o

@@ -6,7 +6,9 @@ void print_menu() {
 		<< "1. Change length of the square side" << std::endl
 		<< "2. Print square area" << std::endl
 		<< "3. Print square perimeter" << std::endl
-		<< "4. Exit" << std::endl
+		<< "4. Test operators" << std::endl
+		<< "5. Test strings" << std::endl
+		<< "6. Exit" << std::endl
 		<< "Your choice:";
 }
 

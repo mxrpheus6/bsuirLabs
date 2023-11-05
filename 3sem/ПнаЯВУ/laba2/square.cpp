@@ -6,6 +6,12 @@ Square::Square() {
 	perimeter = 0.0;
 }
 
+Square::Square(double length) {
+	this->length = length;
+	this->setPerimeter();
+	this->setSquare();
+}
+
 double Square::getLength() {
 	return length;
 }
@@ -31,4 +37,18 @@ double Square::getPerimeter() {
 
 void Square::setPerimeter() {
 	perimeter = length * 4;
+}
+
+Square Square::operator+(const Square obj) {
+	Square result;
+	result.setLength(this->length + obj.length);
+	result.setSquare();
+	result.setPerimeter();
+	return result;
+}
+
+double Square::operator&(const Square obj) {
+	double s = square + obj.square;
+	double a = sqrt(4 * s / sqrt(3));
+	return a;
 }

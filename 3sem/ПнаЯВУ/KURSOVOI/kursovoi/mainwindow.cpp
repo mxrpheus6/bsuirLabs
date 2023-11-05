@@ -14,8 +14,6 @@ MainWindow::MainWindow(QWidget *parent)
     int width = ui->label_banner->width();
     int height = ui->label_banner->height();
     ui->label_banner->setPixmap(pix.scaled(width, height, Qt::KeepAspectRatio));
-
-
 }
 
 MainWindow::~MainWindow()
