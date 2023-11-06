@@ -7,7 +7,6 @@
 enum Menu {
 	PUSH = 1,
 	POP,
-	PEEK,
 	PRINT,
 	SIZE,
 	FRONT,
@@ -23,7 +22,7 @@ template<typename T>
 void menu() {
 	Queue<T> queue;
 
-	int temp;
+	T temp;
 	int choose = -1;
 
 	while (choose != EXIT) {
@@ -35,7 +34,7 @@ void menu() {
 		case PUSH:
 		{
 			std::cout << "Enter data:";
-			temp = input_check();
+			std::cin >> temp;
 			queue.push(temp);
 			press_to_continue();
 			break;
@@ -45,19 +44,6 @@ void menu() {
 			try {
 				T temp = queue.pop();
 				std::cout << "Popped data is " << temp << std::endl;
-			}
-			catch (std::string error_message) {
-				std::cout << error_message << std::endl;
-			}
-
-			press_to_continue();
-			break;
-		}
-		case PEEK:
-		{
-			try {
-				T temp = queue.peek();
-				std::cout << "Peek data is " << temp << std::endl;
 			}
 			catch (std::string error_message) {
 				std::cout << error_message << std::endl;

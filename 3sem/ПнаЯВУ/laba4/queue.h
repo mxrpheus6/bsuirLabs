@@ -17,6 +17,7 @@ private:
 public:
 	Queue();
 	Queue(const Queue& queue);
+	~Queue();
 	
 	bool empty();
 	int size();
@@ -46,6 +47,13 @@ Queue<T>::Queue(const Queue& queue) {
 	_front = queue._front;
 	_rear = queue._rear;
 	_size = queue._size;
+}
+
+template<typename T>
+Queue<T>::~Queue() {
+	while (_front != nullptr) {
+		pop();
+	}
 }
 
 template<typename T>
@@ -84,14 +92,6 @@ T Queue<T>::pop() {
 	delete temp;
 
 	return deleted_data;
-}
-
-template<typename T>
-T Queue<T>::peek() {
-	if (empty())
-		throw std::string("Queue is empty!");
-
-	return _front->data;
 }
 
 template<typename T>

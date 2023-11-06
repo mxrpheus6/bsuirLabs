@@ -21,11 +21,10 @@ void print_menu()
 	std::cout << "MENU" << std::endl
 		<< "1) - Push" << std::endl
 		<< "2) - Pop" << std::endl
-		<< "3) - Peek" << std::endl
-		<< "4) - Print" << std::endl
-		<< "5) - Size" << std::endl
-		<< "6) - Front" << std::endl
-		<< "7) - Rear" << std::endl
-		<< "8) - Exit" << std::endl
+		<< "3) - Print" << std::endl
+		<< "4) - Size" << std::endl
+		<< "5) - Front" << std::endl
+		<< "6) - Rear" << std::endl
+		<< "7) - Exit" << std::endl
 		<< "Your choose: ";
 }
