@@ -7,6 +7,7 @@ debug/menudatawidget.o
 debug/office.o
 debug/realestate.o
 debug/realestatebase.o
+debug/qrc_src.o
 debug/moc_authorization.o
 debug/moc_mainwindow.o
 debug/moc_menudatawidget.o

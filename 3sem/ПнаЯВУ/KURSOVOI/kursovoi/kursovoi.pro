@@ -41,3 +41,6 @@ win32:RC_FILE = D:\BSUIR\bsuirLabs\3sem\ПнаЯВУ\KURSOVOI\build-kursovoi-Des
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    src.qrc

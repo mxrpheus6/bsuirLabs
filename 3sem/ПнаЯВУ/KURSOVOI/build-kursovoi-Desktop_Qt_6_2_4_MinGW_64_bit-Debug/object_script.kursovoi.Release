@@ -7,6 +7,7 @@ release/menudatawidget.o
 release/office.o
 release/realestate.o
 release/realestatebase.o
+release/qrc_src.o
 release/moc_authorization.o
 release/moc_mainwindow.o
 release/moc_menudatawidget.o

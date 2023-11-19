@@ -40,10 +40,3 @@ void MenuDataWidget::on_tableView_db_clicked(const QModelIndex &index)
 {
     currentRow = index.row();
 }
-
-
-void MenuDataWidget::on_pushButtonAdd_clicked()
-{
-
-}
-

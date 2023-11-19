@@ -23,8 +23,6 @@ private slots:
 
     void on_tableView_db_clicked(const QModelIndex &index);
 
-    void on_pushButtonAdd_clicked();
-
 private:
     Ui::MenuDataWidget *ui;
     QSqlTableModel *model;

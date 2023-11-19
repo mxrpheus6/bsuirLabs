@@ -32,7 +32,6 @@ void MainWindow::on_action_realtors_triggered()
     mw->setParent(dialog);
     mw->show();
 
-
     dialog->exec();
 }
 
@@ -53,7 +52,7 @@ void MainWindow::on_action_districts_triggered()
 void MainWindow::on_pushButton_real_estate_base_clicked()
 {
     QDialog* dialog = new QDialog(this);
-    RealEstateBase* reb = new RealEstateBase(dialog);
+    RealEstateBase* reb = new RealEstateBase(dialog, ESTATE);
     dialog->setModal(true);
     dialog->setWindowTitle("База недвижимости");
     dialog->setFixedSize(550, 450);

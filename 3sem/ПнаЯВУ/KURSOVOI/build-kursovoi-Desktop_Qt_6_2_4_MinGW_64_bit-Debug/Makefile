@@ -322,7 +322,8 @@ Makefile: ../kursovoi/kursovoi.pro D:/Qt/6.2.4/mingw_64/mkspecs/win32-g++/qmake.
 		D:/Qt/6.2.4/mingw_64/lib/Qt6Sql.prl \
 		D:/Qt/6.2.4/mingw_64/lib/Qt6Core.prl \
 		D:/Qt/6.2.4/mingw_64/lib/Qt6EntryPoint.prl \
-		D:/Qt/6.2.4/mingw_64/mkspecs/features/build_pass.prf
+		D:/Qt/6.2.4/mingw_64/mkspecs/features/build_pass.prf \
+		../kursovoi/src.qrc
 	$(QMAKE) -o Makefile ..\kursovoi\kursovoi.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 D:/Qt/6.2.4/mingw_64/mkspecs/features/spec_pre.prf:
 D:/Qt/6.2.4/mingw_64/mkspecs/features/device_config.prf:
@@ -577,6 +578,7 @@ D:/Qt/6.2.4/mingw_64/lib/Qt6Sql.prl:
 D:/Qt/6.2.4/mingw_64/lib/Qt6Core.prl:
 D:/Qt/6.2.4/mingw_64/lib/Qt6EntryPoint.prl:
 D:/Qt/6.2.4/mingw_64/mkspecs/features/build_pass.prf:
+../kursovoi/src.qrc:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ..\kursovoi\kursovoi.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 

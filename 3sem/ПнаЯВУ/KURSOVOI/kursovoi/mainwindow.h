@@ -3,6 +3,7 @@
 
 #define ACCOUNTS "Accounts"
 #define DISTRICTS "Districts"
+#define ESTATE "Estate"
 
 #include <QMainWindow>
 #include <QPixMap>

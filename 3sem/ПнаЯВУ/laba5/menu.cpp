@@ -79,42 +79,11 @@ void test_functionality()
 		exit(-1);
 	}
 
-	int* marks;
-	std::cout << "Enter marks:" << std::endl;
-	try {
-		marks = input_marks();
-	}
-	catch (Exception& e) {
-		e.show();
-		exit(-1);
-	}
-	rewind(stdin);
-
-	double scholarship;
-	std::cout << "Enter scholarship:";
-	std::cin >> scholarship;
-	rewind(stdin);
-
-	double rate;
-	std::cout << "Enter rate:";
-	std::cin >> rate;
-	rewind(stdin);
-
-	double salary;
-	std::cout << "Enter salary:";
-	std::cin >> salary;
-	rewind(stdin);
-
-	int amount_of_articles;
-	std::cout << "Enter amount of articles:";
-	std::cin >> amount_of_articles;
-	rewind(stdin);
-
 	try
 	{
 		student_teacher.set_first_name(first_name);
 	}
-	catch (Exception &e)
+	catch (Exception& e)
 	{
 		e.show();
 		exit(-1);
@@ -130,6 +99,17 @@ void test_functionality()
 		exit(-1);
 	}
 
+	int* marks;
+	std::cout << "Enter marks:" << std::endl;
+	try {
+		marks = input_marks();
+	}
+	catch (Exception& e) {
+		e.show();
+		exit(-1);
+	}
+	rewind(stdin);
+
 	try
 	{
 		student_teacher.set_marks(marks);
@@ -139,6 +119,12 @@ void test_functionality()
 		e.show();
 		exit(-1);
 	}
+
+
+	double scholarship;
+	std::cout << "Enter scholarship:";
+	std::cin >> scholarship;
+	rewind(stdin);
 
 	try
 	{
@@ -150,6 +136,11 @@ void test_functionality()
 		exit(-1);
 	}
 
+	double rate;
+	std::cout << "Enter rate:";
+	std::cin >> rate;
+	rewind(stdin);
+
 	try
 	{
 		student_teacher.set_rate(rate);
@@ -159,6 +150,13 @@ void test_functionality()
 		e.show();
 		exit(-1);
 	}
+
+
+
+	double salary;
+	std::cout << "Enter salary:";
+	std::cin >> salary;
+	rewind(stdin);
 
 	try
 	{
@@ -170,6 +168,11 @@ void test_functionality()
 		exit(-1);
 	}
 
+	int amount_of_articles;
+	std::cout << "Enter amount of articles:";
+	std::cin >> amount_of_articles;
+	rewind(stdin);
+
 	try
 	{
 		student_teacher.set_amount_of_articles(amount_of_articles);
@@ -179,6 +182,7 @@ void test_functionality()
 		e.show();
 		exit(-1);
 	}
+
 
 	int choose = 0;
 
