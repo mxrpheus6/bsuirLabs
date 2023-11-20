@@ -155,7 +155,7 @@
     <string>До</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="pushButton_estate">
    <property name="geometry">
     <rect>
      <x>370</x>
@@ -168,7 +168,7 @@
     <string>Карточка объекта</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_3">
+  <widget class="QPushButton" name="pushButton_delete">
    <property name="geometry">
     <rect>
      <x>460</x>
@@ -207,7 +207,7 @@
     <string>Год</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_4">
+  <widget class="QPushButton" name="pushButton_add">
    <property name="geometry">
     <rect>
      <x>370</x>

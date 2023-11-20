@@ -115,11 +115,15 @@ public:
         font3.setPointSize(14);
         font3.setBold(false);
         pushButton_login->setFont(font3);
+        pushButton_login->setAutoDefault(false);
 
         gridLayout->addWidget(pushButton_login, 3, 0, 1, 2);
 
 
         retranslateUi(Authorization);
+
+        pushButton_login->setDefault(false);
+
 
         QMetaObject::connectSlotsByName(Authorization);
     } // setupUi

@@ -373,3 +373,38 @@ void RealEstateBase::createEmptyTable(QSqlTableModel* model) {
     ui->tableView_estate->setSelectionBehavior(QAbstractItemView::SelectRows);
     ui->tableView_estate->setSortingEnabled(true);
 }
+
+
+
+
+void RealEstateBase::on_tableView_estate_clicked(const QModelIndex &index)
+{
+    currentRow = index.row();
+}
+
+
+void RealEstateBase::on_pushButton_delete_clicked()
+{
+
+    if (currentRow >= 0) {
+        QMessageBox msgBox;
+        msgBox.setIcon(QMessageBox::Question);
+        msgBox.setWindowTitle("Подтверждение удаления");
+        msgBox.setText("Вы уверены, что хотите удалить этот объект?");
+        msgBox.addButton(QMessageBox::Yes)->setText("Да");
+        msgBox.addButton(QMessageBox::No)->setText("Нет");
+        msgBox.setDefaultButton(QMessageBox::No);
+
+        int reply = msgBox.exec();
+
+        if (reply == QMessageBox::Yes) {
+            model->removeRow(currentRow);
+            model->select();
+        }
+    }
+    else {
+        QMessageBox::warning(this, "Предупреждение", "Объект для удаления не выбран!");
+    }
+
+    currentRow = -1;
+}

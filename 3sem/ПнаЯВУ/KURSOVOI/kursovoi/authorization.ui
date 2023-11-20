@@ -149,6 +149,12 @@
      <property name="text">
       <string>Войти</string>
      </property>
+     <property name="autoDefault">
+      <bool>false</bool>
+     </property>
+     <property name="default">
+      <bool>false</bool>
+     </property>
     </widget>
    </item>
   </layout>

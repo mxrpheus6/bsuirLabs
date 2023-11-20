@@ -11,9 +11,18 @@ MenuDataWidget::MenuDataWidget(QWidget *parent, QString tableName) :
     model->setTable(tableName);
     model->select();
 
+    if (tableName == "Accounts") {
+        model->setHeaderData(0, Qt::Horizontal, "Риелтор");
+        model->setHeaderData(1, Qt::Horizontal, "Логин");
+        model->setHeaderData(2, Qt::Horizontal, "Пароль");
+        model->setHeaderData(3, Qt::Horizontal, "Права доступа");
+    }
+    else if (tableName == "Districts") {
+        model->setHeaderData(0, Qt::Horizontal, "Район");
+    }
+
     ui->tableView_db->setModel(model);
     ui->tableView_db->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
-    ui->tableView_db->setColumnHidden(0, true);
     ui->tableView_db->setSelectionBehavior(QAbstractItemView::SelectRows);
     ui->tableView_db->setSortingEnabled(true);
 }

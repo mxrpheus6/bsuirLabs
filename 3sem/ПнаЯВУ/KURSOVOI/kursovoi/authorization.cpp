@@ -62,7 +62,7 @@ void Authorization::on_pushButton_login_clicked()
             emit authorizationSuccess();
         }
         else {
-            QMessageBox::warning(this, "Вход", "Неверный логин и\или пароль!");
+            QMessageBox::warning(this, "Вход", "Неверный логин и\\или пароль!");
             ui->lineEdit_password->clear();
         }
     }

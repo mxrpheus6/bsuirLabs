@@ -11,6 +11,7 @@
 #include <QStringList>
 #include <QStandardItem>
 #include <QStandardItemModel>
+#include <QMessageBox>
 
 namespace Ui {
 class RealEstateBase;
@@ -60,6 +61,10 @@ private slots:
 
     void on_lineEdit_price_to_textChanged(const QString &arg1);
 
+    void on_tableView_estate_clicked(const QModelIndex &index);
+
+    void on_pushButton_delete_clicked();
+
 private:
     Ui::RealEstateBase *ui;
     QSqlTableModel *model;
@@ -68,7 +73,7 @@ private:
     QDoubleValidator *doubleValidator;
     QIntValidator *intValidator;
 
-    int currentRow;
+    int currentRow = -1;
 };
 
 #endif // REALESTATEBASE_H
