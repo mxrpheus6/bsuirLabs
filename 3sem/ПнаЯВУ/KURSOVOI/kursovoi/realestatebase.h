@@ -2,6 +2,16 @@
 #define REALESTATEBASE_H
 
 #define TABLE_NAME "Estate"
+#define ID_COL 0
+#define PROPERTY_TYPE_COL 1
+#define DEAL_TYPE_COL 2
+#define DISTRICT_COL 3
+#define ADDRESS_COL 4
+#define DESCRIPTION_COL 5
+#define SQUARE_COL 6
+#define FLOOR_AMOUNT_COL 7
+#define YEAR_COL 8
+#define PRICE_COL 9
 
 #include <cfloat>
 
@@ -12,6 +22,8 @@
 #include <QStandardItem>
 #include <QStandardItemModel>
 #include <QMessageBox>
+
+#include "objectoverview.h"
 
 namespace Ui {
 class RealEstateBase;
@@ -25,9 +37,9 @@ public:
     explicit RealEstateBase(QWidget *parent, QString tableName);
     ~RealEstateBase();
     static bool numericCompare(const QString &str1, const QString &str2);
-    QStandardItemModel* apply_filter_combobox(QAbstractItemModel *originalModel, int colIndex, QComboBox *cb);
-    QStandardItemModel* apply_filter_line_edit(QAbstractItemModel *originalModel, int colIndex, QLineEdit *from, QLineEdit *to);
-    void set_filters();
+    QStandardItemModel* applyFilterCombobox(QAbstractItemModel *originalModel, int colIndex, QComboBox *cb);
+    QStandardItemModel* applyFilterLineEdit(QAbstractItemModel *originalModel, int colIndex, QLineEdit *from, QLineEdit *to);
+    void setFilters();
     void createEmptyTable(QSqlTableModel *model);
 
 private slots:
@@ -64,6 +76,12 @@ private slots:
     void on_tableView_estate_clicked(const QModelIndex &index);
 
     void on_pushButton_delete_clicked();
+
+    void on_pushButton_estate_clicked();
+
+    void on_checkBox_deal_stateChanged(int arg1);
+
+    void on_comboBox_deal_activated(int index);
 
 private:
     Ui::RealEstateBase *ui;

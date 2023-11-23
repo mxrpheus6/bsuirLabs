@@ -12,7 +12,7 @@ MenuDataWidget::MenuDataWidget(QWidget *parent, QString tableName) :
     model->select();
 
     if (tableName == "Accounts") {
-        model->setHeaderData(0, Qt::Horizontal, "Риелтор");
+        model->setHeaderData(0, Qt::Horizontal, "ФИО");
         model->setHeaderData(1, Qt::Horizontal, "Логин");
         model->setHeaderData(2, Qt::Horizontal, "Пароль");
         model->setHeaderData(3, Qt::Horizontal, "Права доступа");
@@ -22,7 +22,7 @@ MenuDataWidget::MenuDataWidget(QWidget *parent, QString tableName) :
     }
 
     ui->tableView_db->setModel(model);
-    ui->tableView_db->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
+    ui->tableView_db->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     ui->tableView_db->setSelectionBehavior(QAbstractItemView::SelectRows);
     ui->tableView_db->setSortingEnabled(true);
 }

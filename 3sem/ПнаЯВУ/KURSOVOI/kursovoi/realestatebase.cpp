@@ -17,52 +17,63 @@ RealEstateBase::RealEstateBase(QWidget *parent, QString tableName) :
 
     ui->tableView_estate->setModel(model);
 
+
     QStringList uniqueValues;
     QModelIndex index;
     QVariant value;
 
     //заполнение combobox
     for (int row = 0; row < model->rowCount(); ++row) {
-        index = model->index(row, 1);
+        index = model->index(row, PROPERTY_TYPE_COL);
         value = model->data(index);
         if (!uniqueValues.contains(value.toString())) {
             uniqueValues << value.toString();
         }
     }
-
     ui->comboBox_type->addItems(uniqueValues);
     uniqueValues.clear();
 
+
     for (int row = 0; row < model->rowCount(); ++row) {
-        index = model->index(row, 2);
+        index = model->index(row, DEAL_TYPE_COL);
         value = model->data(index);
         if (!uniqueValues.contains(value.toString())) {
             uniqueValues << value.toString();
         }
     }
+    ui->comboBox_deal->addItems(uniqueValues);
+    uniqueValues.clear();
 
+    for (int row = 0; row < model->rowCount(); ++row) {
+        index = model->index(row, DISTRICT_COL);
+        value = model->data(index);
+        if (!uniqueValues.contains(value.toString())) {
+            uniqueValues << value.toString();
+        }
+    }
     ui->comboBox_district->addItems(uniqueValues);
     uniqueValues.clear();
 
     for (int row = 0; row < model->rowCount(); ++row) {
-        index = model->index(row, 6);
+        index = model->index(row, FLOOR_AMOUNT_COL);
         value = model->data(index);
         if (!uniqueValues.contains(value.toString())) {
             uniqueValues << value.toString();
         }
     }
-
     std::sort(uniqueValues.begin(), uniqueValues.end(), RealEstateBase::numericCompare);
     ui->comboBox_floor_amount->addItems(uniqueValues);
     uniqueValues.clear();
 
     //отключение combobox
     ui->comboBox_type->setEnabled(false);
+    ui->comboBox_deal->setEnabled(false);
     ui->comboBox_district->setEnabled(false);
     ui->comboBox_floor_amount->setEnabled(false);
 
     //помещение в combobox placeholder
     ui->comboBox_type->setCurrentIndex(-1);
+    ui->comboBox_deal->setCurrentIndex(-1);
     ui->comboBox_district->setCurrentIndex(-1);
     ui->comboBox_floor_amount->setCurrentIndex(-1);
 
@@ -105,9 +116,23 @@ void RealEstateBase::on_checkBox_type_stateChanged(int arg1)
         ui->tableView_estate->setModel(model);
         ui->comboBox_type->setEnabled(false);
         ui->comboBox_type->setCurrentIndex(-1);
-        set_filters();
+        setFilters();
     }
 }
+
+void RealEstateBase::on_checkBox_deal_stateChanged(int arg1)
+{
+    if (arg1 == Qt::Checked) {
+        ui->comboBox_deal->setEnabled(true);
+    }
+    else {
+        ui->tableView_estate->setModel(model);
+        ui->comboBox_deal->setEnabled(false);
+        ui->comboBox_deal->setCurrentIndex(-1);
+        setFilters();
+    }
+}
+
 
 
 void RealEstateBase::on_checkBox_district_stateChanged(int arg1)
@@ -119,7 +144,7 @@ void RealEstateBase::on_checkBox_district_stateChanged(int arg1)
         ui->tableView_estate->setModel(model);
         ui->comboBox_district->setEnabled(false);
         ui->comboBox_district->setCurrentIndex(-1);
-        set_filters();
+        setFilters();
     }
 }
 
@@ -133,7 +158,7 @@ void RealEstateBase::on_checkBox_floor_amount_stateChanged(int arg1)
         ui->tableView_estate->setModel(model);
         ui->comboBox_floor_amount->setEnabled(false);
         ui->comboBox_floor_amount->setCurrentIndex(-1);
-        set_filters();
+        setFilters();
     }
 }
 
@@ -150,7 +175,7 @@ void RealEstateBase::on_checkBox_square_stateChanged(int arg1)
         ui->tableView_estate->setModel(model);
         ui->lineEdit_square_from->setEnabled(false);
         ui->lineEdit_square_to->setEnabled(false);
-        set_filters();
+        setFilters();
     }
 }
 
@@ -167,7 +192,7 @@ void RealEstateBase::on_checkBox_year_stateChanged(int arg1)
         ui->tableView_estate->setModel(model);
         ui->lineEdit_year_from->setEnabled(false);
         ui->lineEdit_year_to->setEnabled(false);
-        set_filters();
+        setFilters();
     }
 }
 
@@ -184,12 +209,12 @@ void RealEstateBase::on_checkBox_price_stateChanged(int arg1)
         ui->tableView_estate->setModel(model);
         ui->lineEdit_price_from->setEnabled(false);
         ui->lineEdit_price_to->setEnabled(false);
-        set_filters();
+        setFilters();
     }
 }
 
 
-QStandardItemModel* RealEstateBase::apply_filter_combobox(QAbstractItemModel *originalModel, int colIndex, QComboBox *cb)
+QStandardItemModel* RealEstateBase::applyFilterCombobox(QAbstractItemModel *originalModel, int colIndex, QComboBox *cb)
 {
     QStandardItemModel *newModel = new QStandardItemModel(this);
     if (originalModel)
@@ -225,7 +250,7 @@ QStandardItemModel* RealEstateBase::apply_filter_combobox(QAbstractItemModel *or
     return newModel;
 }
 
-QStandardItemModel* RealEstateBase::apply_filter_line_edit(QAbstractItemModel *originalModel, int colIndex, QLineEdit *from, QLineEdit *to)
+QStandardItemModel* RealEstateBase::applyFilterLineEdit(QAbstractItemModel *originalModel, int colIndex, QLineEdit *from, QLineEdit *to)
 {
     QStandardItemModel *newModel = new QStandardItemModel(this);
     if (originalModel)
@@ -271,26 +296,29 @@ QStandardItemModel* RealEstateBase::apply_filter_line_edit(QAbstractItemModel *o
     return newModel;
 }
 
-void RealEstateBase::set_filters() {
+void RealEstateBase::setFilters() {
     resModel = model;
 
     if (ui->comboBox_type->currentIndex() != -1) {
-        resModel= apply_filter_combobox(resModel, 1, ui->comboBox_type);
+        resModel= applyFilterCombobox(resModel, PROPERTY_TYPE_COL, ui->comboBox_type);
+    }
+    if (ui->comboBox_deal->currentIndex() != -1) {
+        resModel= applyFilterCombobox(resModel, DEAL_TYPE_COL, ui->comboBox_deal);
     }
     if (ui->comboBox_district->currentIndex() != -1) {
-        resModel= apply_filter_combobox(resModel, 2, ui->comboBox_district);
+        resModel= applyFilterCombobox(resModel, DISTRICT_COL, ui->comboBox_district);
     }
     if (!ui->lineEdit_square_to->text().isEmpty() || !ui->lineEdit_square_from->text().isEmpty()) {
-        resModel= apply_filter_line_edit(resModel, 5, ui->lineEdit_square_from, ui->lineEdit_square_to);
+        resModel= applyFilterLineEdit(resModel, SQUARE_COL, ui->lineEdit_square_from, ui->lineEdit_square_to);
     }
     if (!ui->lineEdit_year_to->text().isEmpty() || !ui->lineEdit_year_from->text().isEmpty()) {
-        resModel= apply_filter_line_edit(resModel, 7, ui->lineEdit_year_from, ui->lineEdit_year_to);
+        resModel= applyFilterLineEdit(resModel, YEAR_COL, ui->lineEdit_year_from, ui->lineEdit_year_to);
     }
     if (!ui->lineEdit_price_to->text().isEmpty() || !ui->lineEdit_price_from->text().isEmpty()) {
-        resModel= apply_filter_line_edit(resModel, 8, ui->lineEdit_price_from, ui->lineEdit_price_to);
+        resModel= applyFilterLineEdit(resModel, PRICE_COL, ui->lineEdit_price_from, ui->lineEdit_price_to);
     }
     if (ui->comboBox_floor_amount->currentIndex() != -1) {
-        resModel= apply_filter_combobox(resModel, 6, ui->comboBox_floor_amount);
+        resModel= applyFilterCombobox(resModel, FLOOR_AMOUNT_COL, ui->comboBox_floor_amount);
     }
     ui->tableView_estate->setModel(resModel);
 }
@@ -299,71 +327,78 @@ void RealEstateBase::set_filters() {
 void RealEstateBase::on_comboBox_type_activated(int index)
 {
     Q_UNUSED(index);
-    set_filters();
+    setFilters();
+}
+
+void RealEstateBase::on_comboBox_deal_activated(int index)
+{
+    Q_UNUSED(index);
+    setFilters();
 }
 
 void RealEstateBase::on_comboBox_district_activated(int index)
 {
     Q_UNUSED(index);
-    set_filters();
+    setFilters();
 
 }
 
 void RealEstateBase::on_comboBox_floor_amount_activated(int index)
 {
     Q_UNUSED(index);
-    set_filters();
+    setFilters();
 }
 
 //устанавливаем фильтры на lineEdit
 void RealEstateBase::on_lineEdit_square_from_textChanged(const QString &arg1)
 {
     Q_UNUSED(arg1);
-    set_filters();
+    setFilters();
 }
 
 void RealEstateBase::on_lineEdit_square_to_textChanged(const QString &arg1)
 {
     Q_UNUSED(arg1);
-    set_filters();
+    setFilters();
 }
 
 void RealEstateBase::on_lineEdit_year_from_textChanged(const QString &arg1)
 {
     Q_UNUSED(arg1);
-    set_filters();
+    setFilters();
 }
 
 
 void RealEstateBase::on_lineEdit_year_to_textChanged(const QString &arg1)
 {
     Q_UNUSED(arg1);
-    set_filters();
+    setFilters();
 }
 
 void RealEstateBase::on_lineEdit_price_from_textChanged(const QString &arg1)
 {
     Q_UNUSED(arg1);
-    set_filters();
+    setFilters();
 }
 
 
 void RealEstateBase::on_lineEdit_price_to_textChanged(const QString &arg1)
 {
     Q_UNUSED(arg1);
-    set_filters();
+    setFilters();
 }
 
 void RealEstateBase::createEmptyTable(QSqlTableModel* model) {
-    model->setHeaderData(0, Qt::Horizontal, "ID");
-    model->setHeaderData(1, Qt::Horizontal, "Тип");
-    model->setHeaderData(2, Qt::Horizontal, "Район");
-    model->setHeaderData(3, Qt::Horizontal, "Адрес");
-    model->setHeaderData(4, Qt::Horizontal, "Описание");
-    model->setHeaderData(5, Qt::Horizontal, "Площадь, м^2");
-    model->setHeaderData(6, Qt::Horizontal, "Кол-во комнат");
-    model->setHeaderData(7, Qt::Horizontal, "Год постройки");
-    model->setHeaderData(8, Qt::Horizontal, "Цена, USD");
+    model->setHeaderData(ID_COL, Qt::Horizontal, "ID");
+    model->setHeaderData(PROPERTY_TYPE_COL, Qt::Horizontal, "Тип");
+    model->setHeaderData(DEAL_TYPE_COL, Qt::Horizontal, "Тип сделки");
+    model->setHeaderData(DISTRICT_COL, Qt::Horizontal, "Район");
+    model->setHeaderData(ADDRESS_COL, Qt::Horizontal, "Адрес");
+    model->setHeaderData(DESCRIPTION_COL, Qt::Horizontal, "Описание");
+    model->setHeaderData(SQUARE_COL, Qt::Horizontal, "Площадь, м^2");
+    model->setHeaderData(FLOOR_AMOUNT_COL, Qt::Horizontal, "Кол-во комнат");
+    model->setHeaderData(YEAR_COL, Qt::Horizontal, "Год постройки");
+    model->setHeaderData(PRICE_COL, Qt::Horizontal, "Цена, USD");
 
     ui->tableView_estate->verticalHeader()->setVisible(false);
 
@@ -385,7 +420,6 @@ void RealEstateBase::on_tableView_estate_clicked(const QModelIndex &index)
 
 void RealEstateBase::on_pushButton_delete_clicked()
 {
-
     if (currentRow >= 0) {
         QMessageBox msgBox;
         msgBox.setIcon(QMessageBox::Question);
@@ -408,3 +442,51 @@ void RealEstateBase::on_pushButton_delete_clicked()
 
     currentRow = -1;
 }
+
+void RealEstateBase::on_pushButton_estate_clicked()
+{
+    QModelIndex index;
+    QVariant data;
+    if (currentRow >= 0) {
+        index = model->index(currentRow, PROPERTY_TYPE_COL);
+        data = model->data(index);
+        if (data.toString() == "Квартира") {
+            QDialog* dialog = new QDialog(this);
+            objectOverview* oo = new objectOverview(dialog, model, "Apartment", currentRow);
+            dialog->setModal(true);
+            dialog->setWindowTitle("Карточка квартиры");
+            dialog->setFixedSize(500, 400);
+            oo->setParent(dialog);
+            oo->show();
+
+            dialog->exec();
+        }
+        else if (data.toString() == "Дом") {
+            QDialog* dialog = new QDialog(this);
+            objectOverview* oo = new objectOverview(dialog, model, "House", currentRow);
+            dialog->setModal(true);
+            dialog->setWindowTitle("Карточка частного дома");
+            dialog->setFixedSize(500, 400);
+            oo->setParent(dialog);
+            oo->show();
+
+            dialog->exec();
+        }
+        else if (data.toString() == "Офис") {
+            QDialog* dialog = new QDialog(this);
+            objectOverview* oo = new objectOverview(dialog, model, "Office", currentRow);
+            dialog->setModal(true);
+            dialog->setWindowTitle("Карточка офиса");
+            dialog->setFixedSize(500, 400);
+            oo->setParent(dialog);
+            oo->show();
+
+            dialog->exec();
+        }
+    }
+    else {
+        QMessageBox::warning(this, "Предупреждение", "Объект для показа карточки не выбран!");
+    }
+    currentRow = -1;
+}
+

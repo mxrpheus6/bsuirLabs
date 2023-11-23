@@ -27,11 +27,11 @@ public:
     QLabel *label_auth_pic;
     QLabel *label_auth;
     QHBoxLayout *horizontalLayout;
-    QLabel *label_username;
-    QLineEdit *lineEdit_username;
+    QLabel *labelUsername;
+    QLineEdit *lineEditUsername;
     QHBoxLayout *horizontalLayout_2;
-    QLabel *label_password;
-    QLineEdit *lineEdit_password;
+    QLabel *labelPassword;
+    QLineEdit *lineEditPassword;
     QPushButton *pushButton_login;
 
     void setupUi(QWidget *Authorization)
@@ -69,41 +69,41 @@ public:
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        label_username = new QLabel(Authorization);
-        label_username->setObjectName(QString::fromUtf8("label_username"));
+        labelUsername = new QLabel(Authorization);
+        labelUsername->setObjectName(QString::fromUtf8("labelUsername"));
         QFont font2;
         font2.setFamilies({QString::fromUtf8("Arial")});
         font2.setPointSize(12);
         font2.setBold(true);
-        label_username->setFont(font2);
+        labelUsername->setFont(font2);
 
-        horizontalLayout->addWidget(label_username);
+        horizontalLayout->addWidget(labelUsername);
 
-        lineEdit_username = new QLineEdit(Authorization);
-        lineEdit_username->setObjectName(QString::fromUtf8("lineEdit_username"));
-        lineEdit_username->setMinimumSize(QSize(0, 30));
-        lineEdit_username->setFrame(false);
+        lineEditUsername = new QLineEdit(Authorization);
+        lineEditUsername->setObjectName(QString::fromUtf8("lineEditUsername"));
+        lineEditUsername->setMinimumSize(QSize(0, 30));
+        lineEditUsername->setFrame(false);
 
-        horizontalLayout->addWidget(lineEdit_username);
+        horizontalLayout->addWidget(lineEditUsername);
 
 
         gridLayout->addLayout(horizontalLayout, 1, 0, 1, 2);
 
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
-        label_password = new QLabel(Authorization);
-        label_password->setObjectName(QString::fromUtf8("label_password"));
-        label_password->setFont(font2);
+        labelPassword = new QLabel(Authorization);
+        labelPassword->setObjectName(QString::fromUtf8("labelPassword"));
+        labelPassword->setFont(font2);
 
-        horizontalLayout_2->addWidget(label_password);
+        horizontalLayout_2->addWidget(labelPassword);
 
-        lineEdit_password = new QLineEdit(Authorization);
-        lineEdit_password->setObjectName(QString::fromUtf8("lineEdit_password"));
-        lineEdit_password->setMinimumSize(QSize(0, 30));
-        lineEdit_password->setFrame(false);
-        lineEdit_password->setEchoMode(QLineEdit::Password);
+        lineEditPassword = new QLineEdit(Authorization);
+        lineEditPassword->setObjectName(QString::fromUtf8("lineEditPassword"));
+        lineEditPassword->setMinimumSize(QSize(0, 30));
+        lineEditPassword->setFrame(false);
+        lineEditPassword->setEchoMode(QLineEdit::Password);
 
-        horizontalLayout_2->addWidget(lineEdit_password);
+        horizontalLayout_2->addWidget(lineEditPassword);
 
 
         gridLayout->addLayout(horizontalLayout_2, 2, 0, 1, 2);
@@ -133,8 +133,8 @@ public:
         Authorization->setWindowTitle(QCoreApplication::translate("Authorization", "\320\220\320\262\321\202\320\276\321\200\320\270\320\267\320\260\321\206\320\270\321\217", nullptr));
         label_auth_pic->setText(QString());
         label_auth->setText(QCoreApplication::translate("Authorization", "\320\222\320\276\320\271\321\202\320\270 \320\262 \321\201\320\270\321\201\321\202\320\265\320\274\321\203", nullptr));
-        label_username->setText(QCoreApplication::translate("Authorization", "\320\230\320\274\321\217 \320\277\320\276\320\273\321\214\320\267\320\276\320\262\320\260\321\202\320\265\320\273\321\217", nullptr));
-        label_password->setText(QCoreApplication::translate("Authorization", "\320\237\320\260\321\200\320\276\320\273\321\214", nullptr));
+        labelUsername->setText(QCoreApplication::translate("Authorization", "\320\230\320\274\321\217 \320\277\320\276\320\273\321\214\320\267\320\276\320\262\320\260\321\202\320\265\320\273\321\217", nullptr));
+        labelPassword->setText(QCoreApplication::translate("Authorization", "\320\237\320\260\321\200\320\276\320\273\321\214", nullptr));
         pushButton_login->setText(QCoreApplication::translate("Authorization", "\320\222\320\276\320\271\321\202\320\270", nullptr));
     } // retranslateUi
 

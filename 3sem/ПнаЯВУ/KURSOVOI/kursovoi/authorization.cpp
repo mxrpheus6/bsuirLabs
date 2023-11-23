@@ -41,8 +41,8 @@ void Authorization::on_pushButton_login_clicked()
         return;
     }
 
-    QString login = ui->lineEdit_username->text();
-    QString password = ui->lineEdit_password->text();
+    QString login = ui->lineEditUsername->text();
+    QString password = ui->lineEditPassword->text();
 
     bool authenticated;
     QSqlQuery query;
@@ -63,7 +63,7 @@ void Authorization::on_pushButton_login_clicked()
         }
         else {
             QMessageBox::warning(this, "Вход", "Неверный логин и\\или пароль!");
-            ui->lineEdit_password->clear();
+            ui->lineEditPassword->clear();
         }
     }
 }

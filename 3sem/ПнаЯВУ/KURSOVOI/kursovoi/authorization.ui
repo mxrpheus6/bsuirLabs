@@ -75,7 +75,7 @@
    <item row="1" column="0" colspan="2">
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QLabel" name="label_username">
+      <widget class="QLabel" name="labelUsername">
        <property name="font">
         <font>
          <family>Arial</family>
@@ -89,7 +89,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_username">
+      <widget class="QLineEdit" name="lineEditUsername">
        <property name="minimumSize">
         <size>
          <width>0</width>
@@ -106,7 +106,7 @@
    <item row="2" column="0" colspan="2">
     <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
-      <widget class="QLabel" name="label_password">
+      <widget class="QLabel" name="labelPassword">
        <property name="font">
         <font>
          <family>Arial</family>
@@ -120,7 +120,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_password">
+      <widget class="QLineEdit" name="lineEditPassword">
        <property name="minimumSize">
         <size>
          <width>0</width>

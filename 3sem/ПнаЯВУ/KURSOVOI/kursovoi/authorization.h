@@ -29,8 +29,6 @@ signals:
 private slots:
     void on_pushButton_login_clicked();
 
-    void on_pushButton_login_pressed();
-
 private:
     Ui::Authorization *ui;
     bool authorizationResult = false;

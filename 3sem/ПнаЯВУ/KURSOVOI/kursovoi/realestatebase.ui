@@ -158,14 +158,15 @@
   <widget class="QPushButton" name="pushButton_estate">
    <property name="geometry">
     <rect>
-     <x>370</x>
+     <x>460</x>
      <y>300</y>
-     <width>171</width>
+     <width>81</width>
      <height>61</height>
     </rect>
    </property>
    <property name="text">
-    <string>Карточка объекта</string>
+    <string>Карточка
+объекта</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_delete">
@@ -210,7 +211,7 @@
   <widget class="QPushButton" name="pushButton_add">
    <property name="geometry">
     <rect>
-     <x>370</x>
+     <x>360</x>
      <y>370</y>
      <width>81</width>
      <height>55</height>
@@ -276,6 +277,32 @@
    </property>
    <property name="placeholderText">
     <string>От</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox_deal">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>330</y>
+     <width>81</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Выберите</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBox_deal">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>300</y>
+     <width>81</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Тип сделки</string>
    </property>
   </widget>
  </widget>

@@ -43,6 +43,8 @@ public:
     QLineEdit *lineEdit_year_from;
     QLineEdit *lineEdit_square_to;
     QLineEdit *lineEdit_square_from;
+    QComboBox *comboBox_deal;
+    QCheckBox *checkBox_deal;
 
     void setupUi(QWidget *RealEstateBase)
     {
@@ -83,7 +85,7 @@ public:
         lineEdit_price_to->setGeometry(QRect(300, 400, 41, 24));
         pushButton_estate = new QPushButton(RealEstateBase);
         pushButton_estate->setObjectName(QString::fromUtf8("pushButton_estate"));
-        pushButton_estate->setGeometry(QRect(370, 300, 171, 61));
+        pushButton_estate->setGeometry(QRect(460, 300, 81, 61));
         pushButton_delete = new QPushButton(RealEstateBase);
         pushButton_delete->setObjectName(QString::fromUtf8("pushButton_delete"));
         pushButton_delete->setGeometry(QRect(460, 370, 81, 55));
@@ -95,7 +97,7 @@ public:
         checkBox_year->setGeometry(QRect(130, 370, 45, 22));
         pushButton_add = new QPushButton(RealEstateBase);
         pushButton_add->setObjectName(QString::fromUtf8("pushButton_add"));
-        pushButton_add->setGeometry(QRect(370, 370, 81, 55));
+        pushButton_add->setGeometry(QRect(360, 370, 81, 55));
         lineEdit_year_to = new QLineEdit(RealEstateBase);
         lineEdit_year_to->setObjectName(QString::fromUtf8("lineEdit_year_to"));
         lineEdit_year_to->setGeometry(QRect(180, 400, 41, 24));
@@ -108,6 +110,12 @@ public:
         lineEdit_square_from = new QLineEdit(RealEstateBase);
         lineEdit_square_from->setObjectName(QString::fromUtf8("lineEdit_square_from"));
         lineEdit_square_from->setGeometry(QRect(250, 330, 41, 24));
+        comboBox_deal = new QComboBox(RealEstateBase);
+        comboBox_deal->setObjectName(QString::fromUtf8("comboBox_deal"));
+        comboBox_deal->setGeometry(QRect(360, 330, 81, 24));
+        checkBox_deal = new QCheckBox(RealEstateBase);
+        checkBox_deal->setObjectName(QString::fromUtf8("checkBox_deal"));
+        checkBox_deal->setGeometry(QRect(360, 300, 81, 22));
 
         retranslateUi(RealEstateBase);
 
@@ -127,7 +135,8 @@ public:
         lineEdit_price_from->setInputMask(QString());
         lineEdit_price_from->setPlaceholderText(QCoreApplication::translate("RealEstateBase", "\320\236\321\202", nullptr));
         lineEdit_price_to->setPlaceholderText(QCoreApplication::translate("RealEstateBase", "\320\224\320\276", nullptr));
-        pushButton_estate->setText(QCoreApplication::translate("RealEstateBase", "\320\232\320\260\321\200\321\202\320\276\321\207\320\272\320\260 \320\276\320\261\321\212\320\265\320\272\321\202\320\260", nullptr));
+        pushButton_estate->setText(QCoreApplication::translate("RealEstateBase", "\320\232\320\260\321\200\321\202\320\276\321\207\320\272\320\260\n"
+"\320\276\320\261\321\212\320\265\320\272\321\202\320\260", nullptr));
         pushButton_delete->setText(QCoreApplication::translate("RealEstateBase", "\320\243\320\264\320\260\320\273\320\270\321\202\321\214", nullptr));
         checkBox_floor_amount->setText(QCoreApplication::translate("RealEstateBase", "\320\232\320\276\320\273-\320\262\320\276 \320\272\320\276\320\274\320\275\320\260\321\202", nullptr));
         checkBox_year->setText(QCoreApplication::translate("RealEstateBase", "\320\223\320\276\320\264", nullptr));
@@ -138,6 +147,8 @@ public:
         lineEdit_square_to->setPlaceholderText(QCoreApplication::translate("RealEstateBase", "\320\224\320\276", nullptr));
         lineEdit_square_from->setInputMask(QString());
         lineEdit_square_from->setPlaceholderText(QCoreApplication::translate("RealEstateBase", "\320\236\321\202", nullptr));
+        comboBox_deal->setPlaceholderText(QCoreApplication::translate("RealEstateBase", "\320\222\321\213\320\261\320\265\321\200\320\270\321\202\320\265", nullptr));
+        checkBox_deal->setText(QCoreApplication::translate("RealEstateBase", "\320\242\320\270\320\277 \321\201\320\264\320\265\320\273\320\272\320\270", nullptr));
     } // retranslateUi
 
 };
