@@ -22,42 +22,44 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_RealEstateBase_t {
-    const uint offsetsAndSize[50];
-    char stringdata0[674];
+    const uint offsetsAndSize[52];
+    char stringdata0[702];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(offsetof(qt_meta_stringdata_RealEstateBase_t, stringdata0) + ofs), len 
 static const qt_meta_stringdata_RealEstateBase_t qt_meta_stringdata_RealEstateBase = {
     {
 QT_MOC_LITERAL(0, 14), // "RealEstateBase"
-QT_MOC_LITERAL(15, 29), // "on_checkBox_type_stateChanged"
-QT_MOC_LITERAL(45, 0), // ""
-QT_MOC_LITERAL(46, 4), // "arg1"
-QT_MOC_LITERAL(51, 33), // "on_checkBox_district_stateCha..."
-QT_MOC_LITERAL(85, 37), // "on_checkBox_floor_amount_stat..."
-QT_MOC_LITERAL(123, 26), // "on_comboBox_type_activated"
-QT_MOC_LITERAL(150, 5), // "index"
-QT_MOC_LITERAL(156, 30), // "on_comboBox_district_activated"
-QT_MOC_LITERAL(187, 34), // "on_comboBox_floor_amount_acti..."
-QT_MOC_LITERAL(222, 31), // "on_checkBox_square_stateChanged"
-QT_MOC_LITERAL(254, 29), // "on_checkBox_year_stateChanged"
-QT_MOC_LITERAL(284, 30), // "on_checkBox_price_stateChanged"
-QT_MOC_LITERAL(315, 35), // "on_lineEdit_square_from_textC..."
-QT_MOC_LITERAL(351, 33), // "on_lineEdit_square_to_textCha..."
-QT_MOC_LITERAL(385, 33), // "on_lineEdit_year_from_textCha..."
-QT_MOC_LITERAL(419, 31), // "on_lineEdit_year_to_textChanged"
-QT_MOC_LITERAL(451, 34), // "on_lineEdit_price_from_textCh..."
-QT_MOC_LITERAL(486, 32), // "on_lineEdit_price_to_textChanged"
-QT_MOC_LITERAL(519, 27), // "on_tableView_estate_clicked"
-QT_MOC_LITERAL(547, 11), // "QModelIndex"
-QT_MOC_LITERAL(559, 28), // "on_pushButton_delete_clicked"
-QT_MOC_LITERAL(588, 28), // "on_pushButton_estate_clicked"
-QT_MOC_LITERAL(617, 29), // "on_checkBox_deal_stateChanged"
-QT_MOC_LITERAL(647, 26) // "on_comboBox_deal_activated"
+QT_MOC_LITERAL(15, 27), // "onObjectOverviewSaveClicked"
+QT_MOC_LITERAL(43, 0), // ""
+QT_MOC_LITERAL(44, 29), // "on_checkBox_type_stateChanged"
+QT_MOC_LITERAL(74, 4), // "arg1"
+QT_MOC_LITERAL(79, 33), // "on_checkBox_district_stateCha..."
+QT_MOC_LITERAL(113, 37), // "on_checkBox_floor_amount_stat..."
+QT_MOC_LITERAL(151, 26), // "on_comboBox_type_activated"
+QT_MOC_LITERAL(178, 5), // "index"
+QT_MOC_LITERAL(184, 30), // "on_comboBox_district_activated"
+QT_MOC_LITERAL(215, 34), // "on_comboBox_floor_amount_acti..."
+QT_MOC_LITERAL(250, 31), // "on_checkBox_square_stateChanged"
+QT_MOC_LITERAL(282, 29), // "on_checkBox_year_stateChanged"
+QT_MOC_LITERAL(312, 30), // "on_checkBox_price_stateChanged"
+QT_MOC_LITERAL(343, 35), // "on_lineEdit_square_from_textC..."
+QT_MOC_LITERAL(379, 33), // "on_lineEdit_square_to_textCha..."
+QT_MOC_LITERAL(413, 33), // "on_lineEdit_year_from_textCha..."
+QT_MOC_LITERAL(447, 31), // "on_lineEdit_year_to_textChanged"
+QT_MOC_LITERAL(479, 34), // "on_lineEdit_price_from_textCh..."
+QT_MOC_LITERAL(514, 32), // "on_lineEdit_price_to_textChanged"
+QT_MOC_LITERAL(547, 27), // "on_tableView_estate_clicked"
+QT_MOC_LITERAL(575, 11), // "QModelIndex"
+QT_MOC_LITERAL(587, 28), // "on_pushButton_delete_clicked"
+QT_MOC_LITERAL(616, 28), // "on_pushButton_estate_clicked"
+QT_MOC_LITERAL(645, 29), // "on_checkBox_deal_stateChanged"
+QT_MOC_LITERAL(675, 26) // "on_comboBox_deal_activated"
 
     },
-    "RealEstateBase\0on_checkBox_type_stateChanged\0"
-    "\0arg1\0on_checkBox_district_stateChanged\0"
+    "RealEstateBase\0onObjectOverviewSaveClicked\0"
+    "\0on_checkBox_type_stateChanged\0arg1\0"
+    "on_checkBox_district_stateChanged\0"
     "on_checkBox_floor_amount_stateChanged\0"
     "on_comboBox_type_activated\0index\0"
     "on_comboBox_district_activated\0"
@@ -85,7 +87,7 @@ static const uint qt_meta_data_RealEstateBase[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-      20,   14, // methods
+      21,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -93,48 +95,50 @@ static const uint qt_meta_data_RealEstateBase[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,  134,    2, 0x08,    1 /* Private */,
-       4,    1,  137,    2, 0x08,    3 /* Private */,
-       5,    1,  140,    2, 0x08,    5 /* Private */,
-       6,    1,  143,    2, 0x08,    7 /* Private */,
-       8,    1,  146,    2, 0x08,    9 /* Private */,
-       9,    1,  149,    2, 0x08,   11 /* Private */,
-      10,    1,  152,    2, 0x08,   13 /* Private */,
-      11,    1,  155,    2, 0x08,   15 /* Private */,
-      12,    1,  158,    2, 0x08,   17 /* Private */,
-      13,    1,  161,    2, 0x08,   19 /* Private */,
-      14,    1,  164,    2, 0x08,   21 /* Private */,
-      15,    1,  167,    2, 0x08,   23 /* Private */,
-      16,    1,  170,    2, 0x08,   25 /* Private */,
-      17,    1,  173,    2, 0x08,   27 /* Private */,
-      18,    1,  176,    2, 0x08,   29 /* Private */,
-      19,    1,  179,    2, 0x08,   31 /* Private */,
-      21,    0,  182,    2, 0x08,   33 /* Private */,
-      22,    0,  183,    2, 0x08,   34 /* Private */,
-      23,    1,  184,    2, 0x08,   35 /* Private */,
-      24,    1,  187,    2, 0x08,   37 /* Private */,
+       1,    0,  140,    2, 0x0a,    1 /* Public */,
+       3,    1,  141,    2, 0x08,    2 /* Private */,
+       5,    1,  144,    2, 0x08,    4 /* Private */,
+       6,    1,  147,    2, 0x08,    6 /* Private */,
+       7,    1,  150,    2, 0x08,    8 /* Private */,
+       9,    1,  153,    2, 0x08,   10 /* Private */,
+      10,    1,  156,    2, 0x08,   12 /* Private */,
+      11,    1,  159,    2, 0x08,   14 /* Private */,
+      12,    1,  162,    2, 0x08,   16 /* Private */,
+      13,    1,  165,    2, 0x08,   18 /* Private */,
+      14,    1,  168,    2, 0x08,   20 /* Private */,
+      15,    1,  171,    2, 0x08,   22 /* Private */,
+      16,    1,  174,    2, 0x08,   24 /* Private */,
+      17,    1,  177,    2, 0x08,   26 /* Private */,
+      18,    1,  180,    2, 0x08,   28 /* Private */,
+      19,    1,  183,    2, 0x08,   30 /* Private */,
+      20,    1,  186,    2, 0x08,   32 /* Private */,
+      22,    0,  189,    2, 0x08,   34 /* Private */,
+      23,    0,  190,    2, 0x08,   35 /* Private */,
+      24,    1,  191,    2, 0x08,   36 /* Private */,
+      25,    1,  194,    2, 0x08,   38 /* Private */,
 
  // slots: parameters
-    QMetaType::Void, QMetaType::Int,    3,
-    QMetaType::Void, QMetaType::Int,    3,
-    QMetaType::Void, QMetaType::Int,    3,
-    QMetaType::Void, QMetaType::Int,    7,
-    QMetaType::Void, QMetaType::Int,    7,
-    QMetaType::Void, QMetaType::Int,    7,
-    QMetaType::Void, QMetaType::Int,    3,
-    QMetaType::Void, QMetaType::Int,    3,
-    QMetaType::Void, QMetaType::Int,    3,
-    QMetaType::Void, QMetaType::QString,    3,
-    QMetaType::Void, QMetaType::QString,    3,
-    QMetaType::Void, QMetaType::QString,    3,
-    QMetaType::Void, QMetaType::QString,    3,
-    QMetaType::Void, QMetaType::QString,    3,
-    QMetaType::Void, QMetaType::QString,    3,
-    QMetaType::Void, 0x80000000 | 20,    7,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::Int,    4,
+    QMetaType::Void, QMetaType::Int,    4,
+    QMetaType::Void, QMetaType::Int,    4,
+    QMetaType::Void, QMetaType::Int,    8,
+    QMetaType::Void, QMetaType::Int,    8,
+    QMetaType::Void, QMetaType::Int,    8,
+    QMetaType::Void, QMetaType::Int,    4,
+    QMetaType::Void, QMetaType::Int,    4,
+    QMetaType::Void, QMetaType::Int,    4,
+    QMetaType::Void, QMetaType::QString,    4,
+    QMetaType::Void, QMetaType::QString,    4,
+    QMetaType::Void, QMetaType::QString,    4,
+    QMetaType::Void, QMetaType::QString,    4,
+    QMetaType::Void, QMetaType::QString,    4,
+    QMetaType::Void, QMetaType::QString,    4,
+    QMetaType::Void, 0x80000000 | 21,    8,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::Int,    3,
-    QMetaType::Void, QMetaType::Int,    7,
+    QMetaType::Void, QMetaType::Int,    4,
+    QMetaType::Void, QMetaType::Int,    8,
 
        0        // eod
 };
@@ -145,26 +149,27 @@ void RealEstateBase::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         auto *_t = static_cast<RealEstateBase *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->on_checkBox_type_stateChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
-        case 1: _t->on_checkBox_district_stateChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
-        case 2: _t->on_checkBox_floor_amount_stateChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
-        case 3: _t->on_comboBox_type_activated((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
-        case 4: _t->on_comboBox_district_activated((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
-        case 5: _t->on_comboBox_floor_amount_activated((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
-        case 6: _t->on_checkBox_square_stateChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
-        case 7: _t->on_checkBox_year_stateChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
-        case 8: _t->on_checkBox_price_stateChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
-        case 9: _t->on_lineEdit_square_from_textChanged((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 10: _t->on_lineEdit_square_to_textChanged((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 11: _t->on_lineEdit_year_from_textChanged((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 12: _t->on_lineEdit_year_to_textChanged((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 13: _t->on_lineEdit_price_from_textChanged((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 14: _t->on_lineEdit_price_to_textChanged((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 15: _t->on_tableView_estate_clicked((*reinterpret_cast< std::add_pointer_t<QModelIndex>>(_a[1]))); break;
-        case 16: _t->on_pushButton_delete_clicked(); break;
-        case 17: _t->on_pushButton_estate_clicked(); break;
-        case 18: _t->on_checkBox_deal_stateChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
-        case 19: _t->on_comboBox_deal_activated((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 0: _t->onObjectOverviewSaveClicked(); break;
+        case 1: _t->on_checkBox_type_stateChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 2: _t->on_checkBox_district_stateChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 3: _t->on_checkBox_floor_amount_stateChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 4: _t->on_comboBox_type_activated((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 5: _t->on_comboBox_district_activated((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 6: _t->on_comboBox_floor_amount_activated((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 7: _t->on_checkBox_square_stateChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 8: _t->on_checkBox_year_stateChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 9: _t->on_checkBox_price_stateChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 10: _t->on_lineEdit_square_from_textChanged((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 11: _t->on_lineEdit_square_to_textChanged((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 12: _t->on_lineEdit_year_from_textChanged((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 13: _t->on_lineEdit_year_to_textChanged((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 14: _t->on_lineEdit_price_from_textChanged((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 15: _t->on_lineEdit_price_to_textChanged((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 16: _t->on_tableView_estate_clicked((*reinterpret_cast< std::add_pointer_t<QModelIndex>>(_a[1]))); break;
+        case 17: _t->on_pushButton_delete_clicked(); break;
+        case 18: _t->on_pushButton_estate_clicked(); break;
+        case 19: _t->on_checkBox_deal_stateChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 20: _t->on_comboBox_deal_activated((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
         default: ;
         }
     }
@@ -178,7 +183,7 @@ const QMetaObject RealEstateBase::staticMetaObject = { {
     nullptr,
 qt_incomplete_metaTypeArray<qt_meta_stringdata_RealEstateBase_t
 , QtPrivate::TypeAndForceComplete<RealEstateBase, std::true_type>
-, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QString &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QString &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QString &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QString &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QString &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QString &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QModelIndex &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>
+, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QString &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QString &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QString &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QString &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QString &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QString &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QModelIndex &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>
 
 
 >,
@@ -205,13 +210,13 @@ int RealEstateBase::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 20)
+        if (_id < 21)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 20;
+        _id -= 21;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 20)
+        if (_id < 21)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 20;
+        _id -= 21;
     }
     return _id;
 }

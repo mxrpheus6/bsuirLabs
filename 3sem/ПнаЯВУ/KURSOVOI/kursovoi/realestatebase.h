@@ -41,6 +41,10 @@ public:
     QStandardItemModel* applyFilterLineEdit(QAbstractItemModel *originalModel, int colIndex, QLineEdit *from, QLineEdit *to);
     void setFilters();
     void createEmptyTable(QSqlTableModel *model);
+    int findID(QAbstractItemModel* model, int ID);
+
+public slots:
+    void onObjectOverviewSaveClicked();
 
 private slots:
     void on_checkBox_type_stateChanged(int arg1);

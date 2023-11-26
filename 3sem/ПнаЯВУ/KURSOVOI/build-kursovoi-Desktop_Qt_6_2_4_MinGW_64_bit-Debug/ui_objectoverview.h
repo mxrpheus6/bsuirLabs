@@ -62,10 +62,10 @@ public:
         objectOverview->resize(500, 400);
         label = new QLabel(objectOverview);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(240, 300, 71, 16));
+        label->setGeometry(QRect(240, 260, 71, 21));
         comboBox_deal = new QComboBox(objectOverview);
         comboBox_deal->setObjectName(QString::fromUtf8("comboBox_deal"));
-        comboBox_deal->setGeometry(QRect(310, 300, 171, 20));
+        comboBox_deal->setGeometry(QRect(310, 260, 171, 20));
         label_2 = new QLabel(objectOverview);
         label_2->setObjectName(QString::fromUtf8("label_2"));
         label_2->setGeometry(QRect(20, 60, 61, 16));
@@ -137,13 +137,13 @@ public:
         pushButton_save->setGeometry(QRect(20, 350, 201, 31));
         pushButton_deal = new QPushButton(objectOverview);
         pushButton_deal->setObjectName(QString::fromUtf8("pushButton_deal"));
-        pushButton_deal->setGeometry(QRect(370, 260, 111, 31));
+        pushButton_deal->setGeometry(QRect(310, 290, 171, 31));
         lineEdit_type = new QLineEdit(objectOverview);
         lineEdit_type->setObjectName(QString::fromUtf8("lineEdit_type"));
         lineEdit_type->setGeometry(QRect(90, 30, 131, 24));
         checkBox_deal = new QCheckBox(objectOverview);
         checkBox_deal->setObjectName(QString::fromUtf8("checkBox_deal"));
-        checkBox_deal->setGeometry(QRect(240, 260, 77, 31));
+        checkBox_deal->setGeometry(QRect(240, 290, 77, 31));
 
         retranslateUi(objectOverview);
 
