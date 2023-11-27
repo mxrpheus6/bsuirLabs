@@ -6,41 +6,49 @@
 class RealEstate
 {
 private:
-    double square;
-    int floors_amount;
-    QString property_type;
-    QString description;
+    int ID;
+    QString propertyType;
+    QString dealType;
     QString district;
     QString address;
-    int construction_year;
+    QString description;
+    double square;
+    int floorsAmount;
+    int constructionYear;
     double price;
 
 public:
     RealEstate();
 
-    void set_square(double square);
-    double get_square();
+    void setID(int ID);
+    int getID();
 
-    void set_floors_amount(int floors_amount);
-    int get_floors_amount();
+    void setPropertyType(QString propertyType);
+    QString getPropertyType();
 
-    void set_property_type(QString property_type);
-    QString get_property_type();
+    void setDealType(QString dealType);
+    QString getDealType();
 
-    void set_description(QString description);
-    QString get_description();
+    void setDistrict(QString district);
+    QString getDistrict();
 
-    void set_district(QString district);
-    QString get_district();
+    void setAddress(QString address);
+    QString getAddress();
 
-    void set_address(QString address);
-    QString get_address();
+    void setDescription(QString description);
+    QString getDescription();
 
-    void set_construction_year(int construction_year);
-    int get_construction_year();
+    void setSquare(double square);
+    double getSquare();
 
-    void set_price(double price);
-    double get_price();
+    void setFloorsAmount(int floorsAmount);
+    int getFloorsAmount();
+
+    void setConstructionYear(int constructionYear);
+    int getConstructionYear();
+
+    void setPrice(double price);
+    double getPrice();
 };
 
 #endif // REALESTATE_H

@@ -13,7 +13,7 @@ objectOverview::objectOverview(QWidget *parent, QSqlTableModel* originalModel, Q
     model = originalModel;
 
     QSqlTableModel* tempModel = new QSqlTableModel(this);
-    tempModel->setTable("Districts");
+    tempModel->setTable(DISTRICTS);
     tempModel->select();
 
     //установка combobox для района
@@ -250,11 +250,11 @@ void objectOverview::on_pushButton_save_clicked()
 
     rowToUpdate = findID(extendedModel);
 
-    if (ui->lineEdit_type->text() == APARTMENT)
+    if (ui->lineEdit_type->text() == APARTMENT_RUS)
         updateExtended(fields_apartment, rowToUpdate);
-    else if (ui->lineEdit_type->text() == HOUSE)
+    else if (ui->lineEdit_type->text() == HOUSE_RUS)
         updateExtended(fields_house, rowToUpdate);
-    else if (ui->lineEdit_type->text() == OFFICE)
+    else if (ui->lineEdit_type->text() == OFFICE_RUS)
         updateExtended(fields_office, rowToUpdate);
     else
         return;

@@ -1,7 +1,7 @@
 #ifndef REALESTATEBASE_H
 #define REALESTATEBASE_H
 
-#define TABLE_NAME "Estate"
+/*#define TABLE_NAME "Estate"
 #define ID_COL 0
 #define PROPERTY_TYPE_COL 1
 #define DEAL_TYPE_COL 2
@@ -11,7 +11,9 @@
 #define SQUARE_COL 6
 #define FLOOR_AMOUNT_COL 7
 #define YEAR_COL 8
-#define PRICE_COL 9
+#define PRICE_COL 9*/
+
+#include "defines.h"
 
 #include <cfloat>
 
@@ -24,6 +26,7 @@
 #include <QMessageBox>
 
 #include "objectoverview.h"
+#include "objectadding.h"
 
 namespace Ui {
 class RealEstateBase;
@@ -86,6 +89,8 @@ private slots:
     void on_checkBox_deal_stateChanged(int arg1);
 
     void on_comboBox_deal_activated(int index);
+
+    void on_pushButton_add_clicked();
 
 private:
     Ui::RealEstateBase *ui;

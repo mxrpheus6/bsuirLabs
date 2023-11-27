@@ -1,37 +1,69 @@
 #include "apartment.h"
 
-Apartment::Apartment()
+Apartment::Apartment() : RealEstate()
 {
-    rooms_amount = 0;
-    floor = 0;
-    layout_type = "";
-    has_balcony = false;
+    squareKitchen = 0.0;
+    allFloorsAmount = 0;
+    layoutType = "";
+    hasBalcony = "";
+    hasElevator = "";
+    ceilingHeight = 0.0;
+    hasParking = "";
+    hasConcierge = "";
 }
 
-void Apartment::set_rooms_amount(int rooms_amount) {
-    this->rooms_amount = rooms_amount;
+void Apartment::setSquareKitchen(double squareKitchen) {
+    this->squareKitchen = squareKitchen;
 }
-int Apartment::get_rooms_amount() {
-    return rooms_amount;
-}
-
-void Apartment::set_floor(int floor) {
-    this->floor = floor;
-}
-int Apartment::get_floor() {
-    return floor;
+double Apartment::getSquareKitchen() {
+    return squareKitchen;
 }
 
-void Apartment::set_layout_type(QString layout_type) {
-    this->layout_type = layout_type;
+void Apartment::setAllFloorsAmount(int allFloorsAmount) {
+    this->allFloorsAmount = allFloorsAmount;
 }
-QString Apartment::get_layout_type() {
-    return layout_type;
+int Apartment::getAllFloorsAmount() {
+    return allFloorsAmount;
 }
 
-void Apartment::set_has_balcony(bool has_balcony) {
-    this->has_balcony = has_balcony;
+void Apartment::setLayoutType(QString layoutType) {
+    this->layoutType = layoutType;
 }
-bool Apartment::get_has_balcony() {
-    return has_balcony;
+QString Apartment::getLayoutType() {
+    return layoutType;
+}
+
+void Apartment::setHasBalcony(QString hasBalcony) {
+    this->hasBalcony = hasBalcony;
+}
+QString Apartment::getHasBalcony() {
+    return hasBalcony;
+}
+
+void Apartment::setHasElevator(QString hasElevator) {
+    this->hasElevator = hasElevator;
+}
+QString Apartment::getHasElevator() {
+    return hasElevator;
+}
+
+void Apartment::setCeilingHeight(int ceilingHeight) {
+    this->ceilingHeight = ceilingHeight;
+}
+int Apartment::getCeilingHeight() {
+    return ceilingHeight;
+}
+
+void Apartment::setHasParking(QString hasParking) {
+    this->hasParking = hasParking;
+}
+QString Apartment::getHasParking() {
+    return hasParking;
+}
+
+void Apartment::setHasConcierge(QString hasConcierge) {
+    this->hasConcierge = hasConcierge;
+}
+QString Apartment::getHasConcierge() {
+    return hasConcierge;
 }

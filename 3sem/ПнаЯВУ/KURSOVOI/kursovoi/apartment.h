@@ -6,24 +6,40 @@
 class Apartment : public RealEstate
 {
 private:
-    int rooms_amount;
-    int floor;
-    QString layout_type;
-    bool has_balcony;
+    double squareKitchen;
+    int allFloorsAmount;
+    QString layoutType;
+    QString hasBalcony;
+    QString hasElevator;
+    int ceilingHeight;
+    QString hasParking;
+    QString hasConcierge;
 public:
     Apartment();
 
-    void set_rooms_amount(int rooms_amount);
-    int get_rooms_amount();
+    void setSquareKitchen(double squareKitchen);
+    double getSquareKitchen();
 
-    void set_floor(int floor);
-    int get_floor();
+    void setAllFloorsAmount(int allFloorsAmount);
+    int getAllFloorsAmount();
 
-    void set_layout_type(QString layout_type);
-    QString get_layout_type();
+    void setLayoutType(QString layoutType);
+    QString getLayoutType();
 
-    void set_has_balcony(bool has_balcony);
-    bool get_has_balcony();
+    void setHasBalcony(QString hasBalcony);
+    QString getHasBalcony();
+
+    void setHasElevator(QString hasElevator);
+    QString getHasElevator();
+
+    void setCeilingHeight(int ceilingHeight);
+    int getCeilingHeight();
+
+    void setHasParking(QString hasParking);
+    QString getHasParking();
+
+    void setHasConcierge(QString hasConcierge);
+    QString getHasConcierge();
 };
 
 #endif // APARTMENT_H

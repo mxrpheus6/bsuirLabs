@@ -6,24 +6,41 @@
 class Office : public RealEstate
 {
 private:
-    int workstations_amount;
-    QString office_layout;
-    bool has_conference_rooms;
-    bool has_security_features;
+    QString officeClass;
+    int allFloorsAmount;
+    int workstationsAmount;
+    QString wallMaterial;
+    QString renovation;
+    QString hasConferenceRooms;
+    QString hasSecurityFeatures;
+    QString hasToilet;
+
 public:
     Office();
 
-    void set_workstations_amount(int workstations_amount);
-    int get_workstations_amount();
+    void setOfficeClass(QString officeClass);
+    QString getOfficeClass();
 
-    void set_office_layout(QString office_layout);
-    QString get_office_layout();
+    void setAllFloorsAmount(int allFloorsAmount);
+    int getAllFloorsAmount();
 
-    void set_has_conference_rooms(bool has_conference_rooms);
-    bool get_has_conference_rooms();
+    void setWorkstationsAmount(int workstationsAmount);
+    int getWorkstationsAmount();
 
-    void set_has_security_features(bool has_security_features);
-    bool get_has_security_features();
+    void setWallMaterial(QString wallMaterial);
+    QString getWallMaterial();
+
+    void setRenovation(QString renovation);
+    QString getRenovation();
+
+    void setHasConferenceRooms(QString hasConferenceRooms);
+    QString getHasConferenceRooms();
+
+    void setHasSecurityFeatures(QString hasSecurityFeatures);
+    QString getHasSecurityFeatures();
+
+    void setHasToilet(QString hasToilet);
+    QString getHasToilet();
 };
 
 #endif // OFFICE_H

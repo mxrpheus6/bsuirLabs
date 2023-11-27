@@ -1,37 +1,69 @@
 #include "office.h"
 
-Office::Office()
+Office::Office() : RealEstate()
 {
-    workstations_amount = 0;
-    office_layout = "";
-    has_conference_rooms = false;
-    has_security_features = false;
+    officeClass = "";
+    allFloorsAmount = 0;
+    workstationsAmount = 0;
+    wallMaterial = "";
+    renovation = "";
+    hasConferenceRooms = "";
+    hasSecurityFeatures = "";
+    hasToilet = "";
 }
 
-void Office::set_workstations_amount(int workstations_amount) {
-    this->workstations_amount = workstations_amount;
+void Office::setOfficeClass(QString officeClass) {
+    this->officeClass = officeClass;
 }
-int Office::get_workstations_amount() {
-    return workstations_amount;
-}
-
-void Office::set_office_layout(QString office_layout) {
-    this->office_layout = office_layout;
-}
-QString Office::get_office_layout() {
-    return office_layout;
+QString Office::getOfficeClass() {
+    return officeClass;
 }
 
-void Office::set_has_conference_rooms(bool has_conference_rooms) {
-    this->has_conference_rooms = has_conference_rooms;
+void Office::setAllFloorsAmount(int allFloorsAmount) {
+    this->allFloorsAmount = allFloorsAmount;
 }
-bool Office::get_has_conference_rooms() {
-    return has_conference_rooms;
+int Office::getAllFloorsAmount() {
+    return allFloorsAmount;
 }
 
-void Office::set_has_security_features(bool has_security_features) {
-    this->has_security_features = has_security_features;
+void Office::setWorkstationsAmount(int workstationsAmount) {
+    this->workstationsAmount = workstationsAmount;
 }
-bool Office::get_has_security_features() {
-    return has_security_features;
+int Office::getWorkstationsAmount() {
+    return workstationsAmount;
+}
+
+void Office::setWallMaterial(QString wallMaterial) {
+    this->wallMaterial = wallMaterial;
+}
+QString Office::getWallMaterial() {
+    return wallMaterial;
+}
+
+void Office::setRenovation(QString renovation) {
+    this->renovation = renovation;
+}
+QString Office::getRenovation() {
+    return renovation;
+}
+
+void Office::setHasConferenceRooms(QString hasConferenceRooms) {
+    this->hasConferenceRooms = hasConferenceRooms;
+}
+QString Office::getHasConferenceRooms() {
+    return hasConferenceRooms;
+}
+
+void Office::setHasSecurityFeatures(QString hasSecurityFeatures) {
+    this->hasSecurityFeatures = hasSecurityFeatures;
+}
+QString Office::getHasSecurityFeatures() {
+    return hasSecurityFeatures;
+}
+
+void Office::setHasToilet(QString hasToilet) {
+    this->hasToilet = hasToilet;
+}
+QString Office::getHasToilet() {
+    return hasToilet;
 }

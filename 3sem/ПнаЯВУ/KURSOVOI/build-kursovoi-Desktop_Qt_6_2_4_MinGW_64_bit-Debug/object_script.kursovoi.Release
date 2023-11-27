@@ -4,6 +4,7 @@ release/house.o
 release/main.o
 release/mainwindow.o
 release/menudatawidget.o
+release/objectadding.o
 release/objectoverview.o
 release/office.o
 release/realestate.o
@@ -12,5 +13,6 @@ release/qrc_src.o
 release/moc_authorization.o
 release/moc_mainwindow.o
 release/moc_menudatawidget.o
+release/moc_objectadding.o
 release/moc_objectoverview.o
 release/moc_realestatebase.o

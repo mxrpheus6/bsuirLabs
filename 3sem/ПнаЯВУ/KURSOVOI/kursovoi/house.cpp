@@ -1,37 +1,69 @@
 #include "house.h"
 
-House::House()
+House::House() : RealEstate()
 {
-    land_square = 0.0;
-    floors_count = 0;
-    has_garage = false;
-    heating_type = "";
+    landSquare = 0.0;
+    kitchenSquare = 0.0;
+    wallMaterial = "";
+    roofMaterial = "";
+    hasGarage = "";
+    heatingType = "";
+    sanitation = "";
+    waterSupply = "";
 }
 
-void House::set_land_square(double land_square) {
-    this->land_square = land_square;
+void House::setLandSquare(double landSquare) {
+    this->landSquare = landSquare;
 }
-double House::get_land_square() {
-    return land_square;
-}
-
-void House::set_floors_count(int floors_count) {
-    this->floors_count = floors_count;
-}
-double House::get_floors_count() {
-    return floors_count;
+double House::getLandSquare() {
+    return landSquare;
 }
 
-void House::set_has_garage(bool has_garage) {
-    this->has_garage = has_garage;
+void House::setKitchenSquare(double kitchenSquare) {
+    this->kitchenSquare = kitchenSquare;
 }
-bool House::get_has_garage() {
-    return has_garage;
+double House::getKitchenSquare() {
+    return kitchenSquare;
 }
 
-void House::set_heating_type(QString heating_type) {
-    this->heating_type = heating_type;
+void House::setWallMaterial(QString wallMaterial) {
+    this->wallMaterial = wallMaterial;
 }
-QString House::get_heating_type() {
-    return heating_type;
+QString House::getWallMaterial() {
+    return wallMaterial;
+}
+
+void House::setRoofMaterial(QString roofMaterial) {
+    this->roofMaterial = roofMaterial;
+}
+QString House::getRoofMaterial() {
+    return roofMaterial;
+}
+
+void House::setHasGarage(QString hasGarage) {
+    this->hasGarage = hasGarage;
+}
+QString House::getHasGarage() {
+    return hasGarage;
+}
+
+void House::setHeatingType(QString heatingType) {
+    this->heatingType = heatingType;
+}
+QString House::getHeatingType() {
+    return heatingType;
+}
+
+void House::setSanitation(QString sanitation) {
+    this->sanitation = sanitation;
+}
+QString House::getSanitation() {
+    return sanitation;
+}
+
+void House::setWaterSupply(QString waterSupply) {
+    this->waterSupply = waterSupply;
+}
+QString House::getWaterSupply() {
+    return waterSupply;
 }

@@ -467,6 +467,7 @@ void RealEstateBase::on_pushButton_delete_clicked()
             model->removeRow(rowToDeleteModel);
             extendedModel->removeRow(rowToDeleteExtendedModel);
             model->select();
+            setFilters();
         }
     }
     else {
@@ -546,3 +547,18 @@ int RealEstateBase::findID(QAbstractItemModel* model, int ID) {
     }
     return -1;
 }
+
+void RealEstateBase::on_pushButton_add_clicked()
+{
+    QDialog* dialog = new QDialog(this);
+    objectAdding* oa = new objectAdding(dialog, model);
+
+    dialog->setModal(true);
+    dialog->setWindowTitle("Добавление объекта");
+    dialog->setFixedSize(300, 500);
+    oa->setParent(dialog);
+    oa->show();
+
+    dialog->exec();
+}
+

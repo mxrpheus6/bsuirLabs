@@ -6,25 +6,41 @@
 class House : public RealEstate
 {
 private:
-    double land_square;
-    int floors_count;
-    bool has_garage;
-    QString heating_type;
+    double landSquare;
+    double kitchenSquare;
+    QString wallMaterial;
+    QString roofMaterial;
+    QString hasGarage;
+    QString heatingType;
+    QString sanitation;
+    QString waterSupply;
 
 public:
     House();
 
-    void set_land_square(double land_square);
-    double get_land_square();
+    void setLandSquare(double landSquare);
+    double getLandSquare();
 
-    void set_floors_count(int floors_count);
-    double get_floors_count();
+    void setKitchenSquare(double kitchenSquare);
+    double getKitchenSquare();
 
-    void set_has_garage(bool has_garage);
-    bool get_has_garage();
+    void setWallMaterial(QString wallMaterial);
+    QString getWallMaterial();
 
-    void set_heating_type(QString heating_type);
-    QString get_heating_type();
+    void setRoofMaterial(QString roofMaterial);
+    QString getRoofMaterial();
+
+    void setHasGarage(QString hasGarage);
+    QString getHasGarage();
+
+    void setHeatingType(QString heatingType);
+    QString getHeatingType();
+
+    void setSanitation(QString sanitation);
+    QString getSanitation();
+
+    void setWaterSupply(QString waterSupply);
+    QString getWaterSupply();
 };
 
 #endif // HOUSE_H

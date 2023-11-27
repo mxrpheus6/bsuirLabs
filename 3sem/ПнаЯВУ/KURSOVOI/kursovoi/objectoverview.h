@@ -1,7 +1,7 @@
 #ifndef OBJECTOVERVIEW_H
 #define OBJECTOVERVIEW_H
 
-#define ID_COL 0
+/*#define ID_COL 0
 #define PROPERTY_TYPE_COL 1
 #define DEAL_TYPE_COL 2
 #define DISTRICT_COL 3
@@ -12,11 +12,13 @@
 #define YEAR_COL 8
 #define PRICE_COL 9
 
-#define APARTMENT "Квартира"
-#define HOUSE "Дом"
-#define OFFICE "Офис"
+#define APARTMENT_RUS "Квартира"
+#define HOUSE_RUS "Дом"
+#define OFFICE_RUS "Офис"
 
-#define DEALS_ARR {"Продажа", "Аренда"}
+#define DEALS_ARR {"Продажа", "Аренда"}*/
+
+#include "defines.h"
 
 
 #include <QWidget>

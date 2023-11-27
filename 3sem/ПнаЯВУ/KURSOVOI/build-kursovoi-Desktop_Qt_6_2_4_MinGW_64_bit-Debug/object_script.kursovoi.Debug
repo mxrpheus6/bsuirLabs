@@ -4,6 +4,7 @@ debug/house.o
 debug/main.o
 debug/mainwindow.o
 debug/menudatawidget.o
+debug/objectadding.o
 debug/objectoverview.o
 debug/office.o
 debug/realestate.o
@@ -12,5 +13,6 @@ debug/qrc_src.o
 debug/moc_authorization.o
 debug/moc_mainwindow.o
 debug/moc_menudatawidget.o
+debug/moc_objectadding.o
 debug/moc_objectoverview.o
 debug/moc_realestatebase.o

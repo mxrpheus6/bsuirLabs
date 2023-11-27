@@ -15,6 +15,7 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     menudatawidget.cpp \
+    objectadding.cpp \
     objectoverview.cpp \
     office.cpp \
     realestate.cpp \
@@ -23,9 +24,11 @@ SOURCES += \
 HEADERS += \
     apartment.h \
     authorization.h \
+    defines.h \
     house.h \
     mainwindow.h \
     menudatawidget.h \
+    objectadding.h \
     objectoverview.h \
     office.h \
     realestate.h \
@@ -35,6 +38,7 @@ FORMS += \
     authorization.ui \
     mainwindow.ui \
     menudatawidget.ui \
+    objectadding.ui \
     objectoverview.ui \
     realestatebase.ui
 
