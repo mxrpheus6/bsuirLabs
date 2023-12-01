@@ -1,10 +1,10 @@
 #include "office.h"
 
-Office::Office() : RealEstate()
+Office::Office(const RealEstate& realEstate) : RealEstate(realEstate)
 {
     officeClass = "";
-    allFloorsAmount = 0;
-    workstationsAmount = 0;
+    allFloorsAmount = -1;
+    workstationsAmount = -1;
     wallMaterial = "";
     renovation = "";
     hasConferenceRooms = "";
@@ -20,6 +20,8 @@ QString Office::getOfficeClass() {
 }
 
 void Office::setAllFloorsAmount(int allFloorsAmount) {
+    if (allFloorsAmount <= 0)
+        throw QString("В поле этажность записано некорректное значение!");
     this->allFloorsAmount = allFloorsAmount;
 }
 int Office::getAllFloorsAmount() {
@@ -27,6 +29,8 @@ int Office::getAllFloorsAmount() {
 }
 
 void Office::setWorkstationsAmount(int workstationsAmount) {
+    if (workstationsAmount <= 0)
+        throw QString("В поле количество рабочих мест записано некорректное значение!");
     this->workstationsAmount = workstationsAmount;
 }
 int Office::getWorkstationsAmount() {

@@ -1,8 +1,10 @@
 release/apartment.o
 release/authorization.o
+release/client.o
 release/house.o
 release/main.o
 release/mainwindow.o
+release/makedeal.o
 release/menudatawidget.o
 release/objectadding.o
 release/objectoverview.o
@@ -12,6 +14,7 @@ release/realestatebase.o
 release/qrc_src.o
 release/moc_authorization.o
 release/moc_mainwindow.o
+release/moc_makedeal.o
 release/moc_menudatawidget.o
 release/moc_objectadding.o
 release/moc_objectoverview.o

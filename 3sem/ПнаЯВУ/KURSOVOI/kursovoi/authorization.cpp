@@ -22,7 +22,6 @@ Authorization::Authorization(QWidget *parent) :
 
 Authorization::~Authorization()
 {
-    db.close();
     delete ui;
 }
 

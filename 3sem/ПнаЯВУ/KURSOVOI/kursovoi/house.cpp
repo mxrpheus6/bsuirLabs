@@ -1,11 +1,12 @@
 #include "house.h"
 
-House::House() : RealEstate()
+House::House(const RealEstate& realEstate) : RealEstate(realEstate)
 {
-    landSquare = 0.0;
-    kitchenSquare = 0.0;
+    landSquare = -1.0;
+    kitchenSquare = -1.0;
     wallMaterial = "";
     roofMaterial = "";
+    hasFireplace = "";
     hasGarage = "";
     heatingType = "";
     sanitation = "";
@@ -13,6 +14,8 @@ House::House() : RealEstate()
 }
 
 void House::setLandSquare(double landSquare) {
+    if (landSquare <= 0.0)
+        throw QString("В поле площадь участка записано некорректное значение!");
     this->landSquare = landSquare;
 }
 double House::getLandSquare() {
@@ -20,6 +23,8 @@ double House::getLandSquare() {
 }
 
 void House::setKitchenSquare(double kitchenSquare) {
+    if (kitchenSquare <= 0.0)
+        throw QString("В поле площадь кухни записано некорректное значение!");
     this->kitchenSquare = kitchenSquare;
 }
 double House::getKitchenSquare() {
@@ -38,6 +43,13 @@ void House::setRoofMaterial(QString roofMaterial) {
 }
 QString House::getRoofMaterial() {
     return roofMaterial;
+}
+
+void House::setHasFireplace(QString hasFireplace) {
+    this->hasFireplace = hasFireplace;
+}
+QString House::getHasFireplace() {
+    return hasFireplace;
 }
 
 void House::setHasGarage(QString hasGarage) {

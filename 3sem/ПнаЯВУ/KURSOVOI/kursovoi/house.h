@@ -10,6 +10,7 @@ private:
     double kitchenSquare;
     QString wallMaterial;
     QString roofMaterial;
+    QString hasFireplace;
     QString hasGarage;
     QString heatingType;
     QString sanitation;
@@ -17,6 +18,7 @@ private:
 
 public:
     House();
+    House(const RealEstate& realEstate);
 
     void setLandSquare(double landSquare);
     double getLandSquare();
@@ -29,6 +31,9 @@ public:
 
     void setRoofMaterial(QString roofMaterial);
     QString getRoofMaterial();
+
+    void setHasFireplace(QString hasFireplace);
+    QString getHasFireplace();
 
     void setHasGarage(QString hasGarage);
     QString getHasGarage();

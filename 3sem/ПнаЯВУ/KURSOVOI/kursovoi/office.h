@@ -17,6 +17,7 @@ private:
 
 public:
     Office();
+    Office(const RealEstate& realEstate);
 
     void setOfficeClass(QString officeClass);
     QString getOfficeClass();

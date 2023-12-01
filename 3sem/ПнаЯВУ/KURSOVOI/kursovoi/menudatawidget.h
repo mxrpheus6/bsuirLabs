@@ -4,6 +4,8 @@
 #include <QWidget>
 #include <QtSql>
 
+#include "defines.h"
+
 namespace Ui {
 class MenuDataWidget;
 }

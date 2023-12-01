@@ -149,6 +149,9 @@
      <property name="text">
       <string>Войти</string>
      </property>
+     <property name="shortcut">
+      <string>Return</string>
+     </property>
      <property name="autoDefault">
       <bool>false</bool>
      </property>

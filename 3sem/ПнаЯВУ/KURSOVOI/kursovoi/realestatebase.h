@@ -24,6 +24,7 @@
 #include <QStandardItem>
 #include <QStandardItemModel>
 #include <QMessageBox>
+//#include <QMenuBar>
 
 #include "objectoverview.h"
 #include "objectadding.h"
@@ -56,12 +57,6 @@ private slots:
 
     void on_checkBox_floor_amount_stateChanged(int arg1);
 
-    void on_comboBox_type_activated(int index);
-
-    void on_comboBox_district_activated(int index);
-
-    void on_comboBox_floor_amount_activated(int index);
-
     void on_checkBox_square_stateChanged(int arg1);
 
     void on_checkBox_year_stateChanged(int arg1);
@@ -88,9 +83,15 @@ private slots:
 
     void on_checkBox_deal_stateChanged(int arg1);
 
-    void on_comboBox_deal_activated(int index);
-
     void on_pushButton_add_clicked();
+
+    void on_comboBox_type_currentTextChanged(const QString &arg1);
+
+    void on_comboBox_district_currentTextChanged(const QString &arg1);
+
+    void on_comboBox_floor_amount_currentTextChanged(const QString &arg1);
+
+    void on_comboBox_deal_currentTextChanged(const QString &arg1);
 
 private:
     Ui::RealEstateBase *ui;

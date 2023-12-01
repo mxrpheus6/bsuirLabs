@@ -54,6 +54,7 @@ public:
     QPushButton *pushButton_deal;
     QLineEdit *lineEdit_type;
     QCheckBox *checkBox_deal;
+    QCheckBox *checkBox_auth;
 
     void setupUi(QWidget *objectOverview)
     {
@@ -128,10 +129,10 @@ public:
         label_11->setGeometry(QRect(20, 290, 101, 17));
         comboBox_client = new QComboBox(objectOverview);
         comboBox_client->setObjectName(QString::fromUtf8("comboBox_client"));
-        comboBox_client->setGeometry(QRect(310, 360, 171, 20));
+        comboBox_client->setGeometry(QRect(310, 360, 81, 20));
         label_12 = new QLabel(objectOverview);
         label_12->setObjectName(QString::fromUtf8("label_12"));
-        label_12->setGeometry(QRect(240, 360, 41, 17));
+        label_12->setGeometry(QRect(240, 363, 41, 17));
         pushButton_save = new QPushButton(objectOverview);
         pushButton_save->setObjectName(QString::fromUtf8("pushButton_save"));
         pushButton_save->setGeometry(QRect(20, 350, 201, 31));
@@ -144,6 +145,9 @@ public:
         checkBox_deal = new QCheckBox(objectOverview);
         checkBox_deal->setObjectName(QString::fromUtf8("checkBox_deal"));
         checkBox_deal->setGeometry(QRect(240, 290, 77, 31));
+        checkBox_auth = new QCheckBox(objectOverview);
+        checkBox_auth->setObjectName(QString::fromUtf8("checkBox_auth"));
+        checkBox_auth->setGeometry(QRect(400, 363, 81, 17));
 
         retranslateUi(objectOverview);
 
@@ -173,6 +177,7 @@ public:
         pushButton_save->setText(QCoreApplication::translate("objectOverview", "C\320\276\321\205\321\200\320\260\320\275\320\270\321\202\321\214", nullptr));
         pushButton_deal->setText(QCoreApplication::translate("objectOverview", "\320\227\320\260\320\272\320\273\321\216\321\207\320\270\321\202\321\214 \321\201\320\264\320\265\320\273\320\272\321\203", nullptr));
         checkBox_deal->setText(QCoreApplication::translate("objectOverview", "\320\241\320\264\320\265\320\273\320\272\320\260", nullptr));
+        checkBox_auth->setText(QCoreApplication::translate("objectOverview", "\320\225\321\201\321\202\321\214 \320\262 \320\261\320\260\320\267\320\265", nullptr));
     } // retranslateUi
 
 };

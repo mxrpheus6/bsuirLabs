@@ -1,8 +1,10 @@
 debug/apartment.o
 debug/authorization.o
+debug/client.o
 debug/house.o
 debug/main.o
 debug/mainwindow.o
+debug/makedeal.o
 debug/menudatawidget.o
 debug/objectadding.o
 debug/objectoverview.o
@@ -12,6 +14,7 @@ debug/realestatebase.o
 debug/qrc_src.o
 debug/moc_authorization.o
 debug/moc_mainwindow.o
+debug/moc_makedeal.o
 debug/moc_menudatawidget.o
 debug/moc_objectadding.o
 debug/moc_objectoverview.o

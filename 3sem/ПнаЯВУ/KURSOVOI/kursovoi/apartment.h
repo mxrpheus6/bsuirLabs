@@ -11,11 +11,12 @@ private:
     QString layoutType;
     QString hasBalcony;
     QString hasElevator;
-    int ceilingHeight;
+    double ceilingHeight;
     QString hasParking;
     QString hasConcierge;
 public:
     Apartment();
+    Apartment(const RealEstate& realEstate);
 
     void setSquareKitchen(double squareKitchen);
     double getSquareKitchen();
@@ -32,8 +33,8 @@ public:
     void setHasElevator(QString hasElevator);
     QString getHasElevator();
 
-    void setCeilingHeight(int ceilingHeight);
-    int getCeilingHeight();
+    void setCeilingHeight(double ceilingHeight);
+    double getCeilingHeight();
 
     void setHasParking(QString hasParking);
     QString getHasParking();

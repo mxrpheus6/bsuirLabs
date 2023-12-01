@@ -17,6 +17,9 @@ RealEstate::RealEstate()
 void RealEstate::setID(int ID) {
     this->ID = ID;
 }
+int RealEstate::getID() {
+    return ID;
+}
 
 void RealEstate::setPropertyType(QString propertyType) {
     this->propertyType = propertyType;
@@ -54,6 +57,8 @@ QString RealEstate::getDescription() {
 }
 
 void RealEstate::setSquare(double square) {
+    if (square <= 0.0)
+        throw QString("В поле площадь записано некорректное значение!");
     this->square = square;
 }
 double RealEstate::getSquare() {
@@ -61,6 +66,8 @@ double RealEstate::getSquare() {
 }
 
 void RealEstate::setFloorsAmount(int floorsAmount) {
+    if (floorsAmount <= 0)
+        throw QString("В поле количество комнат записано некорректное значение!");
     this->floorsAmount = floorsAmount;
 }
 int RealEstate::getFloorsAmount() {
@@ -68,6 +75,8 @@ int RealEstate::getFloorsAmount() {
 }
 
 void RealEstate::setConstructionYear(int constructionYear) {
+    if (constructionYear <= 0)
+        throw QString("В поле год постройки записано некорректное значение!");
     this->constructionYear = constructionYear;
 }
 int RealEstate::getConstructionYear() {
@@ -75,6 +84,8 @@ int RealEstate::getConstructionYear() {
 }
 
 void RealEstate::setPrice(double price) {
+    if (price <= 0.0)
+        throw QString("В поле цена записано некорректное значение!");
     this->price = price;
 }
 double RealEstate::getPrice() {

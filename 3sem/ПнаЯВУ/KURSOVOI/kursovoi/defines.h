@@ -20,6 +20,10 @@
 #define HOUSE_RUS "Дом"
 #define OFFICE_RUS "Офис"
 
+#define APARTMENT_ENG "Apartment"
+#define HOUSE_ENG "House"
+#define OFFICE_ENG "Office"
+
 #define DEALS_ARR {"Продажа", "Аренда"}
 #define PROPERTY_ARR {"Квартира", "Дом", "Офис"}
 

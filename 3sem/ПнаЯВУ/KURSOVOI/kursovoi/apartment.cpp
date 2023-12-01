@@ -1,18 +1,20 @@
 #include "apartment.h"
 
-Apartment::Apartment() : RealEstate()
+Apartment::Apartment(const RealEstate& realEstate) : RealEstate(realEstate)
 {
-    squareKitchen = 0.0;
-    allFloorsAmount = 0;
+    squareKitchen = -1.0;
+    allFloorsAmount = -1;
     layoutType = "";
     hasBalcony = "";
     hasElevator = "";
-    ceilingHeight = 0.0;
+    ceilingHeight = -1.0;
     hasParking = "";
     hasConcierge = "";
 }
 
 void Apartment::setSquareKitchen(double squareKitchen) {
+    if (squareKitchen <= 0.0)
+        throw QString("В поле площадь кухни записано некорректное значение!");
     this->squareKitchen = squareKitchen;
 }
 double Apartment::getSquareKitchen() {
@@ -20,6 +22,8 @@ double Apartment::getSquareKitchen() {
 }
 
 void Apartment::setAllFloorsAmount(int allFloorsAmount) {
+    if (allFloorsAmount <= 0)
+        throw QString("В поле высота потолков записано некорректное значение!");
     this->allFloorsAmount = allFloorsAmount;
 }
 int Apartment::getAllFloorsAmount() {
@@ -47,10 +51,12 @@ QString Apartment::getHasElevator() {
     return hasElevator;
 }
 
-void Apartment::setCeilingHeight(int ceilingHeight) {
+void Apartment::setCeilingHeight(double ceilingHeight) {
+    if (ceilingHeight <= 0.0)
+        throw QString("В поле высота потолков записано некорректное значение!");
     this->ceilingHeight = ceilingHeight;
 }
-int Apartment::getCeilingHeight() {
+double Apartment::getCeilingHeight() {
     return ceilingHeight;
 }
 

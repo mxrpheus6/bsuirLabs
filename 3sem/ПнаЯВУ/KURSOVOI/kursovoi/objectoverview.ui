@@ -283,7 +283,7 @@
     <rect>
      <x>310</x>
      <y>360</y>
-     <width>171</width>
+     <width>81</width>
      <height>20</height>
     </rect>
    </property>
@@ -295,7 +295,7 @@
    <property name="geometry">
     <rect>
      <x>240</x>
-     <y>360</y>
+     <y>363</y>
      <width>41</width>
      <height>17</height>
     </rect>
@@ -351,6 +351,19 @@
    </property>
    <property name="text">
     <string>Сделка</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBox_auth">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>363</y>
+     <width>81</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Есть в базе</string>
    </property>
   </widget>
  </widget>

@@ -7,29 +7,36 @@ MenuDataWidget::MenuDataWidget(QWidget *parent, QString tableName) :
 {
     ui->setupUi(this);
 
-    model = new QSqlTableModel(this);
+    model = new QSqlTableModel();
     model->setTable(tableName);
     model->select();
 
-    if (tableName == "Accounts") {
-        model->setHeaderData(0, Qt::Horizontal, "ФИО");
-        model->setHeaderData(1, Qt::Horizontal, "Логин");
-        model->setHeaderData(2, Qt::Horizontal, "Пароль");
-        model->setHeaderData(3, Qt::Horizontal, "Права доступа");
+    if (tableName == ACCOUNTS) {
+        model->setHeaderData(0, Qt::Horizontal, "ID");
+        model->setHeaderData(1, Qt::Horizontal, "ФИО");
+        model->setHeaderData(2, Qt::Horizontal, "Логин");
+        model->setHeaderData(3, Qt::Horizontal, "Пароль");
+        model->setHeaderData(4, Qt::Horizontal, "Паспорт");
+        model->setHeaderData(5, Qt::Horizontal, "Телефон");
+        model->setHeaderData(6, Qt::Horizontal, "Права доступа");
+        ui->tableView_db->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
     }
-    else if (tableName == "Districts") {
+    else if (tableName == DISTRICTS) {
         model->setHeaderData(0, Qt::Horizontal, "Район");
+        ui->tableView_db->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     }
 
     ui->tableView_db->setModel(model);
-    ui->tableView_db->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     ui->tableView_db->setSelectionBehavior(QAbstractItemView::SelectRows);
+    ui->tableView_db->verticalHeader()->setVisible(false);
     ui->tableView_db->setSortingEnabled(true);
 }
 
 MenuDataWidget::~MenuDataWidget()
 {
     delete ui;
+
+    delete model;
 }
 
 void MenuDataWidget::on_pushButton_add_clicked()

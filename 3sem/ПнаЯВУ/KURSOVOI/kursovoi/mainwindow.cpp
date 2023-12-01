@@ -20,6 +20,8 @@ MainWindow::~MainWindow()
 {
     db.close();
     delete ui;
+
+
 }
 
 void MainWindow::on_action_realtors_triggered()

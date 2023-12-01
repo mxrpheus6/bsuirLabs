@@ -11,9 +11,11 @@ CONFIG += c++17
 SOURCES += \
     apartment.cpp \
     authorization.cpp \
+    client.cpp \
     house.cpp \
     main.cpp \
     mainwindow.cpp \
+    makedeal.cpp \
     menudatawidget.cpp \
     objectadding.cpp \
     objectoverview.cpp \
@@ -24,9 +26,11 @@ SOURCES += \
 HEADERS += \
     apartment.h \
     authorization.h \
+    client.h \
     defines.h \
     house.h \
     mainwindow.h \
+    makedeal.h \
     menudatawidget.h \
     objectadding.h \
     objectoverview.h \
@@ -37,6 +41,7 @@ HEADERS += \
 FORMS += \
     authorization.ui \
     mainwindow.ui \
+    makedeal.ui \
     menudatawidget.ui \
     objectadding.ui \
     objectoverview.ui \

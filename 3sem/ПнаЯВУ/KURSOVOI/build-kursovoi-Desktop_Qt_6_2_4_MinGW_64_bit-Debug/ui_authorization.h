@@ -136,6 +136,9 @@ public:
         labelUsername->setText(QCoreApplication::translate("Authorization", "\320\230\320\274\321\217 \320\277\320\276\320\273\321\214\320\267\320\276\320\262\320\260\321\202\320\265\320\273\321\217", nullptr));
         labelPassword->setText(QCoreApplication::translate("Authorization", "\320\237\320\260\321\200\320\276\320\273\321\214", nullptr));
         pushButton_login->setText(QCoreApplication::translate("Authorization", "\320\222\320\276\320\271\321\202\320\270", nullptr));
+#if QT_CONFIG(shortcut)
+        pushButton_login->setShortcut(QCoreApplication::translate("Authorization", "Return", nullptr));
+#endif // QT_CONFIG(shortcut)
     } // retranslateUi
 
 };
