@@ -38,7 +38,7 @@ class RealEstateBase : public QWidget
     Q_OBJECT
 
 public:
-    explicit RealEstateBase(QWidget *parent, QString tableName);
+    explicit RealEstateBase(QWidget *parent, QString mode);
     ~RealEstateBase();
     static bool numericCompare(const QString &str1, const QString &str2);
     QStandardItemModel* applyFilterCombobox(QAbstractItemModel *originalModel, int colIndex, QComboBox *cb);
@@ -46,6 +46,7 @@ public:
     void setFilters();
     void createEmptyTable(QSqlTableModel *model);
     int findID(QAbstractItemModel* model, int ID);
+    QStandardItemModel* requestsFilter(QAbstractItemModel *originalModel);
 
 public slots:
     void onObjectOverviewSaveClicked();
@@ -101,6 +102,7 @@ private:
     QDoubleValidator *doubleValidator;
     QIntValidator *intValidator;
 
+    QString mode;
     int currentRow = -1;
 };
 

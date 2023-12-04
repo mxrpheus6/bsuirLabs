@@ -4,6 +4,8 @@
 #define ACCOUNTS "Accounts"
 #define DISTRICTS "Districts"
 #define ESTATE "Estate"
+#define DEALS "Deals"
+#define REQUESTS "Requests"
 
 #define ID_COL 0
 #define PROPERTY_TYPE_COL 1
@@ -27,4 +29,4 @@
 #define DEALS_ARR {"Продажа", "Аренда"}
 #define PROPERTY_ARR {"Квартира", "Дом", "Офис"}
 
-#endif // DEFINES_H
+#endif  // DEFINES_H

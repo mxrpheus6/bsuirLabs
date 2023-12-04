@@ -5,6 +5,7 @@
 #define DISTRICTS "Districts"
 #define ESTATE "Estate"*/
 
+#include <QApplication>
 #include <QMainWindow>
 #include <QPixMap>
 #include <QSqlDatabase>
@@ -13,6 +14,7 @@
 
 #include "menudatawidget.h"
 #include "realestatebase.h"
+#include "requests.h"
 #include "defines.h"
 
 QT_BEGIN_NAMESPACE
@@ -33,6 +35,10 @@ private slots:
     void on_action_districts_triggered();
 
     void on_pushButton_real_estate_base_clicked();
+
+    void on_pushButton_real_estate_applications_clicked();
+
+    void on_pushButton_deals_clicked();
 
 private:
     Ui::MainWindow *ui;

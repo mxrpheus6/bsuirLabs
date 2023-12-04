@@ -151,7 +151,7 @@ public:
         action_districts->setText(QCoreApplication::translate("MainWindow", "\320\240\320\260\320\271\320\276\320\275\321\213", nullptr));
         label_banner->setText(QString());
         pushButton_real_estate_base->setText(QCoreApplication::translate("MainWindow", "\320\221\320\260\320\267\320\260 \320\275\320\265\320\264\320\262\320\270\320\266\320\270\320\274\320\276\321\201\321\202\320\270", nullptr));
-        pushButton_real_estate_applications->setText(QCoreApplication::translate("MainWindow", "\320\227\320\260\321\217\320\262\320\272\320\270 \320\275\320\265\320\264\320\262\320\270\320\266\320\270\320\274\320\276\321\201\321\202\320\270", nullptr));
+        pushButton_real_estate_applications->setText(QCoreApplication::translate("MainWindow", "\320\227\320\260\321\217\320\262\320\272\320\270 \320\275\320\260 \321\201\320\264\320\265\320\273\320\272\321\203", nullptr));
         pushButton_deals->setText(QCoreApplication::translate("MainWindow", "\320\227\320\260\320\272\320\273\321\216\321\207\320\265\320\275\320\275\321\213\320\265 \321\201\320\264\320\265\320\273\320\272\320\270", nullptr));
         menu->setTitle(QCoreApplication::translate("MainWindow", "\320\241\320\277\321\200\320\260\320\262\320\276\321\207\320\275\321\213\320\265 \320\264\320\260\320\275\320\275\321\213\320\265", nullptr));
     } // retranslateUi

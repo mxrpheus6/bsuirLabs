@@ -177,7 +177,7 @@
           </font>
          </property>
          <property name="text">
-          <string>Заявки недвижимости</string>
+          <string>Заявки на сделку</string>
          </property>
         </widget>
        </item>

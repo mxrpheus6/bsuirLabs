@@ -1,11 +1,41 @@
-#ifndef CLIENT_H
-#define CLIENT_H
+#ifndef client_H
+#define client_H
 
+#include <QString>
 
-class client
+class Client
 {
 public:
-    client();
+    Client();
+
+    void setID(int ID);
+    int getID();
+
+    void setName(QString name);
+    QString getName();
+
+    void setLogin(QString login);
+    QString getLogin();
+
+    void setPassword(QString password);
+    QString getPassword();
+
+    void setPassport(QString passport);
+    QString getPassport();
+
+    void setPhone(QString phone);
+    QString getPhone();
+
+    void setAccess(QString access);
+    QString getAccess();
+private:
+    int ID;
+    QString name;
+    QString login;
+    QString password;
+    QString passport;
+    QString phone;
+    QString access;
 };
 
-#endif // CLIENT_H
+#endif // client_H

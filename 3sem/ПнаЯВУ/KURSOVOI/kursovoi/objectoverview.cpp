@@ -614,14 +614,17 @@ void objectOverview::on_pushButton_deal_clicked()
     }
 
     QDialog* dialog = new QDialog();
-    MakeDeal* md = new MakeDeal(dialog);
+
+    if (ui->checkBox_auth->isChecked())
+        makeDeal = new MakeDeal(dialog, ui->lineEdit_ID->text(), ui->comboBox_rieltor->currentText(), ui->comboBox_client->currentText());
+    else
+        makeDeal = new MakeDeal(dialog, ui->lineEdit_ID->text(), ui->comboBox_rieltor->currentText());
 
     dialog->setModal(true);
-
     dialog->setWindowTitle("Заключение сделки");
     dialog->setFixedSize(300, 200);
-    md->setParent(dialog);
-    md->show();
+    makeDeal->setParent(dialog);
+    makeDeal->show();
 
     dialog->exec();
 }
@@ -647,6 +650,7 @@ void objectOverview::on_checkBox_auth_stateChanged(int arg1)
     else {
         ui->comboBox_client->setCurrentIndex(-1);
         ui->comboBox_client->setEnabled(false);
+        ui->comboBox_client->setStyleSheet("");
     }
 }
 

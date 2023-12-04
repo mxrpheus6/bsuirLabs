@@ -11,6 +11,7 @@ debug/objectoverview.o
 debug/office.o
 debug/realestate.o
 debug/realestatebase.o
+debug/requests.o
 debug/qrc_src.o
 debug/moc_authorization.o
 debug/moc_mainwindow.o
@@ -19,3 +20,4 @@ debug/moc_menudatawidget.o
 debug/moc_objectadding.o
 debug/moc_objectoverview.o
 debug/moc_realestatebase.o
+debug/moc_requests.o

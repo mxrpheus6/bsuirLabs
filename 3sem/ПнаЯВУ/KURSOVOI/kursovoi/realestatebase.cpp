@@ -1,19 +1,23 @@
 #include "realestatebase.h"
 #include "ui_realestatebase.h"
 
-RealEstateBase::RealEstateBase(QWidget *parent, QString tableName) :
+RealEstateBase::RealEstateBase(QWidget *parent, QString mode) :
     QWidget(parent),
     ui(new Ui::RealEstateBase)
 {
     ui->setupUi(this);
 
+    this->mode = mode;
+
     model = new QSqlTableModel();
-    model->setTable(tableName);
+    model->setTable(ESTATE);
     createEmptyTable(model);
 
     model->select();
 
     resModel = model;
+
+    setFilters();
 
     ui->tableView_estate->setModel(resModel);
 
@@ -95,6 +99,11 @@ RealEstateBase::RealEstateBase(QWidget *parent, QString tableName) :
     ui->lineEdit_price_to->setValidator(doubleValidator);
     ui->lineEdit_price_from->setEnabled(false);
     ui->lineEdit_price_to->setEnabled(false);
+
+    if (mode == "deals") {
+        ui->pushButton_add->setEnabled(false);
+        //ui->pushButton_add->setVisible(false);
+    }
 }
 
 RealEstateBase::~RealEstateBase()
@@ -306,6 +315,10 @@ void RealEstateBase::setFilters() {
     model->sort(ID_COL, Qt::AscendingOrder);
     resModel = model;
 
+    if (mode == "deals") {
+        resModel = requestsFilter(resModel);
+    }
+
     if (ui->comboBox_type->currentIndex() != -1) {
         resModel= applyFilterCombobox(resModel, PROPERTY_TYPE_COL, ui->comboBox_type);
     }
@@ -328,6 +341,51 @@ void RealEstateBase::setFilters() {
         resModel= applyFilterCombobox(resModel, FLOOR_AMOUNT_COL, ui->comboBox_floor_amount);
     }
     ui->tableView_estate->setModel(resModel);
+}
+
+QStandardItemModel* RealEstateBase::requestsFilter(QAbstractItemModel *originalModel) {
+    QSqlTableModel* tempModel = new QSqlTableModel();
+    tempModel->setTable(REQUESTS);
+    tempModel->select();
+
+    QList<int> idList;
+    QModelIndex index;
+    int rowCount = tempModel->rowCount();
+
+    for (int row = 0; row < rowCount; row++) {
+        index = tempModel->index(row, ID_COL);
+        idList.append(tempModel->data(index).toInt());
+    }
+
+    QStandardItemModel *newModel = new QStandardItemModel();
+
+    rowCount = originalModel->rowCount();
+    int colCount = originalModel->columnCount();
+
+    for (int col = 0; col < colCount; col++) {
+        newModel->setHorizontalHeaderItem(col, new QStandardItem(originalModel->headerData(col, Qt::Horizontal).toString()));
+    }
+
+    for (int row = 0; row < rowCount; row++) {
+        QModelIndex index = originalModel->index(row, ID_COL);
+        QVariant data = originalModel->data(index);
+
+        if (idList.contains(data.toInt()))
+        {
+            QList<QStandardItem*> rowItems;
+
+            for (int col = 0; col < colCount; col++) {
+                QModelIndex sourceIndex = originalModel->index(row, col);
+                QVariant sourceData = originalModel->data(sourceIndex);
+
+                QStandardItem *item = new QStandardItem(sourceData.toString());
+                rowItems.append(item);
+            }
+
+            newModel->appendRow(rowItems);
+        }
+    }
+    return newModel;
 }
 
 void RealEstateBase::on_lineEdit_square_from_textChanged(const QString &arg1)
@@ -384,7 +442,6 @@ void RealEstateBase::createEmptyTable(QSqlTableModel* model) {
     ui->tableView_estate->setEditTriggers(QAbstractItemView::NoEditTriggers);
     ui->tableView_estate->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
     ui->tableView_estate->setSelectionBehavior(QAbstractItemView::SelectRows);
-    //ui->tableView_estate->setSortingEnabled(true);
 }
 
 void RealEstateBase::on_tableView_estate_clicked(const QModelIndex &index)

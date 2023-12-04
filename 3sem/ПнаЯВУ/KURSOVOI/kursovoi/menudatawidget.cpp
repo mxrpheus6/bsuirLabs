@@ -29,7 +29,6 @@ MenuDataWidget::MenuDataWidget(QWidget *parent, QString tableName) :
     ui->tableView_db->setModel(model);
     ui->tableView_db->setSelectionBehavior(QAbstractItemView::SelectRows);
     ui->tableView_db->verticalHeader()->setVisible(false);
-    ui->tableView_db->setSortingEnabled(true);
 }
 
 MenuDataWidget::~MenuDataWidget()

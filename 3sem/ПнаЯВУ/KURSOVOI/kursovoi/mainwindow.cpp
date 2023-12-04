@@ -20,8 +20,6 @@ MainWindow::~MainWindow()
 {
     db.close();
     delete ui;
-
-
 }
 
 void MainWindow::on_action_realtors_triggered()
@@ -54,7 +52,7 @@ void MainWindow::on_action_districts_triggered()
 void MainWindow::on_pushButton_real_estate_base_clicked()
 {
     QDialog* dialog = new QDialog(this);
-    RealEstateBase* reb = new RealEstateBase(dialog, ESTATE);
+    RealEstateBase* reb = new RealEstateBase(dialog, "base");
     dialog->setModal(true);
     dialog->setWindowTitle("База недвижимости");
     dialog->setFixedSize(550, 450);
@@ -62,5 +60,25 @@ void MainWindow::on_pushButton_real_estate_base_clicked()
     reb->show();
 
     dialog->exec();
+}
+
+
+void MainWindow::on_pushButton_real_estate_applications_clicked()
+{
+    QDialog* dialog = new QDialog(this);
+    RealEstateBase* req = new RealEstateBase(dialog, "deals");
+    dialog->setModal(true);
+    dialog->setWindowTitle("Заявки на сделку");
+    dialog->setFixedSize(550, 450);
+    req->setParent(dialog);
+    req->show();
+
+    dialog->exec();
+}
+
+
+void MainWindow::on_pushButton_deals_clicked()
+{
+
 }
 
