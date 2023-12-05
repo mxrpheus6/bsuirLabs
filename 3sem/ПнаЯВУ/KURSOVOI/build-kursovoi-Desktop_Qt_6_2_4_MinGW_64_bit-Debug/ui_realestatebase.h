@@ -45,6 +45,7 @@ public:
     QLineEdit *lineEdit_square_from;
     QComboBox *comboBox_deal;
     QCheckBox *checkBox_deal;
+    QPushButton *pushButton_reject;
 
     void setupUi(QWidget *RealEstateBase)
     {
@@ -116,8 +117,23 @@ public:
         checkBox_deal = new QCheckBox(RealEstateBase);
         checkBox_deal->setObjectName(QString::fromUtf8("checkBox_deal"));
         checkBox_deal->setGeometry(QRect(360, 300, 81, 22));
+        pushButton_reject = new QPushButton(RealEstateBase);
+        pushButton_reject->setObjectName(QString::fromUtf8("pushButton_reject"));
+        pushButton_reject->setEnabled(false);
+        pushButton_reject->setGeometry(QRect(360, 370, 181, 55));
+#if QT_CONFIG(whatsthis)
+        pushButton_reject->setWhatsThis(QString::fromUtf8("hidden"));
+#endif // QT_CONFIG(whatsthis)
+        pushButton_reject->setAutoFillBackground(false);
+        pushButton_reject->setCheckable(false);
+        pushButton_reject->setAutoRepeatDelay(300);
+        pushButton_reject->setAutoDefault(false);
+        pushButton_reject->setFlat(false);
 
         retranslateUi(RealEstateBase);
+
+        pushButton_reject->setDefault(false);
+
 
         QMetaObject::connectSlotsByName(RealEstateBase);
     } // setupUi
@@ -149,6 +165,10 @@ public:
         lineEdit_square_from->setPlaceholderText(QCoreApplication::translate("RealEstateBase", "\320\236\321\202", nullptr));
         comboBox_deal->setPlaceholderText(QCoreApplication::translate("RealEstateBase", "\320\222\321\213\320\261\320\265\321\200\320\270\321\202\320\265", nullptr));
         checkBox_deal->setText(QCoreApplication::translate("RealEstateBase", "\320\242\320\270\320\277 \321\201\320\264\320\265\320\273\320\272\320\270", nullptr));
+#if QT_CONFIG(statustip)
+        pushButton_reject->setStatusTip(QString());
+#endif // QT_CONFIG(statustip)
+        pushButton_reject->setText(QCoreApplication::translate("RealEstateBase", "\320\236\321\202\320\272\320\276\320\273\320\275\320\270\321\202\321\214 \320\267\320\260\321\217\320\262\320\272\321\203", nullptr));
     } // retranslateUi
 
 };

@@ -100,9 +100,23 @@ RealEstateBase::RealEstateBase(QWidget *parent, QString mode) :
     ui->lineEdit_price_from->setEnabled(false);
     ui->lineEdit_price_to->setEnabled(false);
 
-    if (mode == "deals") {
+    if (mode == "base") {
+        ui->pushButton_reject->setEnabled(false);
+        ui->pushButton_reject->setVisible(false);
+    }
+    else if (mode == "deals") {
         ui->pushButton_add->setEnabled(false);
-        //ui->pushButton_add->setVisible(false);
+        ui->pushButton_add->setVisible(false);
+        ui->pushButton_delete->setEnabled(false);
+        ui->pushButton_delete->setVisible(false);
+
+        ui->pushButton_reject->setEnabled(true);
+    }
+    else if (mode == "purchases") {
+        ui->pushButton_reject->setEnabled(false);
+        ui->pushButton_reject->setVisible(false);
+
+        ui->pushButton_add->setEnabled(false);
     }
 }
 
@@ -315,8 +329,14 @@ void RealEstateBase::setFilters() {
     model->sort(ID_COL, Qt::AscendingOrder);
     resModel = model;
 
-    if (mode == "deals") {
+    if (mode == "base") {
+        resModel = baseFilter(resModel);
+    }
+    else if (mode == "deals") {
         resModel = requestsFilter(resModel);
+    }
+    else if (mode == "purchases") {
+        resModel = purchasesFilter(resModel);
     }
 
     if (ui->comboBox_type->currentIndex() != -1) {
@@ -343,9 +363,99 @@ void RealEstateBase::setFilters() {
     ui->tableView_estate->setModel(resModel);
 }
 
+QStandardItemModel* RealEstateBase::baseFilter(QAbstractItemModel *originalModel) {
+    QSqlTableModel* tempModel = new QSqlTableModel();
+    tempModel->setTable(DEALS);
+    tempModel->select();
+
+    QList<int> idList;
+    QModelIndex index;
+    int rowCount = tempModel->rowCount();
+
+    for (int row = 0; row < rowCount; row++) {
+        index = tempModel->index(row, ID_COL);
+        idList.append(tempModel->data(index).toInt());
+    }
+
+    QStandardItemModel *newModel = new QStandardItemModel();
+
+    rowCount = originalModel->rowCount();
+    int colCount = originalModel->columnCount();
+
+    for (int col = 0; col < colCount; col++) {
+        newModel->setHorizontalHeaderItem(col, new QStandardItem(originalModel->headerData(col, Qt::Horizontal).toString()));
+    }
+
+    for (int row = 0; row < rowCount; row++) {
+        QModelIndex index = originalModel->index(row, ID_COL);
+        QVariant data = originalModel->data(index);
+
+        if (!idList.contains(data.toInt()))
+        {
+            QList<QStandardItem*> rowItems;
+
+            for (int col = 0; col < colCount; col++) {
+                QModelIndex sourceIndex = originalModel->index(row, col);
+                QVariant sourceData = originalModel->data(sourceIndex);
+
+                QStandardItem *item = new QStandardItem(sourceData.toString());
+                rowItems.append(item);
+            }
+
+            newModel->appendRow(rowItems);
+        }
+    }
+    return newModel;
+}
+
 QStandardItemModel* RealEstateBase::requestsFilter(QAbstractItemModel *originalModel) {
     QSqlTableModel* tempModel = new QSqlTableModel();
     tempModel->setTable(REQUESTS);
+    tempModel->select();
+
+    QList<int> idList;
+    QModelIndex index;
+    int rowCount = tempModel->rowCount();
+
+    for (int row = 0; row < rowCount; row++) {
+        index = tempModel->index(row, ID_COL);
+        idList.append(tempModel->data(index).toInt());
+    }
+
+    QStandardItemModel *newModel = new QStandardItemModel();
+
+    rowCount = originalModel->rowCount();
+    int colCount = originalModel->columnCount();
+
+    for (int col = 0; col < colCount; col++) {
+        newModel->setHorizontalHeaderItem(col, new QStandardItem(originalModel->headerData(col, Qt::Horizontal).toString()));
+    }
+
+    for (int row = 0; row < rowCount; row++) {
+        QModelIndex index = originalModel->index(row, ID_COL);
+        QVariant data = originalModel->data(index);
+
+        if (idList.contains(data.toInt()))
+        {
+            QList<QStandardItem*> rowItems;
+
+            for (int col = 0; col < colCount; col++) {
+                QModelIndex sourceIndex = originalModel->index(row, col);
+                QVariant sourceData = originalModel->data(sourceIndex);
+
+                QStandardItem *item = new QStandardItem(sourceData.toString());
+                rowItems.append(item);
+            }
+
+            newModel->appendRow(rowItems);
+        }
+    }
+    return newModel;
+}
+
+QStandardItemModel* RealEstateBase::purchasesFilter(QAbstractItemModel *originalModel) {
+    QSqlTableModel* tempModel = new QSqlTableModel();
+    tempModel->setTable(DEALS);
     tempModel->select();
 
     QList<int> idList;
@@ -501,6 +611,7 @@ void RealEstateBase::on_pushButton_delete_clicked()
             extendedModel->removeRow(rowToDeleteExtendedModel);
             model->select();
             setFilters();
+            QMessageBox::information(this, "Успех", "Объект успешно удален!");
         }
     }
     else {
@@ -588,6 +699,23 @@ int RealEstateBase::findID(QAbstractItemModel* model, int ID) {
     return -1;
 }
 
+int RealEstateBase::findIDTwoFields(QAbstractItemModel* model, int ID1, int ID2) {
+    QModelIndex index;
+    QVariant data;
+
+    for (int row = 0; row < model->rowCount(); row++) {
+        index = model->index(row, 0);
+        data = model->data(index).toString();
+        if (data.toInt() == ID1) {
+            index = model->index(row, 1);
+            data = model->data(index).toString();
+            if (data.toInt() == ID2)
+                return row;
+        }
+    }
+    return -1;
+}
+
 void RealEstateBase::on_pushButton_add_clicked()
 {
     QDialog* dialog = new QDialog(this);
@@ -630,3 +758,43 @@ void RealEstateBase::on_comboBox_deal_currentTextChanged(const QString &arg1)
     Q_UNUSED(arg1);
     setFilters();
 }
+
+void RealEstateBase::on_pushButton_reject_clicked()
+{
+    if (currentRow >= 0) {
+        QSqlTableModel* tempModel = new QSqlTableModel();
+        tempModel->setTable(REQUESTS);
+        tempModel->select();
+
+        QModelIndex index;
+        index = resModel->index(currentRow, ID_COL);
+        int ID = resModel->data(index).toInt();
+
+        int rowToReject = findID(tempModel, ID);
+
+        QMessageBox msgBox;
+        msgBox.setIcon(QMessageBox::Question);
+        msgBox.setWindowTitle("Подтверждение отклонения");
+        msgBox.setText("Вы уверены, что хотите отклонить эту заявку?");
+        msgBox.addButton(QMessageBox::Yes)->setText("Да");
+        msgBox.addButton(QMessageBox::No)->setText("Нет");
+        msgBox.setDefaultButton(QMessageBox::No);
+
+        int reply = msgBox.exec();
+
+        if (reply == QMessageBox::Yes) {
+            tempModel->removeRow(rowToReject);
+            tempModel->select();
+            setFilters();
+            QMessageBox::information(this, "Успех", "Заявка успешно отклонена!");
+        }
+
+
+    }
+    else {
+        QMessageBox::warning(this, "Предупреждение", "Объект для отклонения заявки не выбран!");
+    }
+    ui->tableView_estate->clearSelection();
+    currentRow = -1;
+}
+

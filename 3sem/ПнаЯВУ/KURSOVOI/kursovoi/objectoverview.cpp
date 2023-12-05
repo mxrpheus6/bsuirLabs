@@ -110,7 +110,6 @@ objectOverview::objectOverview(QWidget *parent, QSqlTableModel* model, QAbstract
 
     ui->checkBox_auth->setEnabled(false);
 
-
     QDoubleValidator *doubleValidator = new QDoubleValidator();
     QIntValidator *intValidator = new QIntValidator();
 
@@ -118,6 +117,9 @@ objectOverview::objectOverview(QWidget *parent, QSqlTableModel* model, QAbstract
     ui->lineEdit_square->setValidator(doubleValidator);
     ui->lineEdit_year->setValidator(intValidator);
     ui->lineEdit_floor_amount->setValidator(intValidator);
+
+    isRequested = setRequests();
+    setPurhcases();
 
     extendedModel = new QSqlTableModel(this);
     extendedModel->setTable(tableName);
@@ -127,7 +129,7 @@ objectOverview::objectOverview(QWidget *parent, QSqlTableModel* model, QAbstract
 
     fillTableHeaders(itemModel, tableName);
 
-    int rowOfObject = findID(extendedModel);
+    int rowOfObject = findID(extendedModel, ui->lineEdit_ID->text().toInt());
 
     for (int i = 0; i < itemModel->rowCount(); i++) {
         QModelIndex index = extendedModel->index(rowOfObject, i + 1);
@@ -160,6 +162,110 @@ objectOverview::~objectOverview()
     delete itemModel;
 }
 
+bool objectOverview::setRequests() {
+    QSqlTableModel* tempModelReq = new QSqlTableModel();
+    tempModelReq->setTable(REQUESTS);
+    tempModelReq->select();
+
+    QSqlTableModel* tempModelAcc = new QSqlTableModel();
+    tempModelAcc->setTable(ACCOUNTS);
+    tempModelAcc->select();
+
+    QModelIndex index;
+    QString name;
+    int clientRow = -1;
+
+    for (int row = 0; row < tempModelReq->rowCount(); row++) {
+        index = tempModelReq->index(row, ID_COL);
+        if (tempModelReq->data(index).toInt() == ui->lineEdit_ID->text().toInt()) {
+            index = tempModelReq->index(row, 1);    //id клиента
+            clientRow = findID(tempModelAcc, tempModelReq->data(index).toInt());
+            break;
+        }
+    }
+
+    if (clientRow == -1) {
+        return false;
+    }
+
+    index = tempModelAcc->index(clientRow, 1);      //имя клиента
+    name = tempModelAcc->data(index).toString();
+
+    for (int i = 0; i < ui->comboBox_client->count(); i++) {
+        if (ui->comboBox_client->itemText(i) == name) {
+            ui->comboBox_client->setCurrentIndex(i);
+
+            ui->checkBox_deal->setEnabled(false);
+            ui->checkBox_deal->setChecked(true);
+            ui->checkBox_auth->setEnabled(false);
+            ui->checkBox_auth->setChecked(true);
+
+            ui->comboBox_client->setEnabled(false);
+            return true;
+        }
+    }
+    return false;
+}
+
+void objectOverview::setPurhcases() {
+    QSqlTableModel* tempModelDeals = new QSqlTableModel();
+    tempModelDeals->setTable(DEALS);
+    tempModelDeals->select();
+
+    QSqlTableModel* tempModelAcc = new QSqlTableModel();
+    tempModelAcc->setTable(ACCOUNTS);
+    tempModelAcc->select();
+
+    QModelIndex index;
+    QString rieltorName;
+    QString clientName;
+    int rieltorRow = -1;
+    int clientRow = -1;
+
+    for (int row = 0; row < tempModelDeals->rowCount(); row++) {
+        index = tempModelDeals->index(row, ID_COL);
+        if (tempModelDeals->data(index).toInt() == ui->lineEdit_ID->text().toInt()) {
+            index = tempModelDeals->index(row, 1);    //id риелтора
+            rieltorRow = findID(tempModelAcc, tempModelDeals->data(index).toInt());
+            index = tempModelDeals->index(row, 2);    //id клиента
+            clientRow = findID(tempModelAcc, tempModelDeals->data(index).toInt());
+            break;
+        }
+    }
+
+    if (clientRow == -1 || rieltorRow == -1) {
+        return;
+    }
+
+    index = tempModelAcc->index(rieltorRow, 1);      //имя риелтора
+    rieltorName = tempModelAcc->data(index).toString();
+
+    index = tempModelAcc->index(clientRow, 1);      //имя клиента
+    clientName = tempModelAcc->data(index).toString();
+
+    for (int i = 0; i < ui->comboBox_rieltor->count(); i++) {
+        if (ui->comboBox_rieltor->itemText(i) == rieltorName) {
+            ui->comboBox_rieltor->setCurrentIndex(i);
+        }
+    }
+
+    for (int i = 0; i < ui->comboBox_client->count(); i++) {
+        if (ui->comboBox_client->itemText(i) == clientName) {
+            ui->comboBox_client->setCurrentIndex(i);
+        }
+    }
+
+    ui->checkBox_deal->setEnabled(false);
+    ui->checkBox_deal->setChecked(true);
+    ui->checkBox_auth->setEnabled(false);
+    ui->checkBox_auth->setChecked(true);
+
+    ui->pushButton_deal->setEnabled(false);
+
+    ui->comboBox_deal->setEnabled(false);
+    ui->comboBox_rieltor->setEnabled(false);
+    ui->comboBox_client->setEnabled(false);
+}
 
 void objectOverview::on_checkBox_deal_stateChanged(int arg1)
 {
@@ -182,14 +288,14 @@ void objectOverview::on_checkBox_deal_stateChanged(int arg1)
         ui->comboBox_client->setCurrentIndex(-1);    }
 }
 
-int objectOverview::findID(QAbstractItemModel* model) {
+int objectOverview::findID(QAbstractItemModel* model, int ID) {
     QModelIndex index;
     QVariant data;
 
     for (int row = 0; row < model->rowCount(); row++) {
         index = model->index(row, 0);
-        data = model->data(index).toString();
-        if (data.toString() == ui->lineEdit_ID->text())
+        data = model->data(index);
+        if (data.toInt() == ID)
             return row;
     }
     return -1;
@@ -240,7 +346,7 @@ void objectOverview::on_pushButton_save_clicked()
     }
 
     QModelIndex index;
-    int rowToUpdate = findID(model);
+    int rowToUpdate = findID(model, ui->lineEdit_ID->text().toInt());
 
     realEstate = new RealEstate();
 
@@ -301,7 +407,7 @@ void objectOverview::on_pushButton_save_clicked()
     index = model->index(rowToUpdate, DEAL_TYPE_COL);
     model->setData(index, realEstate->getDealType());
 
-    rowToUpdate = findID(extendedModel);
+    rowToUpdate = findID(extendedModel, ui->lineEdit_ID->text().toInt());
 
     if (propertyType == APARTMENT_RUS) {
         extendedModel->setTable(APARTMENT_ENG);
@@ -402,7 +508,7 @@ void objectOverview::on_pushButton_save_clicked()
 
     if (model->submitAll() && extendedModel->submitAll()) {
         QMessageBox::information(this, "Успех", "Изменения сохранены.");
-        parent->close();
+        //parent->close();
     }
     else {
         QMessageBox::warning(this, "Ошибка", "Что-то пошло не так...");
@@ -616,9 +722,9 @@ void objectOverview::on_pushButton_deal_clicked()
     QDialog* dialog = new QDialog();
 
     if (ui->checkBox_auth->isChecked())
-        makeDeal = new MakeDeal(dialog, ui->lineEdit_ID->text(), ui->comboBox_rieltor->currentText(), ui->comboBox_client->currentText());
+        makeDeal = new MakeDeal(dialog, parent, isRequested, ui->lineEdit_ID->text(), ui->comboBox_rieltor->currentText(), ui->comboBox_client->currentText());
     else
-        makeDeal = new MakeDeal(dialog, ui->lineEdit_ID->text(), ui->comboBox_rieltor->currentText());
+        makeDeal = new MakeDeal(dialog, parent, isRequested, ui->lineEdit_ID->text(), ui->comboBox_rieltor->currentText());
 
     dialog->setModal(true);
     dialog->setWindowTitle("Заключение сделки");

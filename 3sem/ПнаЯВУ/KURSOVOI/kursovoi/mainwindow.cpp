@@ -79,6 +79,14 @@ void MainWindow::on_pushButton_real_estate_applications_clicked()
 
 void MainWindow::on_pushButton_deals_clicked()
 {
+    QDialog* dialog = new QDialog(this);
+    RealEstateBase* pur = new RealEstateBase(dialog, "purchases");
+    dialog->setModal(true);
+    dialog->setWindowTitle("Заключенные сделки");
+    dialog->setFixedSize(550, 450);
+    pur->setParent(dialog);
+    pur->show();
 
+    dialog->exec();
 }
 

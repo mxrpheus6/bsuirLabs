@@ -269,7 +269,7 @@ void objectAdding::on_pushButton_save_clicked()
     }
 
     if (model->submitAll() && extendedModel->submitAll()) {
-        QMessageBox::information(this, "Успех", "Изменения сохранены.");
+        QMessageBox::information(this, "Успех", "Объект успешно добавлен!");
         parent->close();
 
     } else {

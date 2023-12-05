@@ -17,6 +17,7 @@
 
 #include <cfloat>
 
+
 #include <QWidget>
 #include <QtSql>
 #include <QDataWidgetMapper>
@@ -24,7 +25,7 @@
 #include <QStandardItem>
 #include <QStandardItemModel>
 #include <QMessageBox>
-//#include <QMenuBar>
+#include <QMenuBar>
 
 #include "objectoverview.h"
 #include "objectadding.h"
@@ -46,7 +47,10 @@ public:
     void setFilters();
     void createEmptyTable(QSqlTableModel *model);
     int findID(QAbstractItemModel* model, int ID);
+    int findIDTwoFields(QAbstractItemModel* model, int ID1, int ID2);
+    QStandardItemModel* baseFilter(QAbstractItemModel *originalModel);
     QStandardItemModel* requestsFilter(QAbstractItemModel *originalModel);
+    QStandardItemModel* purchasesFilter(QAbstractItemModel *originalModel);
 
 public slots:
     void onObjectOverviewSaveClicked();
@@ -93,6 +97,8 @@ private slots:
     void on_comboBox_floor_amount_currentTextChanged(const QString &arg1);
 
     void on_comboBox_deal_currentTextChanged(const QString &arg1);
+
+    void on_pushButton_reject_clicked();
 
 private:
     Ui::RealEstateBase *ui;

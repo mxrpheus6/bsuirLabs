@@ -1,14 +1,16 @@
 #include "makedeal.h"
 #include "ui_makedeal.h"
 
-MakeDeal::MakeDeal(QWidget *parent, QString propertyID, QString rieltorName, QString clientName) :
+MakeDeal::MakeDeal(QWidget *parent, QWidget *parentOfParent, bool isRequested, QString propertyID, QString rieltorName, QString clientName) :
     QWidget(parent),
     ui(new Ui::MakeDeal)
 {
     ui->setupUi(this);
     this->propertyID = propertyID.toInt();
     this->parent = parent;
+    this->parentOfParent = parentOfParent;
     this->rieltorName = rieltorName;
+    this->isRequested = isRequested;
 
     ui->lineEdit_clientID->setReadOnly(true);
 
@@ -81,6 +83,19 @@ int MakeDeal::findUserRowByID(QString ID) {
     return -1;
 }
 
+int MakeDeal::findID(QAbstractItemModel* model, int ID) {
+    QModelIndex index;
+    QVariant data;
+
+    for (int row = 0; row < model->rowCount(); row++) {
+           index = model->index(row, 0);
+           data = model->data(index);
+           if (data.toInt() == ID)
+               return row;
+    }
+    return -1;
+}
+
 int MakeDeal::generateID() {
     QModelIndex index;
     QVariant data;
@@ -103,6 +118,23 @@ MakeDeal::~MakeDeal()
     delete ui;
 }
 
+void MakeDeal::removeRequest() {
+    QSqlTableModel* tempModel = new QSqlTableModel();
+    tempModel->setTable(REQUESTS);
+    tempModel->select();
+
+    QModelIndex index;
+
+    for (int row = 0; row < tempModel->rowCount(); row++) {
+        index = tempModel->index(row, ID_COL);
+        if (tempModel->data(index).toInt() == propertyID) {
+            tempModel->removeRow(row);
+            tempModel->select();
+            return;
+        }
+    }
+}
+
 void MakeDeal::on_pushButton_deal_clicked()
 {
     if (!checkEmpty()) {
@@ -122,9 +154,6 @@ void MakeDeal::on_pushButton_deal_clicked()
     index = model->index(rieltorRow, ID_COL);
     int rieltorID = model->data(index).toInt();
 
-    QDateTime currentTime = QDateTime::currentDateTime();
-    QString timeString = currentTime.toString("dd.MM.yyyy HH:mm:ss");
-
     index = tempModel->index(rowToAdd, 0);
     tempModel->setData(index, propertyID);
 
@@ -134,8 +163,6 @@ void MakeDeal::on_pushButton_deal_clicked()
     index = tempModel->index(rowToAdd, 2);
     tempModel->setData(index, ui->lineEdit_clientID->text().toInt());
 
-    index = tempModel->index(rowToAdd, 3);
-    tempModel->setData(index, timeString);
 
     int rowToUpdate = findUserRowByID(ui->lineEdit_clientID->text());
     if (rowToUpdate == -1) {
@@ -178,11 +205,17 @@ void MakeDeal::on_pushButton_deal_clicked()
     index = model->index(rowToUpdate, 6);
     model->setData(index, client->getAccess());
 
+
+
     if (tempModel->submitAll() && model->submitAll()) {
         QMessageBox::information(this, "Успех", "Сделка совершена!");
         parent->close();
-
-    } else {
+        parentOfParent->close();
+        if (isRequested) {
+            removeRequest();
+        }
+    }
+    else {
         QMessageBox::warning(this, "Ошибка", "Что-то пошло не так...");
     }
 }

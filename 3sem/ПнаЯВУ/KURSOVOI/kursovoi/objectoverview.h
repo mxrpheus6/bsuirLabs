@@ -44,8 +44,9 @@ class objectOverview : public QWidget
 
 public:
     explicit objectOverview(QWidget *parent, QSqlTableModel* model, QAbstractItemModel* resModel, QString tableName, int objectRow);
-
-    int findID(QAbstractItemModel* model);
+    bool setRequests();
+    void setPurhcases();
+    int findID(QAbstractItemModel* model, int ID);
     void fillTableHeaders(QStandardItemModel* model, QString tableName);
     void updateExtended(const std::vector<QString> vector, int rowToUpdate);
     bool checkEmptySave();
@@ -96,6 +97,8 @@ private:
     House* house;
     Office* office;
     MakeDeal* makeDeal;
+
+    bool isRequested;
 
     const std::vector<QString> fields_apartment = {"Пл-дь кухни, м2", "Этажность", "Тип дома", "Балкон", "Лифт", "Потолок, м", "Паркинг", "Консьерж"};
     const std::vector<QString> fields_house = {"Пл-дь участка, м2", "Пл-дь кухни, м2", "Материал стен", "Материал крыши", "Камин", "Гараж", "Отопление", "Канализация", "Водоснабжение"};
