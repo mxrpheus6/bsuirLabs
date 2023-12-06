@@ -1,18 +1,6 @@
 #ifndef REALESTATEBASE_H
 #define REALESTATEBASE_H
 
-/*#define TABLE_NAME "Estate"
-#define ID_COL 0
-#define PROPERTY_TYPE_COL 1
-#define DEAL_TYPE_COL 2
-#define DISTRICT_COL 3
-#define ADDRESS_COL 4
-#define DESCRIPTION_COL 5
-#define SQUARE_COL 6
-#define FLOOR_AMOUNT_COL 7
-#define YEAR_COL 8
-#define PRICE_COL 9*/
-
 #include "defines.h"
 
 #include <cfloat>
@@ -39,7 +27,7 @@ class RealEstateBase : public QWidget
     Q_OBJECT
 
 public:
-    explicit RealEstateBase(QWidget *parent, QString mode);
+    explicit RealEstateBase(QWidget *parent, QString mode, QString access = "rieltor", int ID = -1);
     ~RealEstateBase();
     static bool numericCompare(const QString &str1, const QString &str2);
     QStandardItemModel* applyFilterCombobox(QAbstractItemModel *originalModel, int colIndex, QComboBox *cb);
@@ -109,6 +97,8 @@ private:
     QIntValidator *intValidator;
 
     QString mode;
+    QString access;
+    int userID;
     int currentRow = -1;
 };
 

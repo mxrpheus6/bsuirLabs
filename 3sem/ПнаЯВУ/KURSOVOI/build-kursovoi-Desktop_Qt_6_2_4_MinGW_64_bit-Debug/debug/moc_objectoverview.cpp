@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_objectOverview_t {
-    const uint offsetsAndSize[34];
-    char stringdata0[426];
+    const uint offsetsAndSize[36];
+    char stringdata0[456];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(offsetof(qt_meta_stringdata_objectOverview_t, stringdata0) + ofs), len 
@@ -45,7 +45,8 @@ QT_MOC_LITERAL(304, 26), // "on_pushButton_deal_clicked"
 QT_MOC_LITERAL(331, 29), // "on_comboBox_rieltor_activated"
 QT_MOC_LITERAL(361, 5), // "index"
 QT_MOC_LITERAL(367, 28), // "on_comboBox_client_activated"
-QT_MOC_LITERAL(396, 29) // "on_checkBox_auth_stateChanged"
+QT_MOC_LITERAL(396, 29), // "on_checkBox_auth_stateChanged"
+QT_MOC_LITERAL(426, 29) // "on_pushButton_request_clicked"
 
     },
     "objectOverview\0saveButtonClickedOverview\0"
@@ -60,7 +61,8 @@ QT_MOC_LITERAL(396, 29) // "on_checkBox_auth_stateChanged"
     "on_pushButton_deal_clicked\0"
     "on_comboBox_rieltor_activated\0index\0"
     "on_comboBox_client_activated\0"
-    "on_checkBox_auth_stateChanged"
+    "on_checkBox_auth_stateChanged\0"
+    "on_pushButton_request_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -70,7 +72,7 @@ static const uint qt_meta_data_objectOverview[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-      13,   14, // methods
+      14,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -78,21 +80,22 @@ static const uint qt_meta_data_objectOverview[] = {
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   92,    2, 0x06,    1 /* Public */,
+       1,    0,   98,    2, 0x06,    1 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       3,    1,   93,    2, 0x08,    2 /* Private */,
-       5,    0,   96,    2, 0x08,    4 /* Private */,
-       6,    0,   97,    2, 0x08,    5 /* Private */,
-       7,    1,   98,    2, 0x08,    6 /* Private */,
-       8,    1,  101,    2, 0x08,    8 /* Private */,
-       9,    1,  104,    2, 0x08,   10 /* Private */,
-      10,    1,  107,    2, 0x08,   12 /* Private */,
-      11,    1,  110,    2, 0x08,   14 /* Private */,
-      12,    0,  113,    2, 0x08,   16 /* Private */,
-      13,    1,  114,    2, 0x08,   17 /* Private */,
-      15,    1,  117,    2, 0x08,   19 /* Private */,
-      16,    1,  120,    2, 0x08,   21 /* Private */,
+       3,    1,   99,    2, 0x08,    2 /* Private */,
+       5,    0,  102,    2, 0x08,    4 /* Private */,
+       6,    0,  103,    2, 0x08,    5 /* Private */,
+       7,    1,  104,    2, 0x08,    6 /* Private */,
+       8,    1,  107,    2, 0x08,    8 /* Private */,
+       9,    1,  110,    2, 0x08,   10 /* Private */,
+      10,    1,  113,    2, 0x08,   12 /* Private */,
+      11,    1,  116,    2, 0x08,   14 /* Private */,
+      12,    0,  119,    2, 0x08,   16 /* Private */,
+      13,    1,  120,    2, 0x08,   17 /* Private */,
+      15,    1,  123,    2, 0x08,   19 /* Private */,
+      16,    1,  126,    2, 0x08,   21 /* Private */,
+      17,    0,  129,    2, 0x08,   23 /* Private */,
 
  // signals: parameters
     QMetaType::Void,
@@ -110,6 +113,7 @@ static const uint qt_meta_data_objectOverview[] = {
     QMetaType::Void, QMetaType::Int,   14,
     QMetaType::Void, QMetaType::Int,   14,
     QMetaType::Void, QMetaType::Int,    4,
+    QMetaType::Void,
 
        0        // eod
 };
@@ -133,6 +137,7 @@ void objectOverview::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         case 10: _t->on_comboBox_rieltor_activated((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
         case 11: _t->on_comboBox_client_activated((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
         case 12: _t->on_checkBox_auth_stateChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 13: _t->on_pushButton_request_clicked(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -155,7 +160,7 @@ const QMetaObject objectOverview::staticMetaObject = { {
     nullptr,
 qt_incomplete_metaTypeArray<qt_meta_stringdata_objectOverview_t
 , QtPrivate::TypeAndForceComplete<objectOverview, std::true_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>
-, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QString &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QString &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QString &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QString &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QString &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>
+, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QString &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QString &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QString &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QString &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QString &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>
 
 
 >,
@@ -182,13 +187,13 @@ int objectOverview::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 13)
+        if (_id < 14)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 13;
+        _id -= 14;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 13)
+        if (_id < 14)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 13;
+        _id -= 14;
     }
     return _id;
 }

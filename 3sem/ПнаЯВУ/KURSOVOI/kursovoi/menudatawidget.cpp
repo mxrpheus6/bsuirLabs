@@ -1,7 +1,7 @@
 #include "menudatawidget.h"
 #include "ui_menudatawidget.h"
 
-MenuDataWidget::MenuDataWidget(QWidget *parent, QString tableName) :
+MenuDataWidget::MenuDataWidget(QWidget *parent, QString access, QString tableName) :
     QWidget(parent),
     ui(new Ui::MenuDataWidget)
 {
@@ -9,6 +9,11 @@ MenuDataWidget::MenuDataWidget(QWidget *parent, QString tableName) :
 
     model = new QSqlTableModel();
     model->setTable(tableName);
+
+    if (access == "client" && tableName == ACCOUNTS) {
+        model->setFilter("access = 'rieltor'");
+    }
+
     model->select();
 
     if (tableName == ACCOUNTS) {
@@ -29,6 +34,23 @@ MenuDataWidget::MenuDataWidget(QWidget *parent, QString tableName) :
     ui->tableView_db->setModel(model);
     ui->tableView_db->setSelectionBehavior(QAbstractItemView::SelectRows);
     ui->tableView_db->verticalHeader()->setVisible(false);
+
+    if (access == "client") {
+
+
+        ui->pushButton_add->setEnabled(false);
+        ui->pushButton_add->setVisible(false);
+        ui->pushButton_del->setEnabled(false);
+        ui->pushButton_del->setVisible(false);
+
+        ui->tableView_db->setColumnHidden(2, true);
+        ui->tableView_db->setColumnHidden(3, true);
+        ui->tableView_db->setColumnHidden(4, true);
+        ui->tableView_db->setColumnHidden(6, true);
+
+        ui->tableView_db->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+        ui->tableView_db->setEditTriggers(QAbstractItemView::NoEditTriggers);
+    }
 }
 
 MenuDataWidget::~MenuDataWidget()

@@ -1,13 +1,15 @@
 #include "realestatebase.h"
 #include "ui_realestatebase.h"
 
-RealEstateBase::RealEstateBase(QWidget *parent, QString mode) :
+RealEstateBase::RealEstateBase(QWidget *parent, QString mode, QString access, int ID) :
     QWidget(parent),
     ui(new Ui::RealEstateBase)
 {
     ui->setupUi(this);
 
     this->mode = mode;
+    this->access = access;
+    userID = ID;
 
     model = new QSqlTableModel();
     model->setTable(ESTATE);
@@ -103,6 +105,15 @@ RealEstateBase::RealEstateBase(QWidget *parent, QString mode) :
     if (mode == "base") {
         ui->pushButton_reject->setEnabled(false);
         ui->pushButton_reject->setVisible(false);
+
+        if (access == "client") {
+            ui->pushButton_add->setEnabled(false);
+            ui->pushButton_add->setVisible(false);
+            ui->pushButton_delete->setEnabled(false);
+            ui->pushButton_delete->setVisible(false);
+
+            ui->pushButton_estate->resize(81, 121);
+        }
     }
     else if (mode == "deals") {
         ui->pushButton_add->setEnabled(false);
@@ -635,12 +646,17 @@ void RealEstateBase::on_pushButton_estate_clicked()
 
         if (data.toString() == APARTMENT_RUS) {
             QDialog* dialog = new QDialog(this);
-            objectOverview* oo = new objectOverview(dialog, model, resModel, "Apartment", currentRow);
+            objectOverview* oo = new objectOverview(dialog, model, resModel, "Apartment", currentRow, access, userID);
 
             dialog->setModal(true);
 
             dialog->setWindowTitle("Карточка квартиры");
-            dialog->setFixedSize(500, 400);
+
+            if (access == "rieltor")
+                dialog->setFixedSize(500, 400);
+            else if (access == "client")
+                dialog->setFixedSize(500, 360);
+
             oo->setParent(dialog);
             oo->show();
 
@@ -650,11 +666,16 @@ void RealEstateBase::on_pushButton_estate_clicked()
         }
         else if (data.toString() == HOUSE_RUS) {
             QDialog* dialog = new QDialog(this);
-            objectOverview* oo = new objectOverview(dialog, model, resModel, "House", currentRow);
+            objectOverview* oo = new objectOverview(dialog, model, resModel, "House", currentRow, access, userID);
 
             dialog->setModal(true);
             dialog->setWindowTitle("Карточка частного дома");
-            dialog->setFixedSize(500, 400);
+
+            if (access == "rieltor")
+                dialog->setFixedSize(500, 400);
+            else if (access == "client")
+                dialog->setFixedSize(500, 360);
+
             oo->setParent(dialog);
             oo->show();
 
@@ -664,11 +685,16 @@ void RealEstateBase::on_pushButton_estate_clicked()
         }
         else if (data.toString() == OFFICE_RUS) {
             QDialog* dialog = new QDialog(this);
-            objectOverview* oo = new objectOverview(dialog, model, resModel, "Office", currentRow);
+            objectOverview* oo = new objectOverview(dialog, model, resModel, "Office", currentRow, access, userID);
 
             dialog->setModal(true);
             dialog->setWindowTitle("Карточка офиса");
-            dialog->setFixedSize(500, 400);
+
+            if (access == "rieltor")
+                dialog->setFixedSize(500, 400);
+            else if (access == "client")
+                dialog->setFixedSize(500, 360);
+
             oo->setParent(dialog);
             oo->show();
 

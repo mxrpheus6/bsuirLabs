@@ -1,7 +1,7 @@
 #include "objectoverview.h"
 #include "ui_objectoverview.h"
 
-objectOverview::objectOverview(QWidget *parent, QSqlTableModel* model, QAbstractItemModel* resModel, QString tableName, int objectRow) :
+objectOverview::objectOverview(QWidget *parent, QSqlTableModel* model, QAbstractItemModel* resModel, QString tableName, int objectRow, QString access, int ID) :
     QWidget(parent),
     ui(new Ui::objectOverview)
 {
@@ -9,6 +9,7 @@ objectOverview::objectOverview(QWidget *parent, QSqlTableModel* model, QAbstract
 
     this->parent = parent;
     this->model = model;
+    userID = ID;
 
     QModelIndex index;
     QVariant data;
@@ -118,8 +119,47 @@ objectOverview::objectOverview(QWidget *parent, QSqlTableModel* model, QAbstract
     ui->lineEdit_year->setValidator(intValidator);
     ui->lineEdit_floor_amount->setValidator(intValidator);
 
-    isRequested = setRequests();
-    setPurhcases();
+    if (access == "rieltor") {
+        ui->pushButton_request->setEnabled(false);
+        ui->pushButton_request->setVisible(false);
+
+        isRequested = setRequests();
+        setPurhcases();
+    }
+    else if (access == "client") {
+        ui->pushButton_deal->setEnabled(false);
+        ui->pushButton_deal->setVisible(false);
+        ui->pushButton_request->setGeometry(230, 290, 251, 51);
+
+
+        ui->plainTextEdit_description->setReadOnly(true);
+        ui->lineEdit_address->setReadOnly(true);
+        ui->lineEdit_floor_amount->setReadOnly(true);
+        ui->lineEdit_price->setReadOnly(true);
+        ui->lineEdit_square->setReadOnly(true);
+        ui->lineEdit_year->setReadOnly(true);
+
+        ui->comboBox_district->setEnabled(false);
+        ui->comboBox_deal->setEnabled(false);
+        ui->comboBox_rieltor->setEnabled(false);
+        ui->comboBox_rieltor->setVisible(false);
+        ui->comboBox_client->setEnabled(false);
+        ui->comboBox_client->setVisible(false);
+
+        ui->checkBox_auth->setVisible(false);
+        ui->checkBox_deal->setVisible(false);
+
+        ui->tableView_extended->setEditTriggers(QAbstractItemView::NoEditTriggers);
+
+        ui->pushButton_save->setEnabled(false);
+        ui->pushButton_save->setVisible(false);
+        ui->pushButton_deal->setEnabled(false);
+        ui->pushButton_deal->setVisible(false);
+
+        ui->label_client->setVisible(false);
+        ui->label_rieltor->setVisible(false);
+    }
+
 
     extendedModel = new QSqlTableModel(this);
     extendedModel->setTable(tableName);
@@ -673,7 +713,6 @@ void objectOverview::on_plainTextEdit_description_textChanged()
     ui->plainTextEdit_description->setStyleSheet("");
 }
 
-
 void objectOverview::on_lineEdit_address_textChanged(const QString &arg1)
 {
     Q_UNUSED(arg1);
@@ -770,3 +809,47 @@ QVariant objectOverview::getDataFromItemModel(int row) {
     return tempData;
 }
 
+void objectOverview::on_pushButton_request_clicked()
+{
+    QSqlTableModel* tempModelReq = new QSqlTableModel();
+    tempModelReq->setTable(REQUESTS);
+    tempModelReq->select();
+
+    QModelIndex index;
+
+    for (int row = 0; row < tempModelReq->rowCount(); row++) {
+        index = tempModelReq->index(row, 1);    //столбец id клиента
+        if (tempModelReq->data(index).toInt() == userID) {
+            QMessageBox::information(this, "Информация", "Вы можете оставить только одну заявку. С вами скоро свяжется риелтор!");
+            return;
+        }
+    }
+
+    for (int row = 0; row < tempModelReq->rowCount(); row++) {
+        index = tempModelReq->index(row, ID_COL);
+        if (tempModelReq->data(index).toInt() == ui->lineEdit_ID->text().toInt()) {
+            index = tempModelReq->index(row, 1);    //столбец id клиента
+            if (tempModelReq->data(index).toInt() != userID) {
+                QMessageBox::information(this, "Информация", "Кто-то другой уже оставил заявку на этот объект. В случае отклонения этой заявки, вы сможете оставить заявку.");
+                return;
+            }
+        }
+    }
+
+    int rowToAdd = tempModelReq->rowCount();
+    tempModelReq->insertRow(rowToAdd);
+
+    index = tempModelReq->index(rowToAdd, ID_COL);
+    tempModelReq->setData(index, ui->lineEdit_ID->text());
+
+    index = tempModelReq->index(rowToAdd, 1);
+    tempModelReq->setData(index, userID);
+
+    if (tempModelReq->submitAll()) {
+        QMessageBox::information(this, "Успех", "Заявка успешно оформлена!");
+        parent->close();
+
+    } else {
+        QMessageBox::warning(this, "Ошибка", "Что-то пошло не так...");
+    }
+}

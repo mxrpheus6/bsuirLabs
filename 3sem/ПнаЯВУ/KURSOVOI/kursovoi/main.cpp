@@ -12,8 +12,9 @@ int main(int argc, char *argv[])
     Authorization au;
     au.show();
 
-    QObject::connect(&au, &Authorization::authorizationSuccess, &w, [&]() {
-        au.hide();
+    QObject::connect(&au, &Authorization::authorizationSuccess, &w, [&](QString access, int ID) {
+        au.close();
+        w.handleAuthorizationSuccessWithAccess(access, ID);
         w.show();
     });
 

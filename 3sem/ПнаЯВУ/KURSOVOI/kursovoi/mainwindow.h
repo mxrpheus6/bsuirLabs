@@ -1,9 +1,6 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-/*#define ACCOUNTS "Accounts"
-#define DISTRICTS "Districts"
-#define ESTATE "Estate"*/
 
 #include <QApplication>
 #include <QMainWindow>
@@ -14,7 +11,6 @@
 
 #include "menudatawidget.h"
 #include "realestatebase.h"
-#include "requests.h"
 #include "defines.h"
 
 QT_BEGIN_NAMESPACE
@@ -40,6 +36,9 @@ private slots:
 
     void on_pushButton_deals_clicked();
 
+public slots:
+    void handleAuthorizationSuccessWithAccess(QString access, int ID);
+
 private:
     Ui::MainWindow *ui;
     QMainWindow *realtorWindow;
@@ -47,5 +46,8 @@ private:
     MenuDataWidget *mw;
     QSqlDatabase db;
     QSqlTableModel *model;
+
+    QString access;
+    int userID;
 };
 #endif // MAINWINDOW_H

@@ -43,26 +43,30 @@ void Authorization::on_pushButton_login_clicked()
     QString login = ui->lineEditUsername->text();
     QString password = ui->lineEditPassword->text();
 
-    bool authenticated;
+    bool authenticated = false;
     QSqlQuery query;
     query.prepare("SELECT * FROM Accounts WHERE login = :login AND password = :password");
     query.bindValue(":login", login);
     query.bindValue(":password", password);
 
     if (query.exec()) {
-        authenticated = false;
-
-        while (query.next()) {
+        if (query.next()) {
             authenticated = true;
-        }
-
-        if (authenticated) {
+            QString access = query.value("access").toString();
+            int ID = query.value("ID").toInt();
             QMessageBox::information(this, "Вход", "Успешно!");
-            emit authorizationSuccess();
-        }
-        else {
-            QMessageBox::warning(this, "Вход", "Неверный логин и\\или пароль!");
-            ui->lineEditPassword->clear();
+            emit authorizationSuccess(access, ID);
         }
     }
+
+    if (!authenticated) {
+        QMessageBox::warning(this, "Вход", "Неверный логин и\\или пароль!");
+        ui->lineEditPassword->clear();
+    }
 }
+
+void Authorization::on_pushButton_register_clicked()
+{
+
+}
+

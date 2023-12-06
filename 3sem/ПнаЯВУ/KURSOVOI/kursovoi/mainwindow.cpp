@@ -22,12 +22,31 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+void MainWindow::handleAuthorizationSuccessWithAccess(QString access, int ID) {
+    this->access = access;
+    userID = ID;
+
+    if (access == "client") {
+        ui->pushButton_real_estate_base->resize(621, 201);
+
+        ui->pushButton_deals->setEnabled(false);
+        ui->pushButton_deals->setVisible(false);
+        ui->pushButton_real_estate_applications->setEnabled(false);
+        ui->pushButton_real_estate_applications->setVisible(false);
+    }
+}
+
 void MainWindow::on_action_realtors_triggered()
 {
     QDialog* dialog = new QDialog(this);
-    MenuDataWidget* mw = new MenuDataWidget(dialog, ACCOUNTS);
+    MenuDataWidget* mw = new MenuDataWidget(dialog, access, ACCOUNTS);
     dialog->setModal(true);
-    dialog->setWindowTitle("Риелторы");
+
+    if (access == "client")
+        dialog->setWindowTitle("Риелторы");
+    else if(access == "rieltor")
+        dialog->setWindowTitle("Риелторы и клиенты");
+
     dialog->setFixedSize(400, 300);
     mw->setParent(dialog);
     mw->show();
@@ -39,7 +58,7 @@ void MainWindow::on_action_realtors_triggered()
 void MainWindow::on_action_districts_triggered()
 {
     QDialog* dialog = new QDialog(this);
-    MenuDataWidget* mw = new MenuDataWidget(dialog, DISTRICTS);
+    MenuDataWidget* mw = new MenuDataWidget(dialog, access, DISTRICTS);
     dialog->setModal(true);
     dialog->setWindowTitle("Районы");
     dialog->setFixedSize(400, 300);
@@ -52,7 +71,7 @@ void MainWindow::on_action_districts_triggered()
 void MainWindow::on_pushButton_real_estate_base_clicked()
 {
     QDialog* dialog = new QDialog(this);
-    RealEstateBase* reb = new RealEstateBase(dialog, "base");
+    RealEstateBase* reb = new RealEstateBase(dialog, "base", access, userID);
     dialog->setModal(true);
     dialog->setWindowTitle("База недвижимости");
     dialog->setFixedSize(550, 450);

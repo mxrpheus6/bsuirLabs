@@ -15,7 +15,7 @@ class MenuDataWidget : public QWidget
     Q_OBJECT
 
 public:
-    explicit MenuDataWidget(QWidget *parent, QString tableName);
+    explicit MenuDataWidget(QWidget *parent, QString access, QString tableName);
     ~MenuDataWidget();
 
 private slots:

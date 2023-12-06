@@ -24,10 +24,12 @@ public:
     void setAuthorizationResult(bool result);
 
 signals:
-    void authorizationSuccess();
+    void authorizationSuccess(QString access, int ID);
 
 private slots:
     void on_pushButton_login_clicked();
+
+    void on_pushButton_register_clicked();
 
 private:
     Ui::Authorization *ui;

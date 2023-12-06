@@ -21,8 +21,7 @@ SOURCES += \
     objectoverview.cpp \
     office.cpp \
     realestate.cpp \
-    realestatebase.cpp \
-    requests.cpp
+    realestatebase.cpp
 
 HEADERS += \
     apartment.h \
@@ -37,8 +36,7 @@ HEADERS += \
     objectoverview.h \
     office.h \
     realestate.h \
-    realestatebase.h \
-    requests.h
+    realestatebase.h
 
 FORMS += \
     authorization.ui \
@@ -47,8 +45,7 @@ FORMS += \
     menudatawidget.ui \
     objectadding.ui \
     objectoverview.ui \
-    realestatebase.ui \
-    requests.ui
+    realestatebase.ui
 
 win32:RC_FILE = D:\BSUIR\bsuirLabs\3sem\ПнаЯВУ\KURSOVOI\build-kursovoi-Desktop_Qt_6_2_4_MinGW_64_bit-Debug\img\icon.rc
 
