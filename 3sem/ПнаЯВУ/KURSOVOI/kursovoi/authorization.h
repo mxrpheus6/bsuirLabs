@@ -7,6 +7,8 @@
 #include <QDebug>
 #include <QPixMap>
 
+#include "registration.h"
+
 
 namespace Ui {
 class Authorization;

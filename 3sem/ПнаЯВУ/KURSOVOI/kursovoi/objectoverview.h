@@ -40,8 +40,8 @@ public:
 
     ~objectOverview();
 
-signals:
-    void saveButtonClickedOverview();
+//signals:
+    //void saveButtonClickedOverview();
 
 private slots:
     void on_checkBox_deal_stateChanged(int arg1);
@@ -77,11 +77,14 @@ private:
     QSqlTableModel* extendedModel;
     QStandardItemModel *itemModel;
 
-    RealEstate* realEstate;
-    Apartment* apartment;
-    House* house;
-    Office* office;
-    MakeDeal* makeDeal;
+    QDoubleValidator *doubleValidator;
+    QIntValidator *intValidator;
+
+    RealEstate* realEstate = nullptr;
+    Apartment* apartment = nullptr;
+    House* house = nullptr;
+    Office* office = nullptr;
+    MakeDeal* makeDeal = nullptr;
 
     bool isRequested;
     int userID;

@@ -48,7 +48,7 @@ public:
         lineEdit_clientID->setGeometry(QRect(10, 30, 61, 24));
         label_2 = new QLabel(MakeDeal);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(91, 10, 81, 16));
+        label_2->setGeometry(QRect(91, 10, 181, 16));
         lineEdit_name = new QLineEdit(MakeDeal);
         lineEdit_name->setObjectName(QString::fromUtf8("lineEdit_name"));
         lineEdit_name->setGeometry(QRect(90, 30, 201, 24));
@@ -90,8 +90,9 @@ public:
     {
         MakeDeal->setWindowTitle(QCoreApplication::translate("MakeDeal", "Form", nullptr));
         label->setText(QCoreApplication::translate("MakeDeal", "ID \320\272\320\273\320\270\320\265\320\275\321\202\320\260", nullptr));
-        label_2->setText(QCoreApplication::translate("MakeDeal", "\320\244\320\230\320\236 \320\272\320\273\320\270\320\265\320\275\321\202\320\260", nullptr));
+        label_2->setText(QCoreApplication::translate("MakeDeal", "\320\244\320\260\320\274\320\270\320\273\320\270\320\273\321\217 \320\270 \320\270\320\275\320\270\321\206\320\270\320\260\320\273\321\213 \320\272\320\273\320\270\320\265\320\275\321\202\320\260", nullptr));
         label_3->setText(QCoreApplication::translate("MakeDeal", "\320\233\320\276\320\263\320\270\320\275", nullptr));
+        lineEdit_login->setPlaceholderText(QString());
         label_4->setText(QCoreApplication::translate("MakeDeal", "\320\237\320\260\321\200\320\276\320\273\321\214", nullptr));
         label_5->setText(QCoreApplication::translate("MakeDeal", "\320\237\320\260\321\201\320\277\320\276\321\200\321\202", nullptr));
         label_6->setText(QCoreApplication::translate("MakeDeal", "\320\242\320\265\320\273\320\265\321\204\320\276\320\275", nullptr));

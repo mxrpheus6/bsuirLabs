@@ -17,13 +17,13 @@ MenuDataWidget::MenuDataWidget(QWidget *parent, QString access, QString tableNam
     model->select();
 
     if (tableName == ACCOUNTS) {
-        model->setHeaderData(0, Qt::Horizontal, "ID");
-        model->setHeaderData(1, Qt::Horizontal, "ФИО");
-        model->setHeaderData(2, Qt::Horizontal, "Логин");
-        model->setHeaderData(3, Qt::Horizontal, "Пароль");
-        model->setHeaderData(4, Qt::Horizontal, "Паспорт");
-        model->setHeaderData(5, Qt::Horizontal, "Телефон");
-        model->setHeaderData(6, Qt::Horizontal, "Права доступа");
+        model->setHeaderData(ID_COL, Qt::Horizontal, "ID");
+        model->setHeaderData(NAME_COL, Qt::Horizontal, "ФИО");
+        model->setHeaderData(LOGIN_COL, Qt::Horizontal, "Логин");
+        model->setHeaderData(PASSWORD_COL, Qt::Horizontal, "Пароль");
+        model->setHeaderData(PASSPORT_COL, Qt::Horizontal, "Паспорт");
+        model->setHeaderData(PHONE_COL, Qt::Horizontal, "Телефон");
+        model->setHeaderData(ACCESS_COL, Qt::Horizontal, "Права доступа");
         ui->tableView_db->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
     }
     else if (tableName == DISTRICTS) {
@@ -43,10 +43,10 @@ MenuDataWidget::MenuDataWidget(QWidget *parent, QString access, QString tableNam
         ui->pushButton_del->setEnabled(false);
         ui->pushButton_del->setVisible(false);
 
-        ui->tableView_db->setColumnHidden(2, true);
-        ui->tableView_db->setColumnHidden(3, true);
-        ui->tableView_db->setColumnHidden(4, true);
-        ui->tableView_db->setColumnHidden(6, true);
+        ui->tableView_db->setColumnHidden(LOGIN_COL, true);
+        ui->tableView_db->setColumnHidden(PASSWORD_COL, true);
+        ui->tableView_db->setColumnHidden(PASSPORT_COL, true);
+        ui->tableView_db->setColumnHidden(ACCESS_COL, true);
 
         ui->tableView_db->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
         ui->tableView_db->setEditTriggers(QAbstractItemView::NoEditTriggers);

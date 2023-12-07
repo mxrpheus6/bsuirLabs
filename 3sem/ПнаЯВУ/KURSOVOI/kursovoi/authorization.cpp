@@ -67,6 +67,16 @@ void Authorization::on_pushButton_login_clicked()
 
 void Authorization::on_pushButton_register_clicked()
 {
+    QDialog* dialog = new QDialog(this);
+    Registration* reg = new Registration(dialog);
+    dialog->setModal(true);
+    dialog->setWindowTitle("Регистрация");
+    dialog->setFixedSize(360, 240);
+    reg->setParent(dialog);
+    reg->show();
 
+    dialog->exec();
+
+    delete reg;
 }
 

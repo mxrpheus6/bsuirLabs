@@ -41,12 +41,12 @@
     <rect>
      <x>91</x>
      <y>10</y>
-     <width>81</width>
+     <width>181</width>
      <height>16</height>
     </rect>
    </property>
    <property name="text">
-    <string>ФИО клиента</string>
+    <string>Фамилиля и инициалы клиента</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_name">
@@ -80,6 +80,9 @@
      <width>81</width>
      <height>24</height>
     </rect>
+   </property>
+   <property name="placeholderText">
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="label_4">

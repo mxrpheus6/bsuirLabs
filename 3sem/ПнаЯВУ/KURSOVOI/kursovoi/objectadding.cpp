@@ -50,7 +50,6 @@ objectAdding::objectAdding(QWidget *parent, QSqlTableModel* model) :
     int propertySize = sizeof(propertyArr) / sizeof(propertyArr[0]);
     for (int i = 0; i < propertySize; i++) {
         ui->comboBox_type->addItem(propertyArr[i]);
-
     }
 
     int newID = generateID();
@@ -64,10 +63,17 @@ objectAdding::~objectAdding()
 {
     delete ui;
 
-    delete parent;
-    delete model;
     delete extendedModel;
     delete itemModel;
+
+    if (realEstate != nullptr)
+        delete realEstate;
+    if (apartment != nullptr)
+        delete apartment;
+    if (house != nullptr)
+        delete house;
+    if (office != nullptr)
+        delete office;
 }
 
 int objectAdding::generateID() {
@@ -174,28 +180,28 @@ void objectAdding::on_pushButton_save_clicked()
         index = extendedModel->index(rowToAdd, ID_COL);
         extendedModel->setData(index, apartment->getID());
 
-        index = extendedModel->index(rowToAdd, 1);
+        index = extendedModel->index(rowToAdd, APARTMENT_KITCHEN_COL);
         extendedModel->setData(index, (apartment->getSquareKitchen() == -1.0) ? QVariant() : apartment->getSquareKitchen());
 
-        index = extendedModel->index(rowToAdd, 2);
+        index = extendedModel->index(rowToAdd, APARTMENT_ALL_FLOORS_COL);
         extendedModel->setData(index, (apartment->getAllFloorsAmount() == -1) ? QVariant() : apartment->getAllFloorsAmount());
 
-        index = extendedModel->index(rowToAdd, 3);
+        index = extendedModel->index(rowToAdd, APARTMENT_LAYOUT_COL);
         extendedModel->setData(index, apartment->getLayoutType().isEmpty() ? QVariant() : apartment->getLayoutType());
 
-        index = extendedModel->index(rowToAdd, 4);
+        index = extendedModel->index(rowToAdd, APARTMENT_BALCONY_COL);
         extendedModel->setData(index, apartment->getHasBalcony().isEmpty() ? QVariant() : apartment->getHasBalcony());
 
-        index = extendedModel->index(rowToAdd, 5);
+        index = extendedModel->index(rowToAdd, APARTMENT_ELEVATOR_COL);
         extendedModel->setData(index, apartment->getHasElevator().isEmpty() ? QVariant() : apartment->getHasElevator());
 
-        index = extendedModel->index(rowToAdd, 6);
+        index = extendedModel->index(rowToAdd, APARTMENT_CEILING_COL);
         extendedModel->setData(index, (apartment->getCeilingHeight() == -1.0) ? QVariant() : apartment->getCeilingHeight());
 
-        index = extendedModel->index(rowToAdd, 7);
+        index = extendedModel->index(rowToAdd, APARTMENT_PARKING_COL);
         extendedModel->setData(index, apartment->getHasParking().isEmpty() ? QVariant() : apartment->getHasParking());
 
-        index = extendedModel->index(rowToAdd, 8);
+        index = extendedModel->index(rowToAdd, APARTMENT_CONCIERGE_COL);
         extendedModel->setData(index, apartment->getHasConcierge().isEmpty() ? QVariant() : apartment->getHasConcierge());
     }
     else if (propertyType == HOUSE_RUS) {
@@ -207,31 +213,31 @@ void objectAdding::on_pushButton_save_clicked()
         index = extendedModel->index(rowToAdd, ID_COL);
         extendedModel->setData(index, house->getID());
 
-        index = extendedModel->index(rowToAdd, 1);
+        index = extendedModel->index(rowToAdd, HOUSE_LAND_COL);
         extendedModel->setData(index, (house->getLandSquare() == -1.0) ? QVariant() : house->getLandSquare());
 
-        index = extendedModel->index(rowToAdd, 2);
+        index = extendedModel->index(rowToAdd, HOUSE_KITCHEN_COL);
         extendedModel->setData(index, (house->getKitchenSquare() == -1.0) ? QVariant() : house->getKitchenSquare());
 
-        index = extendedModel->index(rowToAdd, 3);
+        index = extendedModel->index(rowToAdd, HOUSE_WALL_COL);
         extendedModel->setData(index, house->getWallMaterial().isEmpty() ? QVariant() : house->getWallMaterial());
 
-        index = extendedModel->index(rowToAdd, 4);
+        index = extendedModel->index(rowToAdd, HOUSE_ROOF_COL);
         extendedModel->setData(index, house->getRoofMaterial().isEmpty() ? QVariant() : house->getRoofMaterial());
 
-        index = extendedModel->index(rowToAdd, 5);
+        index = extendedModel->index(rowToAdd, HOUSE_FIREPLACE_COL);
         extendedModel->setData(index, house->getHasFireplace().isEmpty() ? QVariant() : house->getHasFireplace());
 
-        index = extendedModel->index(rowToAdd, 6);
+        index = extendedModel->index(rowToAdd, HOUSE_GARAGE_COL);
         extendedModel->setData(index, house->getHasGarage().isEmpty() ? QVariant() : house->getHasGarage());
 
-        index = extendedModel->index(rowToAdd, 7);
+        index = extendedModel->index(rowToAdd, HOUSE_HEATING_COL);
         extendedModel->setData(index, house->getHeatingType().isEmpty() ? QVariant() : house->getHeatingType());
 
-        index = extendedModel->index(rowToAdd, 8);
+        index = extendedModel->index(rowToAdd, HOUSE_SANITATION_COL);
         extendedModel->setData(index, house->getSanitation().isEmpty() ? QVariant() : house->getSanitation());
 
-        index = extendedModel->index(rowToAdd, 9);
+        index = extendedModel->index(rowToAdd, HOUSE_WATER_COL);
         extendedModel->setData(index, house->getWaterSupply().isEmpty() ? QVariant() : house->getWaterSupply());
     }
     else if (propertyType == OFFICE_RUS) {
@@ -243,28 +249,28 @@ void objectAdding::on_pushButton_save_clicked()
         index = extendedModel->index(rowToAdd, ID_COL);
         extendedModel->setData(index, office->getID());
 
-        index = extendedModel->index(rowToAdd, 1);
+        index = extendedModel->index(rowToAdd, OFFICE_CLASS);
         extendedModel->setData(index, office->getOfficeClass().isEmpty() ? QVariant() : office->getOfficeClass());
 
-        index = extendedModel->index(rowToAdd, 2);
+        index = extendedModel->index(rowToAdd, OFFICE_ALL_FLOORS_COL);
         extendedModel->setData(index, (office->getAllFloorsAmount() == -1) ? QVariant() : office->getAllFloorsAmount());
 
-        index = extendedModel->index(rowToAdd, 3);
+        index = extendedModel->index(rowToAdd, OFFICE_WORKSTATIONS_COL);
         extendedModel->setData(index, (office->getWorkstationsAmount() == -1) ? QVariant() : office->getWorkstationsAmount());
 
-        index = extendedModel->index(rowToAdd, 4);
+        index = extendedModel->index(rowToAdd, OFFICE_WALL_COL);
         extendedModel->setData(index, office->getWallMaterial().isEmpty() ? QVariant() : office->getWallMaterial());
 
-        index = extendedModel->index(rowToAdd, 5);
+        index = extendedModel->index(rowToAdd, OFFICE_RENOVATION_COL);
         extendedModel->setData(index, office->getRenovation().isEmpty() ? QVariant() : office->getRenovation());
 
-        index = extendedModel->index(rowToAdd, 6);
+        index = extendedModel->index(rowToAdd, OFFICE_CONFERENCE_COL);
         extendedModel->setData(index, office->getHasConferenceRooms().isEmpty() ? QVariant() : office->getHasConferenceRooms());
 
-        index = extendedModel->index(rowToAdd, 7);
+        index = extendedModel->index(rowToAdd, OFFICE_SECURITY_COL);
         extendedModel->setData(index, office->getHasSecurityFeatures().isEmpty() ? QVariant() : office->getHasSecurityFeatures());
 
-        index = extendedModel->index(rowToAdd, 8);
+        index = extendedModel->index(rowToAdd, OFFICE_TOILET_COL);
         extendedModel->setData(index, office->getHasToilet().isEmpty() ? QVariant() : office->getHasToilet());
     }
 

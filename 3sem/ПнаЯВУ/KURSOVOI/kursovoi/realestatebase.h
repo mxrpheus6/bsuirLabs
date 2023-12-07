@@ -40,8 +40,6 @@ public:
     QStandardItemModel* requestsFilter(QAbstractItemModel *originalModel);
     QStandardItemModel* purchasesFilter(QAbstractItemModel *originalModel);
 
-public slots:
-    void onObjectOverviewSaveClicked();
 
 private slots:
     void on_checkBox_type_stateChanged(int arg1);

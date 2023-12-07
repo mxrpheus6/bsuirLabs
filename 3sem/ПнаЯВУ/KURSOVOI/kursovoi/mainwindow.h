@@ -41,11 +41,7 @@ public slots:
 
 private:
     Ui::MainWindow *ui;
-    QMainWindow *realtorWindow;
-    QMainWindow *districtWindow;
-    MenuDataWidget *mw;
     QSqlDatabase db;
-    QSqlTableModel *model;
 
     QString access;
     int userID;

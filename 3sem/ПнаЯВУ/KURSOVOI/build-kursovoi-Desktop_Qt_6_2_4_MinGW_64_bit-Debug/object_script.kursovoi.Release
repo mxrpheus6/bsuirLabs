@@ -11,6 +11,7 @@ release/objectoverview.o
 release/office.o
 release/realestate.o
 release/realestatebase.o
+release/registration.o
 release/qrc_src.o
 release/moc_authorization.o
 release/moc_mainwindow.o
@@ -19,3 +20,4 @@ release/moc_menudatawidget.o
 release/moc_objectadding.o
 release/moc_objectoverview.o
 release/moc_realestatebase.o
+release/moc_registration.o

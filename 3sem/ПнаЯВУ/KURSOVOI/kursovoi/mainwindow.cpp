@@ -52,6 +52,8 @@ void MainWindow::on_action_realtors_triggered()
     mw->show();
 
     dialog->exec();
+
+    delete mw;
 }
 
 
@@ -66,6 +68,8 @@ void MainWindow::on_action_districts_triggered()
     mw->show();
 
     dialog->exec();
+
+    delete mw;
 }
 
 void MainWindow::on_pushButton_real_estate_base_clicked()
@@ -79,6 +83,8 @@ void MainWindow::on_pushButton_real_estate_base_clicked()
     reb->show();
 
     dialog->exec();
+
+    delete reb;
 }
 
 
@@ -93,6 +99,8 @@ void MainWindow::on_pushButton_real_estate_applications_clicked()
     req->show();
 
     dialog->exec();
+
+    delete req;
 }
 
 
@@ -107,5 +115,7 @@ void MainWindow::on_pushButton_deals_clicked()
     pur->show();
 
     dialog->exec();
+
+    delete pur;
 }
 

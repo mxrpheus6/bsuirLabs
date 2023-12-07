@@ -11,7 +11,7 @@ RealEstateBase::RealEstateBase(QWidget *parent, QString mode, QString access, in
     this->access = access;
     userID = ID;
 
-    model = new QSqlTableModel();
+    model = new QSqlTableModel(this);
     model->setTable(ESTATE);
     createEmptyTable(model);
 
@@ -29,36 +29,32 @@ RealEstateBase::RealEstateBase(QWidget *parent, QString mode, QString access, in
     QVariant value;
 
     //заполнение combobox
-    for (int row = 0; row < model->rowCount(); ++row) {
-        index = model->index(row, PROPERTY_TYPE_COL);
-        value = model->data(index);
-        if (!uniqueValues.contains(value.toString())) {
-            uniqueValues << value.toString();
-        }
-    }
-    ui->comboBox_type->addItems(uniqueValues);
-    uniqueValues.clear();
+    QString dealsArr[] = DEALS_ARR;
+    int dealsSize = sizeof(dealsArr) / sizeof(dealsArr[0]);
+    for (int i = 0; i < dealsSize; i++) {
+        ui->comboBox_deal->addItem(dealsArr[i]);
 
-
-    for (int row = 0; row < model->rowCount(); ++row) {
-        index = model->index(row, DEAL_TYPE_COL);
-        value = model->data(index);
-        if (!uniqueValues.contains(value.toString())) {
-            uniqueValues << value.toString();
-        }
     }
-    ui->comboBox_deal->addItems(uniqueValues);
-    uniqueValues.clear();
 
-    for (int row = 0; row < model->rowCount(); ++row) {
-        index = model->index(row, DISTRICT_COL);
-        value = model->data(index);
-        if (!uniqueValues.contains(value.toString())) {
-            uniqueValues << value.toString();
-        }
+    QString propertyArr[] = PROPERTY_ARR;
+    int propertySize = sizeof(propertyArr) / sizeof(propertyArr[0]);
+    for (int i = 0; i < propertySize; i++) {
+        ui->comboBox_type->addItem(propertyArr[i]);
     }
-    ui->comboBox_district->addItems(uniqueValues);
-    uniqueValues.clear();
+
+    QSqlTableModel* tempModel = new QSqlTableModel();
+
+    tempModel->setTable(DISTRICTS);
+    tempModel->select();
+
+    for (int row = 0; row < tempModel->rowCount(); row++) {
+        index = tempModel->index(row, 0);
+        value = tempModel->data(index);
+
+        ui->comboBox_district->addItem(value.toString());
+    }
+
+    delete tempModel;
 
     for (int row = 0; row < model->rowCount(); ++row) {
         index = model->index(row, FLOOR_AMOUNT_COL);
@@ -70,6 +66,7 @@ RealEstateBase::RealEstateBase(QWidget *parent, QString mode, QString access, in
     std::sort(uniqueValues.begin(), uniqueValues.end(), RealEstateBase::numericCompare);
     ui->comboBox_floor_amount->addItems(uniqueValues);
     uniqueValues.clear();
+
 
     //отключение combobox
     ui->comboBox_type->setEnabled(false);
@@ -83,8 +80,8 @@ RealEstateBase::RealEstateBase(QWidget *parent, QString mode, QString access, in
     ui->comboBox_district->setCurrentIndex(-1);
     ui->comboBox_floor_amount->setCurrentIndex(-1);
 
-    doubleValidator = new QDoubleValidator();
-    intValidator = new QIntValidator();
+    doubleValidator = new QDoubleValidator(this);
+    intValidator = new QIntValidator(this);
 
     //установка валидаторов и отключение lineedit
     ui->lineEdit_square_from->setValidator(doubleValidator);
@@ -139,10 +136,6 @@ RealEstateBase::~RealEstateBase()
     delete resModel;
     delete doubleValidator;
     delete intValidator;
-}
-
-void RealEstateBase::onObjectOverviewSaveClicked() {
-    setFilters();
 }
 
 bool RealEstateBase::numericCompare(const QString &str1, const QString &str2)
@@ -388,6 +381,8 @@ QStandardItemModel* RealEstateBase::baseFilter(QAbstractItemModel *originalModel
         idList.append(tempModel->data(index).toInt());
     }
 
+    delete tempModel;
+
     QStandardItemModel *newModel = new QStandardItemModel();
 
     rowCount = originalModel->rowCount();
@@ -433,6 +428,8 @@ QStandardItemModel* RealEstateBase::requestsFilter(QAbstractItemModel *originalM
         idList.append(tempModel->data(index).toInt());
     }
 
+    delete tempModel;
+
     QStandardItemModel *newModel = new QStandardItemModel();
 
     rowCount = originalModel->rowCount();
@@ -477,6 +474,8 @@ QStandardItemModel* RealEstateBase::purchasesFilter(QAbstractItemModel *original
         index = tempModel->index(row, ID_COL);
         idList.append(tempModel->data(index).toInt());
     }
+
+    delete tempModel;
 
     QStandardItemModel *newModel = new QStandardItemModel();
 
@@ -624,6 +623,7 @@ void RealEstateBase::on_pushButton_delete_clicked()
             setFilters();
             QMessageBox::information(this, "Успех", "Объект успешно удален!");
         }
+        delete extendedModel;
     }
     else {
         QMessageBox::warning(this, "Предупреждение", "Объект для удаления не выбран!");
@@ -662,6 +662,8 @@ void RealEstateBase::on_pushButton_estate_clicked()
 
             dialog->exec();
 
+            delete oo;
+
             setFilters();
         }
         else if (data.toString() == HOUSE_RUS) {
@@ -681,6 +683,8 @@ void RealEstateBase::on_pushButton_estate_clicked()
 
             dialog->exec();
 
+            delete oo;
+
             setFilters();
         }
         else if (data.toString() == OFFICE_RUS) {
@@ -699,6 +703,8 @@ void RealEstateBase::on_pushButton_estate_clicked()
             oo->show();
 
             dialog->exec();
+
+            delete oo;
 
             setFilters();
         }
@@ -755,6 +761,8 @@ void RealEstateBase::on_pushButton_add_clicked()
     oa->show();
 
     dialog->exec();
+
+    delete oa;
 
     ui->tableView_estate->clearSelection();
 
@@ -815,6 +823,7 @@ void RealEstateBase::on_pushButton_reject_clicked()
             QMessageBox::information(this, "Успех", "Заявка успешно отклонена!");
         }
 
+        delete tempModel;
 
     }
     else {

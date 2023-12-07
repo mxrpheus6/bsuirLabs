@@ -28,27 +28,27 @@ MakeDeal::MakeDeal(QWidget *parent, QWidget *parentOfParent, bool isRequested, Q
 
         int currentRow = findUserRow(clientName);
 
-        index = model->index(currentRow, 0);
+        index = model->index(currentRow, ID_COL);
         data = model->data(index);
         ui->lineEdit_clientID->setText(data.toString());
 
-        index = model->index(currentRow, 1);
+        index = model->index(currentRow, NAME_COL);
         data = model->data(index);
         ui->lineEdit_name->setText(data.toString());
 
-        index = model->index(currentRow, 2);
+        index = model->index(currentRow, LOGIN_COL);
         data = model->data(index);
         ui->lineEdit_login->setText(data.toString());
 
-        index = model->index(currentRow, 3);
+        index = model->index(currentRow, PASSWORD_COL);
         data = model->data(index);
         ui->lineEdit_password->setText(data.toString());
 
-        index = model->index(currentRow, 4);
+        index = model->index(currentRow, PASSPORT_COL);
         data = model->data(index);
         ui->lineEdit_passport->setText(data.toString());
 
-        index = model->index(currentRow, 5);
+        index = model->index(currentRow, PHONE_COL);
         data = model->data(index);
         ui->lineEdit_phone->setText(data.toString());
     }
@@ -57,12 +57,19 @@ MakeDeal::MakeDeal(QWidget *parent, QWidget *parentOfParent, bool isRequested, Q
 
 }
 
+MakeDeal::~MakeDeal()
+{
+    delete ui;
+
+    delete model;
+}
+
 int MakeDeal::findUserRow(QString user) {
     QModelIndex index;
     QVariant data;
 
     for (int row = 0; row < model->rowCount(); row++) {
-           index = model->index(row, 1);
+           index = model->index(row, NAME_COL);
            data = model->data(index).toString();
            if (data.toString() == user)
                return row;
@@ -75,7 +82,7 @@ int MakeDeal::findUserRowByID(QString ID) {
     QVariant data;
 
     for (int row = 0; row < model->rowCount(); row++) {
-           index = model->index(row, 0);
+           index = model->index(row, ID_COL);
            data = model->data(index).toString();
            if (data.toString() == ID)
                return row;
@@ -88,7 +95,7 @@ int MakeDeal::findID(QAbstractItemModel* model, int ID) {
     QVariant data;
 
     for (int row = 0; row < model->rowCount(); row++) {
-           index = model->index(row, 0);
+           index = model->index(row, ID_COL);
            data = model->data(index);
            if (data.toInt() == ID)
                return row;
@@ -112,12 +119,6 @@ int MakeDeal::generateID() {
     return row;
 }
 
-
-MakeDeal::~MakeDeal()
-{
-    delete ui;
-}
-
 void MakeDeal::removeRequest() {
     QSqlTableModel* tempModel = new QSqlTableModel();
     tempModel->setTable(REQUESTS);
@@ -133,6 +134,7 @@ void MakeDeal::removeRequest() {
             return;
         }
     }
+    delete tempModel;
 }
 
 void MakeDeal::on_pushButton_deal_clicked()
@@ -152,23 +154,16 @@ void MakeDeal::on_pushButton_deal_clicked()
     QModelIndex index;
     int rieltorRow = findUserRow(rieltorName);
     index = model->index(rieltorRow, ID_COL);
-    int rieltorID = model->data(index).toInt();
 
-    index = tempModel->index(rowToAdd, 0);
+    int rieltorID = model->data(index).toInt();
+    index = tempModel->index(rowToAdd, ID_COL);
     tempModel->setData(index, propertyID);
 
-    index = tempModel->index(rowToAdd, 1);
+    index = tempModel->index(rowToAdd, ID_RIELTOR);
     tempModel->setData(index, rieltorID);
 
-    index = tempModel->index(rowToAdd, 2);
+    index = tempModel->index(rowToAdd, ID_CLIENT_DEAL);
     tempModel->setData(index, ui->lineEdit_clientID->text().toInt());
-
-
-    int rowToUpdate = findUserRowByID(ui->lineEdit_clientID->text());
-    if (rowToUpdate == -1) {
-        rowToUpdate = model->rowCount();
-        model->insertRow(rowToUpdate);
-    }
 
     Client* client = new Client();
     try {
@@ -181,39 +176,45 @@ void MakeDeal::on_pushButton_deal_clicked()
     }
     catch (QString errorMessage) {
         QMessageBox::warning(this, "Предупреждение", errorMessage);
+        delete client;
         return;
     }
 
-    index = model->index(rowToUpdate, 0);
+    int rowToUpdate = findUserRowByID(ui->lineEdit_clientID->text());
+    if (rowToUpdate == -1) {
+        rowToUpdate = model->rowCount();
+        model->insertRow(rowToUpdate);
+    }
+
+    index = model->index(rowToUpdate, ID_COL);
     model->setData(index, client->getID());
 
-    index = model->index(rowToUpdate, 1);
+    index = model->index(rowToUpdate, NAME_COL);
     model->setData(index, client->getName());
 
-    index = model->index(rowToUpdate, 2);
+    index = model->index(rowToUpdate, LOGIN_COL);
     model->setData(index, client->getLogin());
 
-    index = model->index(rowToUpdate, 3);
+    index = model->index(rowToUpdate, PASSWORD_COL);
     model->setData(index, client->getPassword());
 
-    index = model->index(rowToUpdate, 4);
+    index = model->index(rowToUpdate, PASSPORT_COL);
     model->setData(index, client->getPassport());
 
-    index = model->index(rowToUpdate, 5);
+    index = model->index(rowToUpdate, PHONE_COL);
     model->setData(index, client->getPhone());
 
-    index = model->index(rowToUpdate, 6);
+    index = model->index(rowToUpdate, ACCESS_COL);
     model->setData(index, client->getAccess());
 
-
-
+    delete client;
     if (tempModel->submitAll() && model->submitAll()) {
         QMessageBox::information(this, "Успех", "Сделка совершена!");
-        parent->close();
-        parentOfParent->close();
         if (isRequested) {
             removeRequest();
         }
+        parent->close();
+        parentOfParent->close();
     }
     else {
         QMessageBox::warning(this, "Ошибка", "Что-то пошло не так...");

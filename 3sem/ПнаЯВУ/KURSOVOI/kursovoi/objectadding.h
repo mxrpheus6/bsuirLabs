@@ -59,10 +59,10 @@ private:
     QSqlTableModel* extendedModel;
     QStandardItemModel* itemModel;
 
-    RealEstate* realEstate;
-    Apartment* apartment;
-    House* house;
-    Office* office;
+    RealEstate* realEstate = nullptr;
+    Apartment* apartment = nullptr;
+    House* house = nullptr;
+    Office* office = nullptr;
 
 
     const std::vector<QString> fields_apartment = {"Пл-дь кухни, м2", "Этажность", "Тип дома", "Балкон", "Лифт", "Потолок, м", "Паркинг", "Консьерж"};
