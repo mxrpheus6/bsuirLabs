@@ -25,14 +25,6 @@ Authorization::~Authorization()
     delete ui;
 }
 
-bool Authorization::getAuthorizationResult() const {
-    return authorizationResult;
-}
-
-void Authorization::setAuthorizationResult(bool result) {
-    authorizationResult = result;
-}
-
 void Authorization::on_pushButton_login_clicked()
 {
     if (!db.isOpen()) {
@@ -51,11 +43,11 @@ void Authorization::on_pushButton_login_clicked()
 
     if (query.exec()) {
         if (query.next()) {
-            authenticated = true;
             QString access = query.value("access").toString();
-            int ID = query.value("ID").toInt();
+            int ID = query.value("id").toInt();
             QMessageBox::information(this, "Вход", "Успешно!");
             emit authorizationSuccess(access, ID);
+            return;
         }
     }
 

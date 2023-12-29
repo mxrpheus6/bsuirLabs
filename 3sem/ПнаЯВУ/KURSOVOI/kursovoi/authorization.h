@@ -22,8 +22,8 @@ public:
     explicit Authorization(QWidget *parent = nullptr);
     ~Authorization();
 
-    bool getAuthorizationResult() const;
-    void setAuthorizationResult(bool result);
+/*    bool getAuthorizationResult();
+    void setAuthorizationResult(bool result);*/
 
 signals:
     void authorizationSuccess(QString access, int ID);
@@ -35,7 +35,7 @@ private slots:
 
 private:
     Ui::Authorization *ui;
-    bool authorizationResult = false;
+    //bool authorizationResult = false;
     QSqlDatabase db;
 };
 

@@ -1,6 +1,18 @@
 #include "office.h"
 
-Office::Office(const RealEstate& realEstate) : RealEstate(realEstate)
+/*Office::Office(const RealEstate& realEstate) : RealEstate(realEstate)
+{
+    officeClass = "";
+    allFloorsAmount = -1;
+    workstationsAmount = -1;
+    wallMaterial = "";
+    renovation = "";
+    hasConferenceRooms = "";
+    hasSecurityFeatures = "";
+    hasToilet = "";
+}*/
+
+Office::Office() : RealEstate()
 {
     officeClass = "";
     allFloorsAmount = -1;

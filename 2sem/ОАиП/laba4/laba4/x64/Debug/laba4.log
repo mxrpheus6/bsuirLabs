@@ -1,11 +1,1 @@
-﻿  tree.c
-C:\BSUIR\finished\OAiP\2sem\laba4\laba4\tree.c(11,43): warning C4028: formal parameter 1 different from declaration
-C:\BSUIR\finished\OAiP\2sem\laba4\laba4\tree.c(31,29): warning C4047: 'function': 'FILE **' differs in levels of indirection from 'FILE *'
-C:\BSUIR\finished\OAiP\2sem\laba4\laba4\tree.c(31,19): warning C4024: 'createAddMessage': different types for formal and actual parameter 1
-C:\BSUIR\finished\OAiP\2sem\laba4\laba4\tree.c(35,27): warning C4047: 'function': 'FILE **' differs in levels of indirection from 'FILE *'
-C:\BSUIR\finished\OAiP\2sem\laba4\laba4\tree.c(35,17): warning C4024: 'createMessage': different types for formal and actual parameter 1
-C:\BSUIR\finished\OAiP\2sem\laba4\laba4\tree.c(41,27): warning C4047: 'function': 'FILE **' differs in levels of indirection from 'FILE *'
-C:\BSUIR\finished\OAiP\2sem\laba4\laba4\tree.c(41,17): warning C4024: 'createMessage': different types for formal and actual parameter 1
-C:\BSUIR\finished\OAiP\2sem\laba4\laba4\tree.c(45,27): warning C4047: 'function': 'FILE **' differs in levels of indirection from 'FILE *'
-C:\BSUIR\finished\OAiP\2sem\laba4\laba4\tree.c(45,17): warning C4024: 'createMessage': different types for formal and actual parameter 1
-  laba4.vcxproj -> C:\BSUIR\finished\OAiP\2sem\laba4\x64\Debug\laba4.exe
+﻿  laba4.vcxproj -> D:\BSUIR\bsuirLabs\2sem\ОАиП\laba4\x64\Debug\laba4.exe

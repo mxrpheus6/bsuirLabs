@@ -9,7 +9,7 @@ private:
 	int amount_of_articles;
 public:
 	StudentTeacher();
-	StudentTeacher(char* first_name, char* last_name, int* marks, double scholarship, double rate, double salary, int amount_of_articles);
+	StudentTeacher(char* first_name, char* last_name, double scholarship, double rate, double salary, int amount_of_articles);
 
 	void set_amount_of_articles(int amoint_of_articles);
 

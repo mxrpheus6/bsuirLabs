@@ -18,7 +18,7 @@ private:
 
 public:
     House();
-    House(const RealEstate& realEstate);
+    //House(const RealEstate& realEstate);
 
     void setLandSquare(double landSquare);
     double getLandSquare();

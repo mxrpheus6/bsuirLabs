@@ -100,19 +100,6 @@
     <string>Площадь, м2</string>
    </property>
   </widget>
-  <widget class="QComboBox" name="comboBox_floor_amount">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>400</y>
-     <width>101</width>
-     <height>24</height>
-    </rect>
-   </property>
-   <property name="placeholderText">
-    <string>Выберите</string>
-   </property>
-  </widget>
   <widget class="QCheckBox" name="checkBox_price">
    <property name="geometry">
     <rect>
@@ -343,6 +330,53 @@
    </property>
    <property name="flat">
     <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_floor_amount_to">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>400</y>
+     <width>41</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>До</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_floor_amount_from">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>400</y>
+     <width>41</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="inputMask">
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string>От</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_removeDeal">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>370</y>
+     <width>81</width>
+     <height>55</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Удалить
+из
+сделок</string>
    </property>
   </widget>
  </widget>

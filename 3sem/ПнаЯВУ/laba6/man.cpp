@@ -7,6 +7,7 @@ Man::Man() {
 
 Man::Man(char* first_name, char* last_name) {
 	set_first_name(first_name);
+	set_last_name(last_name);
 
 }
 

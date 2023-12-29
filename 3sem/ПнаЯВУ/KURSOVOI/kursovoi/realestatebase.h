@@ -5,7 +5,6 @@
 
 #include <cfloat>
 
-
 #include <QWidget>
 #include <QtSql>
 #include <QDataWidgetMapper>
@@ -29,19 +28,20 @@ class RealEstateBase : public QWidget
 public:
     explicit RealEstateBase(QWidget *parent, QString mode, QString access = "rieltor", int ID = -1);
     ~RealEstateBase();
-    static bool numericCompare(const QString &str1, const QString &str2);
     QStandardItemModel* applyFilterCombobox(QAbstractItemModel *originalModel, int colIndex, QComboBox *cb);
     QStandardItemModel* applyFilterLineEdit(QAbstractItemModel *originalModel, int colIndex, QLineEdit *from, QLineEdit *to);
     void setFilters();
     void createEmptyTable(QSqlTableModel *model);
     int findID(QAbstractItemModel* model, int ID);
-    int findIDTwoFields(QAbstractItemModel* model, int ID1, int ID2);
+    //int findIDTwoFields(QAbstractItemModel* model, int ID1, int ID2);
     QStandardItemModel* baseFilter(QAbstractItemModel *originalModel);
     QStandardItemModel* requestsFilter(QAbstractItemModel *originalModel);
     QStandardItemModel* purchasesFilter(QAbstractItemModel *originalModel);
 
 
 private slots:
+    void on_tableView_estate_clicked(const QModelIndex &index);
+
     void on_checkBox_type_stateChanged(int arg1);
 
     void on_checkBox_district_stateChanged(int arg1);
@@ -53,6 +53,8 @@ private slots:
     void on_checkBox_year_stateChanged(int arg1);
 
     void on_checkBox_price_stateChanged(int arg1);
+
+    void on_checkBox_deal_stateChanged(int arg1);
 
     void on_lineEdit_square_from_textChanged(const QString &arg1);
 
@@ -66,25 +68,25 @@ private slots:
 
     void on_lineEdit_price_to_textChanged(const QString &arg1);
 
-    void on_tableView_estate_clicked(const QModelIndex &index);
+    void on_lineEdit_floor_amount_from_textChanged(const QString &arg1);
 
-    void on_pushButton_delete_clicked();
-
-    void on_pushButton_estate_clicked();
-
-    void on_checkBox_deal_stateChanged(int arg1);
-
-    void on_pushButton_add_clicked();
+    void on_lineEdit_floor_amount_to_textChanged(const QString &arg1);
 
     void on_comboBox_type_currentTextChanged(const QString &arg1);
 
     void on_comboBox_district_currentTextChanged(const QString &arg1);
 
-    void on_comboBox_floor_amount_currentTextChanged(const QString &arg1);
-
     void on_comboBox_deal_currentTextChanged(const QString &arg1);
 
+    void on_pushButton_delete_clicked();
+
+    void on_pushButton_estate_clicked();
+
     void on_pushButton_reject_clicked();
+
+    void on_pushButton_add_clicked();
+
+    void on_pushButton_removeDeal_clicked();
 
 private:
     Ui::RealEstateBase *ui;

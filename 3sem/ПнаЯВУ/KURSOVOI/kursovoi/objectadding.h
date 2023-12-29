@@ -5,6 +5,7 @@
 #include <QSqlTableModel>
 #include <QStandardItem>
 #include <QMessageBox>
+#include <QDebug>
 
 
 #include "realestate.h"
@@ -27,9 +28,10 @@ public:
     int generateID();
     bool checkEmpty();
     void fillTableHeaders(QStandardItemModel* model);
-    void updateExtended(const std::vector<QString> vector, int rowToUpdate);
+    //void updateExtended(const std::vector<QString> vector, int rowToUpdate);
     bool fillInherited(QString properyType);
     QVariant getDataFromItemModel(int row);
+    bool setСommonFields(RealEstate* estate);
 
 private slots:
     void on_pushButton_save_clicked();
@@ -38,10 +40,6 @@ private slots:
 
     void on_lineEdit_address_textChanged(const QString &arg1);
 
-    void on_comboBox_deal_activated(int index);
-
-    void on_comboBox_district_activated(int index);
-
     void on_lineEdit_square_textChanged(const QString &arg1);
 
     void on_lineEdit_year_textChanged(const QString &arg1);
@@ -49,6 +47,10 @@ private slots:
     void on_lineEdit_floor_amount_textChanged(const QString &arg1);
 
     void on_lineEdit_price_textChanged(const QString &arg1);
+
+    void on_comboBox_deal_activated(int index);
+
+    void on_comboBox_district_activated(int index);
 
     void on_comboBox_type_currentIndexChanged(int index);
 
@@ -59,7 +61,7 @@ private:
     QSqlTableModel* extendedModel;
     QStandardItemModel* itemModel;
 
-    RealEstate* realEstate = nullptr;
+    //RealEstate* realEstate = nullptr;
     Apartment* apartment = nullptr;
     House* house = nullptr;
     Office* office = nullptr;

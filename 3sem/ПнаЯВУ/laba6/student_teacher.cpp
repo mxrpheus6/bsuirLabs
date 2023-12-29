@@ -4,7 +4,7 @@ StudentTeacher::StudentTeacher() : Man(), Student(), Teacher() {
 	amount_of_articles = 0;
 }
 
-StudentTeacher::StudentTeacher(char* first_name, char* last_name, int* marks, double scholarship, double rate, double salary, int amount_of_articles) : Man(first_name, last_name), Student(marks, scholarship), Teacher(rate, salary) {
+StudentTeacher::StudentTeacher(char* first_name, char* last_name, double scholarship, double rate, double salary, int amount_of_articles) : Man(first_name, last_name), Student(scholarship), Teacher(rate, salary) {
 	set_amount_of_articles(amount_of_articles);
 }
 

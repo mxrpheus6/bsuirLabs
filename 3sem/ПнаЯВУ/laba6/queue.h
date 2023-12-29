@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <fstream>
 
 template<typename T>
 struct Node {
@@ -23,11 +24,10 @@ public:
 	int size();
 	void push(const T data);
 	T pop();
-	T peek();
 	void print();
-	T front();
-	T rear();
-
+	Node<T>* front();
+	Node<T>* rear();
+	void clear();
 };
 
 template<typename T>
@@ -108,17 +108,26 @@ void Queue<T>::print() {
 }
 
 template<typename T>
-T Queue<T>::front() {
+Node<T>* Queue<T>::front() {
 	if (empty())
 		throw std::string("Queue is empty!");
 
-	return _front->data;
+	return _front;
 }
 
 template<typename T>
-T Queue<T>::rear() {
+Node<T>* Queue<T>::rear() {
 	if (empty())
 		throw std::string("Queue is empty!");
 
 	return _rear->data;
+}
+
+template<typename T>
+void Queue<T>::clear() {
+	while (_front != nullptr) {
+		Node<T>* temp = _front;
+		_front = _front->next;
+		delete temp;
+	}
 }

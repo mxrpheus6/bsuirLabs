@@ -1,6 +1,19 @@
 #include "house.h"
 
-House::House(const RealEstate& realEstate) : RealEstate(realEstate)
+/*House::House(const RealEstate& realEstate) : RealEstate(realEstate)
+{
+    landSquare = -1.0;
+    kitchenSquare = -1.0;
+    wallMaterial = "";
+    roofMaterial = "";
+    hasFireplace = "";
+    hasGarage = "";
+    heatingType = "";
+    sanitation = "";
+    waterSupply = "";
+}*/
+
+House::House() : RealEstate()
 {
     landSquare = -1.0;
     kitchenSquare = -1.0;

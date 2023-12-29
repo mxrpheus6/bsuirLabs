@@ -1,6 +1,6 @@
 #include "apartment.h"
 
-Apartment::Apartment(const RealEstate& realEstate) : RealEstate(realEstate)
+Apartment::Apartment() : RealEstate()
 {
     squareKitchen = -1.0;
     allFloorsAmount = -1;
@@ -23,7 +23,7 @@ double Apartment::getSquareKitchen() {
 
 void Apartment::setAllFloorsAmount(int allFloorsAmount) {
     if (allFloorsAmount <= 0)
-        throw QString("В поле высота потолков записано некорректное значение!");
+        throw QString("В поле этажность записано некорректное значение!");
     this->allFloorsAmount = allFloorsAmount;
 }
 int Apartment::getAllFloorsAmount() {

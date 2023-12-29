@@ -24,6 +24,7 @@ MenuDataWidget::MenuDataWidget(QWidget *parent, QString access, QString tableNam
         model->setHeaderData(PASSPORT_COL, Qt::Horizontal, "Паспорт");
         model->setHeaderData(PHONE_COL, Qt::Horizontal, "Телефон");
         model->setHeaderData(ACCESS_COL, Qt::Horizontal, "Права доступа");
+
         ui->tableView_db->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
     }
     else if (tableName == DISTRICTS) {
@@ -36,17 +37,18 @@ MenuDataWidget::MenuDataWidget(QWidget *parent, QString access, QString tableNam
     ui->tableView_db->verticalHeader()->setVisible(false);
 
     if (access == "client") {
-
+        if (tableName == ACCOUNTS) {
+            ui->tableView_db->setColumnHidden(ID_COL, true);
+            ui->tableView_db->setColumnHidden(LOGIN_COL, true);
+            ui->tableView_db->setColumnHidden(PASSWORD_COL, true);
+            ui->tableView_db->setColumnHidden(PASSPORT_COL, true);
+            ui->tableView_db->setColumnHidden(ACCESS_COL, true);
+        }
 
         ui->pushButton_add->setEnabled(false);
         ui->pushButton_add->setVisible(false);
         ui->pushButton_del->setEnabled(false);
         ui->pushButton_del->setVisible(false);
-
-        ui->tableView_db->setColumnHidden(LOGIN_COL, true);
-        ui->tableView_db->setColumnHidden(PASSWORD_COL, true);
-        ui->tableView_db->setColumnHidden(PASSPORT_COL, true);
-        ui->tableView_db->setColumnHidden(ACCESS_COL, true);
 
         ui->tableView_db->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
         ui->tableView_db->setEditTriggers(QAbstractItemView::NoEditTriggers);

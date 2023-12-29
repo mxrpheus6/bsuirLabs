@@ -1,14 +1,6 @@
 #ifndef OBJECTOVERVIEW_H
 #define OBJECTOVERVIEW_H
 
-#include "defines.h"
-#include "makedeal.h"
-#include "realestate.h"
-#include "apartment.h"
-#include "house.h"
-#include "office.h"
-
-
 #include <QWidget>
 #include <QtSql>
 #include <QStandardItemModel>
@@ -16,6 +8,13 @@
 #include <QVBoxLayout>
 #include <QMessageBox>
 #include <QDebug>
+
+#include "defines.h"
+#include "makedeal.h"
+#include "realestate.h"
+#include "apartment.h"
+#include "house.h"
+#include "office.h"
 
 namespace Ui {
 class objectOverview;
@@ -31,22 +30,25 @@ public:
     void setPurhcases();
     int findID(QAbstractItemModel* model, int ID);
     void fillTableHeaders(QStandardItemModel* model, QString tableName);
-    void updateExtended(const std::vector<QString> vector, int rowToUpdate);
+    //void updateExtended(const std::vector<QString> vector, int rowToUpdate);
     bool checkEmptySave();
     bool checkEmptyDeal();
     bool checkEmptyAuth();
     bool fillInherited(QString properyType);
     QVariant getDataFromItemModel(int row);
-
+    bool setСommonFields(RealEstate* estate);
     ~objectOverview();
-
-//signals:
-    //void saveButtonClickedOverview();
 
 private slots:
     void on_checkBox_deal_stateChanged(int arg1);
 
+    void on_checkBox_auth_stateChanged(int arg1);
+
     void on_pushButton_save_clicked();
+
+    void on_pushButton_deal_clicked();
+
+    void on_pushButton_request_clicked();
 
     void on_plainTextEdit_description_textChanged();
 
@@ -60,15 +62,9 @@ private slots:
 
     void on_lineEdit_floor_amount_textChanged(const QString &arg1);
 
-    void on_pushButton_deal_clicked();
-
     void on_comboBox_rieltor_activated(int index);
 
     void on_comboBox_client_activated(int index);
-
-    void on_checkBox_auth_stateChanged(int arg1);
-
-    void on_pushButton_request_clicked();
 
 private:
     Ui::objectOverview *ui;
@@ -80,7 +76,7 @@ private:
     QDoubleValidator *doubleValidator;
     QIntValidator *intValidator;
 
-    RealEstate* realEstate = nullptr;
+    //RealEstate* realEstate = nullptr;
     Apartment* apartment = nullptr;
     House* house = nullptr;
     Office* office = nullptr;

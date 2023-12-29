@@ -20,9 +20,7 @@ public:
     explicit MakeDeal(QWidget *parent, QWidget *parentOfParent, bool isRequested, QString properyID, QString rieltorName, QString clientName = "");
     ~MakeDeal();
     void removeRequest();
-    int findUserRow(QString user);
-    int findUserRowByID(QString ID);
-    int findID(QAbstractItemModel* model, int ID);
+    int findRowByField(QString field, int column);
     int generateID();
     bool checkEmpty();
 

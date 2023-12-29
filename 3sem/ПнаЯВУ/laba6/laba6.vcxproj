@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="files.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="man.cpp" />
     <ClCompile Include="menu.cpp" />
@@ -135,12 +136,19 @@
     <ClCompile Include="teacher.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="files.h" />
     <ClInclude Include="man.h" />
     <ClInclude Include="menu.h" />
     <ClInclude Include="queue.h" />
     <ClInclude Include="student.h" />
     <ClInclude Include="student_teacher.h" />
     <ClInclude Include="teacher.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="in.bin" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="in.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

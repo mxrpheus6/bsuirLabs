@@ -16,7 +16,7 @@ private:
     QString hasConcierge;
 public:
     Apartment();
-    Apartment(const RealEstate& realEstate);
+    //Apartment(const RealEstate& realEstate);
 
     void setSquareKitchen(double squareKitchen);
     double getSquareKitchen();

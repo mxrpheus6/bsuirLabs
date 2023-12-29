@@ -1,3 +1,4 @@
+
 #include "objectoverview.h"
 #include "ui_objectoverview.h"
 
@@ -42,13 +43,7 @@ objectOverview::objectOverview(QWidget *parent, QSqlTableModel* model, QAbstract
             index = tempModel->index(row, NAME_COL);
             ui->comboBox_rieltor->addItem(tempModel->data(index).toString());
         }
-    }
-
-    for (int row = 0; row < tempModel->rowCount(); row++) {
-        index = tempModel->index(row, ACCESS_COL);
-        data = tempModel->data(index);
-
-        if (data.toString() == "client") {
+        else if (data.toString() == "client") {
             index = tempModel->index(row, NAME_COL);
             ui->comboBox_client->addItem(tempModel->data(index).toString());
         }
@@ -204,8 +199,8 @@ objectOverview::~objectOverview()
     delete doubleValidator;
     delete intValidator;
 
-    if (realEstate != nullptr)
-        delete realEstate;
+    /*if (realEstate != nullptr)
+        delete realEstate;*/
     if (apartment != nullptr)
         delete apartment;
     if (house != nullptr)
@@ -294,10 +289,10 @@ void objectOverview::setPurhcases() {
         return;
     }
 
-    index = tempModelAcc->index(rieltorRow, NAME_COL);      //имя риелтора
+    index = tempModelAcc->index(rieltorRow, NAME_COL);
     rieltorName = tempModelAcc->data(index).toString();
 
-    index = tempModelAcc->index(clientRow, NAME_COL);      //имя клиента
+    index = tempModelAcc->index(clientRow, NAME_COL);
     clientName = tempModelAcc->data(index).toString();
 
     for (int i = 0; i < ui->comboBox_rieltor->count(); i++) {
@@ -325,27 +320,6 @@ void objectOverview::setPurhcases() {
 
     delete tempModelAcc;
     delete tempModelDeals;
-}
-
-void objectOverview::on_checkBox_deal_stateChanged(int arg1)
-{
-    if (arg1 == Qt::Checked) {
-        ui->pushButton_deal->setEnabled(true);
-        ui->comboBox_rieltor->setEnabled(true);
-        ui->checkBox_auth->setEnabled(true);
-        //ui->comboBox_client->setEnabled(true);
-    }
-    else {
-        ui->checkBox_auth->setChecked(false);
-        ui->checkBox_auth->setEnabled(false);
-
-
-        ui->pushButton_deal->setEnabled(false);
-        ui->comboBox_rieltor->setEnabled(false);
-        ui->comboBox_client->setEnabled(false);
-
-        ui->comboBox_rieltor->setCurrentIndex(-1);
-        ui->comboBox_client->setCurrentIndex(-1);    }
 }
 
 int objectOverview::findID(QAbstractItemModel* model, int ID) {
@@ -393,196 +367,6 @@ void objectOverview::fillTableHeaders(QStandardItemModel* model, QString tableNa
         model->setItem(i, 0, valueItem);
 
         valueItem->setFlags(valueItem->flags() & ~Qt::ItemIsEditable);
-    }
-}
-
-void objectOverview::on_pushButton_save_clicked()
-{
-    if (!checkEmptySave()) {
-        QMessageBox::warning(this, "Предупреждение", "Подсвеченное красным не может быть пустым!");
-        return;
-    }
-
-    QModelIndex index;
-    int rowToUpdate = findID(model, ui->lineEdit_ID->text().toInt());
-
-    realEstate = new RealEstate();
-
-    try {
-        realEstate->setID(ui->lineEdit_ID->text().toInt());
-        realEstate->setPropertyType(ui->lineEdit_type->text());
-        realEstate->setDealType(ui->comboBox_deal->currentText());
-        realEstate->setDescription(ui->plainTextEdit_description->toPlainText());
-        realEstate->setDistrict(ui->comboBox_district->currentText());
-        realEstate->setAddress(ui->lineEdit_address->text());
-        realEstate->setSquare(ui->lineEdit_square->text().toDouble());
-        realEstate->setConstructionYear(ui->lineEdit_year->text().toInt());
-        realEstate->setFloorsAmount(ui->lineEdit_floor_amount->text().toInt());
-        realEstate->setPrice(ui->lineEdit_price->text().toDouble());
-    }
-    catch (QString errorMessage) {
-        QMessageBox::warning(this, "Предупреждение", errorMessage);
-        return;
-    }
-
-    QString propertyType = realEstate->getPropertyType();
-
-    if (propertyType == APARTMENT_RUS) {
-        apartment = new Apartment(*realEstate);
-    }
-    else if (propertyType == HOUSE_RUS) {
-        house = new House(*realEstate);
-    }
-    else if (propertyType == OFFICE_RUS) {
-        office = new Office(*realEstate);
-    }
-
-    if (!fillInherited(propertyType)) {
-        return;
-    }
-
-    index = model->index(rowToUpdate, DESCRIPTION_COL);
-    model->setData(index, realEstate->getDescription());
-
-    index = model->index(rowToUpdate, DISTRICT_COL);
-    model->setData(index, realEstate->getDistrict());
-
-    index = model->index(rowToUpdate, ADDRESS_COL);
-    model->setData(index, realEstate->getAddress());
-
-    index = model->index(rowToUpdate, PRICE_COL);
-    model->setData(index, realEstate->getPrice());
-
-    index = model->index(rowToUpdate, SQUARE_COL);
-    model->setData(index, realEstate->getSquare());
-
-    index = model->index(rowToUpdate, YEAR_COL);
-    model->setData(index, realEstate->getConstructionYear());
-
-    index = model->index(rowToUpdate, FLOOR_AMOUNT_COL);
-    model->setData(index, realEstate->getFloorsAmount());
-
-    index = model->index(rowToUpdate, DEAL_TYPE_COL);
-    model->setData(index, realEstate->getDealType());
-
-    rowToUpdate = findID(extendedModel, ui->lineEdit_ID->text().toInt());
-
-    if (propertyType == APARTMENT_RUS) {
-        extendedModel->setTable(APARTMENT_ENG);
-        extendedModel->select();
-
-        index = extendedModel->index(rowToUpdate, ID_COL);
-        extendedModel->setData(index, apartment->getID());
-
-        index = extendedModel->index(rowToUpdate, APARTMENT_KITCHEN_COL);
-        extendedModel->setData(index, (apartment->getSquareKitchen() == -1.0) ? QVariant() : apartment->getSquareKitchen());
-
-        index = extendedModel->index(rowToUpdate, APARTMENT_ALL_FLOORS_COL);
-        extendedModel->setData(index, (apartment->getAllFloorsAmount() == -1) ? QVariant() : apartment->getAllFloorsAmount());
-
-        index = extendedModel->index(rowToUpdate, APARTMENT_LAYOUT_COL);
-        extendedModel->setData(index, apartment->getLayoutType().isEmpty() ? QVariant() : apartment->getLayoutType());
-
-        index = extendedModel->index(rowToUpdate, APARTMENT_BALCONY_COL);
-        extendedModel->setData(index, apartment->getHasBalcony().isEmpty() ? QVariant() : apartment->getHasBalcony());
-
-        index = extendedModel->index(rowToUpdate, APARTMENT_ELEVATOR_COL);
-        extendedModel->setData(index, apartment->getHasElevator().isEmpty() ? QVariant() : apartment->getHasElevator());
-
-        index = extendedModel->index(rowToUpdate, APARTMENT_CEILING_COL);
-        extendedModel->setData(index, (apartment->getCeilingHeight() == -1.0) ? QVariant() : apartment->getCeilingHeight());
-
-        index = extendedModel->index(rowToUpdate, APARTMENT_PARKING_COL);
-        extendedModel->setData(index, apartment->getHasParking().isEmpty() ? QVariant() : apartment->getHasParking());
-
-        index = extendedModel->index(rowToUpdate, APARTMENT_CONCIERGE_COL);
-        extendedModel->setData(index, apartment->getHasConcierge().isEmpty() ? QVariant() : apartment->getHasConcierge());
-    }
-    else if (propertyType == HOUSE_RUS) {
-        extendedModel->setTable(HOUSE_ENG);
-        extendedModel->select();
-
-        index = extendedModel->index(rowToUpdate, ID_COL);
-        extendedModel->setData(index, house->getID());
-
-        index = extendedModel->index(rowToUpdate, HOUSE_LAND_COL);
-        extendedModel->setData(index, (house->getLandSquare() == -1.0) ? QVariant() : house->getLandSquare());
-
-        index = extendedModel->index(rowToUpdate, HOUSE_KITCHEN_COL);
-        extendedModel->setData(index, (house->getKitchenSquare() == -1.0) ? QVariant() : house->getKitchenSquare());
-
-        index = extendedModel->index(rowToUpdate, HOUSE_WALL_COL);
-        extendedModel->setData(index, house->getWallMaterial().isEmpty() ? QVariant() : house->getWallMaterial());
-
-        index = extendedModel->index(rowToUpdate, HOUSE_ROOF_COL);
-        extendedModel->setData(index, house->getRoofMaterial().isEmpty() ? QVariant() : house->getRoofMaterial());
-
-        index = extendedModel->index(rowToUpdate, HOUSE_FIREPLACE_COL);
-        extendedModel->setData(index, house->getHasFireplace().isEmpty() ? QVariant() : house->getHasFireplace());
-
-        index = extendedModel->index(rowToUpdate, HOUSE_GARAGE_COL);
-        extendedModel->setData(index, house->getHasGarage().isEmpty() ? QVariant() : house->getHasGarage());
-
-        index = extendedModel->index(rowToUpdate, HOUSE_HEATING_COL);
-        extendedModel->setData(index, house->getHeatingType().isEmpty() ? QVariant() : house->getHeatingType());
-
-        index = extendedModel->index(rowToUpdate, HOUSE_SANITATION_COL);
-        extendedModel->setData(index, house->getSanitation().isEmpty() ? QVariant() : house->getSanitation());
-
-        index = extendedModel->index(rowToUpdate, HOUSE_WATER_COL);
-        extendedModel->setData(index, house->getWaterSupply().isEmpty() ? QVariant() : house->getWaterSupply());
-    }
-    else if (propertyType == OFFICE_RUS) {
-        extendedModel->setTable(OFFICE_ENG);
-        extendedModel->select();
-
-        index = extendedModel->index(rowToUpdate, ID_COL);
-        extendedModel->setData(index, office->getID());
-
-        index = extendedModel->index(rowToUpdate, OFFICE_CLASS);
-        extendedModel->setData(index, office->getOfficeClass().isEmpty() ? QVariant() : office->getOfficeClass());
-
-        index = extendedModel->index(rowToUpdate, OFFICE_ALL_FLOORS_COL);
-        extendedModel->setData(index, (office->getAllFloorsAmount() == -1) ? QVariant() : office->getAllFloorsAmount());
-
-        index = extendedModel->index(rowToUpdate, OFFICE_WORKSTATIONS_COL);
-        extendedModel->setData(index, (office->getWorkstationsAmount() == -1) ? QVariant() : office->getWorkstationsAmount());
-
-        index = extendedModel->index(rowToUpdate, OFFICE_WALL_COL);
-        extendedModel->setData(index, office->getWallMaterial().isEmpty() ? QVariant() : office->getWallMaterial());
-
-        index = extendedModel->index(rowToUpdate, OFFICE_RENOVATION_COL);
-        extendedModel->setData(index, office->getRenovation().isEmpty() ? QVariant() : office->getRenovation());
-
-        index = extendedModel->index(rowToUpdate, OFFICE_CONFERENCE_COL);
-        extendedModel->setData(index, office->getHasConferenceRooms().isEmpty() ? QVariant() : office->getHasConferenceRooms());
-
-        index = extendedModel->index(rowToUpdate, OFFICE_SECURITY_COL);
-        extendedModel->setData(index, office->getHasSecurityFeatures().isEmpty() ? QVariant() : office->getHasSecurityFeatures());
-
-        index = extendedModel->index(rowToUpdate, OFFICE_TOILET_COL);
-        extendedModel->setData(index, office->getHasToilet().isEmpty() ? QVariant() : office->getHasToilet());
-    }
-
-    if (model->submitAll() && extendedModel->submitAll()) {
-        QMessageBox::information(this, "Успех", "Изменения сохранены.");
-    }
-    else {
-        QMessageBox::warning(this, "Ошибка", "Что-то пошло не так...");
-    }
-}
-
-void objectOverview::updateExtended(const std::vector<QString> vector, int rowToUpdate) {
-    int size = vector.size();
-    QModelIndex tempIndex;
-    QVariant tempData;
-
-    for (int i = 0; i < size; i++) {
-        tempIndex = itemModel->index(i, 1);
-        tempData = itemModel->data(tempIndex);
-
-        tempIndex = extendedModel->index(rowToUpdate, i + 1);
-        extendedModel->setData(tempIndex, tempData);
     }
 }
 
@@ -725,42 +509,237 @@ bool objectOverview::checkEmptyAuth() {
     return res;
 }
 
-void objectOverview::on_plainTextEdit_description_textChanged()
-{
-    ui->plainTextEdit_description->setStyleSheet("");
+QVariant objectOverview::getDataFromItemModel(int row) {
+    QModelIndex tempIndex;
+    QVariant tempData;
+
+    tempIndex = itemModel->index(row, 1);
+    tempData = itemModel->data(tempIndex);
+
+    return tempData;
 }
 
-void objectOverview::on_lineEdit_address_textChanged(const QString &arg1)
-{
-    Q_UNUSED(arg1);
-    ui->lineEdit_address->setStyleSheet("");
+bool objectOverview::setСommonFields(RealEstate* estate) {
+    try {
+        estate->setID(ui->lineEdit_ID->text().toInt());
+        estate->setPropertyType(ui->lineEdit_type->text());
+        estate->setDealType(ui->comboBox_deal->currentText());
+        estate->setDescription(ui->plainTextEdit_description->toPlainText());
+        estate->setDistrict(ui->comboBox_district->currentText());
+        estate->setAddress(ui->lineEdit_address->text());
+        estate->setSquare(ui->lineEdit_square->text().toDouble());
+        estate->setConstructionYear(ui->lineEdit_year->text().toInt());
+        estate->setFloorsAmount(ui->lineEdit_floor_amount->text().toInt());
+        estate->setPrice(ui->lineEdit_price->text().toDouble());
+    }
+    catch (QString errorMessage) {
+        QMessageBox::warning(this, "Предупреждение", errorMessage);
+        return false;
+    }
+
+    QModelIndex index;
+    int rowToUpdate = findID(model, ui->lineEdit_ID->text().toInt());
+
+    index = model->index(rowToUpdate, ID_COL);
+    model->setData(index, estate->getID());
+
+    index = model->index(rowToUpdate, DEAL_TYPE_COL);
+    model->setData(index, estate->getDealType());
+
+    index = model->index(rowToUpdate, DESCRIPTION_COL);
+    model->setData(index, estate->getDescription());
+
+    index = model->index(rowToUpdate, DISTRICT_COL);
+    model->setData(index, estate->getDistrict());
+
+    index = model->index(rowToUpdate, ADDRESS_COL);
+    model->setData(index, estate->getAddress());
+
+    index = model->index(rowToUpdate, SQUARE_COL);
+    model->setData(index, estate->getSquare());
+
+    index = model->index(rowToUpdate, YEAR_COL);
+    model->setData(index, estate->getConstructionYear());
+
+    index = model->index(rowToUpdate, FLOOR_AMOUNT_COL);
+    model->setData(index, estate->getFloorsAmount());
+
+    index = model->index(rowToUpdate, PRICE_COL);
+    model->setData(index, estate->getPrice());
+
+    index = model->index(rowToUpdate, PROPERTY_TYPE_COL);
+    model->setData(index, estate->getPropertyType());
+
+    return true;
 }
 
-
-void objectOverview::on_lineEdit_price_textChanged(const QString &arg1)
+void objectOverview::on_checkBox_deal_stateChanged(int arg1)
 {
-    Q_UNUSED(arg1);
-    ui->lineEdit_price->setStyleSheet("");
+    if (arg1 == Qt::Checked) {
+        ui->pushButton_deal->setEnabled(true);
+        ui->comboBox_rieltor->setEnabled(true);
+        ui->checkBox_auth->setEnabled(true);
+    }
+    else {
+        ui->checkBox_auth->setChecked(false);
+        ui->checkBox_auth->setEnabled(false);
+
+
+        ui->pushButton_deal->setEnabled(false);
+        ui->comboBox_rieltor->setEnabled(false);
+        ui->comboBox_client->setEnabled(false);
+
+        ui->comboBox_rieltor->setCurrentIndex(-1);
+        ui->comboBox_client->setCurrentIndex(-1);    }
 }
 
-
-void objectOverview::on_lineEdit_square_textChanged(const QString &arg1)
+void objectOverview::on_checkBox_auth_stateChanged(int arg1)
 {
-    Q_UNUSED(arg1);
-    ui->lineEdit_square->setStyleSheet("");
+    if (arg1 == Qt::Checked) {
+        ui->comboBox_client->setEnabled(true);
+    }
+    else {
+        ui->comboBox_client->setCurrentIndex(-1);
+        ui->comboBox_client->setEnabled(false);
+        ui->comboBox_client->setStyleSheet("");
+    }
 }
 
-
-void objectOverview::on_lineEdit_year_textChanged(const QString &arg1)
+void objectOverview::on_pushButton_save_clicked()
 {
-    Q_UNUSED(arg1);
-    ui->lineEdit_year->setStyleSheet("");
-}
+    if (!checkEmptySave()) {
+        QMessageBox::warning(this, "Предупреждение", "Подсвеченное красным не может быть пустым!");
+        return;
+    }
 
-void objectOverview::on_lineEdit_floor_amount_textChanged(const QString &arg1)
-{
-    Q_UNUSED(arg1);
-    ui->lineEdit_floor_amount->setStyleSheet("");
+    QString propertyType = ui->lineEdit_type->text();
+
+    if (propertyType == APARTMENT_RUS) {
+        apartment = new Apartment();
+        if (!setСommonFields(apartment))
+            return;
+    }
+    else if (propertyType == HOUSE_RUS) {
+        house = new House();
+        if (!setСommonFields(house))
+            return;
+    }
+    else if (propertyType == OFFICE_RUS) {
+        office = new Office();
+        if (!setСommonFields(office))
+            return;
+    }
+
+    if (!fillInherited(propertyType)) {
+        return;
+    }
+
+    QModelIndex index;
+    int rowToUpdate = findID(extendedModel, ui->lineEdit_ID->text().toInt());
+
+    if (propertyType == APARTMENT_RUS) {
+        //extendedModel->setTable(APARTMENT_ENG);
+        //extendedModel->select();
+
+        index = extendedModel->index(rowToUpdate, ID_COL);
+        extendedModel->setData(index, apartment->getID());
+
+        index = extendedModel->index(rowToUpdate, APARTMENT_KITCHEN_COL);
+        extendedModel->setData(index, (apartment->getSquareKitchen() == -1.0) ? QVariant() : apartment->getSquareKitchen());
+
+        index = extendedModel->index(rowToUpdate, APARTMENT_ALL_FLOORS_COL);
+        extendedModel->setData(index, (apartment->getAllFloorsAmount() == -1) ? QVariant() : apartment->getAllFloorsAmount());
+
+        index = extendedModel->index(rowToUpdate, APARTMENT_LAYOUT_COL);
+        extendedModel->setData(index, apartment->getLayoutType().isEmpty() ? QVariant() : apartment->getLayoutType());
+
+        index = extendedModel->index(rowToUpdate, APARTMENT_BALCONY_COL);
+        extendedModel->setData(index, apartment->getHasBalcony().isEmpty() ? QVariant() : apartment->getHasBalcony());
+
+        index = extendedModel->index(rowToUpdate, APARTMENT_ELEVATOR_COL);
+        extendedModel->setData(index, apartment->getHasElevator().isEmpty() ? QVariant() : apartment->getHasElevator());
+
+        index = extendedModel->index(rowToUpdate, APARTMENT_CEILING_COL);
+        extendedModel->setData(index, (apartment->getCeilingHeight() == -1.0) ? QVariant() : apartment->getCeilingHeight());
+
+        index = extendedModel->index(rowToUpdate, APARTMENT_PARKING_COL);
+        extendedModel->setData(index, apartment->getHasParking().isEmpty() ? QVariant() : apartment->getHasParking());
+
+        index = extendedModel->index(rowToUpdate, APARTMENT_CONCIERGE_COL);
+        extendedModel->setData(index, apartment->getHasConcierge().isEmpty() ? QVariant() : apartment->getHasConcierge());
+    }
+    else if (propertyType == HOUSE_RUS) {
+        //extendedModel->setTable(HOUSE_ENG);
+        //extendedModel->select();
+
+        index = extendedModel->index(rowToUpdate, ID_COL);
+        extendedModel->setData(index, house->getID());
+
+        index = extendedModel->index(rowToUpdate, HOUSE_LAND_COL);
+        extendedModel->setData(index, (house->getLandSquare() == -1.0) ? QVariant() : house->getLandSquare());
+
+        index = extendedModel->index(rowToUpdate, HOUSE_KITCHEN_COL);
+        extendedModel->setData(index, (house->getKitchenSquare() == -1.0) ? QVariant() : house->getKitchenSquare());
+
+        index = extendedModel->index(rowToUpdate, HOUSE_WALL_COL);
+        extendedModel->setData(index, house->getWallMaterial().isEmpty() ? QVariant() : house->getWallMaterial());
+
+        index = extendedModel->index(rowToUpdate, HOUSE_ROOF_COL);
+        extendedModel->setData(index, house->getRoofMaterial().isEmpty() ? QVariant() : house->getRoofMaterial());
+
+        index = extendedModel->index(rowToUpdate, HOUSE_FIREPLACE_COL);
+        extendedModel->setData(index, house->getHasFireplace().isEmpty() ? QVariant() : house->getHasFireplace());
+
+        index = extendedModel->index(rowToUpdate, HOUSE_GARAGE_COL);
+        extendedModel->setData(index, house->getHasGarage().isEmpty() ? QVariant() : house->getHasGarage());
+
+        index = extendedModel->index(rowToUpdate, HOUSE_HEATING_COL);
+        extendedModel->setData(index, house->getHeatingType().isEmpty() ? QVariant() : house->getHeatingType());
+
+        index = extendedModel->index(rowToUpdate, HOUSE_SANITATION_COL);
+        extendedModel->setData(index, house->getSanitation().isEmpty() ? QVariant() : house->getSanitation());
+
+        index = extendedModel->index(rowToUpdate, HOUSE_WATER_COL);
+        extendedModel->setData(index, house->getWaterSupply().isEmpty() ? QVariant() : house->getWaterSupply());
+    }
+    else if (propertyType == OFFICE_RUS) {
+        //extendedModel->setTable(OFFICE_ENG);
+        //extendedModel->select();
+
+        index = extendedModel->index(rowToUpdate, ID_COL);
+        extendedModel->setData(index, office->getID());
+
+        index = extendedModel->index(rowToUpdate, OFFICE_CLASS);
+        extendedModel->setData(index, office->getOfficeClass().isEmpty() ? QVariant() : office->getOfficeClass());
+
+        index = extendedModel->index(rowToUpdate, OFFICE_ALL_FLOORS_COL);
+        extendedModel->setData(index, (office->getAllFloorsAmount() == -1) ? QVariant() : office->getAllFloorsAmount());
+
+        index = extendedModel->index(rowToUpdate, OFFICE_WORKSTATIONS_COL);
+        extendedModel->setData(index, (office->getWorkstationsAmount() == -1) ? QVariant() : office->getWorkstationsAmount());
+
+        index = extendedModel->index(rowToUpdate, OFFICE_WALL_COL);
+        extendedModel->setData(index, office->getWallMaterial().isEmpty() ? QVariant() : office->getWallMaterial());
+
+        index = extendedModel->index(rowToUpdate, OFFICE_RENOVATION_COL);
+        extendedModel->setData(index, office->getRenovation().isEmpty() ? QVariant() : office->getRenovation());
+
+        index = extendedModel->index(rowToUpdate, OFFICE_CONFERENCE_COL);
+        extendedModel->setData(index, office->getHasConferenceRooms().isEmpty() ? QVariant() : office->getHasConferenceRooms());
+
+        index = extendedModel->index(rowToUpdate, OFFICE_SECURITY_COL);
+        extendedModel->setData(index, office->getHasSecurityFeatures().isEmpty() ? QVariant() : office->getHasSecurityFeatures());
+
+        index = extendedModel->index(rowToUpdate, OFFICE_TOILET_COL);
+        extendedModel->setData(index, office->getHasToilet().isEmpty() ? QVariant() : office->getHasToilet());
+    }
+
+    if (model->submitAll() && extendedModel->submitAll()) {
+        QMessageBox::information(this, "Успех", "Изменения сохранены.");
+    }
+    else {
+        QMessageBox::warning(this, "Ошибка", "Что-то пошло не так...");
+    }
 }
 
 void objectOverview::on_pushButton_deal_clicked()
@@ -789,41 +768,6 @@ void objectOverview::on_pushButton_deal_clicked()
     makeDeal->show();
 
     dialog->exec();
-}
-
-void objectOverview::on_comboBox_rieltor_activated(int index)
-{
-    Q_UNUSED(index);
-    ui->comboBox_rieltor->setStyleSheet("");
-}
-
-
-void objectOverview::on_comboBox_client_activated(int index)
-{
-    Q_UNUSED(index);
-    ui->comboBox_client->setStyleSheet("");
-}
-
-void objectOverview::on_checkBox_auth_stateChanged(int arg1)
-{
-    if (arg1 == Qt::Checked) {
-        ui->comboBox_client->setEnabled(true);
-    }
-    else {
-        ui->comboBox_client->setCurrentIndex(-1);
-        ui->comboBox_client->setEnabled(false);
-        ui->comboBox_client->setStyleSheet("");
-    }
-}
-
-QVariant objectOverview::getDataFromItemModel(int row) {
-    QModelIndex tempIndex;
-    QVariant tempData;
-
-    tempIndex = itemModel->index(row, 1);
-    tempData = itemModel->data(tempIndex);
-
-    return tempData;
 }
 
 void objectOverview::on_pushButton_request_clicked()
@@ -871,4 +815,55 @@ void objectOverview::on_pushButton_request_clicked()
     }
 
     delete tempModelReq;
+}
+
+void objectOverview::on_plainTextEdit_description_textChanged()
+{
+    ui->plainTextEdit_description->setStyleSheet("");
+}
+
+void objectOverview::on_lineEdit_address_textChanged(const QString &arg1)
+{
+    Q_UNUSED(arg1);
+    ui->lineEdit_address->setStyleSheet("");
+}
+
+
+void objectOverview::on_lineEdit_price_textChanged(const QString &arg1)
+{
+    Q_UNUSED(arg1);
+    ui->lineEdit_price->setStyleSheet("");
+}
+
+
+void objectOverview::on_lineEdit_square_textChanged(const QString &arg1)
+{
+    Q_UNUSED(arg1);
+    ui->lineEdit_square->setStyleSheet("");
+}
+
+
+void objectOverview::on_lineEdit_year_textChanged(const QString &arg1)
+{
+    Q_UNUSED(arg1);
+    ui->lineEdit_year->setStyleSheet("");
+}
+
+void objectOverview::on_lineEdit_floor_amount_textChanged(const QString &arg1)
+{
+    Q_UNUSED(arg1);
+    ui->lineEdit_floor_amount->setStyleSheet("");
+}
+
+void objectOverview::on_comboBox_rieltor_activated(int index)
+{
+    Q_UNUSED(index);
+    ui->comboBox_rieltor->setStyleSheet("");
+}
+
+
+void objectOverview::on_comboBox_client_activated(int index)
+{
+    Q_UNUSED(index);
+    ui->comboBox_client->setStyleSheet("");
 }

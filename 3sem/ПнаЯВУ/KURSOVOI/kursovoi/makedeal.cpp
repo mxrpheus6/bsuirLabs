@@ -26,7 +26,7 @@ MakeDeal::MakeDeal(QWidget *parent, QWidget *parentOfParent, bool isRequested, Q
         QModelIndex index;
         QVariant data;
 
-        int currentRow = findUserRow(clientName);
+        int currentRow = findRowByField(clientName, NAME_COL);
 
         index = model->index(currentRow, ID_COL);
         data = model->data(index);
@@ -64,40 +64,14 @@ MakeDeal::~MakeDeal()
     delete model;
 }
 
-int MakeDeal::findUserRow(QString user) {
+int MakeDeal::findRowByField(QString field, int column) {
     QModelIndex index;
     QVariant data;
 
     for (int row = 0; row < model->rowCount(); row++) {
-           index = model->index(row, NAME_COL);
+           index = model->index(row, column);
            data = model->data(index).toString();
-           if (data.toString() == user)
-               return row;
-    }
-    return -1;
-}
-
-int MakeDeal::findUserRowByID(QString ID) {
-    QModelIndex index;
-    QVariant data;
-
-    for (int row = 0; row < model->rowCount(); row++) {
-           index = model->index(row, ID_COL);
-           data = model->data(index).toString();
-           if (data.toString() == ID)
-               return row;
-    }
-    return -1;
-}
-
-int MakeDeal::findID(QAbstractItemModel* model, int ID) {
-    QModelIndex index;
-    QVariant data;
-
-    for (int row = 0; row < model->rowCount(); row++) {
-           index = model->index(row, ID_COL);
-           data = model->data(index);
-           if (data.toInt() == ID)
+           if (data.toString() == field)
                return row;
     }
     return -1;
@@ -144,27 +118,6 @@ void MakeDeal::on_pushButton_deal_clicked()
         return;
     }
 
-    QSqlTableModel* tempModel = new QSqlTableModel();
-    tempModel->setTable(DEALS);
-    tempModel->select();
-
-    int rowToAdd = tempModel->rowCount();
-    tempModel->insertRow(rowToAdd);
-
-    QModelIndex index;
-    int rieltorRow = findUserRow(rieltorName);
-    index = model->index(rieltorRow, ID_COL);
-
-    int rieltorID = model->data(index).toInt();
-    index = tempModel->index(rowToAdd, ID_COL);
-    tempModel->setData(index, propertyID);
-
-    index = tempModel->index(rowToAdd, ID_RIELTOR);
-    tempModel->setData(index, rieltorID);
-
-    index = tempModel->index(rowToAdd, ID_CLIENT_DEAL);
-    tempModel->setData(index, ui->lineEdit_clientID->text().toInt());
-
     Client* client = new Client();
     try {
         client->setID(ui->lineEdit_clientID->text().toInt());
@@ -180,7 +133,28 @@ void MakeDeal::on_pushButton_deal_clicked()
         return;
     }
 
-    int rowToUpdate = findUserRowByID(ui->lineEdit_clientID->text());
+    QSqlTableModel* tempModel = new QSqlTableModel();
+    tempModel->setTable(DEALS);
+    tempModel->select();
+
+    int rowToAdd = tempModel->rowCount();
+    tempModel->insertRow(rowToAdd);
+
+    QModelIndex index;
+    int rieltorRow = findRowByField(rieltorName, NAME_COL);
+    index = model->index(rieltorRow, ID_COL);
+
+    int rieltorID = model->data(index).toInt();
+    index = tempModel->index(rowToAdd, ID_COL);
+    tempModel->setData(index, propertyID);
+
+    index = tempModel->index(rowToAdd, ID_RIELTOR);
+    tempModel->setData(index, rieltorID);
+
+    index = tempModel->index(rowToAdd, ID_CLIENT_DEAL);
+    tempModel->setData(index, ui->lineEdit_clientID->text().toInt());
+
+    int rowToUpdate = findRowByField(ui->lineEdit_clientID->text(), ID_COL);
     if (rowToUpdate == -1) {
         rowToUpdate = model->rowCount();
         model->insertRow(rowToUpdate);
