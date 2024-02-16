@@ -13,6 +13,6 @@
 
 ### [Четвертый семестр (2024)](https://github.com/mxrpheus6/bsuirLabs/tree/main/4sem)
 - [ПнаЯВУ](https://github.com/mxrpheus6/bsuirLabs/tree/main/4sem/ПнаЯВУ) (Марченков Д. Н. / Скиба И. Г.)
-- [ОСиСП](https://github.com/mxrpheus6/bsuirLabs/tree/main/4sem/) (Поденок Л. П. / Калютчик А. А.)
-- [АПК](https://github.com/mxrpheus6/bsuirLabs/tree/main/4sem/) (Одинец Д. Н.)
-- [СхемТ](https://github.com/mxrpheus6/bsuirLabs/tree/main/4sem/) (Байрак С. А. / Мармузевич М. А.)
+- [ОСиСП](https://github.com/mxrpheus6/bsuirLabs/tree/main/4sem/ОСиСП) (Поденок Л. П. / Калютчик А. А.)
+- [АПК](https://github.com/mxrpheus6/bsuirLabs/tree/main/4sem/АПК) (Одинец Д. Н.)
+- [СхемТ](https://github.com/mxrpheus6/bsuirLabs/tree/main/4sem/СхемТ) (Байрак С. А. / Мармузевич М. А.)
