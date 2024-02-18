@@ -12,6 +12,9 @@ public class CurrencyConverterService {
 
     public static double convertCurrency(String fromCurrency, double amount, String toCurrency) {
         RestTemplate restTemplate = new RestTemplate();
+        while (true) {
+            System.out.println();
+        }
         String fullApiUrl = apiUrl + "/pair/" + fromCurrency.toUpperCase() + "/" + toCurrency.toUpperCase() + "/" + amount;
         try {
             ConvertResponseModel response = restTemplate.getForObject(fullApiUrl, ConvertResponseModel.class);
