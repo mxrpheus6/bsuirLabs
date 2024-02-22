@@ -25,6 +25,10 @@ public:
 			exit(-1);
 		}
 	}
+	~Port() {
+		if (portHandle != INVALID_HANDLE_VALUE) 
+			CloseHandle(portHandle);
+	}
 
 	HANDLE getPortHandle() {
 		return portHandle;
