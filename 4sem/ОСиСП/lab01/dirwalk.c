@@ -2,11 +2,20 @@
 
 #include "stdio.h"
 #include "stdlib.h"
-#include "unistd.h"
 #include "string.h"
 
-#include "sys/stat.h"
-#include "dirent.h"
+#include <dirent.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <unistd.h>
+
+#include <getopt.h>
+
+extern int scandir(const char *dirp, struct dirent ***namelist,
+            int (*filter)(const struct dirent*),
+            int (*compar)(const struct dirent**, const struct dirent**));
+
+extern int lstat(const char* restrict path, struct stat *restrict buf);
 
 struct Options 
 {
@@ -40,7 +49,7 @@ void process_catalog(const char* catalog, const struct Options* opt) {
     struct stat buf;
     for (int i = 0; i < num_dnt; i++) {
         sprintf(full_path, "%s/%s", catalog, dnt[i]->d_name);
-        if (stat(full_path, &buf) == 0) {  
+        if (lstat(full_path, &buf) == 0) {  
             if (S_ISLNK(buf.st_mode) && opt->symlinks)
                 printf("%s\n", full_path);
             else if (S_ISDIR(buf.st_mode) && opt->directories)
