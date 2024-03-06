@@ -84,11 +84,8 @@ int main() {
 
 	char data = 'A';
 	DWORD size = sizeof(data);
-	DWORD bytesWritten;
 
-	BOOL Ret = WriteFile(port1.getPortHandle(), &data, size, &bytesWritten, NULL);
-
-	std::cout << size << " Bytes in char. " << bytesWritten << " Bytes sended. " << std::endl;
+	BOOL Ret = WriteFile(port1.getPortHandle(), &data, size, 0, NULL);
 
 	port2.readCOM();
 
