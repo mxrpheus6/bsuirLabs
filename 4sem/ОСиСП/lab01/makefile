@@ -1,14 +1,23 @@
 CC = gcc
-RELEASE = -std=c11 -pedantic -W -Wall -Wextra -Werror
-DEBUG = -g -ggdb -std=c11 -pedantic -W -Wall -Wextra
+CFLAGS_RELEASE = -std=c11 -pedantic -W -Wall -Wextra -Werror
+CFLAGS_DEBUG = -g -ggdb -std=c11 -pedantic -W -Wall -Wextra
 
-.PHONY: clean release debug
+.PHONY: all clean
 
-all: release
+MODE = release
 
-release: dirwalk.c makefile
-	$(CC) $(RELEASE) dirwalk.c -o dirwalk
-debug: dirwalk.c makefile
-	$(CC) $(DEBUG) dirwalk.c -o dirwalk_debug
+ifeq ($(MODE), release)
+	CFLAGS = $(CFLAGS_RELEASE)
+	TARGET = dirwalk
+else
+	CFLAGS = $(CFLAGS_DEBUG)
+	TARGET = dirwalk_debug
+endif
+
+all: $(TARGET)
+
+$(TARGET): src/dirwalk.c
+	$(CC) $(CFLAGS) $^ -o $@
+
 clean:
 	rm -f dirwalk dirwalk_debug

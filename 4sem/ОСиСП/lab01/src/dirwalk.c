@@ -48,6 +48,11 @@ void process_catalog(const char* catalog, const struct Options* opt) {
     char full_path[PATH_LEN];
     struct stat buf;
     for (int i = 0; i < num_dnt; i++) {
+        
+        if (strcmp(dnt[i]->d_name, ".") == 0 || strcmp(dnt[i]->d_name, "..") == 0) {
+            continue;
+        }
+
         sprintf(full_path, "%s/%s", catalog, dnt[i]->d_name);
         if (lstat(full_path, &buf) == 0) {  
             if (S_ISLNK(buf.st_mode) && opt->symlinks)
@@ -60,9 +65,7 @@ void process_catalog(const char* catalog, const struct Options* opt) {
                 printf("%s\n", full_path);
 
             if (S_ISDIR(buf.st_mode)) {
-                if (strcmp(dnt[i]->d_name, ".") != 0 && strcmp(dnt[i]->d_name, "..") != 0) {
-                    process_catalog(full_path, opt);
-                }
+                process_catalog(full_path, opt);
             }
         }
     }
