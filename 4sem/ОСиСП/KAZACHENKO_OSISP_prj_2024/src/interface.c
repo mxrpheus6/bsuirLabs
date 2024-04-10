@@ -41,6 +41,21 @@ Interface** init_interface_array(int size) {
     return interfaces;
 }
 
+void free_interface(Interface *interface) {
+    free(interface->name);
+    free(interface->device_class);
+    free(interface->device_subclass);
+
+    free(interface);
+}
+
+void free_interface_array(Interface **interface_array, int size) {
+    for (int i = 0; i < size; ++i) {
+        free_interface(interface_array[i]);
+    }
+    free(interface_array);
+}
+
 int count_interfaces(const char* path) {
     DIR *dir;
     struct dirent *entry;
@@ -103,7 +118,7 @@ void parse_interfaces(Interface **interface_array, const char* path) {
         snprintf(full_path, sizeof(full_path), "%s/%s", path, entry->d_name);
         
         interface_array[interface_index]->number = atoi(read_descriptor(full_path, INTERFACE_NUMBER_FILENAME));
-        interface_array[interface_index]->name = "Unknown";
+        interface_array[interface_index]->name = NULL;
         interface_array[interface_index]->alternate_number = atoi(read_descriptor(full_path, ALTERNATE_NUMBER_FILENAME));
         interface_array[interface_index]->device_class = read_descriptor(full_path, CLASS_FILENAME);
         interface_array[interface_index]->device_subclass = read_descriptor(full_path, SUBCLASS_FILENAME);

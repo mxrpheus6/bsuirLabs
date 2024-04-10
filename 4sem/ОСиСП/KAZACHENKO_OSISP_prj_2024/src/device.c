@@ -46,6 +46,28 @@ Device** init_device_array(int size) {
     return devices;
 }
 
+void free_device(Device *device) {
+    free(device->name);
+    free(device->manufacturer);
+    free(device->serial_number);
+    free(device->device_class);
+    free(device->device_subclass);
+    free(device->id_vendor);
+    free(device->id_product);
+    free(device->revision);
+
+    free_interface_array(device->interfaces, device->interfaces_amount);
+
+    free(device);
+}
+
+void free_device_array(Device **device_array, int size) {
+    for (int i = 0; i < size; i++) {
+        free_device(device_array[i]);
+    }
+    free(device_array);
+}
+
 
 int count_deivces(const char* path) {
     DIR *dir;

@@ -24,6 +24,8 @@ typedef struct {
 
 Hub* create_hub();
 Hub** init_hub_array(int size);
+void free_hub(Hub *hub);
+void free_hub_array(Hub **hub_array, int size);
 
 void parse_hubs(Hub **hub_array, int size, const char *path);
 void print_hub_console(Hub *hub);

@@ -21,6 +21,8 @@ typedef struct {
 
 Device* create_device();
 Device** init_device_array(int size);
+void free_device(Device *device);
+void free_device_array(Device **device_array, int size);
 
 int count_deivces(const char* path);
 void parse_devices(Device **device_array, const char* path);

@@ -19,7 +19,7 @@ ifeq ($(MODE), release)
     vpath %.o build/linux/release
 endif
 
-objects = $(OUT_DIR)/main.o $(OUT_DIR)/device.o $(OUT_DIR)/descriptors.o $(OUT_DIR)/hub.o $(OUT_DIR)/interface.o
+objects = $(OUT_DIR)/main.o $(OUT_DIR)/device.o $(OUT_DIR)/descriptors.o $(OUT_DIR)/hub.o $(OUT_DIR)/interface.o $(OUT_DIR)/flash_test.o
 #objects = main.o lib.o
 
 prog = USBAssist
