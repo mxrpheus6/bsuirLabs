@@ -1,3 +1,6 @@
+#ifndef HUB_H
+#define HUB_H
+
 #include "device.h"
 
 typedef struct {    
@@ -31,3 +34,5 @@ void parse_hubs(Hub **hub_array, int size, const char *path);
 void print_hub_console(Hub *hub);
 void print_hub_ncurses(Hub *hubs[], int num_hubs);
 int count_hubs(const char *path);
+
+#endif // HUB_H

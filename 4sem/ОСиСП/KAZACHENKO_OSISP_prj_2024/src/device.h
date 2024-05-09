@@ -1,3 +1,6 @@
+#ifndef DEVICE_H
+#define DEVICE_H
+
 #include "interface.h"
 
 typedef struct {
@@ -26,3 +29,5 @@ void free_device_array(Device **device_array, int size);
 
 int count_deivces(const char* path);
 void parse_devices(Device **device_array, const char* path);
+
+#endif // DEVICE_H

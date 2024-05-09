@@ -1,3 +1,4 @@
+#define _DEFAULT_SOURCE
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -8,6 +9,8 @@
 #include "descriptors.h"
 
 #define MAX_FILENAME_LEN 512
+#define DESCRIPTOR_FILENAME "uevent"
+#define DRIVER_DESCRIPTOR "DRIVER"
 
 Interface* create_interface() {
     Interface *interface = malloc(sizeof(Interface));
@@ -90,6 +93,36 @@ int count_interfaces(const char* path) {
     return counter;
 }
 
+char* read_driver_descriptor(const char* path) {
+    FILE* file;
+    char descriptor_path[MAX_FILENAME_LEN];
+    char line[256];
+    char* driver_name = NULL;
+
+    snprintf(descriptor_path, sizeof(descriptor_path), "%s/%s", path, DESCRIPTOR_FILENAME);
+
+    file = fopen(descriptor_path, "r");
+    if (file == NULL) {
+        printf("Error opening descriptor file\n");
+        exit(EXIT_FAILURE);
+    }
+
+    while (fgets(line, sizeof(line), file)) {
+        if (strstr(line, DRIVER_DESCRIPTOR) == line) {
+            char* value_start = strchr(line, '=') + 1;
+            char* newline_pos = strchr(value_start, '\n');
+            if (newline_pos != NULL) {
+                *newline_pos = '\0';
+            }
+            driver_name = strdup(value_start);
+            break;
+        }
+    }
+
+    fclose(file);
+    return driver_name;
+}
+
 void parse_interfaces(Interface **interface_array, const char* path) {
     DIR *dir;
     struct dirent *entry;
@@ -118,7 +151,7 @@ void parse_interfaces(Interface **interface_array, const char* path) {
         snprintf(full_path, sizeof(full_path), "%s/%s", path, entry->d_name);
         
         interface_array[interface_index]->number = atoi(read_descriptor(full_path, INTERFACE_NUMBER_FILENAME));
-        interface_array[interface_index]->name = NULL;
+        interface_array[interface_index]->name = read_driver_descriptor(full_path);
         interface_array[interface_index]->alternate_number = atoi(read_descriptor(full_path, ALTERNATE_NUMBER_FILENAME));
         interface_array[interface_index]->device_class = read_descriptor(full_path, CLASS_FILENAME);
         interface_array[interface_index]->device_subclass = read_descriptor(full_path, SUBCLASS_FILENAME);

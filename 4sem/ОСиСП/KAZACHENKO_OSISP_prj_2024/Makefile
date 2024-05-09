@@ -14,12 +14,12 @@ vpath %.o build/debug
 
 ifeq ($(MODE), release)
     CFLAGS = -std=c11 -pedantic -W -Wall -Wextra -Werror
-    LDFLAGS += -lncurses  # Добавляем флаг линковки для библиотеки ncurses
+    LDFLAGS += -lncurses 
     OUT_DIR = $(RELEASE)
     vpath %.o build/linux/release
 endif
 
-objects = $(OUT_DIR)/main.o $(OUT_DIR)/device.o $(OUT_DIR)/descriptors.o $(OUT_DIR)/hub.o $(OUT_DIR)/interface.o $(OUT_DIR)/flash_test.o
+objects = $(OUT_DIR)/main.o $(OUT_DIR)/device.o $(OUT_DIR)/descriptors.o $(OUT_DIR)/hub.o $(OUT_DIR)/interface.o $(OUT_DIR)/flash_test.o $(OUT_DIR)/flash.o $(OUT_DIR)/input_test.o $(OUT_DIR)/menu.o
 #objects = main.o lib.o
 
 prog = USBAssist

@@ -1,0 +1,17 @@
+{
+    "files.associations": {
+        "unistd.h": "c",
+        "descriptors.h": "c",
+        "dirent.h": "c",
+        "time.h": "c",
+        "stddef.h": "c",
+        "string.h": "c",
+        "stdio.h": "c",
+        "flash_test.h": "c",
+        "stdlib.h": "c",
+        "input_test.h": "c",
+        "menu.h": "c",
+        "flash.h": "c",
+        "ncurses.h": "c"
+    }
+}
