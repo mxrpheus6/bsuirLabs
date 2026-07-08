@@ -1,0 +1,1314 @@
+Project Information                   d:\bsuir\bsuirlabs\5sem\sifo\rzu\rrd.rpt
+
+MAX+plus II Compiler Report File
+Version 10.0 9/14/2000
+Compiled: 11/29/2024 14:39:57
+
+Copyright (C) 1988-2000 Altera Corporation
+Any megafunction design, and related net list (encrypted or decrypted),
+support information, device programming or simulation file, and any other
+associated documentation or information provided by Altera or a partner
+under Altera's Megafunction Partnership Program may be used only to
+program PLD devices (but not masked PLD devices) from Altera.  Any other
+use of such megafunction design, net list, support information, device
+programming or simulation file, or any other related documentation or
+information is prohibited for any other purpose, including, but not
+limited to modification, reverse engineering, de-compiling, or use with
+any other silicon devices, unless such use is explicitly licensed under
+a separate agreement with Altera or a megafunction partner.  Title to
+the intellectual property, including patents, copyrights, trademarks,
+trade secrets, or maskworks, embodied in any such megafunction design,
+net list, support information, device programming or simulation file, or
+any other related documentation or information provided by Altera or a
+megafunction partner, remains with Altera, the megafunction partner, or
+their respective licensors.  No other licenses, including any licenses
+needed under any third party's intellectual property, are provided herein.
+
+
+
+***** Project compilation was successful
+
+
+
+
+** DEVICE SUMMARY **
+
+Chip/                     Input   Output   Bidir         Shareable
+POF       Device          Pins    Pins     Pins     LCs  Expanders  % Utilized
+
+rrd       EPM7096LC68-7    14       8        0      96      0           100%
+
+User Pins:                 14       8        0  
+
+
+
+Project Information                   d:\bsuir\bsuirlabs\5sem\sifo\rzu\rrd.rpt
+
+** PROJECT COMPILATION MESSAGES **
+
+Warning: GLOBAL primitive on node 'clk' feeds logic -- non-global signal usage may result
+
+
+Project Information                   d:\bsuir\bsuirlabs\5sem\sifo\rzu\rrd.rpt
+
+** AUTO GLOBAL SIGNALS **
+
+
+
+INFO: Signal 'clk' chosen for auto global Clock
+
+
+Project Information                   d:\bsuir\bsuirlabs\5sem\sifo\rzu\rrd.rpt
+
+** FILE HIERARCHY **
+
+
+
+|reg4:72|
+|reg4:236|
+|reg4:235|
+|reg4:210|
+|reg4:209|
+|reg4:208|
+|reg4:207|
+|reg4:206|
+|reg4:205|
+|reg4:204|
+|reg4:203|
+|reg4:71|
+|reg4:70|
+|reg4:59|
+|reg4:54|
+|reg4:51|
+|reg4:48|
+|reg4:19|
+|dc4:112|
+|dc4:92|
+
+
+Device-Specific Information:          d:\bsuir\bsuirlabs\5sem\sifo\rzu\rrd.rpt
+rrd
+
+***** Logic for device 'rrd' compiled without errors.
+
+
+
+
+Device: EPM7096LC68-7
+
+Device Options:
+    Turbo Bit                                    = ON
+    Security Bit                                 = OFF
+    MultiVolt I/O                              = OFF
+
+
+
+Device-Specific Information:          d:\bsuir\bsuirlabs\5sem\sifo\rzu\rrd.rpt
+rrd
+
+** ERROR SUMMARY **
+
+Info: Chip 'rrd' in device 'EPM7096LC68-7' has less than 10% of logic cells available for future logic changes -- if your project is likely to change, Altera recommends using a larger device
+              R                                   R  R     R  R  
+              E                                   E  E     E  E  
+              S  b  a     a  a  V                 S  S     S  S  
+              E  _  _     _  _  C                 E  E  V  E  E  
+              R  a  a     a  a  C                 R  R  C  R  R  
+              V  d  d  G  d  d  I  G  G  G  c  G  V  V  C  V  V  
+              E  d  d  N  d  d  N  N  N  N  l  N  E  E  I  E  E  
+              D  1  0  D  1  2  T  D  D  D  k  D  D  D  O  D  D  
+            -----------------------------------------------------_ 
+          /   9  8  7  6  5  4  3  2  1 68 67 66 65 64 63 62 61   | 
+  b_add3 | 10                                                  60 | a_out0 
+   VCCIO | 11                                                  59 | RESERVED 
+  b_add0 | 12                                                  58 | GND 
+   allow | 13                                                  57 | b_out0 
+  b_add2 | 14                                                  56 | RESERVED 
+RESERVED | 15                                                  55 | RESERVED 
+     GND | 16                                                  54 | a_out1 
+RESERVED | 17                                                  53 | VCCIO 
+     in3 | 18                  EPM7096LC68-7                   52 | RESERVED 
+     in2 | 19                                                  51 | RESERVED 
+     in0 | 20                                                  50 | RESERVED 
+   VCCIO | 21                                                  49 | b_out1 
+     in1 | 22                                                  48 | GND 
+  a_add3 | 23                                                  47 | RESERVED 
+RESERVED | 24                                                  46 | RESERVED 
+  a_out3 | 25                                                  45 | RESERVED 
+     GND | 26                                                  44 | a_out2 
+         |_  27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43  _| 
+           ------------------------------------------------------ 
+              R  R  R  b  V  R  R  G  V  R  R  G  b  R  R  R  V  
+              E  E  E  _  C  E  E  N  C  E  E  N  _  E  E  E  C  
+              S  S  S  o  C  S  S  D  C  S  S  D  o  S  S  S  C  
+              E  E  E  u  I  E  E     I  E  E     u  E  E  E  I  
+              R  R  R  t  O  R  R     N  R  R     t  R  R  R  O  
+              V  V  V  3     V  V     T  V  V     2  V  V  V     
+              E  E  E        E  E        E  E        E  E  E     
+              D  D  D        D  D        D  D        D  D  D     
+
+
+N.C. = No Connect. This pin has no internal connection to the device.
+VCCINT = Dedicated power pin, which MUST be connected to VCC (5.0 volts).
+VCCIO = Dedicated power pin, which MUST be connected to VCC (5.0 volts).
+GND = Dedicated ground pin or unused dedicated input, which MUST be connected to GND.
+RESERVED = Unused I/O pin, which MUST be left unconnected.
+
+
+
+Device-Specific Information:          d:\bsuir\bsuirlabs\5sem\sifo\rzu\rrd.rpt
+rrd
+
+** RESOURCE USAGE **
+
+                                                Shareable     External
+Logic Array Block     Logic Cells   I/O Pins    Expanders   Interconnect
+
+A:     LC1 - LC16    16/16(100%)   7/ 8( 87%)   0/16(  0%)   8/36( 22%) 
+B:    LC17 - LC32    16/16(100%)   6/ 8( 75%)   0/16(  0%)   8/36( 22%) 
+C:    LC33 - LC48    16/16(100%)   2/ 8( 25%)   6/16( 37%)  27/36( 75%) 
+D:    LC49 - LC64    16/16(100%)   2/ 8( 25%)   6/16( 37%)  27/36( 75%) 
+E:    LC65 - LC80    16/16(100%)   2/ 8( 25%)   6/16( 37%)  27/36( 75%) 
+F:    LC81 - LC96    16/16(100%)   2/ 8( 25%)   6/16( 37%)  27/36( 75%) 
+
+
+Total dedicated input pins used:                 1/4      ( 25%)
+Total I/O pins used:                            21/48     ( 43%)
+Total logic cells used:                         96/96     (100%)
+Total shareable expanders used:                  0/96     (  0%)
+Total Turbo logic cells used:                   96/96     (100%)
+Total shareable expanders not available (n/a):  24/96     ( 25%)
+Average fan-in:                                  6.41
+Total fan-in:                                   616
+
+Total input pins required:                      14
+Total output pins required:                      8
+Total bidirectional pins required:               0
+Total logic cells required:                     96
+Total flipflops required:                       72
+Total product terms required:                  256
+Total logic cells lending parallel expanders:   24
+Total shareable expanders in database:           0
+
+Synthesized logic cells:                         0/  96   (  0%)
+
+
+
+Device-Specific Information:          d:\bsuir\bsuirlabs\5sem\sifo\rzu\rrd.rpt
+rrd
+
+** INPUTS **
+
+                                         Shareable
+                                         Expanders     Fan-In    Fan-Out
+ Pin     LC  LAB  Primitive    Code   Total Shared n/a INP  FBK  OUT  FBK  Name
+   7   (12)  (A)      INPUT               0      0   0    0    0    4    0  a_add0
+   5   (14)  (A)      INPUT               0      0   0    0    0    4    0  a_add1
+   4   (16)  (A)      INPUT               0      0   0    0    0    4    0  a_add2
+  23   (17)  (B)      INPUT               0      0   0    0    0    4    0  a_add3
+  13    (1)  (A)      INPUT               0      0   0    0    0    0   64  allow
+  12    (4)  (A)      INPUT               0      0   0    0    0    4   64  b_add0
+   8    (9)  (A)      INPUT               0      0   0    0    0    4   64  b_add1
+  14   (32)  (B)      INPUT               0      0   0    0    0    4   64  b_add2
+  10    (6)  (A)      INPUT               0      0   0    0    0    4   64  b_add3
+  67      -   -       INPUT  G            0      0   0    0    0    0   64  clk
+  20   (21)  (B)      INPUT               0      0   0    0    0    0   16  in0
+  22   (19)  (B)      INPUT               0      0   0    0    0    0   16  in1
+  19   (24)  (B)      INPUT               0      0   0    0    0    0   16  in2
+  18   (25)  (B)      INPUT               0      0   0    0    0    0   16  in3
+
+
+Code:
+
+s = Synthesized pin or logic cell
+t = Turbo logic cell
++ = Synchronous flipflop
+! = NOT gate push-back
+r = Fitter-inserted logic cell
+G = Global Source. Fan-out destinations counted here do not include destinations
+that are driven using global routing resources. Refer to the Auto Global Signals,
+Clock Signals, Clear Signals, Synchronous Load Signals, and Synchronous Clear Signals
+Sections of this Report File for information on which signals' fan-outs are used as
+Clock, Clear, Preset, Output Enable, and synchronous Load signals.
+
+
+Device-Specific Information:          d:\bsuir\bsuirlabs\5sem\sifo\rzu\rrd.rpt
+rrd
+
+** OUTPUTS **
+
+                                         Shareable
+                                         Expanders     Fan-In    Fan-Out
+ Pin     LC  LAB  Primitive    Code   Total Shared n/a INP  FBK  OUT  FBK  Name
+  60     88    F         FF   +  t        1      0   1    4   16    0    0  a_out0 (|reg4:235|:5)
+  54     77    E         FF   +  t        1      0   1    4   16    0    0  a_out1 (|reg4:235|:6)
+  44     61    D         FF   +  t        1      0   1    4   16    0    0  a_out2 (|reg4:235|:7)
+  25     45    C         FF   +  t        1      0   1    4   16    0    0  a_out3 (|reg4:235|:8)
+  57     84    F         FF   +  t        1      0   1    4   16    0    0  b_out0 (|reg4:236|:5)
+  49     69    E         FF   +  t        1      0   1    4   16    0    0  b_out1 (|reg4:236|:6)
+  39     53    D         FF   +  t        1      0   1    4   16    0    0  b_out2 (|reg4:236|:7)
+  30     37    C         FF   +  t        1      0   1    4   16    0    0  b_out3 (|reg4:236|:8)
+
+
+Code:
+
+s = Synthesized pin or logic cell
+t = Turbo logic cell
++ = Synchronous flipflop
+! = NOT gate push-back
+r = Fitter-inserted logic cell
+
+
+Device-Specific Information:          d:\bsuir\bsuirlabs\5sem\sifo\rzu\rrd.rpt
+rrd
+
+** BURIED LOGIC **
+
+                                         Shareable
+                                         Expanders     Fan-In    Fan-Out
+ Pin     LC  LAB  Primitive    Code   Total Shared n/a INP  FBK  OUT  FBK  Name
+   -     90    F       DFFE      t        0      0   0    7    0    2    0  |reg4:19|OUT0 (|reg4:19|:5)
+   -     79    E       DFFE      t        0      0   0    7    0    2    0  |reg4:19|OUT1 (|reg4:19|:6)
+   -     55    D       DFFE      t        0      0   0    7    0    2    0  |reg4:19|OUT2 (|reg4:19|:7)
+   -     39    C       DFFE      t        0      0   0    7    0    2    0  |reg4:19|OUT3 (|reg4:19|:8)
+   -     91    F       DFFE      t        0      0   0    7    0    2    0  |reg4:48|OUT0 (|reg4:48|:5)
+ (46)    65    E       DFFE      t        0      0   0    7    0    2    0  |reg4:48|OUT1 (|reg4:48|:6)
+   -     62    D       DFFE      t        0      0   0    7    0    2    0  |reg4:48|OUT2 (|reg4:48|:7)
+   -     46    C       DFFE      t        0      0   0    7    0    2    0  |reg4:48|OUT3 (|reg4:48|:8)
+   -     93    F       DFFE      t        0      0   0    7    0    2    0  |reg4:51|OUT0 (|reg4:51|:5)
+ (50)    72    E       DFFE      t        0      0   0    7    0    2    0  |reg4:51|OUT1 (|reg4:51|:6)
+ (41)    57    D       DFFE      t        0      0   0    7    0    2    0  |reg4:51|OUT2 (|reg4:51|:7)
+ (28)    41    C       DFFE      t        0      0   0    7    0    2    0  |reg4:51|OUT3 (|reg4:51|:8)
+ (64)    94    F       DFFE      t        0      0   0    7    0    2    0  |reg4:54|OUT0 (|reg4:54|:5)
+ (51)    73    E       DFFE      t        0      0   0    7    0    2    0  |reg4:54|OUT1 (|reg4:54|:6)
+   -     63    D       DFFE      t        0      0   0    7    0    2    0  |reg4:54|OUT2 (|reg4:54|:7)
+ (24)    48    C       DFFE      t        0      0   0    7    0    2    0  |reg4:54|OUT3 (|reg4:54|:8)
+ (65)    96    F       DFFE      t        0      0   0    7    0    2    0  |reg4:59|OUT0 (|reg4:59|:5)
+   -     78    E       DFFE      t        0      0   0    7    0    2    0  |reg4:59|OUT1 (|reg4:59|:6)
+ (40)    56    D       DFFE      t        0      0   0    7    0    2    0  |reg4:59|OUT2 (|reg4:59|:7)
+   -     38    C       DFFE      t        0      0   0    7    0    2    0  |reg4:59|OUT3 (|reg4:59|:8)
+ (61)    89    F       DFFE      t        0      0   0    7    0    2    0  |reg4:70|OUT0 (|reg4:70|:5)
+   -     71    E       DFFE      t        0      0   0    7    0    2    0  |reg4:70|OUT1 (|reg4:70|:6)
+ (36)    49    D       DFFE      t        0      0   0    7    0    2    0  |reg4:70|OUT2 (|reg4:70|:7)
+ (29)    40    C       DFFE      t        0      0   0    7    0    2    0  |reg4:70|OUT3 (|reg4:70|:8)
+ (62)    92    F       DFFE      t        0      0   0    7    0    2    0  |reg4:71|OUT0 (|reg4:71|:5)
+   -     70    E       DFFE      t        0      0   0    7    0    2    0  |reg4:71|OUT1 (|reg4:71|:6)
+   -     54    D       DFFE      t        0      0   0    7    0    2    0  |reg4:71|OUT2 (|reg4:71|:7)
+ (33)    33    C       DFFE      t        0      0   0    7    0    2    0  |reg4:71|OUT3 (|reg4:71|:8)
+   -     95    F       DFFE      t        0      0   0    7    0    2    0  |reg4:72|OUT0 (|reg4:72|:5)
+ (55)    80    E       DFFE      t        0      0   0    7    0    2    0  |reg4:72|OUT1 (|reg4:72|:6)
+ (45)    64    D       DFFE      t        0      0   0    7    0    2    0  |reg4:72|OUT2 (|reg4:72|:7)
+   -     47    C       DFFE      t        0      0   0    7    0    2    0  |reg4:72|OUT3 (|reg4:72|:8)
+   -     23    B       DFFE      t        0      0   0    7    0    2    0  |reg4:203|OUT0 (|reg4:203|:5)
+   -     30    B       DFFE      t        0      0   0    7    0    2    0  |reg4:203|OUT1 (|reg4:203|:6)
+ (10)     6    A       DFFE      t        0      0   0    7    0    2    0  |reg4:203|OUT2 (|reg4:203|:7)
+   -     15    A       DFFE      t        0      0   0    7    0    2    0  |reg4:203|OUT3 (|reg4:203|:8)
+   -     31    B       DFFE      t        0      0   0    7    0    2    0  |reg4:204|OUT0 (|reg4:204|:5)
+   -     26    B       DFFE      t        0      0   0    7    0    2    0  |reg4:204|OUT1 (|reg4:204|:6)
+  (4)    16    A       DFFE      t        0      0   0    7    0    2    0  |reg4:204|OUT2 (|reg4:204|:7)
+  (5)    14    A       DFFE      t        0      0   0    7    0    2    0  |reg4:204|OUT3 (|reg4:204|:8)
+ (15)    29    B       DFFE      t        0      0   0    7    0    2    0  |reg4:205|OUT0 (|reg4:205|:5)
+   -     18    B       DFFE      t        0      0   0    7    0    2    0  |reg4:205|OUT1 (|reg4:205|:6)
+   -     13    A       DFFE      t        0      0   0    7    0    2    0  |reg4:205|OUT2 (|reg4:205|:7)
+  (7)    12    A       DFFE      t        0      0   0    7    0    2    0  |reg4:205|OUT3 (|reg4:205|:8)
+ (22)    19    B       DFFE      t        0      0   0    7    0    2    0  |reg4:206|OUT0 (|reg4:206|:5)
+ (14)    32    B       DFFE      t        0      0   0    7    0    2    0  |reg4:206|OUT1 (|reg4:206|:6)
+   -      7    A       DFFE      t        0      0   0    7    0    2    0  |reg4:206|OUT2 (|reg4:206|:7)
+  (9)     8    A       DFFE      t        0      0   0    7    0    2    0  |reg4:206|OUT3 (|reg4:206|:8)
+   -     22    B       DFFE      t        0      0   0    7    0    2    0  |reg4:207|OUT0 (|reg4:207|:5)
+ (20)    21    B       DFFE      t        0      0   0    7    0    2    0  |reg4:207|OUT1 (|reg4:207|:6)
+   -      5    A       DFFE      t        0      0   0    7    0    2    0  |reg4:207|OUT2 (|reg4:207|:7)
+   -     10    A       DFFE      t        0      0   0    7    0    2    0  |reg4:207|OUT3 (|reg4:207|:8)
+ (23)    17    B       DFFE      t        0      0   0    7    0    2    0  |reg4:208|OUT0 (|reg4:208|:5)
+ (18)    25    B       DFFE      t        0      0   0    7    0    2    0  |reg4:208|OUT1 (|reg4:208|:6)
+  (8)     9    A       DFFE      t        0      0   0    7    0    2    0  |reg4:208|OUT2 (|reg4:208|:7)
+ (12)     4    A       DFFE      t        0      0   0    7    0    2    0  |reg4:208|OUT3 (|reg4:208|:8)
+   -     20    B       DFFE      t        0      0   0    7    0    2    0  |reg4:209|OUT0 (|reg4:209|:5)
+ (19)    24    B       DFFE      t        0      0   0    7    0    2    0  |reg4:209|OUT1 (|reg4:209|:6)
+   -      2    A       DFFE      t        0      0   0    7    0    2    0  |reg4:209|OUT2 (|reg4:209|:7)
+   -      3    A       DFFE      t        0      0   0    7    0    2    0  |reg4:209|OUT3 (|reg4:209|:8)
+ (17)    27    B       DFFE      t        0      0   0    7    0    2    0  |reg4:210|OUT0 (|reg4:210|:5)
+   -     28    B       DFFE      t        0      0   0    7    0    2    0  |reg4:210|OUT1 (|reg4:210|:6)
+   -     11    A       DFFE      t        0      0   0    7    0    2    0  |reg4:210|OUT2 (|reg4:210|:7)
+ (13)     1    A       DFFE      t        0      0   0    7    0    2    0  |reg4:210|OUT3 (|reg4:210|:8)
+   -     87    F       PEXP      t        1      0   1    0    0    0    0  _LC087
+ (59)    86    F       PEXP      t        1      0   1    0    0    0    0  _LC086
+   -     85    F       PEXP      t        0      0   0    0    0    0    0  _LC085
+   -     76    E       PEXP      t        1      0   1    0    0    0    0  _LC076
+ (52)    75    E       PEXP      t        1      0   1    0    0    0    0  _LC075
+   -     74    E       PEXP      t        0      0   0    0    0    0    0  _LC074
+   -     60    D       PEXP      t        1      0   1    0    0    0    0  _LC060
+ (42)    59    D       PEXP      t        1      0   1    0    0    0    0  _LC059
+   -     58    D       PEXP      t        0      0   0    0    0    0    0  _LC058
+   -     44    C       PEXP      t        1      0   1    0    0    0    0  _LC044
+ (27)    43    C       PEXP      t        1      0   1    0    0    0    0  _LC043
+   -     42    C       PEXP      t        0      0   0    0    0    0    0  _LC042
+   -     83    F       PEXP      t        1      0   1    0    0    0    0  _LC083
+   -     82    F       PEXP      t        1      0   1    0    0    0    0  _LC082
+ (56)    81    F       PEXP      t        0      0   0    0    0    0    0  _LC081
+   -     68    E       PEXP      t        1      0   1    0    0    0    0  _LC068
+ (47)    67    E       PEXP      t        1      0   1    0    0    0    0  _LC067
+   -     66    E       PEXP      t        0      0   0    0    0    0    0  _LC066
+   -     52    D       PEXP      t        1      0   1    0    0    0    0  _LC052
+ (37)    51    D       PEXP      t        1      0   1    0    0    0    0  _LC051
+   -     50    D       PEXP      t        0      0   0    0    0    0    0  _LC050
+   -     36    C       PEXP      t        1      0   1    0    0    0    0  _LC036
+ (32)    35    C       PEXP      t        1      0   1    0    0    0    0  _LC035
+   -     34    C       PEXP      t        0      0   0    0    0    0    0  _LC034
+
+
+Code:
+
+s = Synthesized pin or logic cell
+t = Turbo logic cell
++ = Synchronous flipflop
+! = NOT gate push-back
+r = Fitter-inserted logic cell
+
+
+Device-Specific Information:          d:\bsuir\bsuirlabs\5sem\sifo\rzu\rrd.rpt
+rrd
+
+** LOGIC CELL INTERCONNECTIONS **
+
+Logic Array Block 'A':
+
+                                         Logic cells placed in LAB 'A'
+        +------------------------------- LC6 |reg4:203|OUT2
+        | +----------------------------- LC15 |reg4:203|OUT3
+        | | +--------------------------- LC16 |reg4:204|OUT2
+        | | | +------------------------- LC14 |reg4:204|OUT3
+        | | | | +----------------------- LC13 |reg4:205|OUT2
+        | | | | | +--------------------- LC12 |reg4:205|OUT3
+        | | | | | | +------------------- LC7 |reg4:206|OUT2
+        | | | | | | | +----------------- LC8 |reg4:206|OUT3
+        | | | | | | | | +--------------- LC5 |reg4:207|OUT2
+        | | | | | | | | | +------------- LC10 |reg4:207|OUT3
+        | | | | | | | | | | +----------- LC9 |reg4:208|OUT2
+        | | | | | | | | | | | +--------- LC4 |reg4:208|OUT3
+        | | | | | | | | | | | | +------- LC2 |reg4:209|OUT2
+        | | | | | | | | | | | | | +----- LC3 |reg4:209|OUT3
+        | | | | | | | | | | | | | | +--- LC11 |reg4:210|OUT2
+        | | | | | | | | | | | | | | | +- LC1 |reg4:210|OUT3
+        | | | | | | | | | | | | | | | | 
+        | | | | | | | | | | | | | | | |   Other LABs fed by signals
+        | | | | | | | | | | | | | | | |   that feed LAB 'A'
+LC      | | | | | | | | | | | | | | | | | A B C D E F |     Logic cells that feed LAB 'A':
+
+Pin
+13   -> * * * * * * * * * * * * * * * * | * * * * * * | <-- allow
+12   -> * * * * * * * * * * * * * * * * | * * * * * * | <-- b_add0
+8    -> * * * * * * * * * * * * * * * * | * * * * * * | <-- b_add1
+14   -> * * * * * * * * * * * * * * * * | * * * * * * | <-- b_add2
+10   -> * * * * * * * * * * * * * * * * | * * * * * * | <-- b_add3
+67   -> * * * * * * * * * * * * * * * * | * * * * * * | <-- clk
+19   -> * - * - * - * - * - * - * - * - | * - - * - - | <-- in2
+18   -> - * - * - * - * - * - * - * - * | * - * - - - | <-- in3
+
+
+* = The logic cell or pin is an input to the logic cell (or LAB) through the PIA.
+- = The logic cell or pin is not an input to the logic cell (or LAB).
+
+
+Device-Specific Information:          d:\bsuir\bsuirlabs\5sem\sifo\rzu\rrd.rpt
+rrd
+
+** LOGIC CELL INTERCONNECTIONS **
+
+Logic Array Block 'B':
+
+                                         Logic cells placed in LAB 'B'
+        +------------------------------- LC23 |reg4:203|OUT0
+        | +----------------------------- LC30 |reg4:203|OUT1
+        | | +--------------------------- LC31 |reg4:204|OUT0
+        | | | +------------------------- LC26 |reg4:204|OUT1
+        | | | | +----------------------- LC29 |reg4:205|OUT0
+        | | | | | +--------------------- LC18 |reg4:205|OUT1
+        | | | | | | +------------------- LC19 |reg4:206|OUT0
+        | | | | | | | +----------------- LC32 |reg4:206|OUT1
+        | | | | | | | | +--------------- LC22 |reg4:207|OUT0
+        | | | | | | | | | +------------- LC21 |reg4:207|OUT1
+        | | | | | | | | | | +----------- LC17 |reg4:208|OUT0
+        | | | | | | | | | | | +--------- LC25 |reg4:208|OUT1
+        | | | | | | | | | | | | +------- LC20 |reg4:209|OUT0
+        | | | | | | | | | | | | | +----- LC24 |reg4:209|OUT1
+        | | | | | | | | | | | | | | +--- LC27 |reg4:210|OUT0
+        | | | | | | | | | | | | | | | +- LC28 |reg4:210|OUT1
+        | | | | | | | | | | | | | | | | 
+        | | | | | | | | | | | | | | | |   Other LABs fed by signals
+        | | | | | | | | | | | | | | | |   that feed LAB 'B'
+LC      | | | | | | | | | | | | | | | | | A B C D E F |     Logic cells that feed LAB 'B':
+
+Pin
+13   -> * * * * * * * * * * * * * * * * | * * * * * * | <-- allow
+12   -> * * * * * * * * * * * * * * * * | * * * * * * | <-- b_add0
+8    -> * * * * * * * * * * * * * * * * | * * * * * * | <-- b_add1
+14   -> * * * * * * * * * * * * * * * * | * * * * * * | <-- b_add2
+10   -> * * * * * * * * * * * * * * * * | * * * * * * | <-- b_add3
+67   -> * * * * * * * * * * * * * * * * | * * * * * * | <-- clk
+20   -> * - * - * - * - * - * - * - * - | - * - - - * | <-- in0
+22   -> - * - * - * - * - * - * - * - * | - * - - * - | <-- in1
+
+
+* = The logic cell or pin is an input to the logic cell (or LAB) through the PIA.
+- = The logic cell or pin is not an input to the logic cell (or LAB).
+
+
+Device-Specific Information:          d:\bsuir\bsuirlabs\5sem\sifo\rzu\rrd.rpt
+rrd
+
+** LOGIC CELL INTERCONNECTIONS **
+
+Logic Array Block 'C':
+
+                                         Logic cells placed in LAB 'C'
+        +------------------------------- LC45 a_out3
+        | +----------------------------- LC37 b_out3
+        | | +--------------------------- LC39 |reg4:19|OUT3
+        | | | +------------------------- LC46 |reg4:48|OUT3
+        | | | | +----------------------- LC41 |reg4:51|OUT3
+        | | | | | +--------------------- LC48 |reg4:54|OUT3
+        | | | | | | +------------------- LC38 |reg4:59|OUT3
+        | | | | | | | +----------------- LC40 |reg4:70|OUT3
+        | | | | | | | | +--------------- LC33 |reg4:71|OUT3
+        | | | | | | | | | +------------- LC47 |reg4:72|OUT3
+        | | | | | | | | | | +----------- LC44 
+        | | | | | | | | | | | +--------- LC43 
+        | | | | | | | | | | | | +------- LC42 
+        | | | | | | | | | | | | | +----- LC36 
+        | | | | | | | | | | | | | | +--- LC35 
+        | | | | | | | | | | | | | | | +- LC34 
+        | | | | | | | | | | | | | | | | 
+        | | | | | | | | | | | | | | | |   Other LABs fed by signals
+        | | | | | | | | | | | | | | | |   that feed LAB 'C'
+LC      | | | | | | | | | | | | | | | | | A B C D E F |     Logic cells that feed LAB 'C':
+LC39 -> * * - - - - - - - - - - - - - - | - - * - - - | <-- |reg4:19|OUT3
+LC46 -> * * - - - - - - - - - - - - - - | - - * - - - | <-- |reg4:48|OUT3
+LC41 -> * * - - - - - - - - - - - - - - | - - * - - - | <-- |reg4:51|OUT3
+LC48 -> * * - - - - - - - - - - - - - - | - - * - - - | <-- |reg4:54|OUT3
+LC38 -> * * - - - - - - - - - - - - - - | - - * - - - | <-- |reg4:59|OUT3
+LC40 -> * * - - - - - - - - - - - - - - | - - * - - - | <-- |reg4:70|OUT3
+LC33 -> * * - - - - - - - - - - - - - - | - - * - - - | <-- |reg4:71|OUT3
+LC47 -> * * - - - - - - - - - - - - - - | - - * - - - | <-- |reg4:72|OUT3
+
+Pin
+7    -> * - - - - - - - - - - - - - - - | - - * * * * | <-- a_add0
+5    -> * - - - - - - - - - - - - - - - | - - * * * * | <-- a_add1
+4    -> * - - - - - - - - - - - - - - - | - - * * * * | <-- a_add2
+23   -> * - - - - - - - - - - - - - - - | - - * * * * | <-- a_add3
+13   -> - - * * * * * * * * - - - - - - | * * * * * * | <-- allow
+12   -> - * * * * * * * * * - - - - - - | * * * * * * | <-- b_add0
+8    -> - * * * * * * * * * - - - - - - | * * * * * * | <-- b_add1
+14   -> - * * * * * * * * * - - - - - - | * * * * * * | <-- b_add2
+10   -> - * * * * * * * * * - - - - - - | * * * * * * | <-- b_add3
+67   -> - - * * * * * * * * - - - - - - | * * * * * * | <-- clk
+18   -> - - * * * * * * * * - - - - - - | * - * - - - | <-- in3
+LC15 -> * * - - - - - - - - - - - - - - | - - * - - - | <-- |reg4:203|OUT3
+LC14 -> * * - - - - - - - - - - - - - - | - - * - - - | <-- |reg4:204|OUT3
+LC12 -> * * - - - - - - - - - - - - - - | - - * - - - | <-- |reg4:205|OUT3
+LC8  -> * * - - - - - - - - - - - - - - | - - * - - - | <-- |reg4:206|OUT3
+LC10 -> * * - - - - - - - - - - - - - - | - - * - - - | <-- |reg4:207|OUT3
+LC4  -> * * - - - - - - - - - - - - - - | - - * - - - | <-- |reg4:208|OUT3
+LC3  -> * * - - - - - - - - - - - - - - | - - * - - - | <-- |reg4:209|OUT3
+LC1  -> * * - - - - - - - - - - - - - - | - - * - - - | <-- |reg4:210|OUT3
+
+
+* = The logic cell or pin is an input to the logic cell (or LAB) through the PIA.
+- = The logic cell or pin is not an input to the logic cell (or LAB).
+
+
+Device-Specific Information:          d:\bsuir\bsuirlabs\5sem\sifo\rzu\rrd.rpt
+rrd
+
+** LOGIC CELL INTERCONNECTIONS **
+
+Logic Array Block 'D':
+
+                                         Logic cells placed in LAB 'D'
+        +------------------------------- LC61 a_out2
+        | +----------------------------- LC53 b_out2
+        | | +--------------------------- LC55 |reg4:19|OUT2
+        | | | +------------------------- LC62 |reg4:48|OUT2
+        | | | | +----------------------- LC57 |reg4:51|OUT2
+        | | | | | +--------------------- LC63 |reg4:54|OUT2
+        | | | | | | +------------------- LC56 |reg4:59|OUT2
+        | | | | | | | +----------------- LC49 |reg4:70|OUT2
+        | | | | | | | | +--------------- LC54 |reg4:71|OUT2
+        | | | | | | | | | +------------- LC64 |reg4:72|OUT2
+        | | | | | | | | | | +----------- LC60 
+        | | | | | | | | | | | +--------- LC59 
+        | | | | | | | | | | | | +------- LC58 
+        | | | | | | | | | | | | | +----- LC52 
+        | | | | | | | | | | | | | | +--- LC51 
+        | | | | | | | | | | | | | | | +- LC50 
+        | | | | | | | | | | | | | | | | 
+        | | | | | | | | | | | | | | | |   Other LABs fed by signals
+        | | | | | | | | | | | | | | | |   that feed LAB 'D'
+LC      | | | | | | | | | | | | | | | | | A B C D E F |     Logic cells that feed LAB 'D':
+LC55 -> * * - - - - - - - - - - - - - - | - - - * - - | <-- |reg4:19|OUT2
+LC62 -> * * - - - - - - - - - - - - - - | - - - * - - | <-- |reg4:48|OUT2
+LC57 -> * * - - - - - - - - - - - - - - | - - - * - - | <-- |reg4:51|OUT2
+LC63 -> * * - - - - - - - - - - - - - - | - - - * - - | <-- |reg4:54|OUT2
+LC56 -> * * - - - - - - - - - - - - - - | - - - * - - | <-- |reg4:59|OUT2
+LC49 -> * * - - - - - - - - - - - - - - | - - - * - - | <-- |reg4:70|OUT2
+LC54 -> * * - - - - - - - - - - - - - - | - - - * - - | <-- |reg4:71|OUT2
+LC64 -> * * - - - - - - - - - - - - - - | - - - * - - | <-- |reg4:72|OUT2
+
+Pin
+7    -> * - - - - - - - - - - - - - - - | - - * * * * | <-- a_add0
+5    -> * - - - - - - - - - - - - - - - | - - * * * * | <-- a_add1
+4    -> * - - - - - - - - - - - - - - - | - - * * * * | <-- a_add2
+23   -> * - - - - - - - - - - - - - - - | - - * * * * | <-- a_add3
+13   -> - - * * * * * * * * - - - - - - | * * * * * * | <-- allow
+12   -> - * * * * * * * * * - - - - - - | * * * * * * | <-- b_add0
+8    -> - * * * * * * * * * - - - - - - | * * * * * * | <-- b_add1
+14   -> - * * * * * * * * * - - - - - - | * * * * * * | <-- b_add2
+10   -> - * * * * * * * * * - - - - - - | * * * * * * | <-- b_add3
+67   -> - - * * * * * * * * - - - - - - | * * * * * * | <-- clk
+19   -> - - * * * * * * * * - - - - - - | * - - * - - | <-- in2
+LC6  -> * * - - - - - - - - - - - - - - | - - - * - - | <-- |reg4:203|OUT2
+LC16 -> * * - - - - - - - - - - - - - - | - - - * - - | <-- |reg4:204|OUT2
+LC13 -> * * - - - - - - - - - - - - - - | - - - * - - | <-- |reg4:205|OUT2
+LC7  -> * * - - - - - - - - - - - - - - | - - - * - - | <-- |reg4:206|OUT2
+LC5  -> * * - - - - - - - - - - - - - - | - - - * - - | <-- |reg4:207|OUT2
+LC9  -> * * - - - - - - - - - - - - - - | - - - * - - | <-- |reg4:208|OUT2
+LC2  -> * * - - - - - - - - - - - - - - | - - - * - - | <-- |reg4:209|OUT2
+LC11 -> * * - - - - - - - - - - - - - - | - - - * - - | <-- |reg4:210|OUT2
+
+
+* = The logic cell or pin is an input to the logic cell (or LAB) through the PIA.
+- = The logic cell or pin is not an input to the logic cell (or LAB).
+
+
+Device-Specific Information:          d:\bsuir\bsuirlabs\5sem\sifo\rzu\rrd.rpt
+rrd
+
+** LOGIC CELL INTERCONNECTIONS **
+
+Logic Array Block 'E':
+
+                                         Logic cells placed in LAB 'E'
+        +------------------------------- LC77 a_out1
+        | +----------------------------- LC69 b_out1
+        | | +--------------------------- LC79 |reg4:19|OUT1
+        | | | +------------------------- LC65 |reg4:48|OUT1
+        | | | | +----------------------- LC72 |reg4:51|OUT1
+        | | | | | +--------------------- LC73 |reg4:54|OUT1
+        | | | | | | +------------------- LC78 |reg4:59|OUT1
+        | | | | | | | +----------------- LC71 |reg4:70|OUT1
+        | | | | | | | | +--------------- LC70 |reg4:71|OUT1
+        | | | | | | | | | +------------- LC80 |reg4:72|OUT1
+        | | | | | | | | | | +----------- LC76 
+        | | | | | | | | | | | +--------- LC75 
+        | | | | | | | | | | | | +------- LC74 
+        | | | | | | | | | | | | | +----- LC68 
+        | | | | | | | | | | | | | | +--- LC67 
+        | | | | | | | | | | | | | | | +- LC66 
+        | | | | | | | | | | | | | | | | 
+        | | | | | | | | | | | | | | | |   Other LABs fed by signals
+        | | | | | | | | | | | | | | | |   that feed LAB 'E'
+LC      | | | | | | | | | | | | | | | | | A B C D E F |     Logic cells that feed LAB 'E':
+LC79 -> * * - - - - - - - - - - - - - - | - - - - * - | <-- |reg4:19|OUT1
+LC65 -> * * - - - - - - - - - - - - - - | - - - - * - | <-- |reg4:48|OUT1
+LC72 -> * * - - - - - - - - - - - - - - | - - - - * - | <-- |reg4:51|OUT1
+LC73 -> * * - - - - - - - - - - - - - - | - - - - * - | <-- |reg4:54|OUT1
+LC78 -> * * - - - - - - - - - - - - - - | - - - - * - | <-- |reg4:59|OUT1
+LC71 -> * * - - - - - - - - - - - - - - | - - - - * - | <-- |reg4:70|OUT1
+LC70 -> * * - - - - - - - - - - - - - - | - - - - * - | <-- |reg4:71|OUT1
+LC80 -> * * - - - - - - - - - - - - - - | - - - - * - | <-- |reg4:72|OUT1
+
+Pin
+7    -> * - - - - - - - - - - - - - - - | - - * * * * | <-- a_add0
+5    -> * - - - - - - - - - - - - - - - | - - * * * * | <-- a_add1
+4    -> * - - - - - - - - - - - - - - - | - - * * * * | <-- a_add2
+23   -> * - - - - - - - - - - - - - - - | - - * * * * | <-- a_add3
+13   -> - - * * * * * * * * - - - - - - | * * * * * * | <-- allow
+12   -> - * * * * * * * * * - - - - - - | * * * * * * | <-- b_add0
+8    -> - * * * * * * * * * - - - - - - | * * * * * * | <-- b_add1
+14   -> - * * * * * * * * * - - - - - - | * * * * * * | <-- b_add2
+10   -> - * * * * * * * * * - - - - - - | * * * * * * | <-- b_add3
+67   -> - - * * * * * * * * - - - - - - | * * * * * * | <-- clk
+22   -> - - * * * * * * * * - - - - - - | - * - - * - | <-- in1
+LC30 -> * * - - - - - - - - - - - - - - | - - - - * - | <-- |reg4:203|OUT1
+LC26 -> * * - - - - - - - - - - - - - - | - - - - * - | <-- |reg4:204|OUT1
+LC18 -> * * - - - - - - - - - - - - - - | - - - - * - | <-- |reg4:205|OUT1
+LC32 -> * * - - - - - - - - - - - - - - | - - - - * - | <-- |reg4:206|OUT1
+LC21 -> * * - - - - - - - - - - - - - - | - - - - * - | <-- |reg4:207|OUT1
+LC25 -> * * - - - - - - - - - - - - - - | - - - - * - | <-- |reg4:208|OUT1
+LC24 -> * * - - - - - - - - - - - - - - | - - - - * - | <-- |reg4:209|OUT1
+LC28 -> * * - - - - - - - - - - - - - - | - - - - * - | <-- |reg4:210|OUT1
+
+
+* = The logic cell or pin is an input to the logic cell (or LAB) through the PIA.
+- = The logic cell or pin is not an input to the logic cell (or LAB).
+
+
+Device-Specific Information:          d:\bsuir\bsuirlabs\5sem\sifo\rzu\rrd.rpt
+rrd
+
+** LOGIC CELL INTERCONNECTIONS **
+
+Logic Array Block 'F':
+
+                                         Logic cells placed in LAB 'F'
+        +------------------------------- LC88 a_out0
+        | +----------------------------- LC84 b_out0
+        | | +--------------------------- LC90 |reg4:19|OUT0
+        | | | +------------------------- LC91 |reg4:48|OUT0
+        | | | | +----------------------- LC93 |reg4:51|OUT0
+        | | | | | +--------------------- LC94 |reg4:54|OUT0
+        | | | | | | +------------------- LC96 |reg4:59|OUT0
+        | | | | | | | +----------------- LC89 |reg4:70|OUT0
+        | | | | | | | | +--------------- LC92 |reg4:71|OUT0
+        | | | | | | | | | +------------- LC95 |reg4:72|OUT0
+        | | | | | | | | | | +----------- LC87 
+        | | | | | | | | | | | +--------- LC86 
+        | | | | | | | | | | | | +------- LC85 
+        | | | | | | | | | | | | | +----- LC83 
+        | | | | | | | | | | | | | | +--- LC82 
+        | | | | | | | | | | | | | | | +- LC81 
+        | | | | | | | | | | | | | | | | 
+        | | | | | | | | | | | | | | | |   Other LABs fed by signals
+        | | | | | | | | | | | | | | | |   that feed LAB 'F'
+LC      | | | | | | | | | | | | | | | | | A B C D E F |     Logic cells that feed LAB 'F':
+LC90 -> * * - - - - - - - - - - - - - - | - - - - - * | <-- |reg4:19|OUT0
+LC91 -> * * - - - - - - - - - - - - - - | - - - - - * | <-- |reg4:48|OUT0
+LC93 -> * * - - - - - - - - - - - - - - | - - - - - * | <-- |reg4:51|OUT0
+LC94 -> * * - - - - - - - - - - - - - - | - - - - - * | <-- |reg4:54|OUT0
+LC96 -> * * - - - - - - - - - - - - - - | - - - - - * | <-- |reg4:59|OUT0
+LC89 -> * * - - - - - - - - - - - - - - | - - - - - * | <-- |reg4:70|OUT0
+LC92 -> * * - - - - - - - - - - - - - - | - - - - - * | <-- |reg4:71|OUT0
+LC95 -> * * - - - - - - - - - - - - - - | - - - - - * | <-- |reg4:72|OUT0
+
+Pin
+7    -> * - - - - - - - - - - - - - - - | - - * * * * | <-- a_add0
+5    -> * - - - - - - - - - - - - - - - | - - * * * * | <-- a_add1
+4    -> * - - - - - - - - - - - - - - - | - - * * * * | <-- a_add2
+23   -> * - - - - - - - - - - - - - - - | - - * * * * | <-- a_add3
+13   -> - - * * * * * * * * - - - - - - | * * * * * * | <-- allow
+12   -> - * * * * * * * * * - - - - - - | * * * * * * | <-- b_add0
+8    -> - * * * * * * * * * - - - - - - | * * * * * * | <-- b_add1
+14   -> - * * * * * * * * * - - - - - - | * * * * * * | <-- b_add2
+10   -> - * * * * * * * * * - - - - - - | * * * * * * | <-- b_add3
+67   -> - - * * * * * * * * - - - - - - | * * * * * * | <-- clk
+20   -> - - * * * * * * * * - - - - - - | - * - - - * | <-- in0
+LC23 -> * * - - - - - - - - - - - - - - | - - - - - * | <-- |reg4:203|OUT0
+LC31 -> * * - - - - - - - - - - - - - - | - - - - - * | <-- |reg4:204|OUT0
+LC29 -> * * - - - - - - - - - - - - - - | - - - - - * | <-- |reg4:205|OUT0
+LC19 -> * * - - - - - - - - - - - - - - | - - - - - * | <-- |reg4:206|OUT0
+LC22 -> * * - - - - - - - - - - - - - - | - - - - - * | <-- |reg4:207|OUT0
+LC17 -> * * - - - - - - - - - - - - - - | - - - - - * | <-- |reg4:208|OUT0
+LC20 -> * * - - - - - - - - - - - - - - | - - - - - * | <-- |reg4:209|OUT0
+LC27 -> * * - - - - - - - - - - - - - - | - - - - - * | <-- |reg4:210|OUT0
+
+
+* = The logic cell or pin is an input to the logic cell (or LAB) through the PIA.
+- = The logic cell or pin is not an input to the logic cell (or LAB).
+
+
+Device-Specific Information:          d:\bsuir\bsuirlabs\5sem\sifo\rzu\rrd.rpt
+rrd
+
+** EQUATIONS **
+
+a_add0   : INPUT;
+a_add1   : INPUT;
+a_add2   : INPUT;
+a_add3   : INPUT;
+allow    : INPUT;
+b_add0   : INPUT;
+b_add1   : INPUT;
+b_add2   : INPUT;
+b_add3   : INPUT;
+clk      : INPUT;
+in0      : INPUT;
+in1      : INPUT;
+in2      : INPUT;
+in3      : INPUT;
+
+-- Node name is 'a_out0' = '|reg4:235|OUT0' 
+-- Equation name is 'a_out0', type is output 
+-- _LC088 borrows parallel expanders from _LC087,  _LC086 and _LC085 
+ a_out0  = DFFE( _EQ001 $  VCC, GLOBAL( clk),  VCC,  VCC,  VCC);
+  _EQ001 =  a_add0 &  a_add1 &  a_add2 &  a_add3 & !_LC027
+         #  a_add0 &  a_add1 &  a_add2 & !a_add3 & !_LC095
+         #  a_add0 &  a_add1 & !a_add2 &  a_add3 & !_LC019
+         #  a_add0 & !a_add1 &  a_add2 &  a_add3 & !_LC017
+         # !a_add0 &  a_add1 &  a_add2 &  a_add3 & !_LC020
+         #  a_add0 &  a_add1 & !a_add2 & !a_add3 & !_LC094
+         #  a_add0 & !a_add1 &  a_add2 & !a_add3 & !_LC089
+         # !a_add0 &  a_add1 &  a_add2 & !a_add3 & !_LC092
+         #  a_add0 & !a_add1 & !a_add2 &  a_add3 & !_LC031
+         # !a_add0 &  a_add1 & !a_add2 &  a_add3 & !_LC029
+         # !a_add0 & !a_add1 &  a_add2 &  a_add3 & !_LC022
+         #  a_add0 & !a_add1 & !a_add2 & !a_add3 & !_LC091
+         # !a_add0 &  a_add1 & !a_add2 & !a_add3 & !_LC093
+         # !a_add0 & !a_add1 &  a_add2 & !a_add3 & !_LC096
+         # !a_add0 & !a_add1 & !a_add2 &  a_add3 & !_LC023
+         # !a_add0 & !a_add1 & !a_add2 & !a_add3 & !_LC090;
+
+-- Node name is 'a_out1' = '|reg4:235|OUT1' 
+-- Equation name is 'a_out1', type is output 
+-- _LC077 borrows parallel expanders from _LC076,  _LC075 and _LC074 
+ a_out1  = DFFE( _EQ002 $  VCC, GLOBAL( clk),  VCC,  VCC,  VCC);
+  _EQ002 =  a_add0 &  a_add1 &  a_add2 &  a_add3 & !_LC028
+         #  a_add0 &  a_add1 &  a_add2 & !a_add3 & !_LC080
+         #  a_add0 &  a_add1 & !a_add2 &  a_add3 & !_LC032
+         #  a_add0 & !a_add1 &  a_add2 &  a_add3 & !_LC025
+         # !a_add0 &  a_add1 &  a_add2 &  a_add3 & !_LC024
+         #  a_add0 &  a_add1 & !a_add2 & !a_add3 & !_LC073
+         #  a_add0 & !a_add1 &  a_add2 & !a_add3 & !_LC071
+         # !a_add0 &  a_add1 &  a_add2 & !a_add3 & !_LC070
+         #  a_add0 & !a_add1 & !a_add2 &  a_add3 & !_LC026
+         # !a_add0 &  a_add1 & !a_add2 &  a_add3 & !_LC018
+         # !a_add0 & !a_add1 &  a_add2 &  a_add3 & !_LC021
+         #  a_add0 & !a_add1 & !a_add2 & !a_add3 & !_LC065
+         # !a_add0 &  a_add1 & !a_add2 & !a_add3 & !_LC072
+         # !a_add0 & !a_add1 &  a_add2 & !a_add3 & !_LC078
+         # !a_add0 & !a_add1 & !a_add2 &  a_add3 & !_LC030
+         # !a_add0 & !a_add1 & !a_add2 & !a_add3 & !_LC079;
+
+-- Node name is 'a_out2' = '|reg4:235|OUT2' 
+-- Equation name is 'a_out2', type is output 
+-- _LC061 borrows parallel expanders from _LC060,  _LC059 and _LC058 
+ a_out2  = DFFE( _EQ003 $  VCC, GLOBAL( clk),  VCC,  VCC,  VCC);
+  _EQ003 =  a_add0 &  a_add1 &  a_add2 &  a_add3 & !_LC011
+         #  a_add0 &  a_add1 &  a_add2 & !a_add3 & !_LC064
+         #  a_add0 &  a_add1 & !a_add2 &  a_add3 & !_LC007
+         #  a_add0 & !a_add1 &  a_add2 &  a_add3 & !_LC009
+         # !a_add0 &  a_add1 &  a_add2 &  a_add3 & !_LC002
+         #  a_add0 &  a_add1 & !a_add2 & !a_add3 & !_LC063
+         #  a_add0 & !a_add1 &  a_add2 & !a_add3 & !_LC049
+         # !a_add0 &  a_add1 &  a_add2 & !a_add3 & !_LC054
+         #  a_add0 & !a_add1 & !a_add2 &  a_add3 & !_LC016
+         # !a_add0 &  a_add1 & !a_add2 &  a_add3 & !_LC013
+         # !a_add0 & !a_add1 &  a_add2 &  a_add3 & !_LC005
+         #  a_add0 & !a_add1 & !a_add2 & !a_add3 & !_LC062
+         # !a_add0 &  a_add1 & !a_add2 & !a_add3 & !_LC057
+         # !a_add0 & !a_add1 &  a_add2 & !a_add3 & !_LC056
+         # !a_add0 & !a_add1 & !a_add2 &  a_add3 & !_LC006
+         # !a_add0 & !a_add1 & !a_add2 & !a_add3 & !_LC055;
+
+-- Node name is 'a_out3' = '|reg4:235|OUT3' 
+-- Equation name is 'a_out3', type is output 
+-- _LC045 borrows parallel expanders from _LC044,  _LC043 and _LC042 
+ a_out3  = DFFE( _EQ004 $  VCC, GLOBAL( clk),  VCC,  VCC,  VCC);
+  _EQ004 =  a_add0 &  a_add1 &  a_add2 &  a_add3 & !_LC001
+         #  a_add0 &  a_add1 &  a_add2 & !a_add3 & !_LC047
+         #  a_add0 &  a_add1 & !a_add2 &  a_add3 & !_LC008
+         #  a_add0 & !a_add1 &  a_add2 &  a_add3 & !_LC004
+         # !a_add0 &  a_add1 &  a_add2 &  a_add3 & !_LC003
+         #  a_add0 &  a_add1 & !a_add2 & !a_add3 & !_LC048
+         #  a_add0 & !a_add1 &  a_add2 & !a_add3 & !_LC040
+         # !a_add0 &  a_add1 &  a_add2 & !a_add3 & !_LC033
+         #  a_add0 & !a_add1 & !a_add2 &  a_add3 & !_LC014
+         # !a_add0 &  a_add1 & !a_add2 &  a_add3 & !_LC012
+         # !a_add0 & !a_add1 &  a_add2 &  a_add3 & !_LC010
+         #  a_add0 & !a_add1 & !a_add2 & !a_add3 & !_LC046
+         # !a_add0 &  a_add1 & !a_add2 & !a_add3 & !_LC041
+         # !a_add0 & !a_add1 &  a_add2 & !a_add3 & !_LC038
+         # !a_add0 & !a_add1 & !a_add2 &  a_add3 & !_LC015
+         # !a_add0 & !a_add1 & !a_add2 & !a_add3 & !_LC039;
+
+-- Node name is 'b_out0' = '|reg4:236|OUT0' 
+-- Equation name is 'b_out0', type is output 
+-- _LC084 borrows parallel expanders from _LC083,  _LC082 and _LC081 
+ b_out0  = DFFE( _EQ005 $  VCC, GLOBAL( clk),  VCC,  VCC,  VCC);
+  _EQ005 =  b_add0 &  b_add1 &  b_add2 &  b_add3 & !_LC027
+         #  b_add0 &  b_add1 &  b_add2 & !b_add3 & !_LC095
+         #  b_add0 &  b_add1 & !b_add2 &  b_add3 & !_LC019
+         #  b_add0 & !b_add1 &  b_add2 &  b_add3 & !_LC017
+         # !b_add0 &  b_add1 &  b_add2 &  b_add3 & !_LC020
+         #  b_add0 &  b_add1 & !b_add2 & !b_add3 & !_LC094
+         #  b_add0 & !b_add1 &  b_add2 & !b_add3 & !_LC089
+         # !b_add0 &  b_add1 &  b_add2 & !b_add3 & !_LC092
+         #  b_add0 & !b_add1 & !b_add2 &  b_add3 & !_LC031
+         # !b_add0 &  b_add1 & !b_add2 &  b_add3 & !_LC029
+         # !b_add0 & !b_add1 &  b_add2 &  b_add3 & !_LC022
+         #  b_add0 & !b_add1 & !b_add2 & !b_add3 & !_LC091
+         # !b_add0 &  b_add1 & !b_add2 & !b_add3 & !_LC093
+         # !b_add0 & !b_add1 &  b_add2 & !b_add3 & !_LC096
+         # !b_add0 & !b_add1 & !b_add2 &  b_add3 & !_LC023
+         # !b_add0 & !b_add1 & !b_add2 & !b_add3 & !_LC090;
+
+-- Node name is 'b_out1' = '|reg4:236|OUT1' 
+-- Equation name is 'b_out1', type is output 
+-- _LC069 borrows parallel expanders from _LC068,  _LC067 and _LC066 
+ b_out1  = DFFE( _EQ006 $  VCC, GLOBAL( clk),  VCC,  VCC,  VCC);
+  _EQ006 =  b_add0 &  b_add1 &  b_add2 &  b_add3 & !_LC028
+         #  b_add0 &  b_add1 &  b_add2 & !b_add3 & !_LC080
+         #  b_add0 &  b_add1 & !b_add2 &  b_add3 & !_LC032
+         #  b_add0 & !b_add1 &  b_add2 &  b_add3 & !_LC025
+         # !b_add0 &  b_add1 &  b_add2 &  b_add3 & !_LC024
+         #  b_add0 &  b_add1 & !b_add2 & !b_add3 & !_LC073
+         #  b_add0 & !b_add1 &  b_add2 & !b_add3 & !_LC071
+         # !b_add0 &  b_add1 &  b_add2 & !b_add3 & !_LC070
+         #  b_add0 & !b_add1 & !b_add2 &  b_add3 & !_LC026
+         # !b_add0 &  b_add1 & !b_add2 &  b_add3 & !_LC018
+         # !b_add0 & !b_add1 &  b_add2 &  b_add3 & !_LC021
+         #  b_add0 & !b_add1 & !b_add2 & !b_add3 & !_LC065
+         # !b_add0 &  b_add1 & !b_add2 & !b_add3 & !_LC072
+         # !b_add0 & !b_add1 &  b_add2 & !b_add3 & !_LC078
+         # !b_add0 & !b_add1 & !b_add2 &  b_add3 & !_LC030
+         # !b_add0 & !b_add1 & !b_add2 & !b_add3 & !_LC079;
+
+-- Node name is 'b_out2' = '|reg4:236|OUT2' 
+-- Equation name is 'b_out2', type is output 
+-- _LC053 borrows parallel expanders from _LC052,  _LC051 and _LC050 
+ b_out2  = DFFE( _EQ007 $  VCC, GLOBAL( clk),  VCC,  VCC,  VCC);
+  _EQ007 =  b_add0 &  b_add1 &  b_add2 &  b_add3 & !_LC011
+         #  b_add0 &  b_add1 &  b_add2 & !b_add3 & !_LC064
+         #  b_add0 &  b_add1 & !b_add2 &  b_add3 & !_LC007
+         #  b_add0 & !b_add1 &  b_add2 &  b_add3 & !_LC009
+         # !b_add0 &  b_add1 &  b_add2 &  b_add3 & !_LC002
+         #  b_add0 &  b_add1 & !b_add2 & !b_add3 & !_LC063
+         #  b_add0 & !b_add1 &  b_add2 & !b_add3 & !_LC049
+         # !b_add0 &  b_add1 &  b_add2 & !b_add3 & !_LC054
+         #  b_add0 & !b_add1 & !b_add2 &  b_add3 & !_LC016
+         # !b_add0 &  b_add1 & !b_add2 &  b_add3 & !_LC013
+         # !b_add0 & !b_add1 &  b_add2 &  b_add3 & !_LC005
+         #  b_add0 & !b_add1 & !b_add2 & !b_add3 & !_LC062
+         # !b_add0 &  b_add1 & !b_add2 & !b_add3 & !_LC057
+         # !b_add0 & !b_add1 &  b_add2 & !b_add3 & !_LC056
+         # !b_add0 & !b_add1 & !b_add2 &  b_add3 & !_LC006
+         # !b_add0 & !b_add1 & !b_add2 & !b_add3 & !_LC055;
+
+-- Node name is 'b_out3' = '|reg4:236|OUT3' 
+-- Equation name is 'b_out3', type is output 
+-- _LC037 borrows parallel expanders from _LC036,  _LC035 and _LC034 
+ b_out3  = DFFE( _EQ008 $  VCC, GLOBAL( clk),  VCC,  VCC,  VCC);
+  _EQ008 =  b_add0 &  b_add1 &  b_add2 &  b_add3 & !_LC001
+         #  b_add0 &  b_add1 &  b_add2 & !b_add3 & !_LC047
+         #  b_add0 &  b_add1 & !b_add2 &  b_add3 & !_LC008
+         #  b_add0 & !b_add1 &  b_add2 &  b_add3 & !_LC004
+         # !b_add0 &  b_add1 &  b_add2 &  b_add3 & !_LC003
+         #  b_add0 &  b_add1 & !b_add2 & !b_add3 & !_LC048
+         #  b_add0 & !b_add1 &  b_add2 & !b_add3 & !_LC040
+         # !b_add0 &  b_add1 &  b_add2 & !b_add3 & !_LC033
+         #  b_add0 & !b_add1 & !b_add2 &  b_add3 & !_LC014
+         # !b_add0 &  b_add1 & !b_add2 &  b_add3 & !_LC012
+         # !b_add0 & !b_add1 &  b_add2 &  b_add3 & !_LC010
+         #  b_add0 & !b_add1 & !b_add2 & !b_add3 & !_LC046
+         # !b_add0 &  b_add1 & !b_add2 & !b_add3 & !_LC041
+         # !b_add0 & !b_add1 &  b_add2 & !b_add3 & !_LC038
+         # !b_add0 & !b_add1 & !b_add2 &  b_add3 & !_LC015
+         # !b_add0 & !b_add1 & !b_add2 & !b_add3 & !_LC039;
+
+-- Node name is '|reg4:19|:5' = '|reg4:19|OUT0' 
+-- Equation name is '_LC090', type is buried 
+_LC090   = DFFE( in0 $  GND,  _EQ009,  VCC,  VCC,  VCC);
+  _EQ009 =  allow & !b_add0 & !b_add1 & !b_add2 & !b_add3 &  clk;
+
+-- Node name is '|reg4:19|:6' = '|reg4:19|OUT1' 
+-- Equation name is '_LC079', type is buried 
+_LC079   = DFFE( in1 $  GND,  _EQ010,  VCC,  VCC,  VCC);
+  _EQ010 =  allow & !b_add0 & !b_add1 & !b_add2 & !b_add3 &  clk;
+
+-- Node name is '|reg4:19|:7' = '|reg4:19|OUT2' 
+-- Equation name is '_LC055', type is buried 
+_LC055   = DFFE( in2 $  GND,  _EQ011,  VCC,  VCC,  VCC);
+  _EQ011 =  allow & !b_add0 & !b_add1 & !b_add2 & !b_add3 &  clk;
+
+-- Node name is '|reg4:19|:8' = '|reg4:19|OUT3' 
+-- Equation name is '_LC039', type is buried 
+_LC039   = DFFE( in3 $  GND,  _EQ012,  VCC,  VCC,  VCC);
+  _EQ012 =  allow & !b_add0 & !b_add1 & !b_add2 & !b_add3 &  clk;
+
+-- Node name is '|reg4:48|:5' = '|reg4:48|OUT0' 
+-- Equation name is '_LC091', type is buried 
+_LC091   = DFFE( in0 $  GND,  _EQ013,  VCC,  VCC,  VCC);
+  _EQ013 =  allow &  b_add0 & !b_add1 & !b_add2 & !b_add3 &  clk;
+
+-- Node name is '|reg4:48|:6' = '|reg4:48|OUT1' 
+-- Equation name is '_LC065', type is buried 
+_LC065   = DFFE( in1 $  GND,  _EQ014,  VCC,  VCC,  VCC);
+  _EQ014 =  allow &  b_add0 & !b_add1 & !b_add2 & !b_add3 &  clk;
+
+-- Node name is '|reg4:48|:7' = '|reg4:48|OUT2' 
+-- Equation name is '_LC062', type is buried 
+_LC062   = DFFE( in2 $  GND,  _EQ015,  VCC,  VCC,  VCC);
+  _EQ015 =  allow &  b_add0 & !b_add1 & !b_add2 & !b_add3 &  clk;
+
+-- Node name is '|reg4:48|:8' = '|reg4:48|OUT3' 
+-- Equation name is '_LC046', type is buried 
+_LC046   = DFFE( in3 $  GND,  _EQ016,  VCC,  VCC,  VCC);
+  _EQ016 =  allow &  b_add0 & !b_add1 & !b_add2 & !b_add3 &  clk;
+
+-- Node name is '|reg4:51|:5' = '|reg4:51|OUT0' 
+-- Equation name is '_LC093', type is buried 
+_LC093   = DFFE( in0 $  GND,  _EQ017,  VCC,  VCC,  VCC);
+  _EQ017 =  allow & !b_add0 &  b_add1 & !b_add2 & !b_add3 &  clk;
+
+-- Node name is '|reg4:51|:6' = '|reg4:51|OUT1' 
+-- Equation name is '_LC072', type is buried 
+_LC072   = DFFE( in1 $  GND,  _EQ018,  VCC,  VCC,  VCC);
+  _EQ018 =  allow & !b_add0 &  b_add1 & !b_add2 & !b_add3 &  clk;
+
+-- Node name is '|reg4:51|:7' = '|reg4:51|OUT2' 
+-- Equation name is '_LC057', type is buried 
+_LC057   = DFFE( in2 $  GND,  _EQ019,  VCC,  VCC,  VCC);
+  _EQ019 =  allow & !b_add0 &  b_add1 & !b_add2 & !b_add3 &  clk;
+
+-- Node name is '|reg4:51|:8' = '|reg4:51|OUT3' 
+-- Equation name is '_LC041', type is buried 
+_LC041   = DFFE( in3 $  GND,  _EQ020,  VCC,  VCC,  VCC);
+  _EQ020 =  allow & !b_add0 &  b_add1 & !b_add2 & !b_add3 &  clk;
+
+-- Node name is '|reg4:54|:5' = '|reg4:54|OUT0' 
+-- Equation name is '_LC094', type is buried 
+_LC094   = DFFE( in0 $  GND,  _EQ021,  VCC,  VCC,  VCC);
+  _EQ021 =  allow &  b_add0 &  b_add1 & !b_add2 & !b_add3 &  clk;
+
+-- Node name is '|reg4:54|:6' = '|reg4:54|OUT1' 
+-- Equation name is '_LC073', type is buried 
+_LC073   = DFFE( in1 $  GND,  _EQ022,  VCC,  VCC,  VCC);
+  _EQ022 =  allow &  b_add0 &  b_add1 & !b_add2 & !b_add3 &  clk;
+
+-- Node name is '|reg4:54|:7' = '|reg4:54|OUT2' 
+-- Equation name is '_LC063', type is buried 
+_LC063   = DFFE( in2 $  GND,  _EQ023,  VCC,  VCC,  VCC);
+  _EQ023 =  allow &  b_add0 &  b_add1 & !b_add2 & !b_add3 &  clk;
+
+-- Node name is '|reg4:54|:8' = '|reg4:54|OUT3' 
+-- Equation name is '_LC048', type is buried 
+_LC048   = DFFE( in3 $  GND,  _EQ024,  VCC,  VCC,  VCC);
+  _EQ024 =  allow &  b_add0 &  b_add1 & !b_add2 & !b_add3 &  clk;
+
+-- Node name is '|reg4:59|:5' = '|reg4:59|OUT0' 
+-- Equation name is '_LC096', type is buried 
+_LC096   = DFFE( in0 $  GND,  _EQ025,  VCC,  VCC,  VCC);
+  _EQ025 =  allow & !b_add0 & !b_add1 &  b_add2 & !b_add3 &  clk;
+
+-- Node name is '|reg4:59|:6' = '|reg4:59|OUT1' 
+-- Equation name is '_LC078', type is buried 
+_LC078   = DFFE( in1 $  GND,  _EQ026,  VCC,  VCC,  VCC);
+  _EQ026 =  allow & !b_add0 & !b_add1 &  b_add2 & !b_add3 &  clk;
+
+-- Node name is '|reg4:59|:7' = '|reg4:59|OUT2' 
+-- Equation name is '_LC056', type is buried 
+_LC056   = DFFE( in2 $  GND,  _EQ027,  VCC,  VCC,  VCC);
+  _EQ027 =  allow & !b_add0 & !b_add1 &  b_add2 & !b_add3 &  clk;
+
+-- Node name is '|reg4:59|:8' = '|reg4:59|OUT3' 
+-- Equation name is '_LC038', type is buried 
+_LC038   = DFFE( in3 $  GND,  _EQ028,  VCC,  VCC,  VCC);
+  _EQ028 =  allow & !b_add0 & !b_add1 &  b_add2 & !b_add3 &  clk;
+
+-- Node name is '|reg4:70|:5' = '|reg4:70|OUT0' 
+-- Equation name is '_LC089', type is buried 
+_LC089   = DFFE( in0 $  GND,  _EQ029,  VCC,  VCC,  VCC);
+  _EQ029 =  allow &  b_add0 & !b_add1 &  b_add2 & !b_add3 &  clk;
+
+-- Node name is '|reg4:70|:6' = '|reg4:70|OUT1' 
+-- Equation name is '_LC071', type is buried 
+_LC071   = DFFE( in1 $  GND,  _EQ030,  VCC,  VCC,  VCC);
+  _EQ030 =  allow &  b_add0 & !b_add1 &  b_add2 & !b_add3 &  clk;
+
+-- Node name is '|reg4:70|:7' = '|reg4:70|OUT2' 
+-- Equation name is '_LC049', type is buried 
+_LC049   = DFFE( in2 $  GND,  _EQ031,  VCC,  VCC,  VCC);
+  _EQ031 =  allow &  b_add0 & !b_add1 &  b_add2 & !b_add3 &  clk;
+
+-- Node name is '|reg4:70|:8' = '|reg4:70|OUT3' 
+-- Equation name is '_LC040', type is buried 
+_LC040   = DFFE( in3 $  GND,  _EQ032,  VCC,  VCC,  VCC);
+  _EQ032 =  allow &  b_add0 & !b_add1 &  b_add2 & !b_add3 &  clk;
+
+-- Node name is '|reg4:71|:5' = '|reg4:71|OUT0' 
+-- Equation name is '_LC092', type is buried 
+_LC092   = DFFE( in0 $  GND,  _EQ033,  VCC,  VCC,  VCC);
+  _EQ033 =  allow & !b_add0 &  b_add1 &  b_add2 & !b_add3 &  clk;
+
+-- Node name is '|reg4:71|:6' = '|reg4:71|OUT1' 
+-- Equation name is '_LC070', type is buried 
+_LC070   = DFFE( in1 $  GND,  _EQ034,  VCC,  VCC,  VCC);
+  _EQ034 =  allow & !b_add0 &  b_add1 &  b_add2 & !b_add3 &  clk;
+
+-- Node name is '|reg4:71|:7' = '|reg4:71|OUT2' 
+-- Equation name is '_LC054', type is buried 
+_LC054   = DFFE( in2 $  GND,  _EQ035,  VCC,  VCC,  VCC);
+  _EQ035 =  allow & !b_add0 &  b_add1 &  b_add2 & !b_add3 &  clk;
+
+-- Node name is '|reg4:71|:8' = '|reg4:71|OUT3' 
+-- Equation name is '_LC033', type is buried 
+_LC033   = DFFE( in3 $  GND,  _EQ036,  VCC,  VCC,  VCC);
+  _EQ036 =  allow & !b_add0 &  b_add1 &  b_add2 & !b_add3 &  clk;
+
+-- Node name is '|reg4:72|:5' = '|reg4:72|OUT0' 
+-- Equation name is '_LC095', type is buried 
+_LC095   = DFFE( in0 $  GND,  _EQ037,  VCC,  VCC,  VCC);
+  _EQ037 =  allow &  b_add0 &  b_add1 &  b_add2 & !b_add3 &  clk;
+
+-- Node name is '|reg4:72|:6' = '|reg4:72|OUT1' 
+-- Equation name is '_LC080', type is buried 
+_LC080   = DFFE( in1 $  GND,  _EQ038,  VCC,  VCC,  VCC);
+  _EQ038 =  allow &  b_add0 &  b_add1 &  b_add2 & !b_add3 &  clk;
+
+-- Node name is '|reg4:72|:7' = '|reg4:72|OUT2' 
+-- Equation name is '_LC064', type is buried 
+_LC064   = DFFE( in2 $  GND,  _EQ039,  VCC,  VCC,  VCC);
+  _EQ039 =  allow &  b_add0 &  b_add1 &  b_add2 & !b_add3 &  clk;
+
+-- Node name is '|reg4:72|:8' = '|reg4:72|OUT3' 
+-- Equation name is '_LC047', type is buried 
+_LC047   = DFFE( in3 $  GND,  _EQ040,  VCC,  VCC,  VCC);
+  _EQ040 =  allow &  b_add0 &  b_add1 &  b_add2 & !b_add3 &  clk;
+
+-- Node name is '|reg4:203|:5' = '|reg4:203|OUT0' 
+-- Equation name is '_LC023', type is buried 
+_LC023   = DFFE( in0 $  GND,  _EQ041,  VCC,  VCC,  VCC);
+  _EQ041 =  allow & !b_add0 & !b_add1 & !b_add2 &  b_add3 &  clk;
+
+-- Node name is '|reg4:203|:6' = '|reg4:203|OUT1' 
+-- Equation name is '_LC030', type is buried 
+_LC030   = DFFE( in1 $  GND,  _EQ042,  VCC,  VCC,  VCC);
+  _EQ042 =  allow & !b_add0 & !b_add1 & !b_add2 &  b_add3 &  clk;
+
+-- Node name is '|reg4:203|:7' = '|reg4:203|OUT2' 
+-- Equation name is '_LC006', type is buried 
+_LC006   = DFFE( in2 $  GND,  _EQ043,  VCC,  VCC,  VCC);
+  _EQ043 =  allow & !b_add0 & !b_add1 & !b_add2 &  b_add3 &  clk;
+
+-- Node name is '|reg4:203|:8' = '|reg4:203|OUT3' 
+-- Equation name is '_LC015', type is buried 
+_LC015   = DFFE( in3 $  GND,  _EQ044,  VCC,  VCC,  VCC);
+  _EQ044 =  allow & !b_add0 & !b_add1 & !b_add2 &  b_add3 &  clk;
+
+-- Node name is '|reg4:204|:5' = '|reg4:204|OUT0' 
+-- Equation name is '_LC031', type is buried 
+_LC031   = DFFE( in0 $  GND,  _EQ045,  VCC,  VCC,  VCC);
+  _EQ045 =  allow &  b_add0 & !b_add1 & !b_add2 &  b_add3 &  clk;
+
+-- Node name is '|reg4:204|:6' = '|reg4:204|OUT1' 
+-- Equation name is '_LC026', type is buried 
+_LC026   = DFFE( in1 $  GND,  _EQ046,  VCC,  VCC,  VCC);
+  _EQ046 =  allow &  b_add0 & !b_add1 & !b_add2 &  b_add3 &  clk;
+
+-- Node name is '|reg4:204|:7' = '|reg4:204|OUT2' 
+-- Equation name is '_LC016', type is buried 
+_LC016   = DFFE( in2 $  GND,  _EQ047,  VCC,  VCC,  VCC);
+  _EQ047 =  allow &  b_add0 & !b_add1 & !b_add2 &  b_add3 &  clk;
+
+-- Node name is '|reg4:204|:8' = '|reg4:204|OUT3' 
+-- Equation name is '_LC014', type is buried 
+_LC014   = DFFE( in3 $  GND,  _EQ048,  VCC,  VCC,  VCC);
+  _EQ048 =  allow &  b_add0 & !b_add1 & !b_add2 &  b_add3 &  clk;
+
+-- Node name is '|reg4:205|:5' = '|reg4:205|OUT0' 
+-- Equation name is '_LC029', type is buried 
+_LC029   = DFFE( in0 $  GND,  _EQ049,  VCC,  VCC,  VCC);
+  _EQ049 =  allow & !b_add0 &  b_add1 & !b_add2 &  b_add3 &  clk;
+
+-- Node name is '|reg4:205|:6' = '|reg4:205|OUT1' 
+-- Equation name is '_LC018', type is buried 
+_LC018   = DFFE( in1 $  GND,  _EQ050,  VCC,  VCC,  VCC);
+  _EQ050 =  allow & !b_add0 &  b_add1 & !b_add2 &  b_add3 &  clk;
+
+-- Node name is '|reg4:205|:7' = '|reg4:205|OUT2' 
+-- Equation name is '_LC013', type is buried 
+_LC013   = DFFE( in2 $  GND,  _EQ051,  VCC,  VCC,  VCC);
+  _EQ051 =  allow & !b_add0 &  b_add1 & !b_add2 &  b_add3 &  clk;
+
+-- Node name is '|reg4:205|:8' = '|reg4:205|OUT3' 
+-- Equation name is '_LC012', type is buried 
+_LC012   = DFFE( in3 $  GND,  _EQ052,  VCC,  VCC,  VCC);
+  _EQ052 =  allow & !b_add0 &  b_add1 & !b_add2 &  b_add3 &  clk;
+
+-- Node name is '|reg4:206|:5' = '|reg4:206|OUT0' 
+-- Equation name is '_LC019', type is buried 
+_LC019   = DFFE( in0 $  GND,  _EQ053,  VCC,  VCC,  VCC);
+  _EQ053 =  allow &  b_add0 &  b_add1 & !b_add2 &  b_add3 &  clk;
+
+-- Node name is '|reg4:206|:6' = '|reg4:206|OUT1' 
+-- Equation name is '_LC032', type is buried 
+_LC032   = DFFE( in1 $  GND,  _EQ054,  VCC,  VCC,  VCC);
+  _EQ054 =  allow &  b_add0 &  b_add1 & !b_add2 &  b_add3 &  clk;
+
+-- Node name is '|reg4:206|:7' = '|reg4:206|OUT2' 
+-- Equation name is '_LC007', type is buried 
+_LC007   = DFFE( in2 $  GND,  _EQ055,  VCC,  VCC,  VCC);
+  _EQ055 =  allow &  b_add0 &  b_add1 & !b_add2 &  b_add3 &  clk;
+
+-- Node name is '|reg4:206|:8' = '|reg4:206|OUT3' 
+-- Equation name is '_LC008', type is buried 
+_LC008   = DFFE( in3 $  GND,  _EQ056,  VCC,  VCC,  VCC);
+  _EQ056 =  allow &  b_add0 &  b_add1 & !b_add2 &  b_add3 &  clk;
+
+-- Node name is '|reg4:207|:5' = '|reg4:207|OUT0' 
+-- Equation name is '_LC022', type is buried 
+_LC022   = DFFE( in0 $  GND,  _EQ057,  VCC,  VCC,  VCC);
+  _EQ057 =  allow & !b_add0 & !b_add1 &  b_add2 &  b_add3 &  clk;
+
+-- Node name is '|reg4:207|:6' = '|reg4:207|OUT1' 
+-- Equation name is '_LC021', type is buried 
+_LC021   = DFFE( in1 $  GND,  _EQ058,  VCC,  VCC,  VCC);
+  _EQ058 =  allow & !b_add0 & !b_add1 &  b_add2 &  b_add3 &  clk;
+
+-- Node name is '|reg4:207|:7' = '|reg4:207|OUT2' 
+-- Equation name is '_LC005', type is buried 
+_LC005   = DFFE( in2 $  GND,  _EQ059,  VCC,  VCC,  VCC);
+  _EQ059 =  allow & !b_add0 & !b_add1 &  b_add2 &  b_add3 &  clk;
+
+-- Node name is '|reg4:207|:8' = '|reg4:207|OUT3' 
+-- Equation name is '_LC010', type is buried 
+_LC010   = DFFE( in3 $  GND,  _EQ060,  VCC,  VCC,  VCC);
+  _EQ060 =  allow & !b_add0 & !b_add1 &  b_add2 &  b_add3 &  clk;
+
+-- Node name is '|reg4:208|:5' = '|reg4:208|OUT0' 
+-- Equation name is '_LC017', type is buried 
+_LC017   = DFFE( in0 $  GND,  _EQ061,  VCC,  VCC,  VCC);
+  _EQ061 =  allow &  b_add0 & !b_add1 &  b_add2 &  b_add3 &  clk;
+
+-- Node name is '|reg4:208|:6' = '|reg4:208|OUT1' 
+-- Equation name is '_LC025', type is buried 
+_LC025   = DFFE( in1 $  GND,  _EQ062,  VCC,  VCC,  VCC);
+  _EQ062 =  allow &  b_add0 & !b_add1 &  b_add2 &  b_add3 &  clk;
+
+-- Node name is '|reg4:208|:7' = '|reg4:208|OUT2' 
+-- Equation name is '_LC009', type is buried 
+_LC009   = DFFE( in2 $  GND,  _EQ063,  VCC,  VCC,  VCC);
+  _EQ063 =  allow &  b_add0 & !b_add1 &  b_add2 &  b_add3 &  clk;
+
+-- Node name is '|reg4:208|:8' = '|reg4:208|OUT3' 
+-- Equation name is '_LC004', type is buried 
+_LC004   = DFFE( in3 $  GND,  _EQ064,  VCC,  VCC,  VCC);
+  _EQ064 =  allow &  b_add0 & !b_add1 &  b_add2 &  b_add3 &  clk;
+
+-- Node name is '|reg4:209|:5' = '|reg4:209|OUT0' 
+-- Equation name is '_LC020', type is buried 
+_LC020   = DFFE( in0 $  GND,  _EQ065,  VCC,  VCC,  VCC);
+  _EQ065 =  allow & !b_add0 &  b_add1 &  b_add2 &  b_add3 &  clk;
+
+-- Node name is '|reg4:209|:6' = '|reg4:209|OUT1' 
+-- Equation name is '_LC024', type is buried 
+_LC024   = DFFE( in1 $  GND,  _EQ066,  VCC,  VCC,  VCC);
+  _EQ066 =  allow & !b_add0 &  b_add1 &  b_add2 &  b_add3 &  clk;
+
+-- Node name is '|reg4:209|:7' = '|reg4:209|OUT2' 
+-- Equation name is '_LC002', type is buried 
+_LC002   = DFFE( in2 $  GND,  _EQ067,  VCC,  VCC,  VCC);
+  _EQ067 =  allow & !b_add0 &  b_add1 &  b_add2 &  b_add3 &  clk;
+
+-- Node name is '|reg4:209|:8' = '|reg4:209|OUT3' 
+-- Equation name is '_LC003', type is buried 
+_LC003   = DFFE( in3 $  GND,  _EQ068,  VCC,  VCC,  VCC);
+  _EQ068 =  allow & !b_add0 &  b_add1 &  b_add2 &  b_add3 &  clk;
+
+-- Node name is '|reg4:210|:5' = '|reg4:210|OUT0' 
+-- Equation name is '_LC027', type is buried 
+_LC027   = DFFE( in0 $  GND,  _EQ069,  VCC,  VCC,  VCC);
+  _EQ069 =  allow &  b_add0 &  b_add1 &  b_add2 &  b_add3 &  clk;
+
+-- Node name is '|reg4:210|:6' = '|reg4:210|OUT1' 
+-- Equation name is '_LC028', type is buried 
+_LC028   = DFFE( in1 $  GND,  _EQ070,  VCC,  VCC,  VCC);
+  _EQ070 =  allow &  b_add0 &  b_add1 &  b_add2 &  b_add3 &  clk;
+
+-- Node name is '|reg4:210|:7' = '|reg4:210|OUT2' 
+-- Equation name is '_LC011', type is buried 
+_LC011   = DFFE( in2 $  GND,  _EQ071,  VCC,  VCC,  VCC);
+  _EQ071 =  allow &  b_add0 &  b_add1 &  b_add2 &  b_add3 &  clk;
+
+-- Node name is '|reg4:210|:8' = '|reg4:210|OUT3' 
+-- Equation name is '_LC001', type is buried 
+_LC001   = DFFE( in3 $  GND,  _EQ072,  VCC,  VCC,  VCC);
+  _EQ072 =  allow &  b_add0 &  b_add1 &  b_add2 &  b_add3 &  clk;
+
+
+
+--     Shareable expanders that are duplicated in multiple LABs:
+--     (none)
+
+
+
+
+Project Information                   d:\bsuir\bsuirlabs\5sem\sifo\rzu\rrd.rpt
+
+** COMPILATION SETTINGS & TIMES **
+
+Processing Menu Commands
+------------------------
+
+Design Doctor                             = off
+
+Logic Synthesis:
+
+   Synthesis Type Used                    = Standard
+
+   Default Synthesis Style                = FAST
+
+      Logic option settings in 'FAST' style for 'MAX7000' family
+
+      DECOMPOSE_GATES                     = on
+      DUPLICATE_LOGIC_EXTRACTION          = on
+      MINIMIZATION                        = full
+      MULTI_LEVEL_FACTORING               = on
+      NOT_GATE_PUSH_BACK                  = on
+      PARALLEL_EXPANDERS                  = on
+      REDUCE_LOGIC                        = on
+      REFACTORIZATION                     = off
+      REGISTER_OPTIMIZATION               = on
+      RESYNTHESIZE_NETWORK                = on
+      SLOW_SLEW_RATE                      = off
+      SOFT_BUFFER_INSERTION               = on
+      SUBFACTOR_EXTRACTION                = off
+      TURBO_BIT                           = on
+      XOR_SYNTHESIS                       = on
+      IGNORE_SOFT_BUFFERS                 = off
+      USE_LPM_FOR_AHDL_OPERATORS          = off
+
+   Other logic synthesis settings:
+
+      Automatic Global Clock              = on
+      Automatic Global Clear              = on
+      Automatic Global Preset             = on
+      Automatic Global Output Enable      = on
+      Automatic Fast I/O                  = off
+      Automatic Register Packing          = off
+      Automatic Open-Drain Pins           = on
+      Automatic Implement in EAB          = off
+      One-Hot State Machine Encoding      = off
+      Optimize                            = 5
+
+Default Timing Specifications: None
+
+Cut All Bidir Feedback Timing Paths       = on
+Cut All Clear & Preset Timing Paths       = on
+
+Ignore Timing Assignments                 = off
+
+Functional SNF Extractor                  = off
+
+Linked SNF Extractor                      = off
+Timing SNF Extractor                      = on
+Optimize Timing SNF                       = off
+Generate AHDL TDO File                    = off
+Fitter Settings                           = NORMAL
+Smart Recompile                           = off
+Total Recompile                           = off
+
+Interfaces Menu Commands
+------------------------
+
+EDIF Netlist Writer                       = off
+Verilog Netlist Writer                    = off
+VHDL Netlist Writer                       = off
+
+Compilation Times
+-----------------
+
+   Compiler Netlist Extractor             00:00:00
+   Database Builder                       00:00:00
+   Logic Synthesizer                      00:00:00
+   Partitioner                            00:00:01
+   Fitter                                 00:00:00
+   Timing SNF Extractor                   00:00:00
+   Assembler                              00:00:00
+   --------------------------             --------
+   Total Time                             00:00:01
+
+
+Memory Allocated
+-----------------
+
+Peak memory allocated during compilation  = 3,551K

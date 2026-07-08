@@ -1,0 +1,89 @@
+-- MAX+plus II Compiler Fit File      
+-- Version 10.0 9/14/2000             
+-- Compiled: 11/15/2024 12:53:35      
+
+-- Copyright (C) 1988-2000 Altera Corporation
+-- Any megafunction design, and related net list (encrypted or decrypted),
+-- support information, device programming or simulation file, and any other
+-- associated documentation or information provided by Altera or a partner
+-- under Altera's Megafunction Partnership Program may be used only to
+-- program PLD devices (but not masked PLD devices) from Altera.  Any other
+-- use of such megafunction design, net list, support information, device
+-- programming or simulation file, or any other related documentation or
+-- information is prohibited for any other purpose, including, but not
+-- limited to modification, reverse engineering, de-compiling, or use with
+-- any other silicon devices, unless such use is explicitly licensed under
+-- a separate agreement with Altera or a megafunction partner.  Title to
+-- the intellectual property, including patents, copyrights, trademarks,
+-- trade secrets, or maskworks, embodied in any such megafunction design,
+-- net list, support information, device programming or simulation file, or
+-- any other related documentation or information provided by Altera or a
+-- megafunction partner, remains with Altera, the megafunction partner, or
+-- their respective licensors.  No other licenses, including any licenses
+-- needed under any third party's intellectual property, are provided herein.
+
+CHIP "lab3parralel"
+BEGIN
+
+    DEVICE = "EPM7032LC44-6";
+
+    "C"                            : INPUT_PIN  = 43     ;
+    "I0"                           : INPUT_PIN  = 5      ; -- LC2
+    "I1"                           : INPUT_PIN  = 6      ; -- LC3
+    "I2"                           : INPUT_PIN  = 7      ; -- LC4
+    "I3"                           : INPUT_PIN  = 8      ; -- LC5
+    "PUSHPOP"                      : INPUT_PIN  = 4      ; -- LC1
+    "0"                            : INPUT_PIN  = 9      ; -- LC6
+    "Q0"                           : OUTPUT_PIN = 38     ; -- LC20
+    "Q1"                           : OUTPUT_PIN = 31     ; -- LC26
+    "Q2"                           : OUTPUT_PIN = 29     ; -- LC27
+    "Q3"                           : OUTPUT_PIN = 28     ; -- LC28
+    ":1"                           : LOCATION   = LC31   ; -- PIN 25
+    ":2"                           : LOCATION   = LC32   ; -- PIN 24
+    ":3"                           : LOCATION   = LC30   ; -- PIN 26
+    ":4"                           : LOCATION   = LC29   ; -- PIN 27
+    ":69"                          : LOCATION   = LC25   ; -- PIN 32
+    ":70"                          : LOCATION   = LC17   ; -- PIN 41
+    ":71"                          : LOCATION   = LC18   ; -- PIN 40
+    ":72"                          : LOCATION   = LC22   ; -- PIN 36
+    ":85"                          : LOCATION   = LC21   ; -- PIN 37
+    ":86"                          : LOCATION   = LC2    ; -- PIN 5
+    ":87"                          : LOCATION   = LC19   ; -- PIN 39
+    ":88"                          : LOCATION   = LC1    ; -- PIN 4
+    ":101"                         : LOCATION   = LC23   ; -- PIN 34
+    ":102"                         : LOCATION   = LC4    ; -- PIN 7
+    ":103"                         : LOCATION   = LC24   ; -- PIN 33
+    ":104"                         : LOCATION   = LC8    ; -- PIN 12
+
+END;
+
+INTERNAL_INFO "lab3parralel"
+BEGIN
+	DEVICE = EPM7032LC44-6;
+	LC28    : LORAX = "G41R0";
+	LC20    : LORAX = "G16R0";
+	LC27    : LORAX = "G40R0";
+	LC26    : LORAX = "G39R0";
+	OH0R0P4 : LORAX = "G43R0,PA20R0C0,PA20R0C1";
+	LC8     : LORAX = "G29R0,PA9R0C1";
+	OH4R0P8 : LORAX = "G60R0,PA29R0C0";
+	LC24    : LORAX = "G33R0,PA10R0C0";
+	LC4     : LORAX = "G12R0,PA0R0C1";
+	LC23    : LORAX = "G32R0,PA12R0C0";
+	OH5R0P9 : LORAX = "G61R0,PA28R0C1";
+	LC31    : LORAX = "G57R0,PA33R0C1";
+	OH1R0P5 : LORAX = "G44R0,PA19R0C1";
+	LC32    : LORAX = "G58R0,PA31R0C1";
+	LC30    : LORAX = "G56R0,PA34R0C1";
+	LC29    : LORAX = "G55R0,PA27R0C1";
+	LC1     : LORAX = "G9R0,PA2R0C1";
+	OH3R0P7 : LORAX = "G46R0,PA24R0C0";
+	LC19    : LORAX = "G15R0,PA3R0C0";
+	LC2     : LORAX = "G10R0,PA1R0C1";
+	LC21    : LORAX = "G30R0,PA16R0C0";
+	LC22    : LORAX = "G31R0,PA14R0C1";
+	OH2R0P6 : LORAX = "G45R0,PA22R0C1";
+	LC18    : LORAX = "G14R0,PA5R0C1";
+	LC17    : LORAX = "G13R0,PA7R0C1";
+	LC25    : LORAX = "G38R0,PA18R0C1";
+END;

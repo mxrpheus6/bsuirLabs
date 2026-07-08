@@ -1,0 +1,128 @@
+Bus Number:N/A
+Device Number:N/A
+Vendor ID:1532
+Product ID:0098
+Vendor Name:Razer USA, Ltd
+Product Name:N/A
+Friendly Name:N/A
+Manufacturer:Razer Inc
+Device Description:Razer DeathAdder Essential
+Device Class:HIDClass
+Device Subclass:{745a17a0-74d3-11d0-b6fe-00a0c90f57da}
+Device Protocol:HidUsb
+Hardware ID:USB\VID_1532&PID_0098&REV_0200&MI_02
+Compatible IDs:USB\COMPAT_VID_1532&Class_03&SubClass_00&Prot_01
+Config Flags:0
+
+Bus Number:1
+Device Number:15
+Vendor ID:04f2
+Product ID:b64f
+Vendor Name:Chicony Electronics Co., Ltd
+Product Name:N/A
+Friendly Name:N/A
+Manufacturer:(Стандартный USB хост-контроллер)
+Device Description:Составное USB устройство
+Device Class:USB
+Device Subclass:{36fc9e60-c465-11cf-8056-444553540000}
+Device Protocol:usbccgp
+Hardware ID:USB\VID_04F2&PID_B64F&REV_9649
+Compatible IDs:USB\COMPAT_VID_04F2&DevClass_00&SubClass_00&Prot00
+Config Flags:0
+
+Bus Number:1
+Device Number:114
+Vendor ID:8087
+Product ID:0026
+Vendor Name:Intel Corp.
+Product Name:AX201 Bluetooth
+Friendly Name:N/A
+Manufacturer:Intel Corporation
+Device Description:Intel(R) Wireless Bluetooth(R)
+Device Class:Bluetooth
+Device Subclass:{e0cbf06c-cd8b-4647-bb8a-263b43f0f974}
+Device Protocol:BTHUSB
+Hardware ID:USB\VID_8087&PID_0026&REV_0002
+Compatible IDs:USB\COMPAT_VID_8087&Class_E0&SubClass_01&Prot_01
+Config Flags:0
+
+Bus Number:N/A
+Device Number:N/A
+Vendor ID:04f2
+Product ID:b64f
+Vendor Name:Chicony Electronics Co., Ltd
+Product Name:N/A
+Friendly Name:HD User Facing
+Manufacturer:Майкрософт
+Device Description:USB-видеоустройство
+Device Class:Camera
+Device Subclass:{ca3e7ab9-b4c3-4ae6-8251-579ef933890f}
+Device Protocol:usbvideo
+Hardware ID:USB\VID_04F2&PID_B64F&REV_9649&MI_00
+Compatible IDs:USB\COMPAT_VID_04f2&Class_0e&SubClass_03&Prot_00
+Config Flags:0
+
+Bus Number:N/A
+Device Number:N/A
+Vendor ID:1532
+Product ID:0098
+Vendor Name:Razer USA, Ltd
+Product Name:N/A
+Friendly Name:N/A
+Manufacturer:(Стандартные системные устройства)
+Device Description:USB-устройство ввода
+Device Class:HIDClass
+Device Subclass:{745a17a0-74d3-11d0-b6fe-00a0c90f57da}
+Device Protocol:HidUsb
+Hardware ID:USB\VID_1532&PID_0098&REV_0200&MI_00
+Compatible IDs:USB\COMPAT_VID_1532&Class_03&SubClass_01&Prot_02
+Config Flags:0
+
+Bus Number:N/A
+Device Number:N/A
+Vendor ID:1532
+Product ID:0098
+Vendor Name:Razer USA, Ltd
+Product Name:N/A
+Friendly Name:N/A
+Manufacturer:(Стандартные системные устройства)
+Device Description:USB-устройство ввода
+Device Class:HIDClass
+Device Subclass:{745a17a0-74d3-11d0-b6fe-00a0c90f57da}
+Device Protocol:HidUsb
+Hardware ID:USB\VID_1532&PID_0098&REV_0200&MI_01
+Compatible IDs:USB\COMPAT_VID_1532&Class_03&SubClass_00&Prot_01
+Config Flags:0
+
+Bus Number:N/A
+Device Number:N/A
+Vendor ID:N/A
+Product ID:N/A
+Vendor Name:N/A
+Product Name:N/A
+Friendly Name:N/A
+Manufacturer:(Стандартные USB-концентраторы)
+Device Description:Корневой USB-концентратор (USB 3.0)
+Device Class:USB
+Device Subclass:{36fc9e60-c465-11cf-8056-444553540000}
+Device Protocol:USBHUB3
+Hardware ID:USB\ROOT_HUB30&VID8086&PID06ED&REV0000
+Compatible IDs:
+Config Flags:0
+
+Bus Number:1
+Device Number:11
+Vendor ID:1532
+Product ID:0098
+Vendor Name:Razer USA, Ltd
+Product Name:N/A
+Friendly Name:N/A
+Manufacturer:(Стандартный USB хост-контроллер)
+Device Description:Составное USB устройство
+Device Class:USB
+Device Subclass:{36fc9e60-c465-11cf-8056-444553540000}
+Device Protocol:usbccgp
+Hardware ID:USB\VID_1532&PID_0098&REV_0200
+Compatible IDs:USB\COMPAT_VID_1532&DevClass_00&SubClass_00&Prot00
+Config Flags:0
+

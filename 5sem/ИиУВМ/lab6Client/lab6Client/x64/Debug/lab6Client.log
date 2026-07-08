@@ -1,0 +1,5 @@
+﻿  client.cpp
+D:\BSUIR\bsuirLabs\5sem\IiUVM\lab6Client\client.cpp(108,19): warning C4244: инициализация: преобразование "std::streamoff" в "int", возможна потеря данных
+D:\BSUIR\bsuirLabs\5sem\IiUVM\lab6Client\client.cpp(110,17): warning C4244: инициализация: преобразование "std::streamoff" в "int", возможна потеря данных
+D:\BSUIR\bsuirLabs\5sem\IiUVM\lab6Client\client.cpp(134,1): warning C4715: sendFile: значение возвращается не при всех путях выполнения
+  lab6Client.vcxproj -> D:\BSUIR\bsuirLabs\5sem\IiUVM\lab6Client\x64\Debug\lab6Client.exe

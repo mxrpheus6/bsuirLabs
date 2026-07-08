@@ -1,0 +1,335 @@
+
+*** Running vivado
+    with args -log top_counter.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_counter.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source top_counter.tcl -notrace
+Command: synth_design -top top_counter -part xc7a200tfbg676-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 21800 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 409.793 ; gain = 98.309
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top_counter' [C:/Users/thegw/Desktop/apcu-matvey/lab4.srcs/sources_1/new/top_counter.vhd:45]
+INFO: [Synth 8-3491] module 'IBUFDS' declared at 'C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:19488' bound to instance 'clk_buf' of component 'IBUFDS' [C:/Users/thegw/Desktop/apcu-matvey/lab4.srcs/sources_1/new/top_counter.vhd:78]
+INFO: [Synth 8-6157] synthesizing module 'IBUFDS' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:19488]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter DIFF_TERM bound to: FALSE - type: string 
+	Parameter DQS_BIAS bound to: FALSE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IBUFDS' (1#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:19488]
+INFO: [Synth 8-3491] module 'divider' declared at 'C:/Users/thegw/Desktop/apcu-matvey/lab4.srcs/sources_1/new/divider.vhd:34' bound to instance 'div_inst' of component 'divider' [C:/Users/thegw/Desktop/apcu-matvey/lab4.srcs/sources_1/new/top_counter.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'divider' [C:/Users/thegw/Desktop/apcu-matvey/lab4.srcs/sources_1/new/divider.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'divider' (2#1) [C:/Users/thegw/Desktop/apcu-matvey/lab4.srcs/sources_1/new/divider.vhd:41]
+INFO: [Synth 8-3491] module 'counter' declared at 'C:/Users/thegw/Desktop/apcu-matvey/lab4.srcs/sources_1/new/counter.vhd:34' bound to instance 'cnt' of component 'counter' [C:/Users/thegw/Desktop/apcu-matvey/lab4.srcs/sources_1/new/top_counter.vhd:98]
+INFO: [Synth 8-638] synthesizing module 'counter' [C:/Users/thegw/Desktop/apcu-matvey/lab4.srcs/sources_1/new/counter.vhd:43]
+INFO: [Synth 8-3491] module 't_trigger' declared at 'C:/Users/thegw/Desktop/apcu-matvey/lab4.srcs/sources_1/new/t_trigger.vhd:34' bound to instance 'FF0' of component 't_trigger' [C:/Users/thegw/Desktop/apcu-matvey/lab4.srcs/sources_1/new/counter.vhd:74]
+INFO: [Synth 8-638] synthesizing module 't_trigger' [C:/Users/thegw/Desktop/apcu-matvey/lab4.srcs/sources_1/new/t_trigger.vhd:41]
+WARNING: [Synth 8-614] signal 'P' is read in the process but is not in the sensitivity list [C:/Users/thegw/Desktop/apcu-matvey/lab4.srcs/sources_1/new/t_trigger.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 't_trigger' (3#1) [C:/Users/thegw/Desktop/apcu-matvey/lab4.srcs/sources_1/new/t_trigger.vhd:41]
+INFO: [Synth 8-3491] module 't_trigger' declared at 'C:/Users/thegw/Desktop/apcu-matvey/lab4.srcs/sources_1/new/t_trigger.vhd:34' bound to instance 'FF1' of component 't_trigger' [C:/Users/thegw/Desktop/apcu-matvey/lab4.srcs/sources_1/new/counter.vhd:83]
+INFO: [Synth 8-3491] module 't_trigger' declared at 'C:/Users/thegw/Desktop/apcu-matvey/lab4.srcs/sources_1/new/t_trigger.vhd:34' bound to instance 'FF2' of component 't_trigger' [C:/Users/thegw/Desktop/apcu-matvey/lab4.srcs/sources_1/new/counter.vhd:92]
+INFO: [Synth 8-3491] module 't_trigger' declared at 'C:/Users/thegw/Desktop/apcu-matvey/lab4.srcs/sources_1/new/t_trigger.vhd:34' bound to instance 'FF3' of component 't_trigger' [C:/Users/thegw/Desktop/apcu-matvey/lab4.srcs/sources_1/new/counter.vhd:101]
+INFO: [Synth 8-256] done synthesizing module 'counter' (4#1) [C:/Users/thegw/Desktop/apcu-matvey/lab4.srcs/sources_1/new/counter.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'top_counter' (5#1) [C:/Users/thegw/Desktop/apcu-matvey/lab4.srcs/sources_1/new/top_counter.vhd:45]
+WARNING: [Synth 8-3917] design top_counter has port ledsboard[3] driven by constant 0
+WARNING: [Synth 8-3917] design top_counter has port ledsboard[2] driven by constant 0
+WARNING: [Synth 8-3331] design top_counter has unconnected port pushbuttons[4]
+WARNING: [Synth 8-3331] design top_counter has unconnected port pushbuttons[3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 464.539 ; gain = 153.055
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 464.539 ; gain = 153.055
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 464.539 ; gain = 153.055
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7a200tfbg676-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/thegw/Desktop/apcu-matvey/lab4.srcs/constrs_1/new/top.xdc]
+Finished Parsing XDC File [C:/Users/thegw/Desktop/apcu-matvey/lab4.srcs/constrs_1/new/top.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/thegw/Desktop/apcu-matvey/lab4.srcs/constrs_1/new/top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_counter_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_counter_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 818.914 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 818.914 ; gain = 507.430
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a200tfbg676-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 818.914 ; gain = 507.430
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 818.914 ; gain = 507.430
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "holder" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 818.914 ; gain = 507.430
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 9     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module divider 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module t_trigger 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 740 (col length:100)
+BRAMs: 730 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5545] ROM "div_inst/counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "div_inst/holder" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-3917] design top_counter has port ledsboard[3] driven by constant 0
+WARNING: [Synth 8-3917] design top_counter has port ledsboard[2] driven by constant 0
+WARNING: [Synth 8-3331] design top_counter has unconnected port pushbuttons[4]
+WARNING: [Synth 8-3331] design top_counter has unconnected port pushbuttons[3]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 818.914 ; gain = 507.430
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 837.785 ; gain = 526.301
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 837.785 ; gain = 526.301
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 847.840 ; gain = 536.355
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 847.840 ; gain = 536.355
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 847.840 ; gain = 536.355
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 847.840 ; gain = 536.355
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 847.840 ; gain = 536.355
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 847.840 ; gain = 536.355
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 847.840 ; gain = 536.355
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     8|
+|3     |LUT2   |     9|
+|4     |LUT3   |     4|
+|5     |LUT4   |     9|
+|6     |LUT5   |     4|
+|7     |LUT6   |     4|
+|8     |FDCE   |     4|
+|9     |FDPE   |     4|
+|10    |FDRE   |    33|
+|11    |LDC    |     4|
+|12    |IBUF   |     7|
+|13    |IBUFDS |     1|
+|14    |OBUF   |     8|
++------+-------+------+
+
+Report Instance Areas: 
++------+-----------+------------+------+
+|      |Instance   |Module      |Cells |
++------+-----------+------------+------+
+|1     |top        |            |   100|
+|2     |  cnt      |counter     |    30|
+|3     |    FF0    |t_trigger   |     7|
+|4     |    FF1    |t_trigger_0 |     7|
+|5     |    FF2    |t_trigger_1 |    10|
+|6     |    FF3    |t_trigger_2 |     6|
+|7     |  div_inst |divider     |    53|
++------+-----------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 847.840 ; gain = 536.355
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 847.840 ; gain = 181.980
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 847.840 ; gain = 536.355
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  LDC => LDCE: 4 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+35 Infos, 9 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 864.215 ; gain = 565.379
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/thegw/Documents/project_2/project_2.runs/synth_1/top_counter.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_counter_utilization_synth.rpt -pb top_counter_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.068 . Memory (MB): peak = 864.215 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 10 10:23:09 2025...

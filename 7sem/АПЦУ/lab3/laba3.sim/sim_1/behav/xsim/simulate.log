@@ -1,0 +1,962 @@
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+Error: Line 1: A_out mismatch. Expected='Z' Got='0'
+Time: 5 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 1: B_out mismatch. Expected='Z' Got='0'
+Time: 5 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 1: C_out mismatch. Expected='Z' Got='0'
+Time: 5 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 1: D_out mismatch. Expected='Z' Got='0'
+Time: 5 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 1: E_out mismatch. Expected='Z' Got='0'
+Time: 5 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 1: F_out mismatch. Expected='Z' Got='0'
+Time: 5 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 1: G_out mismatch. Expected='Z' Got='0'
+Time: 5 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 1: H_out mismatch. Expected='Z' Got='0'
+Time: 5 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 2: A_out mismatch. Expected='Z' Got='0'
+Time: 10 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 2: B_out mismatch. Expected='Z' Got='0'
+Time: 10 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 2: C_out mismatch. Expected='Z' Got='0'
+Time: 10 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 2: D_out mismatch. Expected='Z' Got='0'
+Time: 10 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 2: E_out mismatch. Expected='Z' Got='0'
+Time: 10 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 2: F_out mismatch. Expected='Z' Got='0'
+Time: 10 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 2: G_out mismatch. Expected='Z' Got='0'
+Time: 10 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 2: H_out mismatch. Expected='Z' Got='0'
+Time: 10 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 3: A_out mismatch. Expected='Z' Got='0'
+Time: 15 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 3: B_out mismatch. Expected='Z' Got='0'
+Time: 15 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 3: C_out mismatch. Expected='Z' Got='0'
+Time: 15 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 3: D_out mismatch. Expected='Z' Got='0'
+Time: 15 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 3: E_out mismatch. Expected='Z' Got='0'
+Time: 15 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 3: F_out mismatch. Expected='Z' Got='0'
+Time: 15 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 3: G_out mismatch. Expected='Z' Got='0'
+Time: 15 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 3: H_out mismatch. Expected='Z' Got='0'
+Time: 15 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 4: A_out mismatch. Expected='Z' Got='0'
+Time: 20 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 4: B_out mismatch. Expected='Z' Got='0'
+Time: 20 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 4: C_out mismatch. Expected='Z' Got='0'
+Time: 20 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 4: D_out mismatch. Expected='Z' Got='0'
+Time: 20 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 4: E_out mismatch. Expected='Z' Got='0'
+Time: 20 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 4: F_out mismatch. Expected='Z' Got='0'
+Time: 20 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 4: G_out mismatch. Expected='Z' Got='0'
+Time: 20 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 4: H_out mismatch. Expected='Z' Got='0'
+Time: 20 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 5: A_out mismatch. Expected='Z' Got='0'
+Time: 25 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 5: B_out mismatch. Expected='Z' Got='0'
+Time: 25 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 5: C_out mismatch. Expected='Z' Got='0'
+Time: 25 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 5: D_out mismatch. Expected='Z' Got='0'
+Time: 25 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 5: E_out mismatch. Expected='Z' Got='0'
+Time: 25 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 5: F_out mismatch. Expected='Z' Got='0'
+Time: 25 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 5: G_out mismatch. Expected='Z' Got='0'
+Time: 25 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 5: H_out mismatch. Expected='Z' Got='0'
+Time: 25 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 6: A_out mismatch. Expected='Z' Got='0'
+Time: 30 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 6: B_out mismatch. Expected='Z' Got='0'
+Time: 30 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 6: C_out mismatch. Expected='Z' Got='0'
+Time: 30 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 6: D_out mismatch. Expected='Z' Got='0'
+Time: 30 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 6: E_out mismatch. Expected='Z' Got='0'
+Time: 30 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 6: F_out mismatch. Expected='Z' Got='0'
+Time: 30 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 6: G_out mismatch. Expected='Z' Got='0'
+Time: 30 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 6: H_out mismatch. Expected='Z' Got='0'
+Time: 30 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 7: A_out mismatch. Expected='0' Got='Z'
+Time: 35 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 7: B_out mismatch. Expected='0' Got='Z'
+Time: 35 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 7: C_out mismatch. Expected='0' Got='Z'
+Time: 35 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 7: D_out mismatch. Expected='0' Got='Z'
+Time: 35 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 7: E_out mismatch. Expected='0' Got='Z'
+Time: 35 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 7: F_out mismatch. Expected='0' Got='Z'
+Time: 35 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 7: G_out mismatch. Expected='0' Got='Z'
+Time: 35 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 7: H_out mismatch. Expected='0' Got='Z'
+Time: 35 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 8: A_out mismatch. Expected='1' Got='Z'
+Time: 40 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 8: B_out mismatch. Expected='0' Got='Z'
+Time: 40 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 8: C_out mismatch. Expected='1' Got='Z'
+Time: 40 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 8: D_out mismatch. Expected='0' Got='Z'
+Time: 40 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 8: E_out mismatch. Expected='1' Got='Z'
+Time: 40 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 8: F_out mismatch. Expected='0' Got='Z'
+Time: 40 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 8: G_out mismatch. Expected='1' Got='Z'
+Time: 40 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 8: H_out mismatch. Expected='0' Got='Z'
+Time: 40 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 9: A_out mismatch. Expected='1' Got='Z'
+Time: 45 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 9: B_out mismatch. Expected='0' Got='Z'
+Time: 45 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 9: C_out mismatch. Expected='1' Got='Z'
+Time: 45 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 9: D_out mismatch. Expected='0' Got='Z'
+Time: 45 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 9: E_out mismatch. Expected='1' Got='Z'
+Time: 45 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 9: F_out mismatch. Expected='0' Got='Z'
+Time: 45 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 9: G_out mismatch. Expected='1' Got='Z'
+Time: 45 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 9: H_out mismatch. Expected='0' Got='Z'
+Time: 45 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 10: A_out mismatch. Expected='1' Got='Z'
+Time: 50 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 10: B_out mismatch. Expected='0' Got='Z'
+Time: 50 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 10: C_out mismatch. Expected='1' Got='Z'
+Time: 50 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 10: D_out mismatch. Expected='0' Got='Z'
+Time: 50 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 10: E_out mismatch. Expected='1' Got='Z'
+Time: 50 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 10: F_out mismatch. Expected='0' Got='Z'
+Time: 50 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 10: G_out mismatch. Expected='1' Got='Z'
+Time: 50 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 10: H_out mismatch. Expected='0' Got='Z'
+Time: 50 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 11: A_out mismatch. Expected='1' Got='Z'
+Time: 55 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 11: B_out mismatch. Expected='0' Got='Z'
+Time: 55 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 11: C_out mismatch. Expected='1' Got='Z'
+Time: 55 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 11: D_out mismatch. Expected='0' Got='Z'
+Time: 55 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 11: E_out mismatch. Expected='1' Got='Z'
+Time: 55 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 11: F_out mismatch. Expected='0' Got='Z'
+Time: 55 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 11: G_out mismatch. Expected='1' Got='Z'
+Time: 55 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 11: H_out mismatch. Expected='0' Got='Z'
+Time: 55 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 12: A_out mismatch. Expected='1' Got='Z'
+Time: 60 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 12: B_out mismatch. Expected='0' Got='Z'
+Time: 60 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 12: C_out mismatch. Expected='1' Got='Z'
+Time: 60 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 12: D_out mismatch. Expected='0' Got='Z'
+Time: 60 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 12: E_out mismatch. Expected='1' Got='Z'
+Time: 60 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 12: F_out mismatch. Expected='0' Got='Z'
+Time: 60 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 12: G_out mismatch. Expected='1' Got='Z'
+Time: 60 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 12: H_out mismatch. Expected='0' Got='Z'
+Time: 60 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 13: A_out mismatch. Expected='1' Got='Z'
+Time: 65 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 13: B_out mismatch. Expected='0' Got='Z'
+Time: 65 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 13: C_out mismatch. Expected='1' Got='Z'
+Time: 65 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 13: D_out mismatch. Expected='0' Got='Z'
+Time: 65 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 13: E_out mismatch. Expected='1' Got='Z'
+Time: 65 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 13: F_out mismatch. Expected='0' Got='Z'
+Time: 65 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 13: G_out mismatch. Expected='1' Got='Z'
+Time: 65 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 13: H_out mismatch. Expected='0' Got='Z'
+Time: 65 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 14: A_out mismatch. Expected='0' Got='Z'
+Time: 70 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 14: B_out mismatch. Expected='1' Got='Z'
+Time: 70 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 14: C_out mismatch. Expected='0' Got='Z'
+Time: 70 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 14: D_out mismatch. Expected='1' Got='Z'
+Time: 70 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 14: E_out mismatch. Expected='0' Got='Z'
+Time: 70 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 14: F_out mismatch. Expected='1' Got='Z'
+Time: 70 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 14: G_out mismatch. Expected='0' Got='Z'
+Time: 70 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 14: H_out mismatch. Expected='1' Got='Z'
+Time: 70 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 15: A_out mismatch. Expected='0' Got='Z'
+Time: 75 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 15: B_out mismatch. Expected='1' Got='Z'
+Time: 75 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 15: C_out mismatch. Expected='0' Got='Z'
+Time: 75 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 15: D_out mismatch. Expected='1' Got='Z'
+Time: 75 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 15: E_out mismatch. Expected='0' Got='Z'
+Time: 75 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 15: F_out mismatch. Expected='1' Got='Z'
+Time: 75 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 15: G_out mismatch. Expected='0' Got='Z'
+Time: 75 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 15: H_out mismatch. Expected='1' Got='Z'
+Time: 75 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 16: A_out mismatch. Expected='0' Got='Z'
+Time: 80 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 16: B_out mismatch. Expected='0' Got='Z'
+Time: 80 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 16: C_out mismatch. Expected='1' Got='Z'
+Time: 80 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 16: D_out mismatch. Expected='0' Got='Z'
+Time: 80 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 16: E_out mismatch. Expected='1' Got='Z'
+Time: 80 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 16: F_out mismatch. Expected='0' Got='Z'
+Time: 80 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 16: G_out mismatch. Expected='1' Got='Z'
+Time: 80 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 16: H_out mismatch. Expected='0' Got='Z'
+Time: 80 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 17: A_out mismatch. Expected='0' Got='Z'
+Time: 85 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 17: B_out mismatch. Expected='0' Got='Z'
+Time: 85 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 17: C_out mismatch. Expected='1' Got='Z'
+Time: 85 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 17: D_out mismatch. Expected='0' Got='Z'
+Time: 85 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 17: E_out mismatch. Expected='1' Got='Z'
+Time: 85 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 17: F_out mismatch. Expected='0' Got='Z'
+Time: 85 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 17: G_out mismatch. Expected='1' Got='Z'
+Time: 85 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 17: H_out mismatch. Expected='0' Got='Z'
+Time: 85 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 18: A_out mismatch. Expected='0' Got='Z'
+Time: 90 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 18: B_out mismatch. Expected='0' Got='Z'
+Time: 90 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 18: C_out mismatch. Expected='0' Got='Z'
+Time: 90 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 18: D_out mismatch. Expected='1' Got='Z'
+Time: 90 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 18: E_out mismatch. Expected='0' Got='Z'
+Time: 90 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 18: F_out mismatch. Expected='1' Got='Z'
+Time: 90 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 18: G_out mismatch. Expected='0' Got='Z'
+Time: 90 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 18: H_out mismatch. Expected='1' Got='Z'
+Time: 90 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 19: A_out mismatch. Expected='0' Got='Z'
+Time: 95 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 19: B_out mismatch. Expected='0' Got='Z'
+Time: 95 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 19: C_out mismatch. Expected='0' Got='Z'
+Time: 95 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 19: D_out mismatch. Expected='1' Got='Z'
+Time: 95 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 19: E_out mismatch. Expected='0' Got='Z'
+Time: 95 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 19: F_out mismatch. Expected='1' Got='Z'
+Time: 95 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 19: G_out mismatch. Expected='0' Got='Z'
+Time: 95 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 19: H_out mismatch. Expected='1' Got='Z'
+Time: 95 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 20: A_out mismatch. Expected='0' Got='Z'
+Time: 100 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 20: B_out mismatch. Expected='0' Got='Z'
+Time: 100 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 20: C_out mismatch. Expected='0' Got='Z'
+Time: 100 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 20: D_out mismatch. Expected='0' Got='Z'
+Time: 100 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 20: E_out mismatch. Expected='1' Got='Z'
+Time: 100 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 20: F_out mismatch. Expected='0' Got='Z'
+Time: 100 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 20: G_out mismatch. Expected='1' Got='Z'
+Time: 100 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 20: H_out mismatch. Expected='0' Got='Z'
+Time: 100 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 21: A_out mismatch. Expected='0' Got='Z'
+Time: 105 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 21: B_out mismatch. Expected='0' Got='Z'
+Time: 105 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 21: C_out mismatch. Expected='0' Got='Z'
+Time: 105 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 21: D_out mismatch. Expected='0' Got='Z'
+Time: 105 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 21: E_out mismatch. Expected='1' Got='Z'
+Time: 105 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 21: F_out mismatch. Expected='0' Got='Z'
+Time: 105 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 21: G_out mismatch. Expected='1' Got='Z'
+Time: 105 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 21: H_out mismatch. Expected='0' Got='Z'
+Time: 105 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 22: A_out mismatch. Expected='0' Got='Z'
+Time: 110 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 22: B_out mismatch. Expected='0' Got='Z'
+Time: 110 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 22: C_out mismatch. Expected='0' Got='Z'
+Time: 110 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 22: D_out mismatch. Expected='0' Got='Z'
+Time: 110 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 22: E_out mismatch. Expected='0' Got='Z'
+Time: 110 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 22: F_out mismatch. Expected='1' Got='Z'
+Time: 110 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 22: G_out mismatch. Expected='0' Got='Z'
+Time: 110 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 22: H_out mismatch. Expected='1' Got='Z'
+Time: 110 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 23: A_out mismatch. Expected='0' Got='Z'
+Time: 115 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 23: B_out mismatch. Expected='0' Got='Z'
+Time: 115 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 23: C_out mismatch. Expected='0' Got='Z'
+Time: 115 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 23: D_out mismatch. Expected='0' Got='Z'
+Time: 115 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 23: E_out mismatch. Expected='0' Got='Z'
+Time: 115 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 23: F_out mismatch. Expected='1' Got='Z'
+Time: 115 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 23: G_out mismatch. Expected='0' Got='Z'
+Time: 115 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 23: H_out mismatch. Expected='1' Got='Z'
+Time: 115 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 24: A_out mismatch. Expected='0' Got='Z'
+Time: 120 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 24: B_out mismatch. Expected='0' Got='Z'
+Time: 120 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 24: C_out mismatch. Expected='0' Got='Z'
+Time: 120 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 24: D_out mismatch. Expected='0' Got='Z'
+Time: 120 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 24: E_out mismatch. Expected='0' Got='Z'
+Time: 120 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 24: F_out mismatch. Expected='0' Got='Z'
+Time: 120 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 24: G_out mismatch. Expected='1' Got='Z'
+Time: 120 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 24: H_out mismatch. Expected='0' Got='Z'
+Time: 120 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 25: A_out mismatch. Expected='0' Got='Z'
+Time: 125 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 25: B_out mismatch. Expected='0' Got='Z'
+Time: 125 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 25: C_out mismatch. Expected='0' Got='Z'
+Time: 125 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 25: D_out mismatch. Expected='0' Got='Z'
+Time: 125 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 25: E_out mismatch. Expected='0' Got='Z'
+Time: 125 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 25: F_out mismatch. Expected='0' Got='Z'
+Time: 125 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 25: G_out mismatch. Expected='1' Got='Z'
+Time: 125 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 25: H_out mismatch. Expected='0' Got='Z'
+Time: 125 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 26: A_out mismatch. Expected='0' Got='Z'
+Time: 130 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 26: B_out mismatch. Expected='0' Got='Z'
+Time: 130 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 26: C_out mismatch. Expected='0' Got='Z'
+Time: 130 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 26: D_out mismatch. Expected='0' Got='Z'
+Time: 130 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 26: E_out mismatch. Expected='0' Got='Z'
+Time: 130 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 26: F_out mismatch. Expected='0' Got='Z'
+Time: 130 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 26: G_out mismatch. Expected='0' Got='Z'
+Time: 130 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 26: H_out mismatch. Expected='1' Got='Z'
+Time: 130 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 27: A_out mismatch. Expected='0' Got='Z'
+Time: 135 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 27: B_out mismatch. Expected='0' Got='Z'
+Time: 135 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 27: C_out mismatch. Expected='0' Got='Z'
+Time: 135 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 27: D_out mismatch. Expected='0' Got='Z'
+Time: 135 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 27: E_out mismatch. Expected='0' Got='Z'
+Time: 135 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 27: F_out mismatch. Expected='0' Got='Z'
+Time: 135 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 27: G_out mismatch. Expected='0' Got='Z'
+Time: 135 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 27: H_out mismatch. Expected='1' Got='Z'
+Time: 135 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 28: A_out mismatch. Expected='0' Got='Z'
+Time: 140 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 28: B_out mismatch. Expected='0' Got='Z'
+Time: 140 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 28: C_out mismatch. Expected='0' Got='Z'
+Time: 140 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 28: D_out mismatch. Expected='0' Got='Z'
+Time: 140 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 28: E_out mismatch. Expected='0' Got='Z'
+Time: 140 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 28: F_out mismatch. Expected='0' Got='Z'
+Time: 140 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 28: G_out mismatch. Expected='0' Got='Z'
+Time: 140 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 28: H_out mismatch. Expected='0' Got='Z'
+Time: 140 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 29: A_out mismatch. Expected='0' Got='Z'
+Time: 145 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 29: B_out mismatch. Expected='0' Got='Z'
+Time: 145 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 29: C_out mismatch. Expected='0' Got='Z'
+Time: 145 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 29: D_out mismatch. Expected='0' Got='Z'
+Time: 145 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 29: E_out mismatch. Expected='0' Got='Z'
+Time: 145 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 29: F_out mismatch. Expected='0' Got='Z'
+Time: 145 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 29: G_out mismatch. Expected='0' Got='Z'
+Time: 145 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 29: H_out mismatch. Expected='0' Got='Z'
+Time: 145 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 30: A_out mismatch. Expected='0' Got='Z'
+Time: 150 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 30: B_out mismatch. Expected='0' Got='Z'
+Time: 150 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 30: C_out mismatch. Expected='0' Got='Z'
+Time: 150 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 30: D_out mismatch. Expected='0' Got='Z'
+Time: 150 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 30: E_out mismatch. Expected='0' Got='Z'
+Time: 150 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 30: F_out mismatch. Expected='0' Got='Z'
+Time: 150 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 30: G_out mismatch. Expected='0' Got='Z'
+Time: 150 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 30: H_out mismatch. Expected='0' Got='Z'
+Time: 150 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 31: A_out mismatch. Expected='0' Got='Z'
+Time: 155 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 31: B_out mismatch. Expected='0' Got='Z'
+Time: 155 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 31: C_out mismatch. Expected='0' Got='Z'
+Time: 155 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 31: D_out mismatch. Expected='0' Got='Z'
+Time: 155 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 31: E_out mismatch. Expected='0' Got='Z'
+Time: 155 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 31: F_out mismatch. Expected='0' Got='Z'
+Time: 155 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 31: G_out mismatch. Expected='0' Got='Z'
+Time: 155 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 31: H_out mismatch. Expected='0' Got='Z'
+Time: 155 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 32: A_out mismatch. Expected='0' Got='Z'
+Time: 160 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 32: B_out mismatch. Expected='1' Got='Z'
+Time: 160 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 32: C_out mismatch. Expected='0' Got='Z'
+Time: 160 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 32: D_out mismatch. Expected='1' Got='Z'
+Time: 160 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 32: E_out mismatch. Expected='0' Got='Z'
+Time: 160 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 32: F_out mismatch. Expected='1' Got='Z'
+Time: 160 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 32: G_out mismatch. Expected='0' Got='Z'
+Time: 160 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 32: H_out mismatch. Expected='1' Got='Z'
+Time: 160 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 33: A_out mismatch. Expected='0' Got='Z'
+Time: 165 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 33: B_out mismatch. Expected='1' Got='Z'
+Time: 165 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 33: C_out mismatch. Expected='0' Got='Z'
+Time: 165 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 33: D_out mismatch. Expected='1' Got='Z'
+Time: 165 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 33: E_out mismatch. Expected='0' Got='Z'
+Time: 165 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 33: F_out mismatch. Expected='1' Got='Z'
+Time: 165 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 33: G_out mismatch. Expected='0' Got='Z'
+Time: 165 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 33: H_out mismatch. Expected='1' Got='Z'
+Time: 165 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 34: A_out mismatch. Expected='0' Got='Z'
+Time: 170 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 34: B_out mismatch. Expected='1' Got='Z'
+Time: 170 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 34: C_out mismatch. Expected='0' Got='Z'
+Time: 170 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 34: D_out mismatch. Expected='1' Got='Z'
+Time: 170 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 34: E_out mismatch. Expected='0' Got='Z'
+Time: 170 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 34: F_out mismatch. Expected='1' Got='Z'
+Time: 170 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 34: G_out mismatch. Expected='0' Got='Z'
+Time: 170 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 34: H_out mismatch. Expected='1' Got='Z'
+Time: 170 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 35: A_out mismatch. Expected='0' Got='Z'
+Time: 175 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 35: B_out mismatch. Expected='1' Got='Z'
+Time: 175 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 35: C_out mismatch. Expected='0' Got='Z'
+Time: 175 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 35: D_out mismatch. Expected='1' Got='Z'
+Time: 175 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 35: E_out mismatch. Expected='0' Got='Z'
+Time: 175 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 35: F_out mismatch. Expected='1' Got='Z'
+Time: 175 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 35: G_out mismatch. Expected='0' Got='Z'
+Time: 175 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 35: H_out mismatch. Expected='1' Got='Z'
+Time: 175 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 36: A_out mismatch. Expected='0' Got='Z'
+Time: 180 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 36: B_out mismatch. Expected='1' Got='Z'
+Time: 180 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 36: C_out mismatch. Expected='0' Got='Z'
+Time: 180 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 36: D_out mismatch. Expected='1' Got='Z'
+Time: 180 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 36: E_out mismatch. Expected='0' Got='Z'
+Time: 180 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 36: F_out mismatch. Expected='1' Got='Z'
+Time: 180 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 36: G_out mismatch. Expected='0' Got='Z'
+Time: 180 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 36: H_out mismatch. Expected='1' Got='Z'
+Time: 180 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 37: A_out mismatch. Expected='0' Got='Z'
+Time: 185 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 37: B_out mismatch. Expected='1' Got='Z'
+Time: 185 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 37: C_out mismatch. Expected='0' Got='Z'
+Time: 185 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 37: D_out mismatch. Expected='1' Got='Z'
+Time: 185 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 37: E_out mismatch. Expected='0' Got='Z'
+Time: 185 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 37: F_out mismatch. Expected='1' Got='Z'
+Time: 185 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 37: G_out mismatch. Expected='0' Got='Z'
+Time: 185 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 37: H_out mismatch. Expected='1' Got='Z'
+Time: 185 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 38: A_out mismatch. Expected='1' Got='Z'
+Time: 190 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 38: B_out mismatch. Expected='0' Got='Z'
+Time: 190 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 38: C_out mismatch. Expected='1' Got='Z'
+Time: 190 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 38: D_out mismatch. Expected='0' Got='Z'
+Time: 190 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 38: E_out mismatch. Expected='1' Got='Z'
+Time: 190 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 38: F_out mismatch. Expected='0' Got='Z'
+Time: 190 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 38: G_out mismatch. Expected='1' Got='Z'
+Time: 190 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 38: H_out mismatch. Expected='0' Got='Z'
+Time: 190 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 39: A_out mismatch. Expected='1' Got='Z'
+Time: 195 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 39: B_out mismatch. Expected='0' Got='Z'
+Time: 195 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 39: C_out mismatch. Expected='1' Got='Z'
+Time: 195 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 39: D_out mismatch. Expected='0' Got='Z'
+Time: 195 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 39: E_out mismatch. Expected='1' Got='Z'
+Time: 195 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 39: F_out mismatch. Expected='0' Got='Z'
+Time: 195 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 39: G_out mismatch. Expected='1' Got='Z'
+Time: 195 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 39: H_out mismatch. Expected='0' Got='Z'
+Time: 195 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 40: A_out mismatch. Expected='0' Got='Z'
+Time: 200 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 40: B_out mismatch. Expected='1' Got='Z'
+Time: 200 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 40: C_out mismatch. Expected='0' Got='Z'
+Time: 200 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 40: D_out mismatch. Expected='1' Got='Z'
+Time: 200 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 40: E_out mismatch. Expected='0' Got='Z'
+Time: 200 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 40: F_out mismatch. Expected='1' Got='Z'
+Time: 200 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 40: G_out mismatch. Expected='0' Got='Z'
+Time: 200 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 40: H_out mismatch. Expected='0' Got='Z'
+Time: 200 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 41: A_out mismatch. Expected='0' Got='Z'
+Time: 205 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 41: B_out mismatch. Expected='1' Got='Z'
+Time: 205 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 41: C_out mismatch. Expected='0' Got='Z'
+Time: 205 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 41: D_out mismatch. Expected='1' Got='Z'
+Time: 205 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 41: E_out mismatch. Expected='0' Got='Z'
+Time: 205 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 41: F_out mismatch. Expected='1' Got='Z'
+Time: 205 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 41: G_out mismatch. Expected='0' Got='Z'
+Time: 205 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 41: H_out mismatch. Expected='0' Got='Z'
+Time: 205 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 42: A_out mismatch. Expected='1' Got='Z'
+Time: 210 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 42: B_out mismatch. Expected='0' Got='Z'
+Time: 210 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 42: C_out mismatch. Expected='1' Got='Z'
+Time: 210 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 42: D_out mismatch. Expected='0' Got='Z'
+Time: 210 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 42: E_out mismatch. Expected='1' Got='Z'
+Time: 210 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 42: F_out mismatch. Expected='0' Got='Z'
+Time: 210 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 42: G_out mismatch. Expected='0' Got='Z'
+Time: 210 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 42: H_out mismatch. Expected='0' Got='Z'
+Time: 210 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 43: A_out mismatch. Expected='1' Got='Z'
+Time: 215 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 43: B_out mismatch. Expected='0' Got='Z'
+Time: 215 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 43: C_out mismatch. Expected='1' Got='Z'
+Time: 215 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 43: D_out mismatch. Expected='0' Got='Z'
+Time: 215 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 43: E_out mismatch. Expected='1' Got='Z'
+Time: 215 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 43: F_out mismatch. Expected='0' Got='Z'
+Time: 215 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 43: G_out mismatch. Expected='0' Got='Z'
+Time: 215 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 43: H_out mismatch. Expected='0' Got='Z'
+Time: 215 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 44: A_out mismatch. Expected='0' Got='Z'
+Time: 220 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 44: B_out mismatch. Expected='1' Got='Z'
+Time: 220 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 44: C_out mismatch. Expected='0' Got='Z'
+Time: 220 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 44: D_out mismatch. Expected='1' Got='Z'
+Time: 220 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 44: E_out mismatch. Expected='0' Got='Z'
+Time: 220 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 44: F_out mismatch. Expected='0' Got='Z'
+Time: 220 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 44: G_out mismatch. Expected='0' Got='Z'
+Time: 220 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 44: H_out mismatch. Expected='0' Got='Z'
+Time: 220 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 45: A_out mismatch. Expected='0' Got='Z'
+Time: 225 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 45: B_out mismatch. Expected='1' Got='Z'
+Time: 225 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 45: C_out mismatch. Expected='0' Got='Z'
+Time: 225 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 45: D_out mismatch. Expected='1' Got='Z'
+Time: 225 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 45: E_out mismatch. Expected='0' Got='Z'
+Time: 225 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 45: F_out mismatch. Expected='0' Got='Z'
+Time: 225 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 45: G_out mismatch. Expected='0' Got='Z'
+Time: 225 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 45: H_out mismatch. Expected='0' Got='Z'
+Time: 225 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 46: A_out mismatch. Expected='1' Got='Z'
+Time: 230 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 46: B_out mismatch. Expected='0' Got='Z'
+Time: 230 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 46: C_out mismatch. Expected='1' Got='Z'
+Time: 230 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 46: D_out mismatch. Expected='0' Got='Z'
+Time: 230 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 46: E_out mismatch. Expected='0' Got='Z'
+Time: 230 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 46: F_out mismatch. Expected='0' Got='Z'
+Time: 230 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 46: G_out mismatch. Expected='0' Got='Z'
+Time: 230 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 46: H_out mismatch. Expected='0' Got='Z'
+Time: 230 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 47: A_out mismatch. Expected='1' Got='Z'
+Time: 235 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 47: B_out mismatch. Expected='0' Got='Z'
+Time: 235 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 47: C_out mismatch. Expected='1' Got='Z'
+Time: 235 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 47: D_out mismatch. Expected='0' Got='Z'
+Time: 235 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 47: E_out mismatch. Expected='0' Got='Z'
+Time: 235 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 47: F_out mismatch. Expected='0' Got='Z'
+Time: 235 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 47: G_out mismatch. Expected='0' Got='Z'
+Time: 235 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 47: H_out mismatch. Expected='0' Got='Z'
+Time: 235 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 48: A_out mismatch. Expected='0' Got='Z'
+Time: 240 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 48: B_out mismatch. Expected='1' Got='Z'
+Time: 240 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 48: C_out mismatch. Expected='0' Got='Z'
+Time: 240 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 48: D_out mismatch. Expected='0' Got='Z'
+Time: 240 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 48: E_out mismatch. Expected='0' Got='Z'
+Time: 240 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 48: F_out mismatch. Expected='0' Got='Z'
+Time: 240 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 48: G_out mismatch. Expected='0' Got='Z'
+Time: 240 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 48: H_out mismatch. Expected='0' Got='Z'
+Time: 240 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 49: A_out mismatch. Expected='0' Got='Z'
+Time: 245 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 49: B_out mismatch. Expected='1' Got='Z'
+Time: 245 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 49: C_out mismatch. Expected='0' Got='Z'
+Time: 245 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 49: D_out mismatch. Expected='0' Got='Z'
+Time: 245 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 49: E_out mismatch. Expected='0' Got='Z'
+Time: 245 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 49: F_out mismatch. Expected='0' Got='Z'
+Time: 245 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 49: G_out mismatch. Expected='0' Got='Z'
+Time: 245 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 49: H_out mismatch. Expected='0' Got='Z'
+Time: 245 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 50: A_out mismatch. Expected='1' Got='Z'
+Time: 250 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 50: B_out mismatch. Expected='0' Got='Z'
+Time: 250 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 50: C_out mismatch. Expected='0' Got='Z'
+Time: 250 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 50: D_out mismatch. Expected='0' Got='Z'
+Time: 250 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 50: E_out mismatch. Expected='0' Got='Z'
+Time: 250 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 50: F_out mismatch. Expected='0' Got='Z'
+Time: 250 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 50: G_out mismatch. Expected='0' Got='Z'
+Time: 250 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 50: H_out mismatch. Expected='0' Got='Z'
+Time: 250 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 51: A_out mismatch. Expected='1' Got='Z'
+Time: 255 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 51: B_out mismatch. Expected='0' Got='Z'
+Time: 255 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 51: C_out mismatch. Expected='0' Got='Z'
+Time: 255 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 51: D_out mismatch. Expected='0' Got='Z'
+Time: 255 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 51: E_out mismatch. Expected='0' Got='Z'
+Time: 255 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 51: F_out mismatch. Expected='0' Got='Z'
+Time: 255 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 51: G_out mismatch. Expected='0' Got='Z'
+Time: 255 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 51: H_out mismatch. Expected='0' Got='Z'
+Time: 255 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 52: A_out mismatch. Expected='0' Got='Z'
+Time: 260 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 52: B_out mismatch. Expected='0' Got='Z'
+Time: 260 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 52: C_out mismatch. Expected='0' Got='Z'
+Time: 260 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 52: D_out mismatch. Expected='0' Got='Z'
+Time: 260 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 52: E_out mismatch. Expected='0' Got='Z'
+Time: 260 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 52: F_out mismatch. Expected='0' Got='Z'
+Time: 260 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 52: G_out mismatch. Expected='0' Got='Z'
+Time: 260 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 52: H_out mismatch. Expected='0' Got='Z'
+Time: 260 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 53: A_out mismatch. Expected='0' Got='Z'
+Time: 265 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 53: B_out mismatch. Expected='0' Got='Z'
+Time: 265 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 53: C_out mismatch. Expected='0' Got='Z'
+Time: 265 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 53: D_out mismatch. Expected='0' Got='Z'
+Time: 265 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 53: E_out mismatch. Expected='0' Got='Z'
+Time: 265 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 53: F_out mismatch. Expected='0' Got='Z'
+Time: 265 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 53: G_out mismatch. Expected='0' Got='Z'
+Time: 265 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 53: H_out mismatch. Expected='0' Got='Z'
+Time: 265 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 54: A_out mismatch. Expected='0' Got='Z'
+Time: 270 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 54: B_out mismatch. Expected='0' Got='Z'
+Time: 270 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 54: C_out mismatch. Expected='0' Got='Z'
+Time: 270 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 54: D_out mismatch. Expected='0' Got='Z'
+Time: 270 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 54: E_out mismatch. Expected='0' Got='Z'
+Time: 270 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 54: F_out mismatch. Expected='0' Got='Z'
+Time: 270 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 54: G_out mismatch. Expected='0' Got='Z'
+Time: 270 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 54: H_out mismatch. Expected='0' Got='Z'
+Time: 270 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 55: A_out mismatch. Expected='0' Got='Z'
+Time: 275 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 55: B_out mismatch. Expected='0' Got='Z'
+Time: 275 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 55: C_out mismatch. Expected='0' Got='Z'
+Time: 275 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 55: D_out mismatch. Expected='0' Got='Z'
+Time: 275 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 55: E_out mismatch. Expected='0' Got='Z'
+Time: 275 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 55: F_out mismatch. Expected='0' Got='Z'
+Time: 275 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 55: G_out mismatch. Expected='0' Got='Z'
+Time: 275 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 55: H_out mismatch. Expected='0' Got='Z'
+Time: 275 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 56: A_out mismatch. Expected='0' Got='Z'
+Time: 280 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 56: B_out mismatch. Expected='0' Got='Z'
+Time: 280 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 56: C_out mismatch. Expected='0' Got='Z'
+Time: 280 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 56: D_out mismatch. Expected='0' Got='Z'
+Time: 280 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 56: E_out mismatch. Expected='0' Got='Z'
+Time: 280 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 56: F_out mismatch. Expected='0' Got='Z'
+Time: 280 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 56: G_out mismatch. Expected='0' Got='Z'
+Time: 280 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 56: H_out mismatch. Expected='0' Got='Z'
+Time: 280 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 57: A_out mismatch. Expected='0' Got='Z'
+Time: 285 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 57: B_out mismatch. Expected='0' Got='Z'
+Time: 285 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 57: C_out mismatch. Expected='0' Got='Z'
+Time: 285 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 57: D_out mismatch. Expected='0' Got='Z'
+Time: 285 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 57: E_out mismatch. Expected='0' Got='Z'
+Time: 285 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 57: F_out mismatch. Expected='0' Got='Z'
+Time: 285 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 57: G_out mismatch. Expected='0' Got='Z'
+Time: 285 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 57: H_out mismatch. Expected='0' Got='Z'
+Time: 285 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 58: A_out mismatch. Expected='0' Got='Z'
+Time: 290 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 58: B_out mismatch. Expected='0' Got='Z'
+Time: 290 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 58: C_out mismatch. Expected='0' Got='Z'
+Time: 290 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 58: D_out mismatch. Expected='0' Got='Z'
+Time: 290 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 58: E_out mismatch. Expected='0' Got='Z'
+Time: 290 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 58: F_out mismatch. Expected='0' Got='Z'
+Time: 290 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 58: G_out mismatch. Expected='0' Got='Z'
+Time: 290 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 58: H_out mismatch. Expected='0' Got='Z'
+Time: 290 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 59: A_out mismatch. Expected='0' Got='Z'
+Time: 295 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 59: B_out mismatch. Expected='0' Got='Z'
+Time: 295 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 59: C_out mismatch. Expected='0' Got='Z'
+Time: 295 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 59: D_out mismatch. Expected='0' Got='Z'
+Time: 295 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 59: E_out mismatch. Expected='0' Got='Z'
+Time: 295 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 59: F_out mismatch. Expected='0' Got='Z'
+Time: 295 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 59: G_out mismatch. Expected='0' Got='Z'
+Time: 295 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 59: H_out mismatch. Expected='0' Got='Z'
+Time: 295 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 60: A_out mismatch. Expected='0' Got='Z'
+Time: 300 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 60: B_out mismatch. Expected='0' Got='Z'
+Time: 300 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 60: C_out mismatch. Expected='0' Got='Z'
+Time: 300 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 60: D_out mismatch. Expected='0' Got='Z'
+Time: 300 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 60: E_out mismatch. Expected='0' Got='Z'
+Time: 300 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 60: F_out mismatch. Expected='0' Got='Z'
+Time: 300 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 60: G_out mismatch. Expected='0' Got='Z'
+Time: 300 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd
+Error: Line 60: H_out mismatch. Expected='0' Got='Z'
+Time: 300 ns  Iteration: 0  Process: /tb_registers/stimulus  File: D:/BSUIR/bsuirLabs/7sem/APCU/laba3/laba3.srcs/sim_1/new/tb_registers_file.vhd

@@ -1,0 +1,12 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/d_flip_flop.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity d_flip_flop
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/divider.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity DIVIDER
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/jk_flip_flop.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity jk_flip_flop
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/main.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ShiftRegisterWithBuffer
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/circuit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity circuit
+WARNING: [VRFC 10-280] actual for formal port not_rclr is neither a static name nor a globally static expression [D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/circuit.vhd:86]
+WARNING: [VRFC 10-280] actual for formal port not_srclr is neither a static name nor a globally static expression [D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/circuit.vhd:88]

@@ -1,0 +1,52 @@
+NDB006
+The number of symbol table entries is: 1
+The length of the symbol table is: 13
+
+Index Hierarchy Path
+----- --------------
+!	&null_hpath&
+
+The number of name info structs is : 40
+
+InsOrder BitField SymTableIndex NextSyn SynParent Loc ChainType NextChain ChainParent FanOut DirExp ParExp ShareExp NodeName
+-------- -------- ------------- ------- --------- --- --------- --------- ----------- ------ ------ ------ -------- --------
+"	IGdW	!	:2	"&
+#	IGdW	!	:27	"8
+$	IGdW	!	:28	"7
+%	IGdW	!	:29	"6
+&	IGdW	!	:3	"%
+'	IGdW	!	:30	"5
+(	IGdW	!	:31	"4
+)	IGdW	!	:32	"3
+*	IGdW	!	:33	"2
++	IGdW	!	:34	")
+,	IGdW	!	:4	"'
+-	IGdW	!	:43	"1
+.	IGdW	!	:44	"0
+/	IGdW	!	:45	"/
+0	IGdW	!	:46	".
+1	IGdW	!	:47	"-
+2	IGdW	!	:48	",
+3	IGdW	!	:49	"+
+4	IGdW	!	:5	"(
+5	IGdW	!	:50	"*
+6	IGdq	!	O0	"$
+7	IGdq	!	O1	"#
+8	IGdq	!	O10	y
+9	IGdq	!	O11	x
+:	IGdq	!	O12	w
+;	IGdq	!	O13	v
+<	IGdq	!	O14	u
+=	IGdq	!	O15	t
+>	IGdq	!	O2	""
+?	IGdq	!	O3	"!
+@	IGdq	!	O4	~
+A	IGdq	!	O5	}
+B	IGdq	!	O6	|
+C	IGdq	!	O7	s
+D	IGdq	!	O8	{
+E	IGdq	!	O9	z
+F	Ky&|	!	16	6	7	>	?	@	A	B	C	D	E	8	9	:	;	<	=	SELC0	r
+G	Ky&|	!	16	6	7	>	?	@	A	B	C	D	E	8	9	:	;	<	=	SELC1	q
+H	Ky&|	!	16	6	7	>	?	@	A	B	C	D	E	8	9	:	;	<	=	SELC2	p
+I	Ky&|	!	16	6	7	>	?	@	A	B	C	D	E	8	9	:	;	<	=	SELC3	o

@@ -1,0 +1,19 @@
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 8c93b934dd564d8cb0f0721bd29c087c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot circuit_behav xil_defaultlib.circuit -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-122] ibufds remains a black-box since it has no binding entity [D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/circuit.vhd:104]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling architecture behavioral of entity xil_defaultlib.jk_flip_flop [jk_flip_flop_default]
+Compiling architecture behavioral of entity xil_defaultlib.d_flip_flop [d_flip_flop_default]
+Compiling architecture behavioral of entity xil_defaultlib.ShiftRegisterWithBuffer [shiftregisterwithbuffer_default]
+Compiling architecture behavioral of entity xil_defaultlib.DIVIDER [divider_default]
+Compiling architecture behavioral of entity xil_defaultlib.circuit
+Built simulation snapshot circuit_behav

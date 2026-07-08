@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7vx485tffg1157-1" LaunchTime="1757623754">
+  <File Type="BITSTR-BMM" Name="parallel_bd.bmm"/>
+  <File Type="ROUTE-PWR" Name="parallel_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="parallel.tcl"/>
+  <File Type="OPT-DCP" Name="parallel_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="parallel_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="parallel_reports.tcl"/>
+  <File Type="OPT-DRC" Name="parallel_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="parallel.hwdef"/>
+  <File Type="PWROPT-DCP" Name="parallel_pwropt.dcp"/>
+  <File Type="PLACE-DCP" Name="parallel_placed.dcp"/>
+  <File Type="PLACE-IO" Name="parallel_io_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="parallel_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="parallel_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="parallel_control_sets_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="parallel_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BGN" Name="parallel.bgn"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="parallel_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="parallel.bin"/>
+  <File Type="PHYSOPT-DCP" Name="parallel_physopt.dcp"/>
+  <File Type="BITSTR-MSK" Name="parallel.msk"/>
+  <File Type="ROUTE-ERROR-DCP" Name="parallel_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="parallel_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="parallel_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="parallel_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="parallel_drc_routed.pb"/>
+  <File Type="BITSTR-LTX" Name="parallel.ltx"/>
+  <File Type="ROUTE-DRC-RPX" Name="parallel_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="parallel.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="parallel_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="parallel_methodology_drc_routed.rpx"/>
+  <File Type="BITSTR-SYSDEF" Name="parallel.sysdef"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="parallel_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="parallel_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="parallel_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="parallel_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="parallel_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="parallel_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="parallel_timing_summary_routed.rpx"/>
+  <File Type="RDI-RDI" Name="parallel.vdi"/>
+  <File Type="ROUTE-CLK" Name="parallel_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="parallel_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="parallel_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="parallel_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="parallel_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="parallel_postroute_physopt_bb.dcp"/>
+  <File Type="BG-BIT" Name="parallel.bit"/>
+  <File Type="BITSTR-RBT" Name="parallel.rbt"/>
+  <File Type="BITSTR-NKY" Name="parallel.nky"/>
+  <File Type="BG-DRC" Name="parallel.drc"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/parallel.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/serial.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="parallel"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

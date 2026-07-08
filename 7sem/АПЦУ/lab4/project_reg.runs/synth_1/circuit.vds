@@ -1,0 +1,381 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sun Oct 12 12:59:01 2025
+# Process ID: 6280
+# Current directory: D:/BSUIR/bsuirLabs/7sem/APCU/project_reg/project_reg.runs/synth_1
+# Command line: vivado.exe -log circuit.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source circuit.tcl
+# Log file: D:/BSUIR/bsuirLabs/7sem/APCU/project_reg/project_reg.runs/synth_1/circuit.vds
+# Journal file: D:/BSUIR/bsuirLabs/7sem/APCU/project_reg/project_reg.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source circuit.tcl -notrace
+Command: synth_design -top circuit -part xc7a200tfbg676-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 14260 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 408.582 ; gain = 95.762
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-1565] actual for formal port not_rclr is neither a static name nor a globally static expression [D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/circuit.vhd:86]
+WARNING: [Synth 8-1565] actual for formal port not_srclr is neither a static name nor a globally static expression [D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/circuit.vhd:88]
+INFO: [Synth 8-638] synthesizing module 'circuit' [D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/circuit.vhd:46]
+INFO: [Synth 8-3491] module 'ShiftRegisterWithBuffer' declared at 'D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/main.vhd:34' bound to instance 'ShiftRegisterWithBuffer1' of component 'ShiftRegisterWithBuffer' [D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/circuit.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'ShiftRegisterWithBuffer' [D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/main.vhd:53]
+INFO: [Synth 8-3491] module 'd_flip_flop' declared at 'D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/d_flip_flop.vhd:34' bound to instance 'first_flip_flop0' of component 'd_flip_flop' [D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/main.vhd:69]
+INFO: [Synth 8-638] synthesizing module 'd_flip_flop' [D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/d_flip_flop.vhd:45]
+INFO: [Synth 8-3491] module 'jk_flip_flop' declared at 'D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/jk_flip_flop.vhd:34' bound to instance 'inner_flip_flop' of component 'jk_flip_flop' [D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/d_flip_flop.vhd:61]
+INFO: [Synth 8-638] synthesizing module 'jk_flip_flop' [D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/jk_flip_flop.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'jk_flip_flop' (1#1) [D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/jk_flip_flop.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'd_flip_flop' (2#1) [D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/d_flip_flop.vhd:45]
+INFO: [Synth 8-3491] module 'd_flip_flop' declared at 'D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/d_flip_flop.vhd:34' bound to instance 'first_flip_flop1' of component 'd_flip_flop' [D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/main.vhd:76]
+INFO: [Synth 8-3491] module 'd_flip_flop' declared at 'D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/d_flip_flop.vhd:34' bound to instance 'first_flip_flop2' of component 'd_flip_flop' [D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/main.vhd:83]
+INFO: [Synth 8-3491] module 'd_flip_flop' declared at 'D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/d_flip_flop.vhd:34' bound to instance 'first_flip_flop3' of component 'd_flip_flop' [D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/main.vhd:90]
+INFO: [Synth 8-3491] module 'd_flip_flop' declared at 'D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/d_flip_flop.vhd:34' bound to instance 'first_flip_flop4' of component 'd_flip_flop' [D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/main.vhd:97]
+INFO: [Synth 8-3491] module 'd_flip_flop' declared at 'D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/d_flip_flop.vhd:34' bound to instance 'first_flip_flop5' of component 'd_flip_flop' [D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/main.vhd:104]
+INFO: [Synth 8-3491] module 'd_flip_flop' declared at 'D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/d_flip_flop.vhd:34' bound to instance 'first_flip_flop6' of component 'd_flip_flop' [D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/main.vhd:111]
+INFO: [Synth 8-3491] module 'd_flip_flop' declared at 'D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/d_flip_flop.vhd:34' bound to instance 'first_flip_flop7' of component 'd_flip_flop' [D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/main.vhd:118]
+INFO: [Synth 8-3491] module 'd_flip_flop' declared at 'D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/d_flip_flop.vhd:34' bound to instance 'second_flip_flop0' of component 'd_flip_flop' [D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/main.vhd:126]
+INFO: [Synth 8-3491] module 'd_flip_flop' declared at 'D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/d_flip_flop.vhd:34' bound to instance 'second_flip_flop1' of component 'd_flip_flop' [D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/main.vhd:133]
+INFO: [Synth 8-3491] module 'd_flip_flop' declared at 'D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/d_flip_flop.vhd:34' bound to instance 'second_flip_flop2' of component 'd_flip_flop' [D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/main.vhd:140]
+INFO: [Synth 8-3491] module 'd_flip_flop' declared at 'D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/d_flip_flop.vhd:34' bound to instance 'second_flip_flop3' of component 'd_flip_flop' [D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/main.vhd:147]
+INFO: [Synth 8-3491] module 'd_flip_flop' declared at 'D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/d_flip_flop.vhd:34' bound to instance 'second_flip_flop4' of component 'd_flip_flop' [D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/main.vhd:154]
+INFO: [Synth 8-3491] module 'd_flip_flop' declared at 'D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/d_flip_flop.vhd:34' bound to instance 'second_flip_flop5' of component 'd_flip_flop' [D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/main.vhd:161]
+INFO: [Synth 8-3491] module 'd_flip_flop' declared at 'D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/d_flip_flop.vhd:34' bound to instance 'second_flip_flop6' of component 'd_flip_flop' [D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/main.vhd:168]
+INFO: [Synth 8-3491] module 'd_flip_flop' declared at 'D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/d_flip_flop.vhd:34' bound to instance 'second_flip_flop7' of component 'd_flip_flop' [D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/main.vhd:175]
+INFO: [Synth 8-256] done synthesizing module 'ShiftRegisterWithBuffer' (3#1) [D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/main.vhd:53]
+INFO: [Synth 8-3491] module 'IBUFDS' declared at 'D:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:19488' bound to instance 'buffds' of component 'ibufds' [D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/circuit.vhd:104]
+INFO: [Synth 8-6157] synthesizing module 'IBUFDS' [D:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:19488]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter DIFF_TERM bound to: FALSE - type: string 
+	Parameter DQS_BIAS bound to: FALSE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IBUFDS' (4#1) [D:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:19488]
+INFO: [Synth 8-3491] module 'DIVIDER' declared at 'D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/divider.vhd:34' bound to instance 'div' of component 'DIVIDER' [D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/circuit.vhd:110]
+INFO: [Synth 8-638] synthesizing module 'DIVIDER' [D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/divider.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'DIVIDER' (5#1) [D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/divider.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'circuit' (6#1) [D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/sources_1/new/circuit.vhd:46]
+WARNING: [Synth 8-3331] design circuit has unconnected port pushbuttons[4]
+WARNING: [Synth 8-3331] design circuit has unconnected port pushbuttons[3]
+WARNING: [Synth 8-3331] design circuit has unconnected port pushbuttons[2]
+WARNING: [Synth 8-3331] design circuit has unconnected port dipswitch[3]
+WARNING: [Synth 8-3331] design circuit has unconnected port dipswitch[2]
+WARNING: [Synth 8-3331] design circuit has unconnected port dipswitch[1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 462.141 ; gain = 149.320
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 462.141 ; gain = 149.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 462.141 ; gain = 149.320
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7a200tfbg676-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/constrs_1/new/top.xdc]
+Finished Parsing XDC File [D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/constrs_1/new/top.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/BSUIR/bsuirLabs/7sem/APCU/Lab 4/Lab 4.srcs/constrs_1/new/top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/circuit_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/circuit_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 845.109 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 845.109 ; gain = 532.289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a200tfbg676-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 845.109 ; gain = 532.289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 845.109 ; gain = 532.289
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "i" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "temp" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 845.109 ; gain = 532.289
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 17    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 65    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module jk_flip_flop 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 4     
+Module DIVIDER 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 740 (col length:100)
+BRAMs: 730 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5545] ROM "div/i" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "div/temp" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-3331] design circuit has unconnected port pushbuttons[4]
+WARNING: [Synth 8-3331] design circuit has unconnected port pushbuttons[3]
+WARNING: [Synth 8-3331] design circuit has unconnected port pushbuttons[2]
+WARNING: [Synth 8-3331] design circuit has unconnected port dipswitch[3]
+WARNING: [Synth 8-3331] design circuit has unconnected port dipswitch[2]
+WARNING: [Synth 8-3331] design circuit has unconnected port dipswitch[1]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 845.109 ; gain = 532.289
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 845.109 ; gain = 532.289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 845.109 ; gain = 532.289
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 847.574 ; gain = 534.754
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 847.574 ; gain = 534.754
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 847.574 ; gain = 534.754
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 847.574 ; gain = 534.754
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 847.574 ; gain = 534.754
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 847.574 ; gain = 534.754
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 847.574 ; gain = 534.754
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     8|
+|3     |LUT1   |     1|
+|4     |LUT3   |     1|
+|5     |LUT4   |     7|
+|6     |LUT5   |     3|
+|7     |LUT6   |     1|
+|8     |FDCE   |    16|
+|9     |FDRE   |    33|
+|10    |IBUF   |     3|
+|11    |IBUFDS |     1|
+|12    |OBUF   |     8|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------------------------+------------------------+------+
+|      |Instance                   |Module                  |Cells |
++------+---------------------------+------------------------+------+
+|1     |top                        |                        |    83|
+|2     |  ShiftRegisterWithBuffer1 |ShiftRegisterWithBuffer |    17|
+|3     |    first_flip_flop0       |d_flip_flop             |     1|
+|4     |      inner_flip_flop      |jk_flip_flop_29         |     1|
+|5     |    first_flip_flop1       |d_flip_flop_0           |     1|
+|6     |      inner_flip_flop      |jk_flip_flop_28         |     1|
+|7     |    first_flip_flop2       |d_flip_flop_1           |     1|
+|8     |      inner_flip_flop      |jk_flip_flop_27         |     1|
+|9     |    first_flip_flop3       |d_flip_flop_2           |     1|
+|10    |      inner_flip_flop      |jk_flip_flop_26         |     1|
+|11    |    first_flip_flop4       |d_flip_flop_3           |     1|
+|12    |      inner_flip_flop      |jk_flip_flop_25         |     1|
+|13    |    first_flip_flop5       |d_flip_flop_4           |     1|
+|14    |      inner_flip_flop      |jk_flip_flop_24         |     1|
+|15    |    first_flip_flop6       |d_flip_flop_5           |     1|
+|16    |      inner_flip_flop      |jk_flip_flop_23         |     1|
+|17    |    first_flip_flop7       |d_flip_flop_6           |     1|
+|18    |      inner_flip_flop      |jk_flip_flop_22         |     1|
+|19    |    second_flip_flop0      |d_flip_flop_7           |     1|
+|20    |      inner_flip_flop      |jk_flip_flop_21         |     1|
+|21    |    second_flip_flop1      |d_flip_flop_8           |     1|
+|22    |      inner_flip_flop      |jk_flip_flop_20         |     1|
+|23    |    second_flip_flop2      |d_flip_flop_9           |     1|
+|24    |      inner_flip_flop      |jk_flip_flop_19         |     1|
+|25    |    second_flip_flop3      |d_flip_flop_10          |     1|
+|26    |      inner_flip_flop      |jk_flip_flop_18         |     1|
+|27    |    second_flip_flop4      |d_flip_flop_11          |     1|
+|28    |      inner_flip_flop      |jk_flip_flop_17         |     1|
+|29    |    second_flip_flop5      |d_flip_flop_12          |     1|
+|30    |      inner_flip_flop      |jk_flip_flop_16         |     1|
+|31    |    second_flip_flop6      |d_flip_flop_13          |     1|
+|32    |      inner_flip_flop      |jk_flip_flop_15         |     1|
+|33    |    second_flip_flop7      |d_flip_flop_14          |     2|
+|34    |      inner_flip_flop      |jk_flip_flop            |     2|
+|35    |  div                      |DIVIDER                 |    52|
++------+---------------------------+------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 847.574 ; gain = 534.754
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 847.574 ; gain = 151.785
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 847.574 ; gain = 534.754
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+50 Infos, 14 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 866.078 ; gain = 566.422
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'D:/BSUIR/bsuirLabs/7sem/APCU/project_reg/project_reg.runs/synth_1/circuit.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file circuit_utilization_synth.rpt -pb circuit_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.074 . Memory (MB): peak = 866.078 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 12 12:59:28 2025...

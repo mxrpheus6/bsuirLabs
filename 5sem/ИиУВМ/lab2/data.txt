@@ -1,0 +1,22 @@
+0|0|0|8086|9b64|  Intel Corporation|  10th Gen Core Processor Host Bridge/DRAM Registers
+0|1|0|8086|1901|  Intel Corporation|  6th-10th Gen Core Processor PCIe Controller (x16)
+0|2|0|8086|9bc4|  Intel Corporation|  CometLake-H GT2 [UHD Graphics]
+0|4|0|8086|1903|  Intel Corporation|  Xeon E3-1200 v5/E3-1500 v5/6th Gen Core Processor Thermal Subsystem
+0|8|0|8086|1911|  Intel Corporation|  Xeon E3-1200 v5/v6 / E3-1500 v5 / 6th/7th/8th Gen Core Processor Gaussian Mixture Model
+0|18|0|086|6f98|N/A|N/A
+0|20|0|086|6ed8|N/A|N/A
+0|20|2|086|6ef8|N/A|N/A
+0|20|3|086|6f08|N/A|N/A
+0|21|0|086|6e88|N/A|N/A
+0|21|1|086|6e98|N/A|N/A
+0|22|0|086|6e08|N/A|N/A
+0|23|0|8086|282a|  Intel Corporation|  82801 Mobile SATA Controller [RAID mode]
+0|25|2|086|6c78|N/A|N/A
+0|29|0|086|6b58|N/A|N/A
+0|31|0|086|68d8|N/A|N/A
+0|31|3|086|6c88|N/A|N/A
+0|31|4|086|6a38|N/A|N/A
+0|31|5|086|6a48|N/A|N/A
+1|0|0|10de|25a5|  NVIDIA Corporation|  GA107M [GeForce RTX 3050 Mobile]
+1|0|1|10de|2291|  NVIDIA Corporation|N/A
+6|0|0|10ec|2600|  Realtek Semiconductor Co., Ltd.|  Killer E2600 GbE Controller

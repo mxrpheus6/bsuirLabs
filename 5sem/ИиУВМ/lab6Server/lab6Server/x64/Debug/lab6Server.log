@@ -1,0 +1,6 @@
+﻿  server.cpp
+D:\BSUIR\bsuirLabs\5sem\IiUVM\lab6Server\server.cpp(58,17): warning C4244: аргумент: преобразование "SOCKET" в "int", возможна потеря данных
+D:\BSUIR\bsuirLabs\5sem\IiUVM\lab6Server\server.cpp(68,17): warning C4244: аргумент: преобразование "SOCKET" в "int", возможна потеря данных
+D:\BSUIR\bsuirLabs\5sem\IiUVM\lab6Server\server.cpp(82,17): warning C4244: аргумент: преобразование "SOCKET" в "int", возможна потеря данных
+D:\BSUIR\bsuirLabs\5sem\IiUVM\lab6Server\server.cpp(101,29): warning C4244: аргумент: преобразование "SOCKET" в "int", возможна потеря данных
+  lab6Server.vcxproj -> D:\BSUIR\bsuirLabs\5sem\IiUVM\lab6Server\x64\Debug\lab6Server.exe

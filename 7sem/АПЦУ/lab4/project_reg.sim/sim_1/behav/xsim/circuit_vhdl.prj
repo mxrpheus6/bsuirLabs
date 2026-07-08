@@ -1,0 +1,10 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../Lab 4/Lab 4.srcs/sources_1/new/d_flip_flop.vhd" \
+"../../../../../Lab 4/Lab 4.srcs/sources_1/new/divider.vhd" \
+"../../../../../Lab 4/Lab 4.srcs/sources_1/new/jk_flip_flop.vhd" \
+"../../../../../Lab 4/Lab 4.srcs/sources_1/new/main.vhd" \
+"../../../../../Lab 4/Lab 4.srcs/sources_1/new/circuit.vhd" \
+
+# Do not sort compile order
+nosort
