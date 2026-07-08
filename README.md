@@ -5,7 +5,7 @@
 ### [Седьмой семестр (2025)](https://github.com/mxrpheus6/bsuirLabs/tree/main/7sem)
 - [Автоматизация проектирования цифровых устройств](https://github.com/mxrpheus6/bsuirLabs/tree/main/7sem/АПЦУ) (Байрак С. А. / Шеменков В. В.)
 - [Оборудование компьютерных сетей](https://github.com/mxrpheus6/bsuirLabs/tree/main/7sem/ОбКС) (Глецевич И. И. / Марцинкевич В. А.) 
-- [Хранение и управление данными](https://github.com/mxrpheus6/bsuirLabs/tree/main/7sem/ОбКС) (Фролов И. И. / Куприянова Д. В.)
+- [Хранение и управление данными](https://github.com/mxrpheus6/bsuirLabs/tree/main/7sem/ХиУД) (Фролов И. И. / Куприянова Д. В.)
 - [Оборудование компьютерных сетей, Курсовая работа](https://github.com/mxrpheus6/bsuirLabs/tree/main/7sem/КП%20ОбКС) (Глецевич И. И. / Марцинкевич В. А.)
 
 ### [Шестой семестр (2025)](https://github.com/mxrpheus6/bsuirLabs/tree/main/6sem)
