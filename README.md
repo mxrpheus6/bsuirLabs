@@ -10,7 +10,7 @@
 
 ### [Шестой семестр (2025)](https://github.com/mxrpheus6/bsuirLabs/tree/main/6sem)
 - [Администрирование компьютерных сетей](https://github.com/mxrpheus6/bsuirLabs/tree/main/6sem/AKC) (Глецевич И. И. / Марцинкевич В. А.)
-- [Системный анали](https://github.com/mxrpheus6/bsuirLabs/tree/main/6sem/CA) (Никульшин Б. В. / Селезнёв А. И.)
+- [Системный анализ](https://github.com/mxrpheus6/bsuirLabs/tree/main/6sem/CA) (Никульшин Б. В. / Селезнёв А. И.)
 - [Базы данных](https://github.com/mxrpheus6/bsuirLabs/tree/main/6sem/БД) (Поденок Л. П. / Куприянова Д. В.)
 - [Практика (производственная)](https://github.com/mxrpheus6/bsuirLabs/tree/main/6sem/ПРАКТИКА) (Смирнов Ю. В.)
 - [Цифровая обработка сигналов и изображений](https://github.com/mxrpheus6/bsuirLabs/tree/main/6sem/ЦОСиИ) (Перцев Д. Ю)
