@@ -26,7 +26,6 @@
 ### [Четвертый семестр (2024)](https://github.com/mxrpheus6/bsuirLabs/tree/main/4sem)
 - [Программирование на языках высокого уровня](https://github.com/mxrpheus6/CurrencyConverter) (Марченков Д. Н. / Скиба И. Г.)
 - [Операционные системы и системное программирование](https://github.com/mxrpheus6/bsuirLabs/tree/main/4sem/ОСиСП) (Поденок Л. П. / Калютчик А. А.)
-- [Схемотехника](https://github.com/mxrpheus6/bsuirLabs/tree/main/4sem/СхемТ) (Байрак С. А. / Мармузевич М. А.)
 
 ### [Третий семестр (2023)](https://github.com/mxrpheus6/bsuirLabs/tree/main/3sem)
 - [Программирование на языках высокого уровня](https://github.com/mxrpheus6/bsuirLabs/tree/main/3sem/ПнаЯВУ) (Ковальчук А. М. / Марзалюк А. В.)
